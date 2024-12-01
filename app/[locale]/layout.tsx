@@ -7,6 +7,9 @@ import { getMessages } from "next-intl/server";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NavBar } from "@/components/nav-bar";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -37,6 +40,9 @@ export default async function RootLayout({
           <NavBar />
           <main className="container py-6">{children}</main>
           <ToastProvider />
+          <Analytics />
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
+          <SpeedInsights />
         </NextIntlClientProvider>
       </body>
     </html>
