@@ -50,8 +50,8 @@ export default function HomePage() {
         <div className="rounded-lg border p-4">
           <h3 className="mb-2 text-lg font-medium">No Tracking</h3>
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            We don't track or store any of your data. Everything runs in your
-            browser.
+            We don&apos;t track or store any of your data. Everything runs in
+            your browser.
           </p>
         </div>
         <div className="rounded-lg border p-4">
