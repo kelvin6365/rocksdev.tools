@@ -83,7 +83,7 @@ app/
 #### Technical Setup
 
 - [x] Project initialization with Next.js 15
-- [ ] Core layout implementation
+- [x] Core layout implementation
 - [ ] Ad space integration
 - [ ] Analytics setup
 - [ ] Error tracking
