@@ -3,7 +3,7 @@ import { Code, Zap, FileText, Layout } from "lucide-react";
 export const config = {
   name: "Rocks Dev",
   description: "A comprehensive collection of developer tools",
-  github: "https://github.com/kwongtn/rosksdev.tools",
+  github: "https://github.com/kelvin6365/rocksdev.tools",
 
   // Language configuration
   languages: [

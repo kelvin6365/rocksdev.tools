@@ -60,7 +60,9 @@ export function ToolLayout({
           {showGithubLink && (
             <Button variant="outline" size="icon" asChild>
               <Link
-                href={`${config.github}/tree/main/app/${translationKey.replace(/\./g, "/")}`}
+                href={encodeURI(
+                  `${config.github}/tree/main/app/[locale]/tools/${translationKey.replace(/\./g, "/")}`
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
               >
