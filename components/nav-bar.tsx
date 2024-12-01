@@ -1,38 +1,19 @@
 "use client";
 
-import * as React from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { Button } from "@/components/ui/button";
-import { Code2, Menu, X, Github } from "lucide-react";
-
-const routes = [
-  {
-    href: "/tools/json",
-    label: "JSON Tools",
-  },
-  {
-    href: "/tools/converters",
-    label: "Converters",
-  },
-  {
-    href: "/tools/seo",
-    label: "SEO Tools",
-  },
-  {
-    href: "/tools/text",
-    label: "Text Tools",
-  },
-  {
-    href: "/tools/dev",
-    label: "Dev Tools",
-  },
-];
+import { cn } from "@/lib/utils";
+import { config } from "@/services/config";
+import { Code2, Github, Menu } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import * as React from "react";
+import { useTranslations } from "next-intl";
+const routes = config.tools;
 
 export function NavBar() {
   const pathname = usePathname();
+  const t = useTranslations();
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
@@ -54,7 +35,7 @@ export function NavBar() {
         </div>
         <div
           className={cn(
-            "fixed inset-0 top-14 z-50 w-full bg-background md:static md:block",
+            "fixed inset-0 top-14 z-50 w-full md:static md:block",
             isOpen ? "block" : "hidden"
           )}
         >
@@ -71,14 +52,14 @@ export function NavBar() {
                       : "text-foreground/60"
                   )}
                 >
-                  {route.label}
+                  {t(`nav.tools.${route.value}.title`)}
                 </Link>
               ))}
               <div className="flex items-center gap-4 md:ml-auto">
                 <LanguageSwitcher />
                 <Button variant="outline" size="icon" asChild>
                   <Link
-                    href="https://github.com/yourusername/dev-tools"
+                    href={config.github}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

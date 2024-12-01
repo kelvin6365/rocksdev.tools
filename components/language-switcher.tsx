@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { useRouter, usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/routing";
 import {
   Select,
   SelectContent,
@@ -10,12 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-const languages = [
-  { label: "English", value: "en" },
-  { label: "中文(简体)", value: "zh-CN" },
-  { label: "中文(繁體)", value: "zh-HK" },
-] as const;
+import { config } from "@/services/config";
 
 export function LanguageSwitcher() {
   const router = useRouter();
@@ -23,13 +18,7 @@ export function LanguageSwitcher() {
   const locale = useLocale();
 
   const handleLanguageChange = (newLocale: string) => {
-    // Get the current path segments
-    const segments = pathname.split("/");
-    // Replace the locale segment (first segment after leading slash)
-    segments[1] = newLocale;
-    // Reconstruct the path with the new locale
-    const newPath = segments.join("/");
-    router.push(newPath);
+    router.replace(pathname, { locale: newLocale });
   };
 
   return (
@@ -38,7 +27,7 @@ export function LanguageSwitcher() {
         <SelectValue placeholder="Select language" />
       </SelectTrigger>
       <SelectContent>
-        {languages.map((lang) => (
+        {config.languages.map((lang) => (
           <SelectItem key={lang.value} value={lang.value}>
             {lang.label}
           </SelectItem>

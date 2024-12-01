@@ -1,0 +1,11 @@
+{
+  "json": {
+    "formatter": {
+      "title": "JSON Formatter",
+      "description": "Format and validate your JSON data with advanced tools.",
+      "input": "Input JSON",
+      "output": "Formatted Output",
+      "format": "Format"
+    }
+  }
+}

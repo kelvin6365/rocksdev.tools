@@ -1,6 +1,8 @@
-# Dev Tools Hub
+# Rocks Dev
 
 A comprehensive collection of developer tools built with modern web technologies. This project aims to provide free, fast, and reliable tools for developers.
+
+<a href="https://www.buymeacoffee.com/tszhim_tech" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## Project Blueprint
 

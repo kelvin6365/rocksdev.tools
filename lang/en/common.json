@@ -1,5 +1,51 @@
 {
-  "Test": {
-    "test": "test"
+  "site": {
+    "name": "Rocks Dev",
+    "description": "A comprehensive collection of developer tools"
+  },
+  "nav": {
+    "categories": "Categories",
+    "home": "Home",
+    "menu": "Menu",
+    "github": "GitHub",
+    "back": "back",
+    "tools": {
+      "title": "Tools",
+      "json": {
+        "title": "JSON Tools",
+        "formatter": {
+          "title": "JSON Formatter",
+          "description": "Format and validate your JSON data with advanced tools"
+        },
+        "validator": {
+          "title": "JSON Validator",
+          "description": "Validate JSON structure and schema"
+        },
+        "minifier": {
+          "title": "JSON Minifier",
+          "description": "Minify and compress JSON data"
+        },
+        "diff": {
+          "title": "JSON Diff",
+          "description": "Compare and find differences between JSON files"
+        }
+      },
+      "seo": {
+        "title": "SEO Tools",
+        "description": "Tools for search engine optimization"
+      },
+      "converters": {
+        "title": "Converters",
+        "description": "Convert between different data formats"
+      },
+      "text": {
+        "title": "Text Tools",
+        "description": "Text manipulation and formatting tools"
+      },
+      "dev": {
+        "title": "Dev Tools",
+        "description": "Developer utilities and formatters"
+      }
+    }
   }
 }

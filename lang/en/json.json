@@ -1,0 +1,18 @@
+{
+  "json": {
+    "formatter": {
+      "title": "JSON Formatter",
+      "description": "Format and validate your JSON data with advanced tools.",
+      "input": "Input JSON",
+      "output": "Formatted Output",
+      "format": "Format",
+      "copied": "Copied to clipboard!",
+      "placeholder": "Paste your JSON here...",
+      "copy": "Copy",
+      "error": {
+        "empty": "Input cannot be empty",
+        "invalid": "Invalid JSON"
+      }
+    }
+  }
+}
