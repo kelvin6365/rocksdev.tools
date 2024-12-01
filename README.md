@@ -171,9 +171,9 @@ app/
 
 ### Core Dependencies
 
-- `next`: ^15.0.1
-- `react`: ^18.3.1
-- `react-dom`: ^18.3.1
+- `next`: ^15.0.3
+- `react`: 19.0.0-rc.1
+- `react-dom`: 19.0.0-rc.1
 - `typescript`: ^5.x
 - `next-auth`: ^4.24.7
 - `next-intl`: ^3.23.5
@@ -182,16 +182,16 @@ app/
 
 - `@radix-ui/*`: UI primitives
 - `tailwindcss`: ^3.4.14
-- `class-variance-authority`: ^0.7.0
+- `class-variance-authority`: ^0.7.1
 - `clsx`: ^2.1.1
 - `tailwind-merge`: ^2.3.0
 - `lucide-react`: ^0.372.0
 
 ### Form & Validation
 
-- `zod`: ^3.23.3
-- `react-hook-form`: ^7.51.3
-- `@hookform/resolvers`: ^3.3.4
+- `zod`: ^3.23.8
+- `react-hook-form`: ^7.53.2
+- `@hookform/resolvers`: ^3.9.1
 
 ### Development Tools
 
