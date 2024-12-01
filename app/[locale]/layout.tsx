@@ -11,6 +11,7 @@ import { getMessages } from "next-intl/server";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import GoogleAdsense from "../../components/adsense";
+import { Footer } from "../../components/footer";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -36,15 +37,25 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={cn(inter.className, "min-h-screen bg-background")}>
+      <head>
         <GoogleAdsense pId={process.env.NEXT_PUBLIC_ADSENSE_ID ?? ""} />
+      </head>
+      <body
+        className={cn(
+          inter.className,
+          "min-h-screen bg-background flex flex-col"
+        )}
+      >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <NavBar />
-          <main className="container py-6">{children}</main>
-          <ToastProvider />
-          <Analytics />
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
-          <SpeedInsights />
+          <div className="flex flex-col flex-1">
+            <NavBar />
+            <main className="container py-6">{children}</main>
+            <ToastProvider />
+            <Analytics />
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
+            <SpeedInsights />
+          </div>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

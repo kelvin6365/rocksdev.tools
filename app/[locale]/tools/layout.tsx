@@ -18,7 +18,7 @@ export default function ToolsLayout({
   return (
     <>
       <ToolBreadcrumb />
-      <div className="container flex min-h-screen gap-8 py-8">
+      <div className="container flex gap-8 py-8">
         {/* Sidebar */}
         <aside className="hidden w-48 shrink-0 md:block">
           <nav className="sticky top-24 space-y-2">

@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import { config } from "@/services/config";
 import Link from "next/link";
+import AdUnit from "../../../components/ad-units";
 
 export default function ToolsPage() {
   return (
@@ -37,6 +38,12 @@ export default function ToolsPage() {
             </Link>
           </Card>
         ))}
+        {/* Tools Box Banner */}
+        <AdUnit
+          adSlot="4396194595"
+          adFormat="auto"
+          style={{ width: "100%", height: "100%", display: "block" }}
+        />
       </div>
     </div>
   );
