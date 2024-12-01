@@ -27,53 +27,43 @@ This project is built with modern web technologies and best practices:
 ## Project Structure
 
 ```
-app/
-├── (marketing)
-│   ├── page.tsx                # Homepage with tool directory
-│   ├── about/                  # About 2 Rocks Studio
-│   ├── blog/                   # Technical blog/tutorials
-│   └── pricing/                # Premium features/API pricing
+.
+├── app/
+│   └── [locale]/              # Internationalized routes
+│       ├── layout.tsx         # Root layout with providers
+│       ├── page.tsx          # Homepage
+│       └── tools/            # Developer tools
+│           └── json/         # JSON tools
+│               └── formatter/ # JSON formatter tool
 │
-├── (tools)
-│   ├── json/                   # JSON Tools Group
-│   │   ├── formatter/         # JSON Formatter
-│   │   ├── validator/         # JSON Validator
-│   │   ├── diff/             # JSON Diff
-│   │   └── minifier/         # JSON Minifier
-│   │
-│   ├── seo/                    # SEO Tools Group
-│   │   ├── meta-tags/        # Meta Tags Generator
-│   │   ├── robots-txt/       # Robots.txt Generator
-│   │   └── sitemap/          # Sitemap Generator
-│   │
-│   ├── converters/            # Conversion Tools
-│   │   ├── base64/          # Base64 Encoder/Decoder
-│   │   ├── markdown/        # Markdown to HTML
-│   │   └── csv-json/        # CSV to JSON
-│   │
-│   ├── text/                  # Text Tools
-│   │   ├── formatter/       # Text Formatter
-│   │   ├── case/           # Case Converter
-│   │   └── counter/        # Word Counter
-│   │
-│   └── dev/                   # Developer Tools
-│       ├── regex/           # Regex Tester
-│       ├── css/            # CSS Formatter/Minifier
-│       └── html/           # HTML Formatter/Validator
+├── components/
+│   ├── layouts/
+│   │   └── tool-layout.tsx   # Common tool layout
+│   └── ui/                   # UI Components
+│       ├── toast.tsx
+│       ├── toaster.tsx
+│       └── use-toast.ts
 │
-├── api/                        # API Routes
-│   ├── auth/                  # Authentication
-│   └── v1/                    # API Endpoints
+├── lang/                     # i18n translations
+│   ├── en/
+│   │   ├── common.json
+│   │   └── json.json
+│   ├── zh-CN/
+│   │   └── common.json
+│   │   └── json.json
+│   └── zh-HK/
+│       └── common.json
+│       └── json.json
 │
-├── dashboard/                  # User Dashboard
-│   ├── settings/              # User Settings
-│   ├── history/              # Usage History
-│   └── favorites/            # Favorite Tools
+├── providers/
+│   └── toast-provider.tsx    # Toast notifications provider
 │
-└── (auth)
-    ├── login/
-    ├── register/
-    └── forgot-password/
+├── types/
+│   └── next-auth.d.ts       # NextAuth type definitions
+│
+├── middleware.ts             # Next.js middleware
+├── tsconfig.json            # TypeScript configuration
+└── .env.example             # Environment variables template
 ```
 
 ## Development Phases
