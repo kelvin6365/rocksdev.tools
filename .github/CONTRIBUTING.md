@@ -17,7 +17,7 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 1. Fork the repository
 2. Clone your fork:
    ```bash
-   git clone https://github.com/your-username/rocksdev.tools.git
+   git clone https://github.com/kelvin6365/rocksdev.tools.git
    cd rocksdev.tools
    ```
 3. Install dependencies using pnpm:
@@ -61,20 +61,43 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 ## Project Structure
 
 ```
-app/
-├── (marketing)              # Marketing pages
-├── (tools)                 # Tool implementations
-├── api/                    # API routes
-├── dashboard/              # User dashboard
-└── (auth)                 # Authentication pages
-
-components/                 # Shared components
-├── ui/                    # UI components
-└── tools/                 # Tool-specific components
-
-lib/                       # Utilities and helpers
-services/
-└── config.tsx            # Tools configuration
+.
+├── app/
+│   └── [locale]/              # Internationalized routes
+│       ├── layout.tsx         # Root layout with providers
+│       ├── page.tsx          # Homepage
+│       └── tools/            # Developer tools
+│           └── json/         # JSON tools
+│               └── formatter/ # JSON formatter tool
+│
+├── components/
+│   ├── layouts/
+│   │   └── tool-layout.tsx   # Common tool layout
+│   └── ui/                   # UI Components
+│       ├── toast.tsx
+│       ├── toaster.tsx
+│       └── use-toast.ts
+│
+├── lang/                     # i18n translations
+│   ├── en/
+│   │   ├── common.json
+│   │   └── json.json
+│   ├── zh-CN/
+│   │   └── common.json
+│   │   └── json.json
+│   └── zh-HK/
+│       └── common.json
+│       └── json.json
+│
+├── providers/
+│   └── toast-provider.tsx    # Toast notifications provider
+│
+├── types/
+│   └── next-auth.d.ts       # NextAuth type definitions
+│
+├── middleware.ts             # Next.js middleware
+├── tsconfig.json            # TypeScript configuration
+└── .env.example             # Environment variables template
 ```
 
 ## Adding New Tools

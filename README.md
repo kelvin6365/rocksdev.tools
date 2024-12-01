@@ -223,9 +223,7 @@ NEXT_PUBLIC_ADSENSE_ID=your_adsense_id
 
 ## Contributing
 
-1. Create a new branch from `main`
-2. Make your changes
-3. Submit a merge request
+See [CONTRIBUTING.md](.github/CONTRIBUTING.md)
 
 ## License
 
