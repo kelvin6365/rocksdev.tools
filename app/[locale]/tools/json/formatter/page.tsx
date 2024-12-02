@@ -9,6 +9,7 @@ import { useTranslations } from "next-intl";
 import * as React from "react";
 import { toast } from "sonner";
 import dynamic from "next/dynamic";
+import * as Sentry from "@sentry/nextjs";
 
 const JsonEditorWrapper = dynamic(
   () => import("@/components/json-editor-wrapper"),
@@ -36,6 +37,15 @@ export default function JsonFormatterPage() {
       const parsed = JSON.parse(input);
       setOutput(parsed);
     } catch (error) {
+      Sentry.captureException(error, {
+        tags: {
+          component: "JsonFormatter",
+          action: "formatJson",
+        },
+        extra: {
+          inputLength: input.length,
+        },
+      });
       toast.error(t("error.invalid"), {});
     } finally {
       setIsLoading(false);
@@ -61,6 +71,16 @@ export default function JsonFormatterPage() {
         setOutput(parsed);
         setIsJsonValid(true);
       } catch (error) {
+        Sentry.captureException(error, {
+          tags: {
+            component: "JsonFormatter",
+            action: "fileUpload",
+          },
+          extra: {
+            fileName: file.name,
+            fileSize: file.size,
+          },
+        });
         toast.error(t("error.invalid"), {});
       }
     };
