@@ -95,7 +95,7 @@ export function JsonFormatter() {
         <CardContent className="relative px-0 h-[500px] overflow-y-auto">
           <Textarea
             placeholder={t("placeholder")}
-            className={`h-full font-mono ${
+            className={`h-full font-mono focus-visible:outline-none ${
               !isJsonValid && input ? "border-red-500" : ""
             }`}
             value={input}
