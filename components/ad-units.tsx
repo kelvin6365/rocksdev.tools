@@ -29,6 +29,7 @@ export default function AdUnit({
       data-ad-slot={adSlot}
       data-ad-format={adFormat}
       data-full-width-responsive="true"
+      data-adtest="on"
     ></ins>
   );
 }
