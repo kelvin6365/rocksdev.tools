@@ -6,7 +6,7 @@ export function Footer() {
       <AdUnit
         adSlot="2962196569"
         adFormat="auto"
-        className="mx-auto h-[110px]"
+        className="mx-auto w-full h-[110px]"
       />
       <div className="flex items-center justify-center">
         <p>© 2024 RocksDev.Tools</p>
