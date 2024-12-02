@@ -1,6 +1,6 @@
 import { ToolLayout } from "@/components/layouts/tool-layout";
 import { getMetadata } from "@/services/seo";
-import { JsonFormatter } from "@/components/tools/json-formatter";
+import { JsonValidator } from "@/components/tools/json-validator";
 
 type Props = {
   params: Promise<{
@@ -10,13 +10,13 @@ type Props = {
 
 export const generateMetadata = async ({ params }: Props) => {
   const { locale } = await params;
-  return getMetadata({ path: "json.formatter", locale });
+  return getMetadata({ path: "json.validator", locale });
 };
 
-export default function JsonFormatterPage() {
+export default function JsonValidatorPage() {
   return (
-    <ToolLayout translationKey="json.formatter">
-      <JsonFormatter />
+    <ToolLayout translationKey="json.validator">
+      <JsonValidator />
     </ToolLayout>
   );
 }

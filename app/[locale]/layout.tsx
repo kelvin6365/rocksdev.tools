@@ -5,7 +5,6 @@ import { ToastProvider } from "@/providers/toast-provider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Inter } from "next/font/google";
@@ -13,13 +12,11 @@ import { notFound } from "next/navigation";
 import GoogleAdsense from "../../components/adsense";
 import { Footer } from "../../components/footer";
 import "./globals.css";
+import { getMetadata } from "@/services/seo";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Dev Tools Hub",
-  description: "A comprehensive collection of developer tools",
-};
+export const metadata = getMetadata({});
 
 export default async function RootLayout({
   children,

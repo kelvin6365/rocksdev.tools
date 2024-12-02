@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { config } from "@/services/config";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 
 const jsonTools = config.tools.find((tool) => tool.value === "json");
 

@@ -1,20 +1,32 @@
 {
   "json": {
     "formatter": {
-      "title": "JSON Formatter",
-      "description": "Format and validate your JSON data with advanced tools.",
-      "input": "Input JSON",
-      "output": "Formatted Output",
-      "format": "Format",
       "copied": "Copied to clipboard!",
-      "placeholder": "Paste your JSON here...",
       "copy": "Copy",
+      "description": "Format and validate your JSON data with advanced tools.",
+      "download": "Download JSON",
       "error": {
         "empty": "Input cannot be empty",
         "invalid": "Invalid JSON"
       },
-      "upload": "Upload JSON",
-      "download": "Download JSON"
+      "format": "Format",
+      "input": "Input JSON",
+      "output": "Formatted Output",
+      "placeholder": "Paste your JSON here...",
+      "title": "JSON Formatter",
+      "upload": "Upload JSON"
+    },
+    "validator": {
+      "description": "Validate your JSON data with advanced tools.",
+      "error": {
+        "empty": "Input cannot be empty",
+        "invalid": "Invalid JSON"
+      },
+      "input": "Input JSON",
+      "invalid": "JSON is invalid",
+      "title": "JSON Validator",
+      "valid": "JSON is valid",
+      "validate": "Validate"
     }
   }
 }

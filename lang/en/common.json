@@ -1,51 +1,57 @@
 {
-  "site": {
-    "name": "Rocks Dev",
-    "description": "A comprehensive collection of developer tools"
-  },
   "nav": {
+    "back": "back",
     "categories": "Categories",
+    "github": "GitHub",
     "home": "Home",
     "menu": "Menu",
-    "github": "GitHub",
-    "back": "back",
     "tools": {
-      "title": "Tools",
+      "converters": {
+        "description": "Convert between different data formats",
+        "title": "Converters"
+      },
+      "dev": {
+        "description": "Developer utilities and formatters",
+        "title": "Dev Tools"
+      },
       "json": {
-        "title": "JSON Tools",
-        "formatter": {
-          "title": "JSON Formatter",
-          "description": "Format and validate your JSON data with advanced tools"
+        "diff": {
+          "description": "Compare and find differences between JSON files",
+          "title": "JSON Diff"
         },
-        "validator": {
-          "title": "JSON Validator",
-          "description": "Validate JSON structure and schema"
+        "formatter": {
+          "description": "Format and validate your JSON data with advanced tools",
+          "title": "JSON Formatter"
         },
         "minifier": {
-          "title": "JSON Minifier",
-          "description": "Minify and compress JSON data"
+          "description": "Minify and compress JSON data",
+          "title": "JSON Minifier"
         },
-        "diff": {
-          "title": "JSON Diff",
-          "description": "Compare and find differences between JSON files"
+        "title": "JSON Tools",
+        "validator": {
+          "description": "Validate JSON structure and schema",
+          "title": "JSON Validator"
         }
       },
       "seo": {
-        "title": "SEO Tools",
-        "description": "Tools for search engine optimization"
-      },
-      "converters": {
-        "title": "Converters",
-        "description": "Convert between different data formats"
+        "description": "Tools for search engine optimization",
+        "title": "SEO Tools"
       },
       "text": {
-        "title": "Text Tools",
-        "description": "Text manipulation and formatting tools"
+        "description": "Text manipulation and formatting tools",
+        "title": "Text Tools"
       },
-      "dev": {
-        "title": "Dev Tools",
-        "description": "Developer utilities and formatters"
-      }
+      "title": "Tools"
     }
+  },
+  "site": {
+    "description": "A comprehensive collection of developer tools",
+    "name": "Rocks Dev"
+  },
+  "not-found": {
+    "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+    "go-back": "Go Back",
+    "return-home": "Return Home",
+    "title": "Page Not Found"
   }
 }

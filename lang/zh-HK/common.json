@@ -1,50 +1,57 @@
 {
-  "site": {
-    "name": "Rocks Dev",
-    "description": "全面的開發者工具集合"
-  },
   "nav": {
+    "back": "返回",
     "categories": "分類",
+    "github": "GitHub",
     "home": "首頁",
     "menu": "選單",
-    "github": "GitHub",
     "tools": {
-      "title": "工具",
+      "converters": {
+        "description": "在不同數據格式之間轉換",
+        "title": "轉換工具"
+      },
+      "dev": {
+        "description": "開發者實用工具和格式化工具",
+        "title": "開發工具"
+      },
       "json": {
-        "title": "JSON 工具",
-        "formatter": {
-          "title": "JSON 格式化工具",
-          "description": "使用進階工具格式化和驗證 JSON 數據"
+        "diff": {
+          "description": "比較和尋找 JSON 檔案之間的差異",
+          "title": "JSON 比較工具"
         },
-        "validator": {
-          "title": "JSON 驗證工具",
-          "description": "驗證 JSON 結構和模式"
+        "formatter": {
+          "description": "使用進階工具格式化和驗證 JSON 數據",
+          "title": "JSON 格式化工具"
         },
         "minifier": {
-          "title": "JSON 壓縮工具",
-          "description": "壓縮和精簡 JSON 數據"
+          "description": "壓縮和精簡 JSON 數據",
+          "title": "JSON 壓縮工具"
         },
-        "diff": {
-          "title": "JSON 比較工具",
-          "description": "比較和尋找 JSON 檔案之間的差異"
+        "title": "JSON 工具",
+        "validator": {
+          "description": "驗證 JSON 結構和模式",
+          "title": "JSON 驗證工具"
         }
       },
       "seo": {
-        "title": "SEO 工具",
-        "description": "搜尋引擎最佳化工具"
-      },
-      "converters": {
-        "title": "轉換工具",
-        "description": "在不同數據格式之間轉換"
+        "description": "搜尋引擎最佳化工具",
+        "title": "SEO 工具"
       },
       "text": {
-        "title": "文字工具",
-        "description": "文字處理和格式化工具"
+        "description": "文字處理和格式化工具",
+        "title": "文字工具"
       },
-      "dev": {
-        "title": "開發工具",
-        "description": "開發者實用工具和格式化工具"
-      }
+      "title": "工具"
     }
+  },
+  "site": {
+    "description": "全面的開發者工具集合",
+    "name": "Rocks Dev"
+  },
+  "not-found": {
+    "description": "您正在尋找的頁面可能已被刪除、名稱已更改或暫時不可用。",
+    "go-back": "返回",
+    "return-home": "返回首頁",
+    "title": "頁面未找到"
   }
 }

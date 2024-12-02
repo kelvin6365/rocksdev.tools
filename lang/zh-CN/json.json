@@ -15,6 +15,18 @@
       "placeholder": "粘贴你的 JSON 数据...",
       "title": "JSON 格式化器",
       "upload": "上传 JSON"
+    },
+    "validator": {
+      "description": "Validate your JSON data with advanced tools.",
+      "error": {
+        "empty": "输入不能为空",
+        "invalid": "无效的 JSON"
+      },
+      "input": "输入 JSON",
+      "invalid": "JSON 无效",
+      "title": "JSON 验证器",
+      "valid": "JSON 有效",
+      "validate": "验证"
     }
   }
 }

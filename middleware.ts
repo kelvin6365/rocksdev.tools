@@ -5,7 +5,10 @@ import { routing } from "./i18n/routing";
 
 export function middleware(request: NextRequest) {
   // Skip middleware for API routes
-  if (request.nextUrl.pathname.startsWith("/api/")) {
+  if (
+    request.nextUrl.pathname.startsWith("/api/") ||
+    request.nextUrl.pathname.startsWith("/monitoring")
+  ) {
     return NextResponse.next();
   }
 
@@ -21,6 +24,6 @@ export const config = {
   // - Internal Next.js files
   matcher: [
     // Match all pathnames except for
-    "/((?!api|_next/static|_next/image|favicon.ico|.*\\.).*)",
+    "/((?!api|_next/static|_next/image|favicon.ico|.*\\.|monitoring).*)",
   ],
 };

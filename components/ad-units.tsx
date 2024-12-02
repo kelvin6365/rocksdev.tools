@@ -14,13 +14,19 @@ export default function AdUnit({
   className,
 }: AdUnitProps) {
   useEffect(() => {
-    try {
-      // @ts-ignore
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (err) {
-      console.error("AdSense error:", err);
+    if (process.env.NODE_ENV === "production") {
+      try {
+        // @ts-ignore
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (err) {
+        console.error("AdSense error:", err);
+      }
     }
   }, []);
+
+  if (process.env.NODE_ENV !== "production") {
+    return null;
+  }
 
   return (
     <ins
