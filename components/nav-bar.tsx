@@ -36,7 +36,7 @@ export function NavBar() {
         <div
           className={cn(
             "fixed inset-0 top-14 z-50 w-full md:static md:block",
-            isOpen ? "block" : "hidden"
+            isOpen ? "block" : "hidden",
           )}
         >
           <div className="container h-full py-4 md:py-0">
@@ -49,7 +49,7 @@ export function NavBar() {
                     "text-sm font-medium transition-colors hover:text-primary",
                     pathname === route.href
                       ? "text-foreground"
-                      : "text-foreground/60"
+                      : "text-foreground/60",
                   )}
                 >
                   {t(`nav.tools.${route.value}.title`)}

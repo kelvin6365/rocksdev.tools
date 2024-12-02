@@ -42,7 +42,7 @@ export function ToolBreadcrumb() {
               .join(".") +
             "." +
             translationKey
-      }.title`
+      }.title`,
     );
     const isLast = index === paths.length - 1;
 

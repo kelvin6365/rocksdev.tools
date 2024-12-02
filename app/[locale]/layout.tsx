@@ -43,7 +43,7 @@ export default async function RootLayout({
       <body
         className={cn(
           inter.className,
-          "min-h-screen bg-background flex flex-col"
+          "min-h-screen bg-background flex flex-col",
         )}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>

@@ -18,7 +18,7 @@ export default function ToolsLayout({
   return (
     <>
       <ToolBreadcrumb />
-      <div className="container flex gap-8 py-8">
+      <div className="container flex gap-6 py-8">
         {/* Sidebar */}
         <aside className="hidden w-48 shrink-0 md:block">
           <nav className="sticky top-24 space-y-2">
@@ -35,7 +35,7 @@ export default function ToolsLayout({
                       "block rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground",
                       pathname.startsWith(tool.href)
                         ? "bg-accent text-accent-foreground"
-                        : "text-muted-foreground"
+                        : "text-muted-foreground",
                     )}
                   >
                     {t(`nav.tools.${tool.value}.title`)}

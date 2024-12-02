@@ -42,7 +42,7 @@ export default function DashboardLayout({
                     "block rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground",
                     pathname === item.href
                       ? "bg-accent text-accent-foreground"
-                      : "text-muted-foreground"
+                      : "text-muted-foreground",
                   )}
                 >
                   {item.label}

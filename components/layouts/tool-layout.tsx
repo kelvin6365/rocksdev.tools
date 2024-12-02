@@ -34,7 +34,7 @@ export function ToolLayout({
   const backHref = parentTool?.href || `/tools/${paths.slice(0, -1).join("/")}`;
 
   return (
-    <div className={cn("space-y-6", className)}>
+    <div className={cn("space-y-6 px-2", className)}>
       {/* Header Section */}
       <div className="flex items-start justify-between">
         <div className="space-y-2">
@@ -61,7 +61,7 @@ export function ToolLayout({
             <Button variant="outline" size="icon" asChild>
               <Link
                 href={encodeURI(
-                  `${config.github}/tree/main/app/[locale]/tools/${translationKey.replace(/\./g, "/")}`
+                  `${config.github}/tree/main/app/[locale]/tools/${translationKey.replace(/\./g, "/")}`,
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
