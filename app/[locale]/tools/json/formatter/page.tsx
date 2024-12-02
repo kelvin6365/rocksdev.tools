@@ -4,11 +4,18 @@ import { ToolLayout } from "@/components/layouts/tool-layout";
 import { Button } from "@/components/ui/button";
 import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
-import { JsonEditor } from "json-edit-react";
 import { Copy, FileJson, Loader2, Download, Upload } from "lucide-react";
 import { useTranslations } from "next-intl";
 import * as React from "react";
 import { toast } from "sonner";
+import dynamic from "next/dynamic";
+
+const JsonEditorWrapper = dynamic(
+  () => import("@/components/json-editor-wrapper"),
+  {
+    ssr: false,
+  },
+);
 
 export default function JsonFormatterPage() {
   const t = useTranslations("json.formatter");
@@ -155,13 +162,11 @@ export default function JsonFormatterPage() {
               </Button>
             </div>
             <div className="h-full rounded-md border bg-muted overflow-y-auto">
-              <JsonEditor
-                className="!w-full !max-w-full !min-w-min h-full"
+              <JsonEditorWrapper
                 data={output}
                 setData={(newValue) => {
                   setOutput(newValue);
                 }}
-                rootName={"data"}
               />
             </div>
           </CardContent>

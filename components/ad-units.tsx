@@ -1,17 +1,17 @@
 "use client";
 
 import { useEffect } from "react";
-
+import { cn } from "@/lib/utils";
 interface AdUnitProps {
   adSlot: string;
   adFormat?: string;
-  style?: React.CSSProperties;
+  className?: string;
 }
 
 export default function AdUnit({
   adSlot,
   adFormat = "auto",
-  style,
+  className,
 }: AdUnitProps) {
   useEffect(() => {
     try {
@@ -24,12 +24,11 @@ export default function AdUnit({
 
   return (
     <ins
-      className="adsbygoogle"
-      style={style || { display: "block" }}
-      data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID}
+      className={cn("adsbygoogle", className)}
+      data-ad-client={`ca-pub-${process.env.NEXT_PUBLIC_ADSENSE_ID}`}
       data-ad-slot={adSlot}
       data-ad-format={adFormat}
       data-full-width-responsive="true"
-    />
+    ></ins>
   );
 }

@@ -39,11 +39,7 @@ export default function ToolsPage() {
           </Card>
         ))}
         {/* Tools Box Banner */}
-        <AdUnit
-          adSlot="4396194595"
-          adFormat="auto"
-          style={{ width: "100%", height: "100%", display: "block" }}
-        />
+        <AdUnit adSlot="4396194595" adFormat="auto" />
       </div>
     </div>
   );

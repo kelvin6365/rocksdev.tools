@@ -6,7 +6,7 @@ export function Footer() {
       <AdUnit
         adSlot="2962196569"
         adFormat="auto"
-        style={{ width: "100%", height: "110px", display: "block" }}
+        className="w-full h-[110px]"
       />
       <div className="flex items-center justify-center">
         <p>© 2024 RocksDev.Tools</p>
