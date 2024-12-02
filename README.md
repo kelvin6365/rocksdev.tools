@@ -96,7 +96,7 @@ This project is built with modern web technologies and best practices:
   - [x] Format/Validate functionality
   - [x] Copy/Download options
   - [ ] Share functionality
-- [ ] JSON Validator
+- [x] JSON Validator
 - [ ] JSON Diff
 - [ ] JSON Minifier
 
