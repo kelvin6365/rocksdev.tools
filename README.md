@@ -35,6 +35,8 @@ This project is built with modern web technologies and best practices:
 │       └── tools/            # Developer tools
 │           └── json/         # JSON tools
 │               └── formatter/ # JSON formatter tool
+│               └── validator/ # JSON validator tool
+│               └── diff/      # JSON diff tool
 │
 ├── components/
 │   ├── layouts/
@@ -95,9 +97,13 @@ This project is built with modern web technologies and best practices:
 - [x] JSON Formatter
   - [x] Format/Validate functionality
   - [x] Copy/Download options
-  - [ ] Share functionality
 - [x] JSON Validator
-- [ ] JSON Diff
+  - [x] Format/Validate functionality
+  - [x] Copy/Download options
+- [x] JSON Diff
+  - [x] Compare functionality
+  - [x] Export result as JSON/CSV
+  - [ ] <u>Fix the table display issue</u>
 - [ ] JSON Minifier
 
 #### Conversion Tools

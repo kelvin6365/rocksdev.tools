@@ -14,19 +14,62 @@
       "output": "格式化输出",
       "placeholder": "粘贴你的 JSON 数据...",
       "title": "JSON 格式化器",
-      "upload": "上传 JSON"
+      "upload": "上传 JSON",
+      "share": "分享"
     },
     "validator": {
+      "copy": "复制到剪贴板",
+      "copied": "已复制到剪贴板！",
+      "clear": "清除",
       "description": "Validate your JSON data with advanced tools.",
       "error": {
+        "clipboard": "从剪贴板粘贴失败",
         "empty": "输入不能为空",
-        "invalid": "无效的 JSON"
+        "invalid": "无效的 JSON",
+        "copy": "无法复制到剪贴板",
+        "paste": "无法从剪贴板粘贴"
       },
       "input": "输入 JSON",
       "invalid": "JSON 无效",
+      "paste": "从剪贴板粘贴",
       "title": "JSON 验证器",
       "valid": "JSON 有效",
-      "validate": "验证"
+      "validate": "验证",
+      "validating": "正在验证...",
+      "errorPosition": "位置 {position} 错误",
+      "loadSample": "加载样品",
+      "pasted": "从剪贴板粘贴！",
+      "reset": "重置"
+    },
+    "diff": {
+      "added": "额外",
+      "addedProperties": "添加的属性",
+      "compare": "比较",
+      "share": "分享",
+      "description": "比较两个 JSON 对象并找出它们的差异",
+      "differences": "差异",
+      "error": {
+        "empty": "两个输入都是必需的",
+        "invalid": "一个或两个输入中的 JSON 无效"
+      },
+      "removedProperties": "删除的属性",
+      "rightInput": "修改后的 JSON",
+      "title": "JSON 差异",
+      "upload": "上传 JSON",
+      "removed": "已删除",
+      "value": "价值",
+      "newValue": "新价值",
+      "oldValue": "旧值",
+      "path": "小路",
+      "placeholder": "将您的 JSON 粘贴到此处...",
+      "exportResult": "导出结果",
+      "exportAsJson": "导出为 JSON",
+      "exported": "导出为 {format} 成功！",
+      "export": "出口",
+      "exportAsCsv": "导出为 CSV",
+      "leftInput": "原始 JSON",
+      "modified": "修改的",
+      "modifiedProperties": "修改属性"
     }
   }
 }

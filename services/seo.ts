@@ -252,4 +252,40 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
   },
+  "json.diff": {
+    en: {
+      title: "JSON Diff | RocksDev Tools",
+      description:
+        "Compare two JSON objects and find their differences with our powerful online JSON diff tool.",
+      keywords: ["json diff", "json difference", "json tools"],
+      openGraph: {
+        type: "website",
+        title: "JSON Diff",
+        description: "Compare two JSON objects and find their differences",
+        image: "/tools/json-diff-og.png",
+      },
+    },
+    "zh-CN": {
+      title: "JSON 差異工具 | RocksDev 工具集",
+      description: "比較兩個 JSON 對象並找出它們的差異",
+      keywords: ["json差異", "json差異", "json工具"],
+      openGraph: {
+        type: "website",
+        title: "JSON 差異工具",
+        description: "比較兩個 JSON 對象並找出它們的差異",
+        image: "/tools/json-diff-og.png",
+      },
+    },
+    "zh-HK": {
+      title: "JSON 差異工具 | RocksDev 工具集",
+      description: "比較兩個 JSON 對象並找出它們的差異",
+      keywords: ["json差異", "json差異", "json工具"],
+      openGraph: {
+        type: "website",
+        title: "JSON 差異工具",
+        description: "比較兩個 JSON 對象並找出它們的差異",
+        image: "/tools/json-diff-og.png",
+      },
+    },
+  },
 };

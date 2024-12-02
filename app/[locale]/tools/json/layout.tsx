@@ -17,7 +17,7 @@ export default function JsonToolsLayout({
   const t = useTranslations();
 
   return (
-    <div className="container flex gap-4 p-4">
+    <div className="flex gap-4 p-0 py-4 md:p-4">
       {/* Sidebar */}
       <aside className="hidden w-48 shrink-0 md:block">
         <nav className="sticky top-24 space-y-2">
@@ -46,7 +46,7 @@ export default function JsonToolsLayout({
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1">{children}</main>
+      <main className="w-full">{children}</main>
     </div>
   );
 }

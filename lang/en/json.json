@@ -14,19 +14,62 @@
       "output": "Formatted Output",
       "placeholder": "Paste your JSON here...",
       "title": "JSON Formatter",
-      "upload": "Upload JSON"
+      "upload": "Upload JSON",
+      "share": "Share"
     },
     "validator": {
+      "copy": "Copy to clipboard",
+      "copied": "Copied to clipboard!",
+      "clear": "Clear",
       "description": "Validate your JSON data with advanced tools.",
       "error": {
+        "clipboard": "Failed to paste from clipboard",
         "empty": "Input cannot be empty",
-        "invalid": "Invalid JSON"
+        "invalid": "Invalid JSON",
+        "copy": "Failed to copy to clipboard",
+        "paste": "Failed to paste from clipboard"
       },
       "input": "Input JSON",
       "invalid": "JSON is invalid",
+      "paste": "Paste from clipboard",
       "title": "JSON Validator",
       "valid": "JSON is valid",
-      "validate": "Validate"
+      "validate": "Validate",
+      "validating": "Validating...",
+      "reset": "Reset",
+      "loadSample": "Load Sample",
+      "pasted": "Pasted from clipboard!",
+      "errorPosition": "Error at position {position}"
+    },
+    "diff": {
+      "title": "JSON Diff",
+      "description": "Compare two JSON objects and find their differences",
+      "leftInput": "Original JSON",
+      "rightInput": "Modified JSON",
+      "placeholder": "Paste your JSON here...",
+      "compare": "Compare",
+      "differences": "Differences",
+      "share": "Share",
+      "upload": "Upload JSON",
+      "error": {
+        "empty": "Both inputs are required",
+        "invalid": "Invalid JSON in one or both inputs"
+      },
+      "added": "Added",
+      "removed": "Removed",
+      "modified": "Modified",
+      "addedProperties": "Added Properties",
+      "removedProperties": "Removed Properties",
+      "modifiedProperties": "Modified Properties",
+      "path": "Path",
+      "value": "Value",
+      "oldValue": "Old Value",
+      "newValue": "New Value",
+      "export": "Export",
+      "exportResult": "Export Result",
+      "exportAsJson": "Export as JSON",
+      "exportAsCsv": "Export as CSV",
+      "exported": "Exported as {format} successfully!"
     }
   }
 }

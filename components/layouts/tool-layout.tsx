@@ -34,7 +34,7 @@ export function ToolLayout({
   const backHref = parentTool?.href || `/tools/${paths.slice(0, -1).join("/")}`;
 
   return (
-    <div className={cn("space-y-6 px-2", className)}>
+    <div className={cn("space-y-6 md:px-2", className)}>
       {/* Header Section */}
       <div className="flex items-start justify-between">
         <div className="space-y-2">
@@ -75,7 +75,7 @@ export function ToolLayout({
       </div>
 
       {/* Main Content */}
-      <Card className="p-6">{children}</Card>
+      <Card className="p-4 md:p-6">{children}</Card>
     </div>
   );
 }

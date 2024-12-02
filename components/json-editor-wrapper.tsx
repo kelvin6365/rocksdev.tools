@@ -6,12 +6,14 @@ interface JsonEditorWrapperProps {
   data: any;
   setData: (data: any) => void;
   rootName?: string;
+  restrictEdit?: boolean;
 }
 
 export default function JsonEditorWrapper({
   data,
   setData,
   rootName = "data",
+  restrictEdit = false,
 }: JsonEditorWrapperProps) {
   return (
     <JsonEditor
@@ -19,6 +21,7 @@ export default function JsonEditorWrapper({
       data={data}
       setData={setData}
       rootName={rootName}
+      restrictEdit={restrictEdit}
     />
   );
 }

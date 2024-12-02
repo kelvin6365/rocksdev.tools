@@ -5,6 +5,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { toast } from "sonner";
+import {
+  Copy,
+  CheckCircle2,
+  XCircle,
+  FileJson,
+  RotateCcw,
+  Clipboard,
+} from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 export function JsonValidator() {
   const t = useTranslations("json.validator");
@@ -15,7 +24,7 @@ export function JsonValidator() {
 
   const validateJson = () => {
     if (!input.trim()) {
-      toast.warning(t("error.empty"), {});
+      toast.warning(t("error.empty"));
       return;
     }
 
@@ -24,51 +33,135 @@ export function JsonValidator() {
       JSON.parse(input);
       setIsValid(true);
       setErrorMessage("");
-      toast.success(t("valid"), {});
+      toast.success(t("valid"));
     } catch (error) {
       setIsValid(false);
       setErrorMessage((error as Error).message);
-      toast.error(t("error.invalid"), {});
+      toast.error(t("error.invalid"));
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleBlur = () => {
-    if (input.trim()) {
-      validateJson();
+  const getErrorPosition = (message: string): number | null => {
+    const match = message.match(/position (\d+)/);
+    return match ? parseInt(match[1]) : null;
+  };
+
+  const handlePaste = async () => {
+    try {
+      const text = await navigator.clipboard.readText();
+      setInput(text);
+      toast.success(t("pasted"));
+    } catch (error) {
+      toast.error(t("error.paste"));
+    }
+  };
+
+  const loadSampleJson = () => {
+    const sample = {
+      name: "John Doe",
+      age: 30,
+      email: "john@example.com",
+      isActive: true,
+      hobbies: ["reading", "music"],
+      address: {
+        street: "123 Main St",
+        city: "Boston",
+        country: "USA",
+      },
+    };
+    setInput(JSON.stringify(sample, null, 2));
+  };
+
+  const resetValidator = () => {
+    setInput("");
+    setIsValid(null);
+    setErrorMessage("");
+    toast.info(t("reset"));
+  };
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(input);
+      toast.success(t("copied"));
+    } catch (error) {
+      toast.error(t("error.copy"));
     }
   };
 
   return (
     <div className="space-y-4">
+      <div className="flex flex-wrap gap-2">
+        <Button variant="outline" onClick={handlePaste} size="sm">
+          <Clipboard className="w-4 h-4 mr-1" />
+          {t("paste")}
+        </Button>
+        <Button variant="outline" onClick={loadSampleJson} size="sm">
+          <FileJson className="w-4 h-4 mr-1" />
+          {t("loadSample")}
+        </Button>
+        <Button
+          variant="outline"
+          onClick={handleCopy}
+          size="sm"
+          disabled={!input}
+        >
+          <Copy className="w-4 h-4 mr-1" />
+          {t("copy")}
+        </Button>
+        <Button
+          variant="outline"
+          onClick={resetValidator}
+          size="sm"
+          disabled={!input}
+        >
+          <RotateCcw className="w-4 h-4 mr-1" />
+          {t("reset")}
+        </Button>
+      </div>
+
       <Textarea
         placeholder={t("input")}
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        onBlur={handleBlur}
-        className="min-h-[200px] font-mono"
+        className="min-h-[300px] font-mono"
       />
 
       <div className="flex justify-end">
         <Button onClick={validateJson} disabled={isLoading}>
-          {t("validate")}
+          {isLoading ? t("validating") : t("validate")}
         </Button>
       </div>
 
       {isValid !== null && (
-        <div
-          className={`p-4 rounded-md ${isValid ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}
-        >
-          {isValid ? (
-            <p>{t("valid")}</p>
-          ) : (
-            <div>
-              <p>{t("invalid")}</p>
-              <p className="text-sm mt-2">{errorMessage}</p>
-            </div>
-          )}
-        </div>
+        <Card>
+          <CardContent className="pt-6">
+            {isValid ? (
+              <div className="flex items-center text-green-600 gap-2">
+                <CheckCircle2 className="w-5 h-5" />
+                <span>{t("valid")}</span>
+              </div>
+            ) : (
+              <div className="space-y-2">
+                <div className="flex items-center text-red-600 gap-2">
+                  <XCircle className="w-5 h-5" />
+                  <span>{t("invalid")}</span>
+                </div>
+                <div className="bg-red-50 p-4 rounded-md text-red-800 font-mono text-sm">
+                  {errorMessage}
+                  {getErrorPosition(errorMessage) && (
+                    <div className="mt-2 text-red-600">
+                      {t("errorPosition", {
+                        position: getErrorPosition(errorMessage),
+                      })}
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+          </CardContent>
+        </Card>
       )}
     </div>
   );

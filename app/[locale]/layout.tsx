@@ -37,21 +37,14 @@ export default async function RootLayout({
       <head>
         <GoogleAdsense pId={process.env.NEXT_PUBLIC_ADSENSE_ID ?? ""} />
       </head>
-      <body
-        className={cn(
-          inter.className,
-          "min-h-screen bg-background flex flex-col",
-        )}
-      >
+      <body className={cn(inter.className, "bg-background overflow-x-hidden")}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <div className="flex flex-col flex-1">
-            <NavBar />
-            <main className="container py-6">{children}</main>
-            <ToastProvider />
-            <Analytics />
-            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
-            <SpeedInsights />
-          </div>
+          <NavBar />
+          <main className="container py-6">{children}</main>
+          <ToastProvider />
+          <Analytics />
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
+          <SpeedInsights />
           <Footer />
         </NextIntlClientProvider>
       </body>

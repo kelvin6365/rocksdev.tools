@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { getMetadata } from "@/services/seo";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export const generateMetadata = async ({
   params,
@@ -56,9 +56,6 @@ export default function NotFound() {
                   {t("not-found.return-home")}
                 </span>
               </Link>
-            </Button>
-            <Button variant="outline" size="lg" className="min-w-[140px]">
-              {t("not-found.go-back")}
             </Button>
           </div>
         </div>
