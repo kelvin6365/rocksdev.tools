@@ -1,11 +1,20 @@
 {
   "json": {
     "formatter": {
-      "title": "JSON Formatter",
+      "copied": "已複製到剪貼簿！",
+      "copy": "複製",
       "description": "Format and validate your JSON data with advanced tools.",
-      "input": "Input JSON",
-      "output": "Formatted Output",
-      "format": "Format"
+      "download": "下載 JSON",
+      "error": {
+        "empty": "輸入不能為空",
+        "invalid": "無效的 JSON"
+      },
+      "format": "格式化",
+      "input": "輸入 JSON",
+      "output": "格式化輸出",
+      "placeholder": "粘貼你的 JSON 數據...",
+      "title": "JSON 格式化器",
+      "upload": "上傳 JSON"
     }
   }
 }

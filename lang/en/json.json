@@ -12,7 +12,9 @@
       "error": {
         "empty": "Input cannot be empty",
         "invalid": "Invalid JSON"
-      }
+      },
+      "upload": "Upload JSON",
+      "download": "Download JSON"
     }
   }
 }
