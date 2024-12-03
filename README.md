@@ -122,8 +122,8 @@ This project is built with modern web technologies and best practices:
 
 - [x] Base64 Encoder/Decoder
   - [x] Text encoding/decoding
-  - [ ] File encoding/decoding
-  - [ ] Batch processing
+  - [x] File encoding/decoding
+  - [x] URL-safe encoding
 - [ ] Markdown to HTML
 - [ ] CSV to JSON
 

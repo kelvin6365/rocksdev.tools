@@ -1,25 +1,28 @@
 {
   "converters": {
     "base64": {
+      "clear": "清除",
       "copy": "複製",
       "decode": "解碼",
       "description": "將 Base64 轉換為其他格式",
-      "download": "下載",
       "encode": "編碼",
       "error": {
         "empty": "輸入不能為空",
         "invalid": "無效的 Base64 字串"
       },
+      "fileConversion": "文件轉換",
       "input": "輸入",
       "message": {
         "download": "下載完成",
         "success": "已複製到剪貼簿"
       },
       "output": "輸出",
-      "placeholder": "輸入 Base64 字串或上傳文件",
+      "placeholder": "輸入字串",
+      "stringConversion": "字串轉換",
       "title": "Base64 轉換器",
       "upload": "上傳",
-      "clear": "清除"
+      "uploadFile": "上傳文件",
+      "urlSafe": "URL-safe 編碼 (將 + 替換為 - 和 / 替換為 _)"
     }
   }
 }

@@ -1,25 +1,28 @@
 {
   "converters": {
     "base64": {
+      "clear": "Clear",
       "copy": "Copy",
       "decode": "Decode",
       "description": "Convert between Base64 and other formats",
-      "download": "Download",
       "encode": "Encode",
       "error": {
         "empty": "Input cannot be empty",
         "invalid": "Invalid Base64 string"
       },
+      "fileConversion": "File Conversion",
       "input": "Input",
       "message": {
         "download": "Downloaded",
         "success": "Copied to clipboard"
       },
       "output": "Output",
-      "placeholder": "Enter Base64 string or upload a file",
+      "placeholder": "Enter string to convert",
+      "stringConversion": "String Conversion",
       "title": "Base64 Converter",
       "upload": "Upload",
-      "clear": "Clear"
+      "uploadFile": "Upload a file to convert",
+      "urlSafe": "URL-safe encoding (replace + with - and / with _)"
     }
   }
 }
