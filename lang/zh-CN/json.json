@@ -70,6 +70,18 @@
       "leftInput": "原始 JSON",
       "modified": "修改的",
       "modifiedProperties": "修改属性"
+    },
+    "minifier": {
+      "title": "JSON 压缩器",
+      "description": "压缩和压缩你的 JSON 数据",
+      "placeholder": "粘贴你的 JSON 数据...",
+      "minifiedOutput": "压缩输出",
+      "minify": "压缩 JSON",
+      "copy": "复制到剪贴板",
+      "message": {
+        "success": "压缩 JSON 下载成功！"
+      },
+      "download": "下载"
     }
   }
 }

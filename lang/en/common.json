@@ -1,4 +1,10 @@
 {
+  "home": {
+    "freeFastReliable": "Free, fast, and reliable tools for developers. No ads, no tracking, just tools.",
+    "rocksDevTools": "Rocks Dev Tools",
+    "tryNow": "Try Now",
+    "freeOpenSource": "Free & Open Source"
+  },
   "nav": {
     "back": "back",
     "categories": "Categories",

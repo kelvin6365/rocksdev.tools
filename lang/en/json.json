@@ -1,5 +1,35 @@
 {
   "json": {
+    "diff": {
+      "added": "Added",
+      "addedProperties": "Added Properties",
+      "compare": "Compare",
+      "description": "Compare two JSON objects and find their differences",
+      "differences": "Differences",
+      "error": {
+        "empty": "Both inputs are required",
+        "invalid": "Invalid JSON in one or both inputs"
+      },
+      "export": "Export",
+      "exportAsCsv": "Export as CSV",
+      "exportAsJson": "Export as JSON",
+      "exported": "Exported as {format} successfully!",
+      "exportResult": "Export Result",
+      "leftInput": "Original JSON",
+      "modified": "Modified",
+      "modifiedProperties": "Modified Properties",
+      "newValue": "New Value",
+      "oldValue": "Old Value",
+      "path": "Path",
+      "placeholder": "Paste your JSON here...",
+      "removed": "Removed",
+      "removedProperties": "Removed Properties",
+      "rightInput": "Modified JSON",
+      "share": "Share",
+      "title": "JSON Diff",
+      "upload": "Upload JSON",
+      "value": "Value"
+    },
     "formatter": {
       "copied": "Copied to clipboard!",
       "copy": "Copy",
@@ -13,63 +43,51 @@
       "input": "Input JSON",
       "output": "Formatted Output",
       "placeholder": "Paste your JSON here...",
+      "share": "Share",
       "title": "JSON Formatter",
-      "upload": "Upload JSON",
-      "share": "Share"
+      "upload": "Upload JSON"
+    },
+    "minifier": {
+      "copied": "Copied to clipboard!",
+      "copy": "Copy to Clipboard",
+      "description": "Minify and compress your JSON data",
+      "download": "Download",
+      "error": {
+        "empty": "Input cannot be empty.",
+        "invalid": "Invalid JSON format."
+      },
+      "message": {
+        "success": "Minified JSON downloaded successfully!"
+      },
+      "minifiedOutput": "Minified Output",
+      "minify": "Minify JSON",
+      "placeholder": "Paste your JSON here...",
+      "title": "JSON Minifier",
+      "upload": "Upload JSON"
     },
     "validator": {
-      "copy": "Copy to clipboard",
-      "copied": "Copied to clipboard!",
       "clear": "Clear",
+      "copied": "Copied to clipboard!",
+      "copy": "Copy to clipboard",
       "description": "Validate your JSON data with advanced tools.",
       "error": {
         "clipboard": "Failed to paste from clipboard",
+        "copy": "Failed to copy to clipboard",
         "empty": "Input cannot be empty",
         "invalid": "Invalid JSON",
-        "copy": "Failed to copy to clipboard",
         "paste": "Failed to paste from clipboard"
       },
+      "errorPosition": "Error at position {position}",
       "input": "Input JSON",
       "invalid": "JSON is invalid",
+      "loadSample": "Load Sample",
       "paste": "Paste from clipboard",
+      "pasted": "Pasted from clipboard!",
+      "reset": "Reset",
       "title": "JSON Validator",
       "valid": "JSON is valid",
       "validate": "Validate",
-      "validating": "Validating...",
-      "reset": "Reset",
-      "loadSample": "Load Sample",
-      "pasted": "Pasted from clipboard!",
-      "errorPosition": "Error at position {position}"
-    },
-    "diff": {
-      "title": "JSON Diff",
-      "description": "Compare two JSON objects and find their differences",
-      "leftInput": "Original JSON",
-      "rightInput": "Modified JSON",
-      "placeholder": "Paste your JSON here...",
-      "compare": "Compare",
-      "differences": "Differences",
-      "share": "Share",
-      "upload": "Upload JSON",
-      "error": {
-        "empty": "Both inputs are required",
-        "invalid": "Invalid JSON in one or both inputs"
-      },
-      "added": "Added",
-      "removed": "Removed",
-      "modified": "Modified",
-      "addedProperties": "Added Properties",
-      "removedProperties": "Removed Properties",
-      "modifiedProperties": "Modified Properties",
-      "path": "Path",
-      "value": "Value",
-      "oldValue": "Old Value",
-      "newValue": "New Value",
-      "export": "Export",
-      "exportResult": "Export Result",
-      "exportAsJson": "Export as JSON",
-      "exportAsCsv": "Export as CSV",
-      "exported": "Exported as {format} successfully!"
+      "validating": "Validating..."
     }
   }
 }

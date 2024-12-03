@@ -1,5 +1,35 @@
 {
   "json": {
+    "diff": {
+      "added": "額外",
+      "addedProperties": "新增的屬性",
+      "compare": "比較",
+      "description": "比較兩個 JSON 物件並找出它們的差異",
+      "differences": "差異",
+      "error": {
+        "empty": "兩個輸入都是必需的",
+        "invalid": "一個或兩個輸入中的 JSON 無效"
+      },
+      "export": "匯出",
+      "exportAsCsv": "匯出為 CSV",
+      "exportAsJson": "匯出為 JSON",
+      "exported": "匯出為 {format} 成功！",
+      "exportResult": "匯出結果",
+      "leftInput": "原始 JSON",
+      "modified": "修改的",
+      "modifiedProperties": "修改屬性",
+      "newValue": "新價值",
+      "oldValue": "舊值",
+      "path": "小路",
+      "placeholder": "粘貼你的 JSON 數據...",
+      "removed": "已刪除",
+      "removedProperties": "刪除的屬性",
+      "rightInput": "修改後的 JSON",
+      "share": "分享",
+      "title": "JSON 差異",
+      "upload": "上傳 JSON",
+      "value": "價值"
+    },
     "formatter": {
       "copied": "已複製到剪貼簿！",
       "copy": "複製",
@@ -13,63 +43,51 @@
       "input": "輸入 JSON",
       "output": "格式化輸出",
       "placeholder": "粘貼你的 JSON 數據...",
+      "share": "分享",
       "title": "JSON 格式化器",
-      "upload": "上傳 JSON",
-      "share": "分享"
+      "upload": "上傳 JSON"
+    },
+    "minifier": {
+      "copied": "已複製到剪貼簿！",
+      "copy": "複製到剪貼簿",
+      "description": "壓縮和壓縮你的 JSON 數據",
+      "download": "下載",
+      "error": {
+        "empty": "輸入不能為空",
+        "invalid": "無效的 JSON 格式"
+      },
+      "message": {
+        "success": "壓縮 JSON 下載成功！"
+      },
+      "minifiedOutput": "壓縮輸出",
+      "minify": "壓縮 JSON",
+      "placeholder": "粘貼你的 JSON 數據...",
+      "title": "JSON 壓縮器",
+      "upload": "上傳 JSON"
     },
     "validator": {
-      "copy": "複製到剪貼簿",
-      "copied": "已複製到剪貼簿！",
       "clear": "清除",
+      "copied": "已複製到剪貼簿！",
+      "copy": "複製到剪貼簿",
       "description": "Validate your JSON data with advanced tools.",
       "error": {
         "clipboard": "從剪貼簿粘貼失敗",
+        "copy": "無法複製到剪貼簿",
         "empty": "輸入不能為空",
         "invalid": "無效的 JSON",
-        "copy": "無法複製到剪貼簿",
         "paste": "無法從剪貼簿貼上"
       },
+      "errorPosition": "位置 {position} 錯誤",
       "input": "輸入 JSON",
       "invalid": "JSON 無效",
+      "loadSample": "加載樣品",
       "paste": "從剪貼簿粘貼",
+      "pasted": "從剪貼簿貼上！",
+      "reset": "重置",
       "title": "JSON 驗證器",
       "valid": "JSON 有效",
       "validate": "驗證",
-      "loadSample": "加載樣品",
-      "pasted": "從剪貼簿貼上！",
-      "validating": "正在驗證...",
-      "errorPosition": "位置 {position} 錯誤",
-      "reset": "重置"
-    },
-    "diff": {
-      "export": "匯出",
-      "exportAsJson": "匯出為 JSON",
-      "exportAsCsv": "匯出為 CSV",
-      "differences": "差異",
-      "exportResult": "匯出結果",
-      "upload": "上傳 JSON",
-      "placeholder": "粘貼你的 JSON 數據...",
-      "added": "額外",
-      "addedProperties": "新增的屬性",
-      "compare": "比較",
-      "description": "比較兩個 JSON 物件並找出它們的差異",
-      "error": {
-        "empty": "兩個輸入都是必需的",
-        "invalid": "一個或兩個輸入中的 JSON 無效"
-      },
-      "exported": "匯出為 {format} 成功！",
-      "leftInput": "原始 JSON",
-      "modified": "修改的",
-      "modifiedProperties": "修改屬性",
-      "path": "小路",
-      "newValue": "新價值",
-      "oldValue": "舊值",
-      "removed": "已刪除",
-      "removedProperties": "刪除的屬性",
-      "rightInput": "修改後的 JSON",
-      "share": "分享",
-      "title": "JSON 差異",
-      "value": "價值"
+      "validating": "正在驗證..."
     }
   }
 }

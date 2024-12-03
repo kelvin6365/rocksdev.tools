@@ -83,7 +83,7 @@ This project is built with modern web technologies and best practices:
 
 #### Core Features (MVP)
 
-- [ ] Responsive layout
+- [x] Responsive layout
 - [x] Ad integration spaces
 - [x] Analytics setup
 - [ ] Basic SEO structure
@@ -103,8 +103,10 @@ This project is built with modern web technologies and best practices:
 - [x] JSON Diff
   - [x] Compare functionality
   - [x] Export result as JSON/CSV
-  - [ ] <u>Fix the table display issue</u>
-- [ ] JSON Minifier
+  - [x] <u>Fix the table display issue</u>
+- [x] JSON Minifier
+  - [x] Minify functionality
+  - [x] Copy/Download options
 
 #### Conversion Tools
 
