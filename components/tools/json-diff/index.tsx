@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
+import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { ArrowRight, Download, FileJson, Loader2, Upload } from "lucide-react";
 import { useTranslations } from "next-intl";
 import * as React from "react";
@@ -123,7 +124,7 @@ export function JsonDiff() {
           <CardContent className="relative px-0 h-[300px]">
             <Textarea
               placeholder={t("placeholder")}
-              className="h-full font-mono"
+              className="h-full font-mono max-w-[479px]"
               value={leftInput}
               onChange={(e) => setLeftInput(e.target.value)}
             />
@@ -157,7 +158,7 @@ export function JsonDiff() {
           <CardContent className="relative px-0 h-[300px]">
             <Textarea
               placeholder={t("placeholder")}
-              className="h-full font-mono"
+              className="h-full font-mono max-w-[479px]"
               value={rightInput}
               onChange={(e) => setRightInput(e.target.value)}
             />
@@ -311,43 +312,41 @@ export function JsonDiff() {
               </div>
 
               {/* Tables Container */}
-              <div className="space-y-4">
+              <div className="space-y-4 overflow-auto">
                 {/* Added Properties */}
                 {diffResult.added.length > 0 && (
-                  <div className="border rounded-lg overflow-x-auto">
+                  <div className="border rounded-lg">
                     <div className="bg-green-500/5 px-4 py-2 border-b">
                       <h3 className="font-medium text-green-600">
                         {t("addedProperties")}
                       </h3>
                     </div>
-                    <div className="w-full overflow-hidden">
-                      <Table className="min-w-full">
-                        <TableHeader>
-                          <TableRow>
-                            <TableHead className="w-[200px]">
-                              {t("path")}
-                            </TableHead>
-                            <TableHead>{t("value")}</TableHead>
+                    <Table>
+                      <TableHeader>
+                        <TableRow>
+                          <TableHead className="w-[200px]">
+                            {t("path")}
+                          </TableHead>
+                          <TableHead>{t("value")}</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        {diffResult.added.map((item: any, index: number) => (
+                          <TableRow key={index}>
+                            <TableCell className="font-mono whitespace-nowrap">
+                              {item.path}
+                            </TableCell>
+                            <TableCell className="font-mono text-wrap">
+                              <pre className="whitespace-pre-wrap break-words text-sm">
+                                {typeof item.value === "object"
+                                  ? JSON.stringify(item.value, null, 2)
+                                  : String(item.value)}
+                              </pre>
+                            </TableCell>
                           </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                          {diffResult.added.map((item: any, index: number) => (
-                            <TableRow key={index}>
-                              <TableCell className="font-mono whitespace-nowrap">
-                                {item.path}
-                              </TableCell>
-                              <TableCell className="font-mono">
-                                <pre className="whitespace-pre-wrap break-words text-sm">
-                                  {typeof item.value === "object"
-                                    ? JSON.stringify(item.value, null, 2)
-                                    : String(item.value)}
-                                </pre>
-                              </TableCell>
-                            </TableRow>
-                          ))}
-                        </TableBody>
-                      </Table>
-                    </div>
+                        ))}
+                      </TableBody>
+                    </Table>
                   </div>
                 )}
                 {/* Removed Properties - Similar structure */}
@@ -371,7 +370,7 @@ export function JsonDiff() {
                           {diffResult.removed.map(
                             (item: any, index: number) => (
                               <TableRow key={index}>
-                                <TableCell className="font-mono whitespace-nowrap">
+                                <TableCell className="font-mono text-wrap">
                                   {item.path}
                                 </TableCell>
                               </TableRow>
