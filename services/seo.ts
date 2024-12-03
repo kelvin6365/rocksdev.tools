@@ -329,7 +329,13 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       title: "Base64 Converter | RocksDev Tools",
       description:
         "Convert between Base64 and other formats with our powerful online Base64 converter tool.",
-      keywords: ["base64 converter", "base64 tools"],
+      keywords: [
+        "base64 converter",
+        "base64 tools",
+        "base64 encoding",
+        "base64 decoding",
+        "file base64",
+      ],
       openGraph: {
         type: "website",
         title: "Base64 Converter",
@@ -341,7 +347,13 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       title: "Base64 轉換器 | RocksDev 工具集",
       description:
         "使用我們強大的在線 Base64 轉換器工具在 Base64 和其他格式之間轉換。",
-      keywords: ["base64轉換器", "base64工具"],
+      keywords: [
+        "base64轉換器",
+        "base64工具",
+        "base64編碼",
+        "base64解碼",
+        "文件base64",
+      ],
       openGraph: {
         type: "website",
         title: "Base64 轉換器",
@@ -353,7 +365,13 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       title: "Base64 轉換器 | RocksDev 工具集",
       description:
         "使用我們強大的在線 Base64 轉換器工具在 Base64 和其他格式之間轉換。",
-      keywords: ["base64轉換器", "base64工具"],
+      keywords: [
+        "base64轉換器",
+        "base64工具",
+        "base64編碼",
+        "base64解碼",
+        "文件base64",
+      ],
       openGraph: {
         type: "website",
         title: "Base64 轉換器",
