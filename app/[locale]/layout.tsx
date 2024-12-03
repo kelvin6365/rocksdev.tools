@@ -36,6 +36,10 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <GoogleAdsense pId={process.env.NEXT_PUBLIC_ADSENSE_ID ?? ""} />
+        <meta
+          name="google-adsense-account"
+          content={`ca-pub-${process.env.NEXT_PUBLIC_ADSENSE_ID}`}
+        ></meta>
       </head>
       <body className={cn(inter.className, "bg-background overflow-x-hidden")}>
         <NextIntlClientProvider locale={locale} messages={messages}>
