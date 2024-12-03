@@ -288,4 +288,40 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
   },
+  "json.minifier": {
+    en: {
+      title: "JSON Minifier | RocksDev Tools",
+      description:
+        "Minify your JSON data with our powerful online JSON minifier tool.",
+      keywords: ["json minifier", "json minify", "json tools"],
+      openGraph: {
+        type: "website",
+        title: "JSON Minifier",
+        description: "Minify your JSON data online",
+        image: "/tools/json-minifier-og.png",
+      },
+    },
+    "zh-CN": {
+      title: "JSON 壓縮器 | RocksDev 工具集",
+      description: "使用我們強大的在線 JSON 壓縮器工具壓縮您的 JSON 數據。",
+      keywords: ["json壓縮器", "json壓縮", "json工具"],
+      openGraph: {
+        type: "website",
+        title: "JSON 壓縮器",
+        description: "在線壓縮您的 JSON 數據",
+        image: "/tools/json-minifier-og.png",
+      },
+    },
+    "zh-HK": {
+      title: "JSON 壓縮器 | RocksDev 工具集",
+      description: "使用我們強大的在線 JSON 壓縮器工具壓縮您的 JSON 數據。",
+      keywords: ["json壓縮器", "json壓縮", "json工具"],
+      openGraph: {
+        type: "website",
+        title: "JSON 壓縮器",
+        description: "在線壓縮您的 JSON 數據",
+        image: "/tools/json-minifier-og.png",
+      },
+    },
+  },
 };
