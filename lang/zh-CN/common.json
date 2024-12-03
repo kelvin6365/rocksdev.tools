@@ -1,4 +1,9 @@
 {
+  "home": {
+    "freeFastReliable": "免费、快速、可靠的开发者工具。无广告，无跟踪，只有工具。",
+    "rocksDevTools": "Rocks 开发者工具",
+    "freeOpenSource": "免费 & 开源"
+  },
   "nav": {
     "back": "返回",
     "categories": "分类",

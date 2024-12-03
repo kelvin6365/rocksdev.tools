@@ -1,4 +1,9 @@
 {
+  "home": {
+    "freeFastReliable": "免費、快速、可靠的開發者工具。無廣告，無追蹤，只有工具。",
+    "rocksDevTools": "Rocks 開發者工具",
+    "freeOpenSource": "免費 & 開源"
+  },
   "nav": {
     "back": "返回",
     "categories": "分類",

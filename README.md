@@ -243,6 +243,10 @@ NEXT_PUBLIC_ADSENSE_ID=your_adsense_id
 
 See [CONTRIBUTING.md](.github/CONTRIBUTING.md)
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=kelvin6365/rocksdev.tools&type=Date)](https://star-history.com/#kelvin6365/rocksdev.tools&Date)
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

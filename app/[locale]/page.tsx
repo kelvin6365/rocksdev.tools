@@ -22,6 +22,14 @@ export default function HomePage() {
         <p className="max-w-[600px] text-lg text-gray-200 md:text-xl">
           {t("freeFastReliable")}
         </p>
+        {/* Github start */}
+        <iframe
+          src="https://ghbtns.com/github-btn.html?user=kelvin6365&repo=rocksdev.tools&type=star&count=true&size=large"
+          width="170"
+          height="30"
+          title="GitHub"
+          className="mx-auto"
+        ></iframe>
       </section>
 
       {/* Tools Grid */}
