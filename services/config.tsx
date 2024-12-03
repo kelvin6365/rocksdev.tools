@@ -1,5 +1,3 @@
-import { Code, Zap, FileText, Layout } from "lucide-react";
-
 export const config = {
   name: "Rocks Dev",
   description: "A comprehensive collection of developer tools",
@@ -60,6 +58,14 @@ export const config = {
       href: "/tools/converters",
       description: "Convert between different data formats",
       category: "converters",
+      subTools: [
+        {
+          label: "Base64",
+          value: "converters.base64",
+          href: "/tools/converters/base64",
+          description: "Convert between Base64 and other formats",
+        },
+      ],
     },
     {
       label: "Text Tools",

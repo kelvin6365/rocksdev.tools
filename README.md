@@ -37,25 +37,35 @@ This project is built with modern web technologies and best practices:
 │               └── formatter/ # JSON formatter tool
 │               └── validator/ # JSON validator tool
 │               └── diff/      # JSON diff tool
+│               └── minifier/  # JSON minifier tool
+│           └── converters/   # Conversion tools
+│               └── base64/   # Base64 converter tool
 │
 ├── components/
+│   ├── tools/
+│   │   ├── json-formatter # JSON formatter component
+│   │   ├── json-validator # JSON validator component
+│   │   ├── json-diff      # JSON diff component
+│   │   └── json-minifier  # JSON minifier component
+│   │   └── base64         # Base64 converter component
 │   ├── layouts/
 │   │   └── tool-layout.tsx   # Common tool layout
 │   └── ui/                   # UI Components
-│       ├── toast.tsx
-│       ├── toaster.tsx
-│       └── use-toast.ts
+│       ├── shadcn         # shadcn components
 │
 ├── lang/                     # i18n translations
 │   ├── en/
 │   │   ├── common.json
 │   │   └── json.json
+│   │   └── converters.json
 │   ├── zh-CN/
 │   │   └── common.json
 │   │   └── json.json
-│   └── zh-HK/
-│       └── common.json
-│       └── json.json
+│   │   └── converters.json
+│   ├── zh-HK/
+│   │   └── common.json
+│   │   └── json.json
+│   │   └── converters.json
 │
 ├── providers/
 │   └── toast-provider.tsx    # Toast notifications provider
@@ -110,8 +120,8 @@ This project is built with modern web technologies and best practices:
 
 #### Conversion Tools
 
-- [ ] Base64 Encoder/Decoder
-  - [ ] Text encoding/decoding
+- [x] Base64 Encoder/Decoder
+  - [x] Text encoding/decoding
   - [ ] File encoding/decoding
   - [ ] Batch processing
 - [ ] Markdown to HTML

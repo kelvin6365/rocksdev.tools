@@ -1,0 +1,25 @@
+{
+  "converters": {
+    "base64": {
+      "copy": "Copy",
+      "decode": "Decode",
+      "description": "Convert between Base64 and other formats",
+      "download": "Download",
+      "encode": "Encode",
+      "error": {
+        "empty": "Input cannot be empty",
+        "invalid": "Invalid Base64 string"
+      },
+      "input": "Input",
+      "message": {
+        "download": "Downloaded",
+        "success": "Copied to clipboard"
+      },
+      "output": "Output",
+      "placeholder": "Enter Base64 string or upload a file",
+      "title": "Base64 Converter",
+      "upload": "Upload",
+      "clear": "Clear"
+    }
+  }
+}

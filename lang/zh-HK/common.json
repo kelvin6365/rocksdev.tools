@@ -8,7 +8,11 @@
     "tools": {
       "converters": {
         "description": "在不同數據格式之間轉換",
-        "title": "轉換工具"
+        "title": "轉換工具",
+        "base64": {
+          "description": "將 Base64 轉換為其他格式",
+          "title": "Base64 轉換器"
+        }
       },
       "dev": {
         "description": "開發者實用工具和格式化工具",

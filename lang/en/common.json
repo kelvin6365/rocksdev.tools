@@ -14,7 +14,11 @@
     "tools": {
       "converters": {
         "description": "Convert between different data formats",
-        "title": "Converters"
+        "title": "Converters",
+        "base64": {
+          "description": "Convert between Base64 and other formats",
+          "title": "Base64 Converter"
+        }
       },
       "dev": {
         "description": "Developer utilities and formatters",

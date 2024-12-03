@@ -1,0 +1,25 @@
+{
+  "converters": {
+    "base64": {
+      "description": "將 Base64 轉換為其他格式",
+      "title": "Base64 轉換器",
+      "placeholder": "輸入 Base64 字串或上傳文件",
+      "message": {
+        "success": "已複製到剪貼簿",
+        "download": "下載完成"
+      },
+      "error": {
+        "empty": "輸入不能為空",
+        "invalid": "無效的 Base64 字串"
+      },
+      "input": "輸入",
+      "output": "輸出",
+      "encode": "編碼",
+      "decode": "解碼",
+      "copy": "複製",
+      "download": "下載",
+      "upload": "上傳",
+      "clear": "清除"
+    }
+  }
+}
