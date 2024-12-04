@@ -21,7 +21,11 @@
       },
       "dev": {
         "description": "開發者實用工具和格式化工具",
-        "title": "開發工具"
+        "title": "開發工具",
+        "regex": {
+          "description": "測試和驗證正則表達式",
+          "title": "正則表達式測試工具"
+        }
       },
       "json": {
         "diff": {

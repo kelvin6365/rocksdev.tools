@@ -80,6 +80,14 @@ export const config = {
       href: "/tools/dev",
       description: "Developer utilities and formatters",
       category: "dev",
+      subTools: [
+        {
+          label: "Regex Tester",
+          value: "dev.regex",
+          href: "/tools/dev/regex",
+          description: "Test regular expressions",
+        },
+      ],
     },
   ],
 };

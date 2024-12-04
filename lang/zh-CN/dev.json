@@ -1,0 +1,39 @@
+{
+  "dev": {
+    "regex": {
+      "basePattern": "基本模式",
+      "caseInsensitive": "不区分大小写 (i)",
+      "commonPatterns": "常见模式",
+      "copied": "已复制到剪贴板！",
+      "copy": "复制",
+      "description": "测试和验证正则表达式",
+      "dotAll": "点号匹配所有字符 (s)",
+      "email": "电子邮件",
+      "error": {
+        "copy": "复制失败"
+      },
+      "example": "示例",
+      "explanation": "解释",
+      "global": "全局 (g)",
+      "groups": "分组",
+      "indexLength": "索引：{index}，长度：{length}",
+      "match": "匹配 {index}",
+      "matchCount": "匹配数量：{count}",
+      "matches": "匹配结果",
+      "multiline": "多行 (m)",
+      "pattern": "模式",
+      "patternBreakdown": "模式分解",
+      "patternPlaceholder": "在此粘贴您的模式...",
+      "phoneNumber": "电话号码",
+      "placeholder": "在此粘贴您的模式...",
+      "regexPattern": "正则表达式模式",
+      "sticky": "粘性 (y)",
+      "testString": "测试字符串",
+      "testStringPlaceholder": "在此粘贴您的测试字符串...",
+      "title": "正则表达式测试工具",
+      "unicode": "Unicode (u)",
+      "url": "URL",
+      "use": "使用"
+    }
+  }
+}

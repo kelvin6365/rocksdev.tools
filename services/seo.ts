@@ -380,4 +380,39 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
   },
+  "dev.regex": {
+    en: {
+      title: "Regex Tester | RocksDev Tools",
+      description: "Test and validate regular expressions",
+      keywords: ["regex tester", "regex validator", "regex tools"],
+      openGraph: {
+        type: "website",
+        title: "Regex Tester",
+        description: "Test and validate regular expressions",
+        image: "/tools/regex-og.png",
+      },
+    },
+    "zh-CN": {
+      title: "正則表達式測試工具 | RocksDev 工具集",
+      description: "測試和驗證正則表達式",
+      keywords: ["正則表達式測試器", "正則表達式驗證器", "正則表達式工具"],
+      openGraph: {
+        type: "website",
+        title: "正則表達式測試工具",
+        description: "測試和驗證正則表達式",
+        image: "/tools/regex-og.png",
+      },
+    },
+    "zh-HK": {
+      title: "正則表達式測試工具 | RocksDev 工具集",
+      description: "測試和驗證正則表達式",
+      keywords: ["正則表達式測試器", "正則表達式驗證器", "正則表達式工具"],
+      openGraph: {
+        type: "website",
+        title: "正則表達式測試工具",
+        description: "測試和驗證正則表達式",
+        image: "/tools/regex-og.png",
+      },
+    },
+  },
 };

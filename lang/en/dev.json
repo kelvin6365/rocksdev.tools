@@ -1,0 +1,39 @@
+{
+  "dev": {
+    "regex": {
+      "basePattern": "Base Pattern",
+      "caseInsensitive": "Case Insensitive (i)",
+      "commonPatterns": "Common Patterns",
+      "copied": "Copied to clipboard!",
+      "copy": "Copied",
+      "description": "Test and validate regular expressions",
+      "dotAll": "Dot All (s)",
+      "email": "Email",
+      "error": {
+        "copy": "Failed to copy"
+      },
+      "example": "Example",
+      "explanation": "Explanation",
+      "global": "Global (g)",
+      "groups": "Groups",
+      "indexLength": "Index: {index}, Length: {length}",
+      "match": "Match {index}",
+      "matchCount": "Match Count: {count}",
+      "matches": "Matches",
+      "multiline": "Multiline (m)",
+      "pattern": "Pattern",
+      "patternBreakdown": "Pattern Breakdown",
+      "patternPlaceholder": "Paste your pattern here...",
+      "phoneNumber": "Phone Number",
+      "placeholder": "Paste your pattern here...",
+      "regexPattern": "Regex Pattern",
+      "sticky": "Sticky (y)",
+      "testString": "Test String",
+      "testStringPlaceholder": "Paste your test string here...",
+      "title": "Regex Tester",
+      "unicode": "Unicode (u)",
+      "url": "URL",
+      "use": "Use"
+    }
+  }
+}

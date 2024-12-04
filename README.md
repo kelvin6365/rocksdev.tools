@@ -40,14 +40,17 @@ This project is built with modern web technologies and best practices:
 │               └── minifier/  # JSON minifier tool
 │           └── converters/   # Conversion tools
 │               └── base64/   # Base64 converter tool
+│           └── dev/          # Developer tools
+│               └── regex/   # Regex tester tool
 │
 ├── components/
 │   ├── tools/
 │   │   ├── json-formatter # JSON formatter component
 │   │   ├── json-validator # JSON validator component
 │   │   ├── json-diff      # JSON diff component
-│   │   └── json-minifier  # JSON minifier component
+│   │   ├── json-minifier  # JSON minifier component
 │   │   └── base64         # Base64 converter component
+│   │   └── regex          # Regex tester component
 │   ├── layouts/
 │   │   └── tool-layout.tsx   # Common tool layout
 │   └── ui/                   # UI Components
@@ -58,15 +61,17 @@ This project is built with modern web technologies and best practices:
 │   │   ├── common.json
 │   │   └── json.json
 │   │   └── converters.json
+│   │   └── dev.json
 │   ├── zh-CN/
 │   │   └── common.json
 │   │   └── json.json
 │   │   └── converters.json
+│   │   └── dev.json
 │   ├── zh-HK/
 │   │   └── common.json
 │   │   └── json.json
 │   │   └── converters.json
-│
+│   │   └── dev.json
 ├── providers/
 │   └── toast-provider.tsx    # Toast notifications provider
 │
@@ -129,10 +134,10 @@ This project is built with modern web technologies and best practices:
 
 #### Developer Tools
 
-- [ ] Regular Expression Tester
-  - [ ] Live testing
-  - [ ] Common patterns library
-  - [ ] Match highlighting
+- [x] Regular Expression Tester
+  - [x] Live testing
+  - [x] Common patterns library
+  - [x] Match highlighting
 - [ ] CSS Formatter/Minifier
 - [ ] HTML Formatter/Validator
 

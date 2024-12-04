@@ -74,7 +74,8 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │               └── minifier/  # JSON minifier tool
 │           └── converters/   # Conversion tools
 │               └── base64/   # Base64 converter tool
-│
+│           └── dev/          # Developer tools
+│               └── regex/   # Regex tester tool
 ├── components/
 │   ├── tools/               # Tools components
 │   │   ├── json-formatter # JSON formatter component
@@ -82,6 +83,7 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │   │   ├── json-diff      # JSON diff component
 │   │   ├── json-minifier  # JSON minifier component
 │   │   └── base64         # Base64 converter component
+│   │   └── regex          # Regex tester component
 │   ├── layouts/
 │   │   └── tool-layout.tsx   # Common tool layout
 │   └── ui/                   # UI Components
@@ -92,15 +94,17 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │   │   ├── common.json
 │   │   └── json.json
 │   │   └── converters.json
+│   │   └── dev.json
 │   ├── zh-CN/
 │   │   └── common.json
 │   │   └── json.json
 │   │   └── converters.json
+│   │   └── dev.json
 │   ├── zh-HK/
 │   │   └── common.json
 │   │   └── json.json
 │   │   └── converters.json
-│
+│   │   └── dev.json
 ├── providers/
 │   └── toast-provider.tsx    # Toast notifications provider
 │

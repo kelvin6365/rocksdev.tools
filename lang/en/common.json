@@ -22,7 +22,11 @@
       },
       "dev": {
         "description": "Developer utilities and formatters",
-        "title": "Dev Tools"
+        "title": "Dev Tools",
+        "regex": {
+          "description": "Test and validate regular expressions",
+          "title": "Regex Tester"
+        }
       },
       "json": {
         "diff": {

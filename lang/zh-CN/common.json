@@ -21,7 +21,11 @@
       },
       "dev": {
         "description": "开发者实用工具和格式化工具",
-        "title": "开发工具"
+        "title": "开发工具",
+        "regex": {
+          "description": "测试和验证正则表达式",
+          "title": "正则表达式测试工具"
+        }
       },
       "json": {
         "diff": {
