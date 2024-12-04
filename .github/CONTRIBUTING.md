@@ -69,25 +69,37 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │       └── tools/            # Developer tools
 │           └── json/         # JSON tools
 │               └── formatter/ # JSON formatter tool
+│               └── validator/ # JSON validator tool
+│               └── diff/      # JSON diff tool
+│               └── minifier/  # JSON minifier tool
+│           └── converters/   # Conversion tools
+│               └── base64/   # Base64 converter tool
 │
 ├── components/
+│   ├── tools/               # Tools components
+│   │   ├── json-formatter # JSON formatter component
+│   │   ├── json-validator # JSON validator component
+│   │   ├── json-diff      # JSON diff component
+│   │   ├── json-minifier  # JSON minifier component
+│   │   └── base64         # Base64 converter component
 │   ├── layouts/
 │   │   └── tool-layout.tsx   # Common tool layout
 │   └── ui/                   # UI Components
-│       ├── toast.tsx
-│       ├── toaster.tsx
-│       └── use-toast.ts
+│       ├── shadcn            # shadcn components
 │
 ├── lang/                     # i18n translations
 │   ├── en/
 │   │   ├── common.json
 │   │   └── json.json
+│   │   └── converters.json
 │   ├── zh-CN/
 │   │   └── common.json
 │   │   └── json.json
-│   └── zh-HK/
-│       └── common.json
-│       └── json.json
+│   │   └── converters.json
+│   ├── zh-HK/
+│   │   └── common.json
+│   │   └── json.json
+│   │   └── converters.json
 │
 ├── providers/
 │   └── toast-provider.tsx    # Toast notifications provider
@@ -113,6 +125,14 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
          href: "/tools/your-tool",
          description: "Tool description",
          category: "category", // json, seo, text, or dev
+         subTools: [
+           {
+             label: "Subtool 1",
+             value: "subtool-1",
+             href: "/tools/your-tool/subtool-1",
+             description: "Subtool description",
+           },
+         ],
        },
        // ... existing tools
      ],
@@ -128,18 +148,26 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
    }
    ```
 
-3. Create the tool page in `app/[lang]/tools/`:
+3. Create the tool page in `app/[locale]/tools/`:
 
    ```typescript
-   // app/[lang]/tools/your-tool/page.tsx
+   // app/[locale]/tools/your-tool/page.tsx
    import { YourTool } from '@/components/tools/your-tool/YourTool'
+   import { getMetadata } from '@/services/seo'
+   export const metadata = getMetadata({ path: "your-tool", locale });
 
    export default function YourToolPage() {
-     return <YourTool />
+     return (
+       <ToolLayout translationKey="your-tool">
+         <YourTool />
+       </ToolLayout>
+     )
    }
    ```
 
 4. Add translations for your tool in all supported languages.
+
+5. Add SEO metadata for your tool. `services/seo.tsx`
 
 ## Pull Request Guidelines
 
@@ -157,6 +185,7 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 - [ ] Tests added/updated if applicable
 - [ ] All checks pass (build, lint, types)
 - [ ] Translations added for all languages
+- [ ] SEO metadata is added
 
 ## Translation Guide
 

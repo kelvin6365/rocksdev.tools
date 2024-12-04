@@ -26,7 +26,7 @@ export function SupportOverlay() {
       //check if first 5 shown
       const first5Shown = localStorage.getItem("first5SupportOverlayShown");
       const lastShownTime = parseInt(
-        localStorage.getItem("lastSupportOverlay") || "0"
+        localStorage.getItem("lastSupportOverlay") || "0",
       );
       const currentTime = Date.now();
 
@@ -102,7 +102,7 @@ export function SupportOverlay() {
               onClick={() =>
                 window.open(
                   "https://github.com/kelvin6365/rocksdev.tools",
-                  "_blank"
+                  "_blank",
                 )
               }
             >
