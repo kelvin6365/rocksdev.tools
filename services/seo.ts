@@ -175,19 +175,14 @@ export const notFoundSEO: Record<string, SEOConfig> = {
 export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   "json.formatter": {
     en: {
-      title: "JSON Formatter & Validator | RocksDev Tools",
+      title: "JSON Formatter | RocksDev Tools",
       description:
         "Format, validate and beautify your JSON with our powerful online JSON formatter tool. Features include syntax highlighting, error detection, and more.",
-      keywords: [
-        "json formatter",
-        "json validator",
-        "json beautifier",
-        "json tools",
-      ],
+      keywords: ["json formatter", "json beautifier", "json tools"],
       openGraph: {
         type: "website",
-        title: "JSON Formatter & Validator",
-        description: "Format and validate your JSON online",
+        title: "JSON Formatter",
+        description: "Format your JSON online",
         image: "/tools/json-formatter-og.png",
       },
     },
@@ -195,7 +190,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       title: "JSON 格式化工具 | RocksDev 工具集",
       description:
         "使用我们强大的在线 JSON 格式化工具来格式化、验证和美化您的 JSON。包括语法高亮、错误检测等功能。",
-      keywords: ["json格式化", "json验证器", "json美化", "json工具"],
+      keywords: ["json格式化", "json美化", "json工具"],
       openGraph: {
         type: "website",
         title: "JSON 格式化工具",
@@ -207,7 +202,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       title: "JSON 格式化工具 | RocksDev 工具集",
       description:
         "使用我們強大的在線 JSON 格式化工具來格式化、驗證和美化您的 JSON。包括語法高亮、錯誤檢測等功能。",
-      keywords: ["json格式化", "json驗證器", "json美化", "json工具"],
+      keywords: ["json格式化", "json美化", "json工具"],
       openGraph: {
         type: "website",
         title: "JSON 格式化工具",
