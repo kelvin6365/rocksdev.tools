@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 import * as React from "react";
 import { toast } from "sonner";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useTool } from "@/contexts/tool-context.tsx";
+import { useTool } from "@/contexts/tool-context";
 
 export function Base64Converter() {
   const t = useTranslations("converters.base64");
