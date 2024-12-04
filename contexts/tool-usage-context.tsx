@@ -14,7 +14,7 @@ const ToolUsageContext = createContext<ToolUsageContextType>({
 
 export function ToolUsageProvider({ children }: { children: React.ReactNode }) {
   const [toolUsageCount, setToolUsageCount] = useState(
-    parseInt(localStorage.getItem("toolUsageCount") || "0"),
+    parseInt(localStorage?.getItem("toolUsageCount") || "0"),
   );
 
   useEffect(() => {
