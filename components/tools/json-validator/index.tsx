@@ -14,7 +14,7 @@ import {
   Clipboard,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { useToolUsage } from "@/contexts/tool-usage-context";
+import { useTool } from "@/contexts/tool-context.tsx";
 
 export function JsonValidator() {
   const t = useTranslations("json.validator");
@@ -22,7 +22,7 @@ export function JsonValidator() {
   const [isValid, setIsValid] = useState<boolean | null>(null);
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [isLoading, setIsLoading] = useState(false);
-  const { incrementToolUsage } = useToolUsage();
+  const { incrementToolUsage } = useTool();
 
   const validateJson = () => {
     if (!input.trim()) {

@@ -9,7 +9,7 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Copy, RotateCcw, Info } from "lucide-react";
 import { toast } from "react-hot-toast";
-import { useToolUsage } from "@/contexts/tool-usage-context";
+import { useTool } from "@/contexts/tool-context";
 import { Input } from "@/components/ui/input";
 import {
   Accordion,
@@ -411,7 +411,7 @@ function getExample(pattern: string): RegexExample | null {
 
 export function RegexTester() {
   const t = useTranslations("dev.regex");
-  const { incrementToolUsage } = useToolUsage();
+  const { incrementToolUsage } = useTool();
 
   const [pattern, setPattern] = useState("");
   const [flags, setFlags] = useState("g");

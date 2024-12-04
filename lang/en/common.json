@@ -76,5 +76,8 @@
     "description4": "Or Show Your Support With",
     "startOnGitHub": "Star on GitHub",
     "yourStarHelps": "Your star helps others discover these tools too!"
+  },
+  "dock": {
+    "add": "Add to dock"
   }
 }

@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { useToolUsage } from "@/contexts/tool-usage-context";
+import { useTool } from "@/contexts/tool-context";
 import { Github, Heart } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -19,7 +19,7 @@ const RANDOM_CHANCE = 0.2;
 export function SupportOverlay() {
   const t = useTranslations("supportOverlay");
   const [isOpen, setIsOpen] = useState(false);
-  const { toolUsageCount } = useToolUsage();
+  const { toolUsageCount } = useTool();
 
   useEffect(() => {
     const checkAndShowOverlay = () => {

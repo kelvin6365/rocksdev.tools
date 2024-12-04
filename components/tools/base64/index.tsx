@@ -8,11 +8,11 @@ import { useTranslations } from "next-intl";
 import * as React from "react";
 import { toast } from "sonner";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useToolUsage } from "@/contexts/tool-usage-context";
+import { useTool } from "@/contexts/tool-context.tsx";
 
 export function Base64Converter() {
   const t = useTranslations("converters.base64");
-  const { incrementToolUsage } = useToolUsage();
+  const { incrementToolUsage } = useTool();
   const [input, setInput] = React.useState("");
   const [output, setOutput] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(false);

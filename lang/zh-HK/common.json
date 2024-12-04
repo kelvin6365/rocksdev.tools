@@ -75,5 +75,8 @@
     "description4": "您的星星有助於其他人發現這些工具！",
     "startOnGitHub": "在 GitHub 上點贊",
     "yourStarHelps": "您的星星有助於其他人發現這些工具！"
+  },
+  "dock": {
+    "add": "添加到 Dock"
   }
 }

@@ -5,9 +5,16 @@ import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Github } from "lucide-react";
+import { ArrowLeft, Github, Plus } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { config } from "@/services/config";
+import { useTool } from "@/contexts/tool-context";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 interface ToolLayoutProps {
   children: React.ReactNode;
@@ -27,6 +34,7 @@ export function ToolLayout({
   showGithubLink = true,
 }: ToolLayoutProps) {
   const t = useTranslations();
+  const { setTools, tools } = useTool();
 
   // Get parent tool path for back button
   const paths = translationKey.split(".");
@@ -57,6 +65,30 @@ export function ToolLayout({
         {/* Action Buttons */}
         <div className="flex items-center gap-2">
           {actions}
+          {/* Add to dock */}
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => {
+                    setTools([
+                      ...tools.filter((t) => t.id !== translationKey),
+                      {
+                        id: translationKey,
+                        icon: "🔍",
+                        href: `/tools/${translationKey.replace(/\./g, "/")}`,
+                      },
+                    ]);
+                  }}
+                >
+                  <Plus className="h-4 w-4" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>{t("dock.add")}</TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
           {showGithubLink && (
             <Button variant="outline" size="icon" asChild>
               <Link
