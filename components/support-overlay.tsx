@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
@@ -27,7 +26,7 @@ export function SupportOverlay() {
       //check if first 5 shown
       const first5Shown = localStorage.getItem("first5SupportOverlayShown");
       const lastShownTime = parseInt(
-        localStorage.getItem("lastSupportOverlay") || "0",
+        localStorage.getItem("lastSupportOverlay") || "0"
       );
       const currentTime = Date.now();
 
@@ -57,14 +56,6 @@ export function SupportOverlay() {
 
     // Check when component mounts and when tool usage changes
     checkAndShowOverlay();
-
-    // Also check when the window gains focus
-    const handleFocus = () => {
-      checkAndShowOverlay();
-    };
-
-    window.addEventListener("focus", handleFocus);
-    return () => window.removeEventListener("focus", handleFocus);
   }, [toolUsageCount]);
 
   const handleClose = () => {
@@ -79,10 +70,10 @@ export function SupportOverlay() {
             <Heart className="w-8 h-8 text-red-500 animate-pulse" />
             <span>{t("title")}</span>
           </DialogTitle>
-          <DialogDescription className="text-center space-y-2 pt-4">
+          <div className="text-center space-y-2 pt-4 text-sm text-muted-foreground">
             <p className="text-base">{t("description")}</p>
             <p className="text-sm text-muted-foreground">{t("description2")}</p>
-          </DialogDescription>
+          </div>
         </DialogHeader>
         <div className="flex flex-col items-center gap-6 py-6">
           <div className="space-y-2 text-center">
@@ -111,7 +102,7 @@ export function SupportOverlay() {
               onClick={() =>
                 window.open(
                   "https://github.com/kelvin6365/rocksdev.tools",
-                  "_blank",
+                  "_blank"
                 )
               }
             >

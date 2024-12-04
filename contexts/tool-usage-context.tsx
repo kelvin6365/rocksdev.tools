@@ -9,25 +9,16 @@ type ToolUsageContextType = {
 
 const ToolUsageContext = createContext<ToolUsageContextType>({
   incrementToolUsage: () => {},
-  toolUsageCount: parseInt(
-    typeof window !== "undefined"
-      ? localStorage.getItem("toolUsageCount") || "0"
-      : "0",
-  ),
+  toolUsageCount: 0,
 });
 
 export function ToolUsageProvider({ children }: { children: React.ReactNode }) {
-  const [toolUsageCount, setToolUsageCount] = useState(
-    parseInt(
-      typeof window !== "undefined"
-        ? localStorage.getItem("toolUsageCount") || "0"
-        : "0",
-    ),
-  );
+  const [toolUsageCount, setToolUsageCount] = useState(0);
 
   useEffect(() => {
-    localStorage.setItem("toolUsageCount", toolUsageCount.toString());
-  }, [toolUsageCount]);
+    const storedCount = parseInt(localStorage.getItem("toolUsageCount") || "0");
+    setToolUsageCount(storedCount);
+  }, []);
 
   const incrementToolUsage = () => {
     const newCount = toolUsageCount + 1;
