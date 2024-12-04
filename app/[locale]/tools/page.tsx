@@ -39,7 +39,11 @@ export default function ToolsPage() {
           </Card>
         ))}
         {/* Tools Box Banner */}
-        <AdUnit adSlot="4396194595" adFormat="auto" />
+        {process.env.NODE_ENV === "production" && (
+          <Card className="transition-all hover:shadow-lg">
+            <AdUnit adSlot="4396194595" adFormat="auto" />
+          </Card>
+        )}
       </div>
     </div>
   );
