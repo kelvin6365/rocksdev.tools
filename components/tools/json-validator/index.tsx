@@ -14,7 +14,7 @@ import {
   Clipboard,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { useTool } from "@/contexts/tool-context.tsx";
+import { useTool } from "@/contexts/tool-context";
 
 export function JsonValidator() {
   const t = useTranslations("json.validator");

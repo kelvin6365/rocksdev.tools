@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { CardContent } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
-import { useTool } from "@/contexts/tool-context.tsx";
+import { useTool } from "@/contexts/tool-context";
 import { Clipboard, Download, Loader2, Upload } from "lucide-react";
 import { useTranslations } from "next-intl";
 import * as React from "react";

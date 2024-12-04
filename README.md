@@ -52,7 +52,7 @@ This project is built with modern web technologies and best practices:
 │   │   └── base64         # Base64 converter component
 │   │   └── regex          # Regex tester component
 │   ├── layouts/
-│   │   └── tool-layout.tsx   # Common tool layout
+│   │   └── tool-layout   # Common tool layout
 │   └── ui/                   # UI Components
 │       ├── shadcn         # shadcn components
 │

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Textarea } from "@/components/ui/textarea";
-import { useTool } from "@/contexts/tool-context.tsx";
+import { useTool } from "@/contexts/tool-context";
 import { Copy, Download, FileJson, Loader2, Upload } from "lucide-react";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";

@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
-import { useTool } from "@/contexts/tool-context.tsx";
+import { useTool } from "@/contexts/tool-context";
 import { ArrowRight, Download, FileJson, Loader2, Upload } from "lucide-react";
 import { useTranslations } from "next-intl";
 import * as React from "react";

@@ -85,7 +85,7 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │   │   └── base64         # Base64 converter component
 │   │   └── regex          # Regex tester component
 │   ├── layouts/
-│   │   └── tool-layout.tsx   # Common tool layout
+│   │   └── tool-layout   # Common tool layout
 │   └── ui/                   # UI Components
 │       ├── shadcn            # shadcn components
 │
