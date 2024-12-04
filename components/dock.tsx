@@ -21,6 +21,7 @@ import {
   useSortable,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
+import { sendGAEvent } from "@next/third-parties/google";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
@@ -30,7 +31,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
-import { sendGTMEvent } from "@next/third-parties/google";
 
 function DockItem({
   tool,
@@ -88,7 +88,7 @@ function DockItem({
                 return;
               }
               //Send event to analytics GA
-              sendGTMEvent({
+              sendGAEvent({
                 event: "dock_tool_clicked",
                 tool: getTool()?.value,
               });
