@@ -46,7 +46,7 @@ export default function JsonToolsLayout({
       </aside>
 
       {/* Main Content */}
-      <main className="w-full">{children}</main>
+      <main className="flex-1 space-y-6">{children}</main>
     </div>
   );
 }
