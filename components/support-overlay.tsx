@@ -107,7 +107,7 @@ export function SupportOverlay() {
               }
             >
               <Github className="w-4 h-4" />
-              {t("startOnGitHub")}
+              {t("starOnGitHub")}
             </Button>
             <p className="text-xs text-muted-foreground">
               {t("yourStarHelps")}

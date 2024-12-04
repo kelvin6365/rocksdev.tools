@@ -1,9 +1,11 @@
 {
   "home": {
-    "freeFastReliable": "Free, fast, and reliable tools for developers. No ads, no tracking, just tools.",
-    "rocksDevTools": "Rocks Dev Tools",
+    "freeFastReliable": "Free, fast, and reliable tools for developers. No data collection when you use our tools, just tools.",
+    "ads": "Ummmm... We do have some ads~",
+    "rocksDevTools": "RocksDev.Tools",
     "tryNow": "Try Now",
-    "freeOpenSource": "Free & Open Source"
+    "freeOpenSource": "Free & Open Source",
+    "starOnGitHub": "Star on GitHub"
   },
   "nav": {
     "back": "back",
@@ -74,7 +76,7 @@
     "description2": "Every contribution helps maintain and improve these tools!",
     "description3": "Support the Development",
     "description4": "Or Show Your Support With",
-    "startOnGitHub": "Star on GitHub",
+    "starOnGitHub": "Star on GitHub",
     "yourStarHelps": "Your star helps others discover these tools too!"
   },
   "dock": {

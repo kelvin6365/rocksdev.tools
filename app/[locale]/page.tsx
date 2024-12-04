@@ -7,8 +7,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { config } from "@/services/config";
+import { Github } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { Button } from "../../components/ui/button";
 
 export default function HomePage() {
   const t = useTranslations("home");
@@ -19,17 +21,28 @@ export default function HomePage() {
         <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl">
           {t("rocksDevTools")}
         </h1>
-        <p className="max-w-[600px] text-lg text-gray-200 md:text-xl">
-          {t("freeFastReliable")}
-        </p>
+        <div>
+          <p className="max-w-[600px] text-lg text-gray-200 md:text-xl">
+            {t("freeFastReliable")}
+          </p>
+          <p className="max-w-[600px] text-sm font-thin text-gray-200 md:text-xl">
+            {t("ads")}
+          </p>
+        </div>
         {/* Github start */}
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=kelvin6365&repo=rocksdev.tools&type=star&count=true&size=large"
-          width="170"
-          height="30"
-          title="GitHub"
-          className="mx-auto"
-        ></iframe>
+        <Button
+          variant="outline"
+          className="gap-2"
+          onClick={() =>
+            window.open(
+              "https://github.com/kelvin6365/rocksdev.tools",
+              "_blank",
+            )
+          }
+        >
+          <Github className="w-4 h-4" />
+          {t("starOnGitHub")}
+        </Button>
       </section>
 
       {/* Tools Grid */}

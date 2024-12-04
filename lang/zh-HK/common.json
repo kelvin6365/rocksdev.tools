@@ -1,8 +1,11 @@
 {
   "home": {
-    "freeFastReliable": "免費、快速、可靠的開發者工具。無廣告，無追蹤，只有工具。",
-    "rocksDevTools": "Rocks 開發者工具",
-    "freeOpenSource": "免費 & 開源"
+    "freeFastReliable": "免費、快速、可靠的開發者工具。無數據收集，只有工具。",
+    "ads": "嗯...我們確實有一些廣告~",
+    "rocksDevTools": "RocksDev.工具",
+    "freeOpenSource": "免費 & 開源",
+    "starOnGitHub": "在 GitHub 上點贊",
+    "tryNow": "立即試用"
   },
   "nav": {
     "back": "返回",
@@ -73,7 +76,7 @@
     "description2": "每個貢獻都有助於維護和改進這些工具！",
     "description3": "支持開發",
     "description4": "您的星星有助於其他人發現這些工具！",
-    "startOnGitHub": "在 GitHub 上點贊",
+    "starOnGitHub": "在 GitHub 上點贊",
     "yourStarHelps": "您的星星有助於其他人發現這些工具！"
   },
   "dock": {
