@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import { config } from "@/services/config";
 import { Tool } from "@/types/tool";
 import {
-  closestCenter,
   DndContext,
   DragEndEvent,
   DragStartEvent,
@@ -31,10 +30,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
-
-interface DockProps {
-  className?: string;
-}
+import { sendGTMEvent } from "@next/third-parties/google";
 
 function DockItem({
   tool,
@@ -52,7 +48,7 @@ function DockItem({
     //the id is from subTools value
     return config.tools
       .find((t) => t.value?.includes(tool.id.split(".")[0]))
-      ?.subTools?.find((t) => t.value === tool.id)?.value;
+      ?.subTools?.find((t) => t.value === tool.id);
   };
   return (
     <motion.div
@@ -91,33 +87,21 @@ function DockItem({
                 e.preventDefault();
                 return;
               }
+              //Send event to analytics GA
+              sendGTMEvent({
+                event: "dock_tool_clicked",
+                tool: getTool()?.value,
+              });
               router.push(tool.href || "");
             }}
           >
-            <span className="text-2xl select-none">{tool.icon}</span>
+            <span className="text-2xl select-none">{getTool()?.icon}</span>
           </div>
         </TooltipTrigger>
         <TooltipContent className="z-[9999]">
-          {t(getTool() + ".title")}
+          {t(getTool()?.value + ".title")}
         </TooltipContent>
       </Tooltip>
-      {/* <AnimatePresence>
-          {isHovered && !isDragging && (
-            <motion.div
-              initial={{ opacity: 0, y: -4, zIndex: 1000 }}
-              animate={{ opacity: 1, y: -40 }}
-              exit={{ opacity: 0, y: -4 }}
-              className={cn(
-                "absolute whitespace-nowrap px-2 py-1 rounded z-[9999]",
-                "bg-neutral-800 dark:bg-white",
-                "text-white dark:text-neutral-800 text-sm",
-                "transition-all duration-200"
-              )}
-            >
-              {t(getTool() + ".title")}
-            </motion.div>
-          )}
-        </AnimatePresence> */}
     </motion.div>
   );
 }
@@ -153,9 +137,39 @@ function SortableDockItem({ tool }: { tool: Tool }) {
   );
 }
 
-export function Dock({ className }: DockProps) {
+function DroppableDock({ tools }: { tools: Tool[] }) {
+  const { setNodeRef } = useDroppable({ id: "dock" });
+
+  return (
+    <div
+      ref={setNodeRef}
+      className={cn(
+        "p-2 rounded-2xl backdrop-blur-md",
+        "bg-neutral-50/90 dark:bg-neutral-900/90",
+        "border border-neutral-200/50 dark:border-neutral-700/50",
+        "shadow-lg dark:shadow-2xl relative",
+      )}
+    >
+      <SortableContext
+        items={tools.map((tool) => tool.id)}
+        strategy={horizontalListSortingStrategy}
+      >
+        <TooltipProvider>
+          <div className="flex items-center gap-2">
+            {tools.map((tool) => (
+              <SortableDockItem key={tool.id} tool={tool} />
+            ))}
+          </div>
+        </TooltipProvider>
+      </SortableContext>
+    </div>
+  );
+}
+
+export function Dock() {
   const { tools, setTools } = useTool();
   const [_, setActiveId] = useState<string | null>(null);
+
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
@@ -170,64 +184,42 @@ export function Dock({ className }: DockProps) {
 
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
+    console.log(active, over);
     setActiveId(null);
-    console.log(event);
+
+    // If dropped in remove zone
+    if (!over) {
+      setTools(tools.filter((tool) => tool.id !== active.id));
+      return;
+    }
+
+    // Handle reordering
     if (over && active.id !== over.id) {
       const oldIndex = tools.findIndex((tool) => tool.id === active.id);
       const newIndex = tools.findIndex((tool) => tool.id === over.id);
-      setTools(arrayMove(tools, oldIndex, newIndex));
+      if (oldIndex !== newIndex) {
+        setTools(arrayMove(tools, oldIndex, newIndex));
+      }
     }
-    if (!over) {
-      setTools(tools.filter((tool) => tool.id !== active.id));
-    }
-  };
-
-  const handleDragCancel = () => {
-    setActiveId(null);
   };
 
   if (tools.length === 0) {
     return null;
   }
-  return (
-    <div className="fixed inset-x-0 bottom-0 flex justify-center items-end pb-4 z-[999]">
-      <div
-        className={cn(
-          "p-2 rounded-2xl backdrop-blur-md",
-          "bg-neutral-50/90 dark:bg-neutral-900/90",
-          "border border-neutral-200/50 dark:border-neutral-700/50",
-          "shadow-lg dark:shadow-2xl relative",
-          className,
-        )}
-      >
-        <DndContext
-          sensors={sensors}
-          collisionDetection={closestCenter}
-          onDragStart={handleDragStart}
-          onDragEnd={handleDragEnd}
-          onDragCancel={handleDragCancel}
-        >
-          <DroppableDock tools={tools} />
-        </DndContext>
-      </div>
-    </div>
-  );
-}
 
-function DroppableDock({ tools }: { tools: Tool[] }) {
-  const { setNodeRef, over } = useDroppable({ id: "dock" });
-  console.log("[DroppableDock]", over);
   return (
-    <div ref={setNodeRef}>
-      <SortableContext items={tools} strategy={horizontalListSortingStrategy}>
-        <TooltipProvider>
-          <div className="flex items-center gap-2">
-            {tools.map((tool) => (
-              <SortableDockItem key={tool.id} tool={tool} />
-            ))}
-          </div>
-        </TooltipProvider>
-      </SortableContext>
+    <div
+      className={cn(
+        "fixed bottom-0 inset-x-0 flex justify-center items-end pb-4 z-[999]",
+      )}
+    >
+      <DndContext
+        sensors={sensors}
+        onDragStart={handleDragStart}
+        onDragEnd={handleDragEnd}
+      >
+        <DroppableDock tools={tools} />
+      </DndContext>
     </div>
   );
 }

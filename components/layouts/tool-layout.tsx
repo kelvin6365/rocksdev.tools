@@ -68,7 +68,7 @@ export function ToolLayout({
           {/* Add to dock */}
           <TooltipProvider>
             <Tooltip>
-              <TooltipTrigger>
+              <TooltipTrigger asChild>
                 <Button
                   variant="outline"
                   size="icon"
@@ -77,7 +77,6 @@ export function ToolLayout({
                       ...tools.filter((t) => t.id !== translationKey),
                       {
                         id: translationKey,
-                        icon: "🔍",
                         href: `/tools/${translationKey.replace(/\./g, "/")}`,
                       },
                     ]);

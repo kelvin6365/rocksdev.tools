@@ -178,7 +178,7 @@ This project is built with modern web technologies and best practices:
 - [ ] Tool suggestions
 - [ ] Recently used tools
 - [x] Save preferences (dock)
-  - [ ] Dock drop out remove tool bug (Not able to remove tool from dock)
+  - [x] Dock drop out remove tool bug (Not able to remove tool from dock)
 - [ ] Share configurations
 
 ## Installed Libraries
