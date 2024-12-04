@@ -15,18 +15,20 @@ export function JsonMinifier() {
   const [isLoading, setIsLoading] = React.useState(false);
   const inputFileRef = React.useRef<HTMLInputElement>(null);
 
-  const minifyJson = () => {
-    if (!input.trim()) {
+  const minifyJson = (latestInput?: string) => {
+    const _input = latestInput || input;
+    if (!_input.trim()) {
       toast.warning(t("error.empty"));
       return;
     }
 
     setIsLoading(true);
     try {
-      const json = JSON.parse(input);
+      const json = JSON.parse(_input);
       const minified = JSON.stringify(json);
       setMinifiedOutput(minified);
     } catch (error) {
+      console.error(error);
       toast.error(t("error.invalid"));
     } finally {
       setIsLoading(false);
@@ -42,8 +44,9 @@ export function JsonMinifier() {
       try {
         const content = e.target?.result as string;
         setInput(content);
-        minifyJson();
+        minifyJson(content);
       } catch (error) {
+        console.error(error);
         toast.error(t("error.invalid"));
       }
     };
@@ -98,7 +101,7 @@ export function JsonMinifier() {
         />
 
         <div className="flex justify-center mt-4">
-          <Button onClick={minifyJson} disabled={isLoading}>
+          <Button onClick={() => minifyJson(input)} disabled={isLoading}>
             {isLoading && <Loader2 className="mr-1 h-4 w-4 animate-spin" />}
             {t("minify")}
           </Button>
