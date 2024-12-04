@@ -8,9 +8,11 @@ import { useTranslations } from "next-intl";
 import * as React from "react";
 import { toast } from "sonner";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useToolUsage } from "@/contexts/tool-usage-context";
 
 export function Base64Converter() {
   const t = useTranslations("converters.base64");
+  const { incrementToolUsage } = useToolUsage();
   const [input, setInput] = React.useState("");
   const [output, setOutput] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(false);
@@ -55,6 +57,7 @@ export function Base64Converter() {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
     toast.success(t("message.download"));
+    incrementToolUsage();
   };
 
   const decodeBase64 = () => {
@@ -86,6 +89,7 @@ export function Base64Converter() {
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
         toast.success(t("message.download"));
+        incrementToolUsage();
       } catch (error) {
         toast.error(t("error.invalid"));
       }
@@ -139,6 +143,7 @@ export function Base64Converter() {
         ? btoa(input).replace(/\+/g, "-").replace(/\//g, "_")
         : btoa(input);
       setOutput(encoded);
+      incrementToolUsage();
     } catch (error) {
       toast.error(t("error.invalid"));
     } finally {
@@ -157,6 +162,7 @@ export function Base64Converter() {
         isUrlSafe ? input.replace(/-/g, "+").replace(/_/g, "/") : input,
       );
       setOutput(decoded);
+      incrementToolUsage();
     } catch (error) {
       toast.error(t("error.invalid"));
     } finally {

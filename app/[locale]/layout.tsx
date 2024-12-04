@@ -13,6 +13,8 @@ import GoogleAdsense from "../../components/adsense";
 import { Footer } from "../../components/footer";
 import "./globals.css";
 import { getMetadata } from "@/services/seo";
+import { ToolUsageProvider } from "@/contexts/tool-usage-context";
+import { SupportOverlay } from "@/components/support-overlay";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,13 +45,16 @@ export default async function RootLayout({
       </head>
       <body className={cn(inter.className, "bg-background overflow-x-hidden")}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <NavBar />
-          <main className="container py-6">{children}</main>
-          <ToastProvider />
-          <Analytics />
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
-          <SpeedInsights />
-          <Footer />
+          <ToolUsageProvider>
+            <NavBar />
+            <main className="container py-6">{children}</main>
+            <ToastProvider />
+            <Analytics />
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
+            <SpeedInsights />
+            <SupportOverlay />
+            <Footer />
+          </ToolUsageProvider>
         </NextIntlClientProvider>
       </body>
     </html>

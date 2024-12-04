@@ -62,5 +62,14 @@
     "go-back": "返回",
     "return-home": "返回首頁",
     "title": "頁面未找到"
+  },
+  "supportOverlay": {
+    "title": "享受我們的開發者工具？",
+    "description": "感謝使用我們的工具！如果它們幫助您使開發變得更輕鬆，請考慮支持此項目以保持其免費和增長。",
+    "description2": "每個貢獻都有助於維護和改進這些工具！",
+    "description3": "支持開發",
+    "description4": "您的星星有助於其他人發現這些工具！",
+    "startOnGitHub": "在 GitHub 上點贊",
+    "yourStarHelps": "您的星星有助於其他人發現這些工具！"
   }
 }

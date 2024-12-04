@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { CardContent } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
+import { useToolUsage } from "@/contexts/tool-usage-context";
 import { Clipboard, Download, Loader2, Upload } from "lucide-react";
 import { useTranslations } from "next-intl";
 import * as React from "react";
@@ -10,6 +11,7 @@ import { toast } from "sonner";
 
 export function JsonMinifier() {
   const t = useTranslations("json.minifier");
+  const { incrementToolUsage } = useToolUsage();
   const [input, setInput] = React.useState("");
   const [minifiedOutput, setMinifiedOutput] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(false);
@@ -27,6 +29,7 @@ export function JsonMinifier() {
       const json = JSON.parse(_input);
       const minified = JSON.stringify(json);
       setMinifiedOutput(minified);
+      incrementToolUsage();
     } catch (error) {
       console.error(error);
       toast.error(t("error.invalid"));

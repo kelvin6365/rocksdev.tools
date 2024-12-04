@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Textarea } from "@/components/ui/textarea";
+import { useToolUsage } from "@/contexts/tool-usage-context";
 import { Copy, Download, FileJson, Loader2, Upload } from "lucide-react";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
@@ -25,6 +26,7 @@ export function JsonFormatter() {
   const [isLoading, setIsLoading] = React.useState(false);
   const [isJsonValid, setIsJsonValid] = React.useState(false);
   const fileInputRef = React.useRef<HTMLInputElement>(null);
+  const { incrementToolUsage } = useToolUsage();
 
   const formatJson = () => {
     if (!input.trim()) {
@@ -36,6 +38,7 @@ export function JsonFormatter() {
     try {
       const parsed = JSON.parse(input);
       setOutput(parsed);
+      incrementToolUsage();
     } catch (error) {
       toast.error(t("error.invalid"), {});
     } finally {

@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
-import { ScrollArea } from "@radix-ui/react-scroll-area";
+import { useToolUsage } from "@/contexts/tool-usage-context";
 import { ArrowRight, Download, FileJson, Loader2, Upload } from "lucide-react";
 import { useTranslations } from "next-intl";
 import * as React from "react";
@@ -27,6 +27,7 @@ import { toast } from "sonner";
 
 export function JsonDiff() {
   const t = useTranslations("json.diff");
+  const { incrementToolUsage } = useToolUsage();
   const [leftInput, setLeftInput] = React.useState("");
   const [rightInput, setRightInput] = React.useState("");
   const [diffResult, setDiffResult] = React.useState<any>(null);
@@ -72,6 +73,7 @@ export function JsonDiff() {
       };
 
       setDiffResult(diff);
+      incrementToolUsage();
     } catch (error) {
       toast.error(t("error.invalid"));
     } finally {

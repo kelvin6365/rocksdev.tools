@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import { config } from "@/services/config";
 import { Link } from "@/i18n/routing";
+import AdUnit from "@/components/ad-units";
 
 const jsonTools = config.tools.find((tool) => tool.value === "json");
 
@@ -37,6 +38,12 @@ export default function JsonToolsPage() {
             </Link>
           </Card>
         ))}
+        {/* Tools Box Banner */}
+        {process.env.NODE_ENV === "production" && (
+          <Card className="transition-all hover:shadow-lg">
+            <AdUnit adSlot="4396194595" adFormat="auto" />
+          </Card>
+        )}
       </div>
     </div>
   );

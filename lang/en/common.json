@@ -63,5 +63,14 @@
     "go-back": "Go Back",
     "return-home": "Return Home",
     "title": "Page Not Found"
+  },
+  "supportOverlay": {
+    "title": "Enjoying Our Developer Tools?",
+    "description": "Thanks for using our tools! If they've helped make your development easier, consider supporting this project to keep it free and growing.",
+    "description2": "Every contribution helps maintain and improve these tools!",
+    "description3": "Support the Development",
+    "description4": "Or Show Your Support With",
+    "startOnGitHub": "Star on GitHub",
+    "yourStarHelps": "Your star helps others discover these tools too!"
   }
 }
