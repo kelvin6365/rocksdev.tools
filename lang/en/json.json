@@ -1,5 +1,10 @@
 {
   "json": {
+    "title": "JSON Tools",
+    "description": "Tools for JSON data",
+    "tryNow": "Try Now",
+    "free": "Free",
+    "openSource": "Open Source",
     "diff": {
       "added": "Added",
       "addedProperties": "Added Properties",

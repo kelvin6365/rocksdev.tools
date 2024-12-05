@@ -1,5 +1,10 @@
 {
   "dev": {
+    "title": "Dev Tools",
+    "description": "Dev tools for your website",
+    "tryNow": "Try Now",
+    "free": "Free",
+    "openSource": "Open Source",
     "regex": {
       "basePattern": "Base Pattern",
       "caseInsensitive": "Case Insensitive (i)",

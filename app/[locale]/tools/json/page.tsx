@@ -8,15 +8,17 @@ import {
 import { config } from "@/services/config";
 import { Link } from "@/i18n/routing";
 import AdUnit from "@/components/ad-units";
+import { useTranslations } from "next-intl";
 
 const jsonTools = config.tools.find((tool) => tool.value === "json");
 
 export default function JsonToolsPage() {
+  const t = useTranslations();
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold tracking-tight">JSON Tools</h1>
-        <p className="text-muted-foreground">{jsonTools?.description}</p>
+        <h1 className="text-3xl font-bold tracking-tight">{t("json.title")}</h1>
+        <p className="text-muted-foreground">{t("json.description")}</p>
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -24,15 +26,21 @@ export default function JsonToolsPage() {
           <Card key={tool.value} className="transition-all hover:shadow-lg">
             <Link href={tool.href}>
               <CardHeader>
-                <CardTitle className="text-xl">{tool.label}</CardTitle>
-                <CardDescription>{tool.description}</CardDescription>
+                <CardTitle className="text-xl">
+                  {t(`${tool.value}.title`)}
+                </CardTitle>
+                <CardDescription>
+                  {t(`${tool.value}.description`)}
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-muted-foreground">
-                    Free & Open Source
+                    {t("json.free")} & {t("json.openSource")}
                   </span>
-                  <span className="text-sm font-medium">Try Now →</span>
+                  <span className="text-sm font-medium">
+                    {t("json.tryNow")} →
+                  </span>
                 </div>
               </CardContent>
             </Link>

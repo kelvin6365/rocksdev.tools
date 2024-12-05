@@ -88,6 +88,11 @@
       "valid": "JSON 有效",
       "validate": "验证",
       "validating": "正在验证..."
-    }
+    },
+    "description": "JSON 数据工具",
+    "free": "自由的",
+    "openSource": "开源",
+    "title": "JSON 工具",
+    "tryNow": "立即尝试"
   }
 }

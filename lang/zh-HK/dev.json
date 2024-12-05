@@ -1,5 +1,10 @@
 {
   "dev": {
+    "title": "開發工具",
+    "description": "為您的網站提供開發工具",
+    "tryNow": "立即試用",
+    "free": "免費",
+    "openSource": "開源",
     "regex": {
       "basePattern": "基本模式",
       "caseInsensitive": "不分大小寫 (i)",

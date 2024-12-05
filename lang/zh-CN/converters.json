@@ -1,5 +1,10 @@
 {
   "converters": {
+    "title": "轉換器",
+    "description": "工具用於將數據轉換為不同格式",
+    "tryNow": "立即嘗試",
+    "free": "免費",
+    "openSource": "開源",
     "base64": {
       "clear": "清除",
       "copy": "複製",

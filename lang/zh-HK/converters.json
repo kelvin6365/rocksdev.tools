@@ -23,6 +23,11 @@
       "upload": "上傳",
       "uploadFile": "上傳文件",
       "urlSafe": "URL-safe 編碼 (將 + 替換為 - 和 / 替換為 _)"
-    }
+    },
+    "openSource": "開源",
+    "description": "用於在不同格式之間轉換資料的工具",
+    "free": "自由的",
+    "title": "轉換器",
+    "tryNow": "立即嘗試"
   }
 }

@@ -1,5 +1,10 @@
 {
   "converters": {
+    "title": "Converters",
+    "description": "Tools for converting data between different formats",
+    "tryNow": "Try Now",
+    "free": "Free",
+    "openSource": "Open Source",
     "base64": {
       "clear": "Clear",
       "copy": "Copy",
