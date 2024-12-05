@@ -36,22 +36,24 @@ export function NavBar() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex md:items-center md:gap-6">
-          {routes.map((route) => (
-            <Link
-              key={route.href}
-              href={route.href}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                pathname === route.href
-                  ? "text-foreground"
-                  : "text-foreground/60",
-              )}
-            >
-              {t(`nav.tools.${route.value}.title`)}
-            </Link>
-          ))}
-          <div className="flex items-center gap-4 md:ml-auto">
+        <div className="hidden md:flex justify-between w-full">
+          <div className="flex items-center gap-6">
+            {routes.map((route) => (
+              <Link
+                key={route.href}
+                href={route.href}
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-primary",
+                  pathname === route.href
+                    ? "text-foreground"
+                    : "text-foreground/60",
+                )}
+              >
+                {t(`nav.tools.${route.value}.title`)}
+              </Link>
+            ))}
+          </div>
+          <div className="flex items-center gap-4 ml-auto">
             <LanguageSwitcher />
             <Button variant="outline" size="icon" asChild>
               <Link
