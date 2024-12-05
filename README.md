@@ -180,6 +180,7 @@ This project is built with modern web technologies and best practices:
 - [x] Save preferences (dock)
   - [x] Dock drop out remove tool bug (Not able to remove tool from dock)
 - [ ] Share configurations
+- [x] Mobile menu
 
 ## Installed Libraries
 

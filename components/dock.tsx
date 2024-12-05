@@ -209,7 +209,7 @@ export function Dock() {
   return (
     <div
       className={cn(
-        "fixed bottom-0 inset-x-0 flex justify-center items-end pb-4 z-[999]",
+        "fixed bottom-0 inset-x-0 flex justify-center items-end pb-4 z-10",
       )}
     >
       <DndContext

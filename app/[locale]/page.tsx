@@ -19,7 +19,7 @@ export default function HomePage() {
     <div className="flex flex-col gap-8">
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center space-y-4 text-center bg-gradient-to-r from-blue-500 to-purple-600 p-8 rounded-lg shadow-lg">
-        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl">
+        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl">
           {tHome("rocksDevTools")}
         </h1>
         <div>
