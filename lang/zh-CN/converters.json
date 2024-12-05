@@ -1,15 +1,11 @@
 {
   "converters": {
-    "title": "轉換器",
-    "description": "工具用於將數據轉換為不同格式",
-    "tryNow": "立即嘗試",
-    "free": "免費",
-    "openSource": "開源",
     "base64": {
       "clear": "清除",
       "copy": "複製",
       "decode": "解碼",
       "description": "將 Base64 轉換為其他格式",
+      "download": "下載",
       "encode": "編碼",
       "error": {
         "empty": "輸入不能為空",
@@ -28,6 +24,11 @@
       "upload": "上傳",
       "uploadFile": "上傳文件",
       "urlSafe": "URL-safe 編碼 (將 + 替換為 - 和 / 替換為 _)"
-    }
+    },
+    "description": "工具用於將數據轉換為不同格式",
+    "free": "免費",
+    "openSource": "開源",
+    "title": "轉換器",
+    "tryNow": "立即嘗試"
   }
 }
