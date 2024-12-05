@@ -10,6 +10,35 @@ export const config = {
     { label: "中文(繁體)", value: "zh-HK" },
   ] as const,
 
+  promos: [
+    {
+      id: "dock",
+      text: {
+        en: {
+          title: "Rocks Dev Dock Released 🥳",
+          description:
+            "Press '+' inside the tool to add your favorite tools to your dock.",
+          note: "No data collection when you use our tools, just tools.",
+        },
+        "zh-CN": {
+          title: "Rocks Dev Dock 发布了 🥳",
+          description: "在工具内按 '+' 将您喜欢的工具添加到您的 dock。",
+          note: "使用我们的工具时不会收集数据，只是工具。",
+        },
+        "zh-HK": {
+          title: "Rocks Dev Dock 發布了 🥳",
+          description: "在工具內按 '+' 將您喜歡的工具添加到您的 dock。",
+          note: "使用我們的工具時不會收集數據，只是工具。",
+        },
+      },
+    },
+  ] as {
+    id: string;
+    text: {
+      [key: string]: { title: string; description: string; note: string };
+    };
+  }[],
+
   // Tool categories and routes
   tools: [
     {

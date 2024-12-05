@@ -58,6 +58,7 @@
     "dayjs": "^1.11.11",
     "embla-carousel-react": "^8.5.1",
     "input-otp": "^1.4.1",
+    "js-cookie": "^3.0.5",
     "json-edit-react": "^1.17.1",
     "lucide-react": "^0.372.0",
     "motion": "12.0.0-alpha.2",
@@ -79,6 +80,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

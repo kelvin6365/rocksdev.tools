@@ -16,6 +16,8 @@ import { getMetadata } from "@/services/seo";
 import { ToolProvider } from "@/contexts/tool-context";
 import { SupportOverlay } from "@/components/support-overlay";
 import { Dock } from "@/components/dock";
+import { PromotionBanner } from "../../components/promotion-banner";
+import { config } from "../../services/config";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -56,6 +58,13 @@ export default async function RootLayout({
             <SupportOverlay />
             <Footer />
             <Dock />
+            <PromotionBanner
+              title={config.promos[0].text[locale].title}
+              description={config.promos[0].text[locale].description}
+              note={config.promos[0].text[locale].note}
+              id={config.promos[0].id}
+              position="bottom"
+            />
           </ToolProvider>
         </NextIntlClientProvider>
       </body>
