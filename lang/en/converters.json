@@ -1,15 +1,11 @@
 {
   "converters": {
-    "title": "Converters",
-    "description": "Tools for converting data between different formats",
-    "tryNow": "Try Now",
-    "free": "Free",
-    "openSource": "Open Source",
     "base64": {
       "clear": "Clear",
       "copy": "Copy",
       "decode": "Decode",
       "description": "Convert between Base64 and other formats",
+      "download": "Download",
       "encode": "Encode",
       "error": {
         "empty": "Input cannot be empty",
@@ -28,6 +24,11 @@
       "upload": "Upload",
       "uploadFile": "Upload a file to convert",
       "urlSafe": "URL-safe encoding (replace + with - and / with _)"
-    }
+    },
+    "description": "Tools for converting data between different formats",
+    "free": "Free",
+    "openSource": "Open Source",
+    "title": "Converters",
+    "tryNow": "Try Now"
   }
 }
