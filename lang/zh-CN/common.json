@@ -22,7 +22,9 @@
     "categories": "分类",
     "github": "GitHub",
     "home": "首页",
+    "language": "语言",
     "menu": "菜单",
+    "star": "在 GitHub 上点赞",
     "tools": {
       "converters": {
         "base64": {

@@ -45,6 +45,10 @@ export default async function RootLayout({
           name="google-adsense-account"
           content={`ca-pub-${process.env.NEXT_PUBLIC_ADSENSE_ID}`}
         ></meta>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
       </head>
       <body className={cn(inter.className, "bg-background overflow-x-hidden")}>
         <NextIntlClientProvider locale={locale} messages={messages}>

@@ -22,7 +22,9 @@
     "categories": "Categories",
     "github": "GitHub",
     "home": "Home",
+    "language": "Language",
     "menu": "Menu",
+    "star": "Star on GitHub",
     "tools": {
       "converters": {
         "base64": {
