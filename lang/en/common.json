@@ -1,11 +1,21 @@
 {
+  "dock": {
+    "add": "Add to dock"
+  },
   "home": {
-    "freeFastReliable": "Free, fast, and reliable tools for developers. No data collection when you use our tools, just tools.",
     "ads": "Ummmm... We do have some ads~",
-    "rocksDevTools": "RocksDev.Tools",
-    "tryNow": "Try Now",
+    "freeFastReliable": "Free, fast, and reliable tools for developers. No data collection when you use our tools, just tools.",
+    "freeForever": "Free Forever",
+    "freeForeverDescription": "All tools are and will always be free to use. No premium features.",
     "freeOpenSource": "Free & Open Source",
-    "starOnGitHub": "Star on GitHub"
+    "noTracking": "No Tracking",
+    "noTrackingDescription": "We don't track or store any of your data. Everything runs in your browser.",
+    "openSource": "Open Source",
+    "openSourceDescription": "All tools are open source and available on GitHub. Contributions welcome!",
+    "rocksDevTools": "RocksDev.Tools",
+    "starOnGitHub": "Star on GitHub",
+    "tools": "tools",
+    "tryNow": "Try Now"
   },
   "nav": {
     "back": "back",
@@ -15,22 +25,23 @@
     "menu": "Menu",
     "tools": {
       "converters": {
-        "description": "Convert between different data formats",
-        "title": "Converters",
         "base64": {
           "description": "Convert between Base64 and other formats",
           "title": "Base64 Converter"
-        }
+        },
+        "description": "Convert between different data formats",
+        "title": "Converters"
       },
       "dev": {
         "description": "Developer utilities and formatters",
-        "title": "Dev Tools",
         "regex": {
           "description": "Test and validate regular expressions",
           "title": "Regex Tester"
-        }
+        },
+        "title": "Dev Tools"
       },
       "json": {
+        "description": "JSON tools",
         "diff": {
           "description": "Compare and find differences between JSON files",
           "title": "JSON Diff"
@@ -60,26 +71,23 @@
       "title": "Tools"
     }
   },
-  "site": {
-    "description": "A comprehensive collection of developer tools",
-    "name": "Rocks Dev"
-  },
   "not-found": {
     "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
     "go-back": "Go Back",
     "return-home": "Return Home",
     "title": "Page Not Found"
   },
+  "site": {
+    "description": "A comprehensive collection of developer tools",
+    "name": "Rocks Dev"
+  },
   "supportOverlay": {
-    "title": "Enjoying Our Developer Tools?",
     "description": "Thanks for using our tools! If they've helped make your development easier, consider supporting this project to keep it free and growing.",
     "description2": "Every contribution helps maintain and improve these tools!",
     "description3": "Support the Development",
     "description4": "Or Show Your Support With",
     "starOnGitHub": "Star on GitHub",
+    "title": "Enjoying Our Developer Tools?",
     "yourStarHelps": "Your star helps others discover these tools too!"
-  },
-  "dock": {
-    "add": "Add to dock"
   }
 }

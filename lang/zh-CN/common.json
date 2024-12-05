@@ -1,10 +1,20 @@
 {
+  "dock": {
+    "add": "添加到 Dock"
+  },
   "home": {
-    "freeFastReliable": "免费、快速、可靠的开发者工具。无数据收集，只有工具。",
     "ads": "嗯...我们确实有一些广告~",
-    "rocksDevTools": "RocksDev.工具",
+    "freeFastReliable": "免费、快速、可靠的开发者工具。无数据收集，只有工具。",
+    "freeForever": "免费永远",
+    "freeForeverDescription": "所有工具都是免费的，并且将永远免费使用。没有高级功能。",
     "freeOpenSource": "免费 & 开源",
+    "noTracking": "无跟踪",
+    "noTrackingDescription": "我们不跟踪或存储任何数据。所有工具都在您的浏览器中运行。",
+    "openSource": "开源",
+    "openSourceDescription": "所有工具都是开源的，并可在 GitHub 上贡献。",
+    "rocksDevTools": "RocksDev.工具",
     "starOnGitHub": "在 GitHub 上点赞",
+    "tools": "工具",
     "tryNow": "立即试用"
   },
   "nav": {
@@ -15,22 +25,23 @@
     "menu": "菜单",
     "tools": {
       "converters": {
-        "description": "在不同数据格式之间转换",
-        "title": "转换工具",
         "base64": {
           "description": "将 Base64 转换为其他格式",
           "title": "Base64 转换器"
-        }
+        },
+        "description": "在不同数据格式之间转换",
+        "title": "转换工具"
       },
       "dev": {
         "description": "开发者实用工具和格式化工具",
-        "title": "开发工具",
         "regex": {
           "description": "测试和验证正则表达式",
           "title": "正则表达式测试工具"
-        }
+        },
+        "title": "开发工具"
       },
       "json": {
+        "description": "JSON 工具",
         "diff": {
           "description": "比较和查找 JSON 文件之间的差异",
           "title": "JSON 对比工具"
@@ -60,26 +71,23 @@
       "title": "工具"
     }
   },
-  "site": {
-    "description": "全面的开发者工具集合",
-    "name": "Rocks Dev"
-  },
   "not-found": {
     "description": "您正在寻找的页面可能已被删除、名称已更改或暂时不可用。",
     "go-back": "返回",
     "return-home": "返回首页",
     "title": "页面未找到"
   },
+  "site": {
+    "description": "全面的开发者工具集合",
+    "name": "Rocks Dev"
+  },
   "supportOverlay": {
-    "title": "享受我们的开发者工具？",
     "description": "感谢使用我们的工具！如果它们帮助您使开发变得更轻松，请考虑支持此项目以保持其免费和增长。",
     "description2": "每个贡献都有助于维护和改进这些工具！",
     "description3": "支持开发",
     "description4": "您的星星有助于其他人发现这些工具！",
     "starOnGitHub": "在 GitHub 上点赞",
+    "title": "享受我们的开发者工具？",
     "yourStarHelps": "您的星星有助于其他人发现这些工具！"
-  },
-  "dock": {
-    "add": "添加到 Dock"
   }
 }

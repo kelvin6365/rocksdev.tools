@@ -13,7 +13,7 @@ export default function ToolsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold tracking-tight">Developer Tools</h1>
+        <h1 className="text-3xl font-bold tracking-tight">RocksDev.Tools</h1>
         <p className="text-muted-foreground">
           Select a tool category to get started.
         </p>
