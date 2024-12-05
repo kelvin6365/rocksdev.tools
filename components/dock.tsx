@@ -88,8 +88,7 @@ function DockItem({
                 return;
               }
               //Send event to analytics GA
-              sendGAEvent({
-                event: "dock_tool_clicked",
+              sendGAEvent("event", "dock_tool_clicked", {
                 tool: getTool()?.value,
               });
               router.push(tool.href || "");
