@@ -44,6 +44,8 @@ This project is built with modern web technologies and best practices:
 │               └── base64/   # Base64 converter tool
 │           └── dev/          # Developer tools
 │               └── regex/   # Regex tester tool
+│           └── seo/          # SEO tools
+│               └── og-image/ # OG image generator tool
 │
 ├── components/
 │   ├── tools/
@@ -53,6 +55,7 @@ This project is built with modern web technologies and best practices:
 │   │   ├── json-minifier  # JSON minifier component
 │   │   └── base64         # Base64 converter component
 │   │   └── regex          # Regex tester component
+│   │   └── og-image       # OG image generator component
 │   ├── layouts/
 │   │   └── tool-layout   # Common tool layout
 │   └── ui/                   # UI Components
@@ -64,16 +67,19 @@ This project is built with modern web technologies and best practices:
 │   │   └── json.json
 │   │   └── converters.json
 │   │   └── dev.json
+│   │   └── seo.json
 │   ├── zh-CN/
 │   │   └── common.json
 │   │   └── json.json
 │   │   └── converters.json
 │   │   └── dev.json
+│   │   └── seo.json
 │   ├── zh-HK/
 │   │   └── common.json
 │   │   └── json.json
 │   │   └── converters.json
 │   │   └── dev.json
+│   │   └── seo.json
 ├── providers/
 │   └── toast-provider.tsx    # Toast notifications provider
 │
@@ -151,9 +157,9 @@ This project is built with modern web technologies and best practices:
 - [ ] Robots.txt Generator
 - [ ] XML Sitemap Generator
 - [ ] SEO Analyzer
-- [ ] OG Image Generator (Open Graph Image)
-  - [ ] Support batch generation
-  - [ ] Support crop / resize
+- [x] OG Image Generator (Open Graph Image)
+  - [x] Support batch generation
+  - [x] Support crop / resize
 
 #### Text Processing Tools
 

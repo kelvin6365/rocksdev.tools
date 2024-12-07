@@ -76,6 +76,8 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │               └── base64/   # Base64 converter tool
 │           └── dev/          # Developer tools
 │               └── regex/   # Regex tester tool
+│           └── seo/          # SEO tools
+│               └── og-image/ # OG image generator tool
 ├── components/
 │   ├── tools/               # Tools components
 │   │   ├── json-formatter # JSON formatter component
@@ -84,6 +86,7 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │   │   ├── json-minifier  # JSON minifier component
 │   │   └── base64         # Base64 converter component
 │   │   └── regex          # Regex tester component
+│   │   └── og-image       # OG image generator component
 │   ├── layouts/
 │   │   └── tool-layout   # Common tool layout
 │   └── ui/                   # UI Components
@@ -95,16 +98,19 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │   │   └── json.json
 │   │   └── converters.json
 │   │   └── dev.json
+│   │   └── seo.json
 │   ├── zh-CN/
 │   │   └── common.json
 │   │   └── json.json
 │   │   └── converters.json
 │   │   └── dev.json
+│   │   └── seo.json
 │   ├── zh-HK/
 │   │   └── common.json
 │   │   └── json.json
 │   │   └── converters.json
 │   │   └── dev.json
+│   │   └── seo.json
 ├── providers/
 │   └── toast-provider.tsx    # Toast notifications provider
 │
@@ -132,9 +138,10 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
          subTools: [
            {
              label: "Subtool 1",
-             value: "subtool-1",
+             value: "subtool-1", // must be unique
              href: "/tools/your-tool/subtool-1",
              description: "Subtool description",
+             icon: "🔍",
            },
          ],
        },
@@ -157,8 +164,17 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
    ```typescript
    // app/[locale]/tools/your-tool/page.tsx
    import { YourTool } from '@/components/tools/your-tool/YourTool'
-   import { getMetadata } from '@/services/seo'
-   export const metadata = getMetadata({ path: "your-tool", locale });
+   import { ToolLayout } from "../../../../../components/layouts/tool-layout";
+   import { getMetadata } from "../../../../../services/seo";
+
+   type Props = {
+     params: Promise<{ locale: string }>;
+   };
+
+   export const generateMetadata = async ({ params }: Props) => {
+     const { locale } = await params;
+     return getMetadata({ path: "your-tool", locale });
+   };
 
    export default function YourToolPage() {
      return (
