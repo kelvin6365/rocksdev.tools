@@ -4,6 +4,8 @@ A comprehensive collection of developer tools built with modern web technologies
 
 <a href="https://www.buymeacoffee.com/tszhim_tech" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
+<a href="https://www.producthunt.com/posts/rocksdev-tools?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-rocksdev&#0045;tools" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=682248&theme=light" alt="RocksDev&#0032;Tools - A&#0032;comprehensive&#0032;collection&#0032;of&#0032;developer&#0032;tools | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
 ## Project Blueprint
 
 This project is built with modern web technologies and best practices:
