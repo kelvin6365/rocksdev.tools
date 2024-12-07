@@ -12,11 +12,11 @@
     "noTrackingDescription": "We don't track or store any of your data. Everything runs in your browser.",
     "openSource": "Open Source",
     "openSourceDescription": "All tools are open source and available on GitHub. Contributions welcome!",
+    "productHunt": "🎉 We're live on Product Hunt! Support us with your feedback",
     "rocksDevTools": "RocksDev.Tools",
     "starOnGitHub": "Star on GitHub",
     "tools": "tools",
-    "tryNow": "Try Now",
-    "productHunt": "🎉 We're live on Product Hunt! Support us with your feedback"
+    "tryNow": "Try Now"
   },
   "nav": {
     "back": "back",
@@ -65,6 +65,10 @@
       },
       "seo": {
         "description": "Tools for search engine optimization",
+        "og-image": {
+          "description": "Generate OG images for your website",
+          "title": "OG Image Generator"
+        },
         "title": "SEO Tools"
       },
       "text": {

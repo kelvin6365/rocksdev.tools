@@ -84,6 +84,15 @@ export const config = {
       href: "/tools/seo",
       description: "Meta tags, robots.txt, and sitemap generators",
       category: "seo",
+      subTools: [
+        {
+          label: "OG Image Generator",
+          value: "seo.og-image",
+          href: "/tools/seo/og-image",
+          description: "Generate OG images for your website",
+          icon: "🖼️",
+        },
+      ],
     },
     {
       label: "Converters",

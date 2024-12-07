@@ -1,9 +1,57 @@
 {
   "seo": {
-    "title": "SEO Tools",
-    "description": "SEO tools for your website",
-    "tryNow": "Try Now",
+    "description": "Tools for optimizing your website's search engine visibility",
     "free": "Free",
-    "openSource": "Open Source"
+    "og-image": {
+      "description": "Create perfect Open Graph images for social media sharing. Supports batch processing with custom dimensions and cropping.",
+      "download": {
+        "all": {
+          "title": "Download All",
+          "tooltip": "Download all images as a ZIP file"
+        },
+        "single": "Download"
+      },
+      "editor": {
+        "cancel": "Cancel",
+        "save": "Save Changes",
+        "title": "Edit Image",
+        "zoom": "Zoom",
+        "zoom-description": "Adjust zoom level to fine-tune your image composition",
+        "save-description": "Save your cropped image at {width}x{height}"
+      },
+      "title": "OG Image Generator",
+      "upload": {
+        "description": "Drag & drop images here, or click to select files",
+        "title": "Upload Images",
+        "formats": "Supports PNG, JPG, JPEG, and WebP formats"
+      },
+      "info": {
+        "description": "Open Graph images are used by social media platforms when your content is shared. The recommended size is 1200×630 pixels (1.91:1 aspect ratio).",
+        "dimensions": "Standard Open Graph image dimensions"
+      },
+      "images": {
+        "count": "Images ({count})",
+        "alt": "Preview {index}"
+      },
+      "edit": {
+        "title": "Edit",
+        "tooltip": "Crop and adjust the image",
+        "description": "Crop and adjust your image to the perfect Open Graph dimensions"
+      },
+      "remove": {
+        "title": "Remove",
+        "tooltip": "This action cannot be undone"
+      },
+      "edited": "Edited",
+      "instructions": {
+        "drag": "Drag to reposition",
+        "zoom": "Use slider to zoom"
+      },
+      "cancel": "Cancel",
+      "save": "Save Changes"
+    },
+    "openSource": "Open Source",
+    "title": "SEO Tools",
+    "tryNow": "Try Now"
   }
 }

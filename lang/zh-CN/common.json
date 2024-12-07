@@ -12,11 +12,11 @@
     "noTrackingDescription": "我们不跟踪或存储任何数据。所有工具都在您的浏览器中运行。",
     "openSource": "开源",
     "openSourceDescription": "所有工具都是开源的，并可在 GitHub 上贡献。",
+    "productHunt": "🎉 我们上线了 Product Hunt！支持我们并给我们反馈",
     "rocksDevTools": "RocksDev.工具",
     "starOnGitHub": "在 GitHub 上点赞",
     "tools": "工具",
-    "tryNow": "立即试用",
-    "productHunt": "🎉 我们上线了 Product Hunt！支持我们并给我们反馈"
+    "tryNow": "立即试用"
   },
   "nav": {
     "back": "返回",
@@ -65,6 +65,10 @@
       },
       "seo": {
         "description": "搜索引擎优化工具",
+        "og-image": {
+          "description": "生成 OG 图像",
+          "title": "OG 图像生成器"
+        },
         "title": "SEO 工具"
       },
       "text": {

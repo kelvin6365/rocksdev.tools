@@ -904,4 +904,39 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
   },
+  "seo.og-image": {
+    en: {
+      title: "OG Image Generator | RocksDev Tools",
+      description: "Generate OG images for your website",
+      keywords: ["og image generator", "og image tool", "og image creator"],
+      openGraph: {
+        type: "website",
+        title: "OG Image Generator",
+        description: "Generate OG images for your website",
+        images: [`/api/og?title=OG%20Image%20Generator`],
+      },
+    },
+    "zh-CN": {
+      title: "OG圖像生成器 | RocksDev工具集",
+      description: "生成OG圖像",
+      keywords: ["og圖像生成器", "og圖像工具", "og圖像創建者"],
+      openGraph: {
+        type: "website",
+        title: "OG圖像生成器",
+        description: "生成OG圖像",
+        images: [`/api/og?title=OG%20Image%20Generator`],
+      },
+    },
+    "zh-HK": {
+      title: "OG圖像生成器 | RocksDev工具集",
+      description: "生成OG圖像",
+      keywords: ["og圖像生成器", "og圖像工具", "og圖像創建者"],
+      openGraph: {
+        type: "website",
+        title: "OG圖像生成器",
+        description: "生成OG圖像",
+        images: [`/api/og?title=OG%20Image%20Generator`],
+      },
+    },
+  },
 };

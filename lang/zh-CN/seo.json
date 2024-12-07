@@ -1,9 +1,57 @@
 {
   "seo": {
-    "title": "SEO 工具",
-    "description": "SEO 工具",
-    "tryNow": "立即试用",
+    "description": "优化您网站搜索引擎可见性的工具",
     "free": "免费",
-    "openSource": "开源"
+    "og-image": {
+      "description": "创建完美的社交媒体分享图片。支持批量处理、自定义尺寸和裁剪。",
+      "download": {
+        "all": {
+          "title": "下载全部",
+          "tooltip": "将所有图片打包下载为 ZIP 文件"
+        },
+        "single": "下载"
+      },
+      "editor": {
+        "cancel": "取消",
+        "save": "保存更改",
+        "title": "编辑图片",
+        "zoom": "缩放",
+        "zoom-description": "调整缩放级别以微调图片构图",
+        "save-description": "将裁剪后的图片保存为 {width}x{height}"
+      },
+      "title": "OG 图片生成器",
+      "upload": {
+        "description": "拖放图片到此处，或点击选择文件",
+        "title": "上传图片",
+        "formats": "支持 PNG、JPG、JPEG 和 WebP 格式"
+      },
+      "info": {
+        "description": "当您的内容在社交媒体上分享时，Open Graph 图片会被显示。推荐尺寸为 1200×630 像素（1.91:1 宽高比）。",
+        "dimensions": "标准 Open Graph 图片尺寸"
+      },
+      "images": {
+        "count": "图片 ({count})",
+        "alt": "预览 {index}"
+      },
+      "edit": {
+        "title": "编辑",
+        "tooltip": "裁剪和调整图片",
+        "description": "将图片调整为完美的 Open Graph 尺寸"
+      },
+      "remove": {
+        "title": "删除",
+        "tooltip": "此操作无法撤销"
+      },
+      "edited": "已编辑",
+      "instructions": {
+        "drag": "拖动以重新定位",
+        "zoom": "使用滑块缩放"
+      },
+      "cancel": "取消",
+      "save": "保存更改"
+    },
+    "openSource": "开源",
+    "title": "SEO 工具",
+    "tryNow": "立即试用"
   }
 }
