@@ -11,7 +11,7 @@
       "commonPatterns": "常見模式",
       "copied": "已複製到剪貼簿！",
       "copy": "複製",
-      "description": "測試和驗證正則表達式",
+      "description": "測試和驗證Regex",
       "dotAll": "點號匹配所有字符 (s)",
       "email": "電子郵件",
       "error": {
@@ -31,11 +31,11 @@
       "patternPlaceholder": "在此貼上你的模式...",
       "phoneNumber": "電話號碼",
       "placeholder": "在此貼上你的模式...",
-      "regexPattern": "正則表達式模式",
+      "regexPattern": "Regex模式",
       "sticky": "黏性 (y)",
       "testString": "測試字串",
       "testStringPlaceholder": "在此貼上你的測試字串...",
-      "title": "正則表達式測試工具",
+      "title": "Regex測試工具",
       "unicode": "Unicode (u)",
       "url": "URL",
       "use": "使用"

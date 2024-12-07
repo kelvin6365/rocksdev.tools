@@ -149,6 +149,9 @@ This project is built with modern web technologies and best practices:
 - [ ] Robots.txt Generator
 - [ ] XML Sitemap Generator
 - [ ] SEO Analyzer
+- [ ] OG Image Generator (Open Graph Image)
+  - [ ] Support batch generation
+  - [ ] Support crop / resize
 
 #### Text Processing Tools
 
