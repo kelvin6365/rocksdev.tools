@@ -30,7 +30,6 @@ export default function AdUnit({
       data-ad-format={adFormat}
       data-full-width-responsive="true"
       style={{ display: "block", ...style }}
-      data-adtest="on"
     ></ins>
   );
 }
