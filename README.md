@@ -174,8 +174,6 @@ This project is built with modern web technologies and best practices:
 
 - [ ] Strategic ad placement
 - [ ] Premium features (API access)
-- [ ] Removal of ads subscription
-- [ ] Bulk processing options
 
 #### Marketing
 
