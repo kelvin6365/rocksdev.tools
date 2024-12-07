@@ -140,6 +140,7 @@ export function ImageEditor({
             aspect={OG_ASPECT}
             className="max-h-[630px] mx-auto w-auto"
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               ref={imgRef}
               alt="Crop me"
