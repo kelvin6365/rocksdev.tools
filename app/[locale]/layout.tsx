@@ -19,6 +19,7 @@ import { Dock } from "@/components/dock";
 import { PromotionBanner } from "../../components/promotion-banner";
 import { config } from "../../services/config";
 import Script from "next/dist/client/script";
+import ProductHuntBanner from "../../components/product-hunt-banner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,6 +39,7 @@ export default async function RootLayout({
 
   const messages = await getMessages();
   const structuredData = getStructuredData(locale);
+  const isLaunchDay = new Date().toISOString().startsWith("2024-12-11");
 
   return (
     <html lang={locale} suppressHydrationWarning className="scroll-smooth">
@@ -72,6 +74,7 @@ export default async function RootLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ToolProvider>
             <NavBar />
+            {isLaunchDay && <ProductHuntBanner />}
             <main className="container py-6">{children}</main>
             <ToastProvider />
             <Analytics />

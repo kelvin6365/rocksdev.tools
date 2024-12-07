@@ -11,10 +11,12 @@ import { Github } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { Button } from "../../components/ui/button";
+import ProductHuntFollow from "../../components/product-hunt-button";
 
 export default function HomePage() {
   const tNav = useTranslations("nav");
   const tHome = useTranslations("home");
+  const isLaunchDay = new Date().toISOString().startsWith("2024-12-11");
   return (
     <div className="flex flex-col gap-8">
       {/* Hero Section */}
@@ -44,6 +46,7 @@ export default function HomePage() {
           <Github className="w-4 h-4" />
           {tHome("starOnGitHub")}
         </Button>
+        {isLaunchDay && <ProductHuntFollow />}
       </section>
 
       {/* Tools Grid */}

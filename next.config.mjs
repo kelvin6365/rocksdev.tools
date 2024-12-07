@@ -6,10 +6,17 @@ const nextConfig = {
   reactStrictMode: false,
   output: "standalone",
   images: {
+    dangerouslyAllowSVG: true,
     remotePatterns: [
       {
         protocol: "https",
         hostname: "cdn.buymeacoffee.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "api.producthunt.com",
         port: "",
         pathname: "/**",
       },
