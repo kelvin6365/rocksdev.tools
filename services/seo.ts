@@ -62,7 +62,7 @@ export interface SEOConfig {
     description?: string;
     type?: string;
     url?: string;
-    image?: string;
+    images?: string[];
     siteName?: string;
   };
   twitter?: {
@@ -115,7 +115,8 @@ export const defaultSEO: Record<string, SEOConfig> = {
     openGraph: {
       type: "website",
       siteName: "RocksDev Tools",
-      image: "/og-image.png",
+      images: [`/api/og`],
+      url: process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools",
     },
     twitter: {
       card: "summary_large_image",
@@ -186,7 +187,8 @@ export const defaultSEO: Record<string, SEOConfig> = {
     openGraph: {
       type: "website",
       siteName: "RocksDev 工具集",
-      image: "/og-image.png",
+      images: [`/api/og`],
+      url: process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools",
     },
     twitter: {
       card: "summary_large_image",
@@ -253,7 +255,8 @@ export const defaultSEO: Record<string, SEOConfig> = {
     openGraph: {
       type: "website",
       siteName: "RocksDev 工具集",
-      image: "/og-image.png",
+      images: [`/api/og`],
+      url: process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools",
     },
     twitter: {
       card: "summary_large_image",
@@ -366,7 +369,7 @@ export function getToolStructuredData(toolPath: string, locale: string = "en") {
       },
     ],
     keywords: toolSEO.keywords?.join(", "),
-    image: toolSEO.openGraph?.image,
+    images: toolSEO.openGraph?.images,
     potentialAction: {
       "@type": "UseAction",
       target: {
@@ -431,7 +434,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         type: "website",
         title: "JSON Formatter",
         description: "Format your JSON online",
-        image: "/tools/json-formatter-og.png",
+        images: [`/api/og?title=JSON%20Formatter`],
       },
     },
     "zh-CN": {
@@ -456,7 +459,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         type: "website",
         title: "JSON 格式化工具",
         description: "在线格式化和验证您的 JSON",
-        image: "/tools/json-formatter-og.png",
+        images: [`/api/og?title=JSON%20Formatter`],
       },
     },
     "zh-HK": {
@@ -481,7 +484,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         type: "website",
         title: "JSON 格式化工具",
         description: "在線格式化和驗證您的 JSON",
-        image: "/tools/json-formatter-og.png",
+        images: [`/api/og?title=JSON%20Formatter`],
       },
     },
   },
@@ -495,7 +498,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         type: "website",
         title: "JSON Validator",
         description: "Validate your JSON data online",
-        image: "/tools/json-validator-og.png",
+        images: [`/api/og?title=JSON%20Validator`],
       },
     },
     "zh-CN": {
@@ -506,7 +509,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         type: "website",
         title: "JSON 验证工具",
         description: "在线验证您的 JSON 数据",
-        image: "/tools/json-validator-og.png",
+        images: [`/api/og?title=JSON%20Validator`],
       },
     },
     "zh-HK": {
@@ -517,7 +520,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         type: "website",
         title: "JSON 驗證工具",
         description: "在線驗證您的 JSON 數據",
-        image: "/tools/json-validator-og.png",
+        images: [`/api/og?title=JSON%20Validator`],
       },
     },
   },
@@ -567,7 +570,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         title: "JSON Diff - Compare JSON Files Online",
         description:
           "Compare two JSON objects and find their differences instantly. Visual comparison tool with side-by-side view and difference highlighting.",
-        image: "/tools/json-diff-og.png",
+        images: [`/api/og?title=JSON%20Diff`],
       },
     },
     "zh-CN": {
@@ -613,7 +616,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         title: "JSON 差异对比工具 - 在线比较 JSON 文件",
         description:
           "即时比较两个 JSON 对象并找出它们的差异。提供并排视图和差异高亮的可视化比较工具。",
-        image: "/tools/json-diff-og.png",
+        images: [`/api/og?title=JSON%20Diff`],
       },
     },
     "zh-HK": {
@@ -659,7 +662,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         title: "JSON 差異對比工具 - 在線比較 JSON 文件",
         description:
           "即時比較兩個 JSON 對象並找出它們的差異。提供並排視圖和差異高亮的可視化比較工具。",
-        image: "/tools/json-diff-og.png",
+        images: [`/api/og?title=JSON%20Diff`],
       },
     },
   },
@@ -710,7 +713,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         title: "JSON Minifier - Compress JSON Data Online",
         description:
           "Free online JSON minifier to compress and optimize your JSON data. Remove whitespace and reduce file size while maintaining data integrity.",
-        image: "/tools/json-minifier-og.png",
+        images: [`/api/og?title=JSON%20Minifier`],
       },
     },
     "zh-CN": {
@@ -758,7 +761,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         title: "JSON 压缩工具 - 在线压缩 JSON 数据",
         description:
           "免费的在线 JSON 压缩工具，压缩和优化您的 JSON 数据。删除空白并减小文件大小，同时保持数据完整性。",
-        image: "/tools/json-minifier-og.png",
+        images: [`/api/og?title=JSON%20Minifier`],
       },
     },
     "zh-HK": {
@@ -806,7 +809,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         title: "JSON 壓縮工具 - 在線壓縮 JSON 數據",
         description:
           "免費的在線 JSON 壓縮工具，壓縮和優化您的 JSON 數據。刪除空白並減小文件大小，同時保持數據完整性。",
-        image: "/tools/json-minifier-og.png",
+        images: [`/api/og?title=JSON%20Minifier`],
       },
     },
   },
@@ -826,7 +829,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         type: "website",
         title: "Base64 Converter",
         description: "Convert between Base64 and other formats",
-        image: "/tools/base64-og.png",
+        images: [`/api/og?title=Base64%20Converter`],
       },
     },
     "zh-CN": {
@@ -844,7 +847,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         type: "website",
         title: "Base64 轉換器",
         description: "在 Base64 和其他格式之間轉換",
-        image: "/tools/base64-og.png",
+        images: [`/api/og?title=Base64%20Converter`],
       },
     },
     "zh-HK": {
@@ -862,7 +865,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         type: "website",
         title: "Base64 轉換器",
         description: "在 Base64 和其他格式之間轉換",
-        image: "/tools/base64-og.png",
+        images: [`/api/og?title=Base64%20Converter`],
       },
     },
   },
@@ -875,7 +878,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         type: "website",
         title: "Regex Tester",
         description: "Test and validate regular expressions",
-        image: "/tools/regex-og.png",
+        images: [`/api/og?title=Regex%20Tester`],
       },
     },
     "zh-CN": {
@@ -886,7 +889,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         type: "website",
         title: "Regex測試工具",
         description: "測試和驗證Regex",
-        image: "/tools/regex-og.png",
+        images: [`/api/og?title=Regex%20Tester`],
       },
     },
     "zh-HK": {
@@ -897,7 +900,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         type: "website",
         title: "Regex測試工具",
         description: "測試和驗證Regex",
-        image: "/tools/regex-og.png",
+        images: [`/api/og?title=Regex%20Tester`],
       },
     },
   },
