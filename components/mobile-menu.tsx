@@ -1,7 +1,9 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 import { Button } from "./ui/button";
-import { X, ChevronRight, Github, Star } from "lucide-react";
+import { X, ChevronRight, Github, Star, Twitter } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { config } from "@/services/config";
 import { usePathname, Link } from "../i18n/routing";
@@ -122,18 +124,31 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 <span className="text-sm font-medium">{t("nav.language")}</span>
                 <LanguageSwitcher />
               </div>
-              <Link
-                href={config.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between w-full p-2 text-sm font-medium rounded-md hover:bg-accent/50"
-              >
-                <div className="flex items-center gap-2">
-                  <Github className="h-4 w-4" />
-                  <span>{t("nav.star")}</span>
-                </div>
-                <Star className="h-4 w-4" />
-              </Link>
+              <div className="flex gap-2">
+                <Link
+                  href="https://twitter.com/tszhim_tech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between flex-1 p-2 text-sm font-medium rounded-md hover:bg-accent/50"
+                >
+                  <div className="flex items-center gap-2">
+                    <Twitter className="h-4 w-4" />
+                    <span>Follow on Twitter</span>
+                  </div>
+                </Link>
+                <Link
+                  href={config.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between flex-1 p-2 text-sm font-medium rounded-md hover:bg-accent/50"
+                >
+                  <div className="flex items-center gap-2">
+                    <Github className="h-4 w-4" />
+                    <span>Star on GitHub</span>
+                  </div>
+                  <Star className="h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </motion.div>
         </div>

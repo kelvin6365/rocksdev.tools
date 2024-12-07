@@ -4,7 +4,7 @@ import { LanguageSwitcher } from "@/components/language-switcher";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { config } from "@/services/config";
-import { Code2, Github, Menu } from "lucide-react";
+import { Code2, Github, Menu, Twitter } from "lucide-react";
 import { usePathname, Link } from "@/i18n/routing";
 import * as React from "react";
 import { useTranslations } from "next-intl";
@@ -55,6 +55,16 @@ export function NavBar() {
           </div>
           <div className="flex items-center gap-4 ml-auto">
             <LanguageSwitcher />
+            <Button variant="outline" size="icon" asChild>
+              <Link
+                href="https://twitter.com/tszhim_tech"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Twitter className="h-4 w-4" />
+                <span className="sr-only">Twitter</span>
+              </Link>
+            </Button>
             <Button variant="outline" size="icon" asChild>
               <Link
                 href={config.github}
