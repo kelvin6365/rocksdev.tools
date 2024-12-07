@@ -57,7 +57,7 @@ export function Base64Converter() {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
     toast.success(t("message.download"));
-    incrementToolUsage();
+    incrementToolUsage("base64");
   };
 
   const decodeBase64 = () => {
@@ -89,7 +89,7 @@ export function Base64Converter() {
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
         toast.success(t("message.download"));
-        incrementToolUsage();
+        incrementToolUsage("base64");
       } catch (error) {
         toast.error(t("error.invalid"));
       }
@@ -143,7 +143,7 @@ export function Base64Converter() {
         ? btoa(input).replace(/\+/g, "-").replace(/\//g, "_")
         : btoa(input);
       setOutput(encoded);
-      incrementToolUsage();
+      incrementToolUsage("base64");
     } catch (error) {
       toast.error(t("error.invalid"));
     } finally {
@@ -162,7 +162,7 @@ export function Base64Converter() {
         isUrlSafe ? input.replace(/-/g, "+").replace(/_/g, "/") : input,
       );
       setOutput(decoded);
-      incrementToolUsage();
+      incrementToolUsage("base64");
     } catch (error) {
       toast.error(t("error.invalid"));
     } finally {

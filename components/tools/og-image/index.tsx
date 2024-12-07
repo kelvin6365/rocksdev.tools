@@ -103,7 +103,7 @@ export function OGImageGenerator() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    incrementToolUsage();
+    incrementToolUsage("og_image");
   };
 
   return (

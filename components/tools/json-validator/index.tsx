@@ -36,7 +36,7 @@ export function JsonValidator() {
       setIsValid(true);
       setErrorMessage("");
       toast.success(t("valid"));
-      incrementToolUsage();
+      incrementToolUsage("json_validator");
     } catch (error) {
       setIsValid(false);
       setErrorMessage((error as Error).message);

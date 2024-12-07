@@ -38,7 +38,7 @@ export function JsonFormatter() {
     try {
       const parsed = JSON.parse(input);
       setOutput(parsed);
-      incrementToolUsage();
+      incrementToolUsage("json_formatter");
     } catch (error) {
       toast.error(t("error.invalid"), {});
     } finally {

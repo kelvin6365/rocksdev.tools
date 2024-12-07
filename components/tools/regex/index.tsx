@@ -669,7 +669,7 @@ export function RegexTester() {
       setMatches(results);
       setMatchCount(count);
       setHighlightedText(highlightMatches(testString, results));
-      if (count > 0) incrementToolUsage();
+      if (count > 0) incrementToolUsage("regex");
     } catch (err) {
       setError((err as Error).message);
     }

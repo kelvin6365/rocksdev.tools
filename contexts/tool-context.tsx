@@ -1,10 +1,11 @@
 "use client";
 
 import { Tool } from "@/types/tool";
+import { sendGAEvent } from "@next/third-parties/google";
 import { createContext, useContext, useEffect, useState } from "react";
 
 type ToolContextType = {
-  incrementToolUsage: () => void;
+  incrementToolUsage: (tool: string) => void;
   setTools: (tools: Tool[]) => void;
   toolUsageCount: number;
   tools: Tool[];
@@ -32,9 +33,12 @@ export function ToolProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem("tools", JSON.stringify(tools));
   };
 
-  const incrementToolUsage = () => {
+  const incrementToolUsage = (tool: string) => {
     const newCount = toolUsageCount + 1;
     setToolUsageCount(newCount);
+    sendGAEvent("event", "tool_used", {
+      tool: tool,
+    });
     localStorage.setItem("toolUsageCount", newCount.toString());
   };
 
