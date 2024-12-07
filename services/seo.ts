@@ -260,8 +260,7 @@ export const defaultSEO: Record<string, SEOConfig> = {
     },
     twitter: {
       card: "summary_large_image",
-      site: "@rocksdevtools",
-      creator: "@rocksdevtools",
+      site: "@tszhim_tech",
     },
     additionalMetaTags: [
       {
