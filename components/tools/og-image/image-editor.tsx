@@ -43,6 +43,35 @@ export function ImageEditor({
   const [completedCrop, setCompletedCrop] = useState<PixelCrop>();
   const previewCanvasRef = useRef<HTMLCanvasElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
+  const [scale, setScale] = useState(1);
+
+  const setInitialCrop = () => {
+    if (!imgRef.current) return;
+
+    const { naturalWidth: width, naturalHeight: height } = imgRef.current;
+    let cropWidth = width;
+    let cropHeight = cropWidth / OG_ASPECT;
+
+    if (cropHeight > height) {
+      cropHeight = height;
+      cropWidth = cropHeight * OG_ASPECT;
+    }
+
+    const x = (width - cropWidth) / 2;
+    const y = (height - cropHeight) / 2;
+
+    setCrop({
+      unit: "px",
+      x,
+      y,
+      width: cropWidth,
+      height: cropHeight,
+    });
+  };
+
+  const handleImageLoad = () => {
+    setInitialCrop();
+  };
 
   useDebounceEffect(
     async () => {
@@ -98,7 +127,7 @@ export function ImageEditor({
             onChange={(_, percentCrop) => setCrop(percentCrop)}
             onComplete={(c) => setCompletedCrop(c)}
             aspect={OG_ASPECT}
-            className="max-h-[630px] mx-auto"
+            className="max-h-[630px] mx-auto w-auto"
           >
             <img
               ref={imgRef}
@@ -106,6 +135,7 @@ export function ImageEditor({
               src={image.preview}
               className="max-h-[630px] w-auto mx-auto"
               style={{ transform: `scale(${scale})` }}
+              onLoad={handleImageLoad}
             />
           </ReactCrop>
         </div>
