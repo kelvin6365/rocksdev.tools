@@ -1,6 +1,10 @@
-# Rocks Dev
+# RocksDev Tools
+
+[![RocksDev Banner](https://www.rocksdev.tools/api/og?title=RocksDev%20Tools)](https://rocksdev.tools)
 
 A comprehensive collection of developer tools built with modern web technologies. This project aims to provide free, fast, and reliable tools for developers.
+
+[![RocksDev Tools](./public/images/screencapture-rocksdev-tools.png)](https://rocksdev.tools)
 
 <a href="https://www.buymeacoffee.com/tszhim_tech" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
