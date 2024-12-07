@@ -48,17 +48,28 @@ export function ImageEditor({
   const setInitialCrop = () => {
     if (!imgRef.current) return;
 
-    const { naturalWidth: width, naturalHeight: height } = imgRef.current;
-    let cropWidth = width;
-    let cropHeight = cropWidth / OG_ASPECT;
+    // Get the displayed dimensions of the image
+    const { width, height } = imgRef.current.getBoundingClientRect();
 
-    if (cropHeight > height) {
+    // First, determine if the image is taller or wider than OG aspect ratio
+    const imageAspect = width / height;
+    const ogAspect = OG_ASPECT; // 1.91:1
+
+    let cropWidth, cropHeight;
+
+    if (imageAspect > ogAspect) {
+      // Image is wider than OG ratio
       cropHeight = height;
-      cropWidth = cropHeight * OG_ASPECT;
+      cropWidth = height * ogAspect;
+    } else {
+      // Image is taller than OG ratio
+      cropWidth = width;
+      cropHeight = width / ogAspect;
     }
 
-    const x = (width - cropWidth) / 2;
-    const y = (height - cropHeight) / 2;
+    // Center the crop
+    const x = Math.max(0, (width - cropWidth) / 2);
+    const y = Math.max(0, (height - cropHeight) / 2);
 
     setCrop({
       unit: "px",
