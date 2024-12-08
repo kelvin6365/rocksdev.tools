@@ -36,12 +36,12 @@ export function JsonValidator() {
       setIsValid(true);
       setErrorMessage("");
       toast.success(t("valid"));
-      incrementToolUsage("json_validator");
     } catch (error) {
       setIsValid(false);
       setErrorMessage((error as Error).message);
       toast.error(t("error.invalid"));
     } finally {
+      incrementToolUsage("json_validator");
       setIsLoading(false);
     }
   };
