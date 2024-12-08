@@ -29,12 +29,12 @@ export function JsonMinifier() {
       const json = JSON.parse(_input);
       const minified = JSON.stringify(json);
       setMinifiedOutput(minified);
-      incrementToolUsage("json_minifier");
     } catch (error) {
       console.error(error);
       toast.error(t("error.invalid"));
     } finally {
       setIsLoading(false);
+      incrementToolUsage("json_minifier");
     }
   };
 

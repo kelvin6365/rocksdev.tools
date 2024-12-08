@@ -73,11 +73,11 @@ export function JsonDiff() {
       };
 
       setDiffResult(diff);
-      incrementToolUsage("json_diff");
     } catch (error) {
       toast.error(t("error.invalid"));
     } finally {
       setIsLoading(false);
+      incrementToolUsage("json_diff");
     }
   };
 

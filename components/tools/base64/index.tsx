@@ -89,9 +89,10 @@ export function Base64Converter() {
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
         toast.success(t("message.download"));
-        incrementToolUsage("base64");
       } catch (error) {
         toast.error(t("error.invalid"));
+      } finally {
+        incrementToolUsage("base64");
       }
     };
     reader.readAsText(uploadedFile);
@@ -143,11 +144,11 @@ export function Base64Converter() {
         ? btoa(input).replace(/\+/g, "-").replace(/\//g, "_")
         : btoa(input);
       setOutput(encoded);
-      incrementToolUsage("base64");
     } catch (error) {
       toast.error(t("error.invalid"));
     } finally {
       setIsLoading(false);
+      incrementToolUsage("base64");
     }
   };
 
@@ -162,11 +163,11 @@ export function Base64Converter() {
         isUrlSafe ? input.replace(/-/g, "+").replace(/_/g, "/") : input,
       );
       setOutput(decoded);
-      incrementToolUsage("base64");
     } catch (error) {
       toast.error(t("error.invalid"));
     } finally {
       setIsLoading(false);
+      incrementToolUsage("base64");
     }
   };
 
