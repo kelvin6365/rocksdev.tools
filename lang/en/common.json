@@ -33,6 +33,10 @@
           "title": "Base64 Converter"
         },
         "description": "Convert between different data formats",
+        "md2html": {
+          "description": "Convert Markdown to HTML",
+          "title": "Markdown to HTML Converter"
+        },
         "title": "Converters"
       },
       "dev": {

@@ -33,6 +33,10 @@
           "title": "Base64 转换器"
         },
         "description": "在不同数据格式之间转换",
+        "md2html": {
+          "description": "将 Markdown 转换为 HTML",
+          "title": "Markdown 转换器"
+        },
         "title": "转换工具"
       },
       "dev": {

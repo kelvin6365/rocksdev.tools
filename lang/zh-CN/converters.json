@@ -27,6 +27,30 @@
     },
     "description": "工具用於將數據轉換為不同格式",
     "free": "免費",
+    "md2html": {
+      "actions": {
+        "clear": "清除",
+        "convert": "轉換為 HTML",
+        "copy": "複製 HTML",
+        "loadSample": "載入範例"
+      },
+      "converting": "正在轉換...",
+      "description": "將 Markdown 轉換為 HTML",
+      "input": {
+        "placeholder": "輸入你的 Markdown 文件",
+        "title": "Markdown 輸入"
+      },
+      "output": {
+        "html": "HTML",
+        "preview": "預覽",
+        "title": "HTML 輸出"
+      },
+      "title": "Markdown 轉換器",
+      "toast": {
+        "converted": "轉換完成",
+        "copied": "已複製到剪貼簿"
+      }
+    },
     "openSource": "開源",
     "title": "轉換器",
     "tryNow": "立即嘗試"
