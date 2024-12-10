@@ -49,6 +49,9 @@
       "toast": {
         "converted": "Conversion complete",
         "copied": "Copied to clipboard"
+      },
+      "tooltip": {
+        "preview": "The preview styling may differ from your website's styling as it uses a default GitHub-like theme. The HTML output can be styled according to your needs."
       }
     },
     "openSource": "Open Source",
