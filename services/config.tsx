@@ -108,6 +108,13 @@ export const config = {
           description: "Convert between Base64 and other formats",
           icon: "🔄",
         },
+        {
+          label: "Markdown to HTML",
+          value: "converters.md2html",
+          href: "/tools/converters/md2html",
+          description: "Convert Markdown to HTML",
+          icon: "📝",
+        },
       ],
     },
     {

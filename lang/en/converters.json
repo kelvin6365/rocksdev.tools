@@ -27,6 +27,33 @@
     },
     "description": "Tools for converting data between different formats",
     "free": "Free",
+    "md2html": {
+      "actions": {
+        "clear": "Clear",
+        "convert": "Convert to HTML",
+        "copy": "Copy HTML",
+        "loadSample": "Load Sample"
+      },
+      "converting": "Converting...",
+      "description": "Convert Markdown to HTML",
+      "input": {
+        "placeholder": "Enter your markdown here...",
+        "title": "Markdown Input"
+      },
+      "output": {
+        "html": "HTML",
+        "preview": "Preview",
+        "title": "HTML Output"
+      },
+      "title": "Markdown to HTML Converter",
+      "toast": {
+        "converted": "Conversion complete",
+        "copied": "Copied to clipboard"
+      },
+      "tooltip": {
+        "preview": "The preview styling may differ from your website's styling as it uses a default GitHub-like theme. The HTML output can be styled according to your needs."
+      }
+    },
     "openSource": "Open Source",
     "title": "Converters",
     "tryNow": "Try Now"
