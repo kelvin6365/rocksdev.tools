@@ -141,7 +141,7 @@ This project is built with modern web technologies and best practices:
   - [x] Text encoding/decoding
   - [x] File encoding/decoding
   - [x] URL-safe encoding
-- [ ] Markdown to HTML
+- [x] Markdown to HTML
 - [ ] CSV to JSON
 
 #### Developer Tools
