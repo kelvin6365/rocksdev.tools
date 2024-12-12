@@ -39,7 +39,6 @@ export default async function RootLayout({
 
   const messages = await getMessages();
   const structuredData = getStructuredData(locale);
-  const isLaunchDay = new Date().toISOString().startsWith("2024-12-11");
 
   return (
     <html lang={locale} suppressHydrationWarning className="scroll-smooth">
@@ -74,7 +73,7 @@ export default async function RootLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ToolProvider>
             <NavBar />
-            {isLaunchDay && <ProductHuntBanner />}
+            <ProductHuntBanner />
             <main className="container py-6">{children}</main>
             <ToastProvider />
             <Analytics />
