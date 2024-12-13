@@ -12,12 +12,12 @@ import { useTranslations } from "next-intl";
 const textTools = config.tools.find((tool) => tool.value === "text");
 
 export default function TextPage() {
-  const t = useTranslations("text");
+  const t = useTranslations();
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold tracking-tight">{t("title")}</h1>
-        <p className="text-muted-foreground">{t("description")}</p>
+        <h1 className="text-3xl font-bold tracking-tight">{t("text.title")}</h1>
+        <p className="text-muted-foreground">{t("text.description")}</p>
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -35,9 +35,11 @@ export default function TextPage() {
               <CardContent>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-muted-foreground">
-                    {t("free")} & {t("openSource")}
+                    {t("text.free")} & {t("text.openSource")}
                   </span>
-                  <span className="text-sm font-medium">{t("tryNow")} →</span>
+                  <span className="text-sm font-medium">
+                    {t("text.tryNow")} →
+                  </span>
                 </div>
               </CardContent>
             </Link>
