@@ -11,56 +11,47 @@ export async function canvasPreview(
     throw new Error("No 2d context");
   }
 
-  // Set canvas background to white
+  // Get the actual displayed dimensions of the image
+  const displayWidth = image.width;
+  const displayHeight = image.height;
+
+  // Calculate the scale between natural and display size
+  const scaleX = image.naturalWidth / displayWidth;
+  const scaleY = image.naturalHeight / displayHeight;
+
+  // Set canvas size to desired output size
+  canvas.width = 1200; // OG width
+  canvas.height = 630; // OG height
+
+  // Clear the canvas and set white background
   ctx.fillStyle = "white";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // Scale factor for high DPI displays
-  const pixelRatio = window.devicePixelRatio;
-  const scaleX = image.naturalWidth / image.width;
-  const scaleY = image.naturalHeight / image.height;
-
-  // Device pixel ratio adjustment
-  canvas.width = Math.floor(canvas.width * pixelRatio);
-  canvas.height = Math.floor(canvas.height * pixelRatio);
-  ctx.scale(pixelRatio, pixelRatio);
-  ctx.imageSmoothingQuality = "high";
-
-  // Calculate scaled crop dimensions
+  // Calculate the actual crop coordinates in the original image
   const cropX = crop.x * scaleX;
   const cropY = crop.y * scaleY;
   const cropWidth = crop.width * scaleX;
   const cropHeight = crop.height * scaleY;
 
-  // Calculate scaling to fit OG dimensions while maintaining aspect ratio
-  const aspectRatio = canvas.width / canvas.height;
-  let drawWidth = canvas.width;
-  let drawHeight = canvas.height;
+  // Ensure high-quality rendering
+  ctx.imageSmoothingQuality = "high";
+  ctx.imageSmoothingEnabled = true;
 
-  if (cropWidth / cropHeight > aspectRatio) {
-    drawHeight = drawWidth / (cropWidth / cropHeight);
-  } else {
-    drawWidth = drawHeight * (cropWidth / cropHeight);
-  }
-
-  // Center the image
-  const x = (canvas.width - drawWidth) / 2;
-  const y = (canvas.height - drawHeight) / 2;
-
-  // Draw the cropped image
+  // Draw the cropped image to fill the canvas while maintaining aspect ratio
   ctx.drawImage(
     image,
     cropX,
     cropY,
     cropWidth,
     cropHeight,
-    x,
-    y,
-    drawWidth,
-    drawHeight,
+    0,
+    0,
+    canvas.width,
+    canvas.height,
   );
 
-  // Reset canvas scale
-  canvas.style.width = `${canvas.width / pixelRatio}px`;
-  canvas.style.height = `${canvas.height / pixelRatio}px`;
+  // For mobile devices, ensure the canvas display size matches the actual size
+  const displayPixelRatio = window.devicePixelRatio || 1;
+  canvas.style.width = `${canvas.width / displayPixelRatio}px`;
+  canvas.style.height = `${canvas.height / displayPixelRatio}px`;
 }
