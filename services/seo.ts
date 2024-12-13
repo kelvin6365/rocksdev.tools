@@ -967,28 +967,6 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         site: "@rocksdevtools",
         creator: "@teshim_tech",
       },
-      additionalMetaTags: [
-        {
-          name: "application-name",
-          content: "OG Image Generator",
-        },
-        {
-          property: "og:image:width",
-          content: "1200",
-        },
-        {
-          property: "og:image:height",
-          content: "630",
-        },
-        {
-          name: "apple-mobile-web-app-title",
-          content: "OG Image Generator",
-        },
-        {
-          name: "robots",
-          content: "index, follow, max-image-preview:large",
-        },
-      ],
     },
     "zh-CN": {
       title: "OG图像生成器 | 社交媒体预览图片生成工具 | RocksDev工具集",
@@ -1050,31 +1028,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         card: "summary_large_image",
         site: "@rocksdevtools",
         creator: "@teshim_tech",
-        title: "创建专业社交媒体预览图片",
-        description: "为您的社交媒体帖子生成优化的OG图像",
       },
-      additionalMetaTags: [
-        {
-          name: "application-name",
-          content: "OG图像生成器",
-        },
-        {
-          property: "og:image:width",
-          content: "1200",
-        },
-        {
-          property: "og:image:height",
-          content: "630",
-        },
-        {
-          name: "apple-mobile-web-app-title",
-          content: "OG图像生成器",
-        },
-        {
-          name: "robots",
-          content: "index, follow, max-image-preview:large",
-        },
-      ],
     },
     "zh-HK": {
       title: "OG圖像生成器 | 社交媒體預覽圖片生成工具 | RocksDev工具集",
@@ -1136,31 +1090,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         card: "summary_large_image",
         site: "@rocksdevtools",
         creator: "@teshim_tech",
-        title: "創建專業社交媒體預覽圖片",
-        description: "為您的社交媒體帖子生成優化的OG圖像",
       },
-      additionalMetaTags: [
-        {
-          name: "application-name",
-          content: "OG圖像生成器",
-        },
-        {
-          property: "og:image:width",
-          content: "1200",
-        },
-        {
-          property: "og:image:height",
-          content: "630",
-        },
-        {
-          name: "apple-mobile-web-app-title",
-          content: "OG圖像生成器",
-        },
-        {
-          name: "robots",
-          content: "index, follow, max-image-preview:large",
-        },
-      ],
     },
   },
   "text.text-formatter": {
