@@ -50,6 +50,8 @@ This project is built with modern web technologies and best practices:
 │               └── regex/   # Regex tester tool
 │           └── seo/          # SEO tools
 │               └── og-image/ # OG image generator tool
+│           └── text/         # Text tools
+│               └── text-formatter/ # Text formatter tool
 │
 ├── components/
 │   ├── tools/
@@ -57,9 +59,10 @@ This project is built with modern web technologies and best practices:
 │   │   ├── json-validator # JSON validator component
 │   │   ├── json-diff      # JSON diff component
 │   │   ├── json-minifier  # JSON minifier component
-│   │   └── base64         # Base64 converter component
-│   │   └── regex          # Regex tester component
-│   │   └── og-image       # OG image generator component
+│   │   ├── base64         # Base64 converter component
+│   │   ├── regex          # Regex tester component
+│   │   ├── og-image       # OG image generator component
+│   │   └── text-formatter # Text formatter component
 │   ├── layouts/
 │   │   └── tool-layout   # Common tool layout
 │   └── ui/                   # UI Components
@@ -167,7 +170,7 @@ This project is built with modern web technologies and best practices:
 
 #### Text Processing Tools
 
-- [ ] Text Formatter
+- [x] Text Formatter
 - [ ] Case Converter
 - [ ] Word Counter
 - [ ] Markdown Editor

@@ -77,7 +77,11 @@
       },
       "text": {
         "description": "文字處理和格式化工具",
-        "title": "文字工具"
+        "title": "文字工具",
+        "text-formatter": {
+          "description": "使用進階工具格式化和操縱您的文字",
+          "title": "文字格式化工具"
+        }
       },
       "title": "工具"
     }

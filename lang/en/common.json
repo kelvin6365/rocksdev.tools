@@ -77,6 +77,10 @@
       },
       "text": {
         "description": "Text manipulation and formatting tools",
+        "text-formatter": {
+          "description": "Format and manipulate your text with advanced tools",
+          "title": "Text Formatter"
+        },
         "title": "Text Tools"
       },
       "title": "Tools"

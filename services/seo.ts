@@ -938,4 +938,39 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
   },
+  "text.text-formatter": {
+    en: {
+      title: "Text Formatter | RocksDev Tools",
+      description: "Format and manipulate your text with advanced tools",
+      keywords: ["text formatter", "text tools", "text formatting"],
+      openGraph: {
+        type: "website",
+        title: "Text Formatter",
+        description: "Format and manipulate your text with advanced tools",
+        images: [`/api/og?title=Text%20Formatter`],
+      },
+    },
+    "zh-CN": {
+      title: "文本格式化器 | RocksDev 工具集",
+      description: "使用高级工具格式化和操作您的文本",
+      keywords: ["文本格式化器", "文本工具", "文本格式化"],
+      openGraph: {
+        type: "website",
+        title: "文本格式化器",
+        description: "使用高级工具格式化和操作您的文本",
+        images: [`/api/og?title=Text%20Formatter`],
+      },
+    },
+    "zh-HK": {
+      title: "文本格式化器 | RocksDev 工具集",
+      description: "使用高级工具格式化和操作您的文本",
+      keywords: ["文本格式化器", "文本工具", "文本格式化"],
+      openGraph: {
+        type: "website",
+        title: "文本格式化器",
+        description: "使用高级工具格式化和操作您的文本",
+        images: [`/api/og?title=Text%20Formatter`],
+      },
+    },
+  },
 };

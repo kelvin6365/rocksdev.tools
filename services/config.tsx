@@ -123,6 +123,15 @@ export const config = {
       href: "/tools/text",
       description: "Text manipulation and formatting tools",
       category: "text",
+      subTools: [
+        {
+          label: "Text Formatter",
+          value: "text.text-formatter",
+          href: "/tools/text/text-formatter",
+          description: "Format text",
+          icon: "🎨",
+        },
+      ],
     },
     {
       label: "Dev Tools",
