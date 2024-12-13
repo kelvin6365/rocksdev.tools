@@ -4,6 +4,32 @@
     "description": "Text tools for your website",
     "tryNow": "Try Now",
     "free": "Free",
-    "openSource": "Open Source"
+    "openSource": "Open Source",
+    "text-formatter": {
+      "title": "Text Formatter",
+      "description": "Format and manipulate your text with advanced tools",
+      "uppercase": "UPPERCASE",
+      "lowercase": "lowercase",
+      "capitalize": "Title Case",
+      "sentence": "Sentence case",
+      "alternating": "aLtErNaTiNg CaSe",
+      "trim": "Clean Spaces",
+      "remove-lines": "Single Line",
+      "copy-success": "Text copied to clipboard",
+      "download-success": "Text downloaded",
+      "stats": {
+        "chars": "Characters",
+        "words": "Words",
+        "lines": "Lines"
+      },
+      "apply-to-input": "Apply to Input",
+      "upload": "Upload",
+      "clear": "Clear",
+      "input-text": "Input Text",
+      "formatted-result": "Formatted Result",
+      "copy": "Copy",
+      "download": "Download",
+      "read-only-result": "Read-only result"
+    }
   }
 }

@@ -4,6 +4,32 @@
     "description": "为您的网站提供文本工具",
     "tryNow": "立即试用",
     "free": "免费",
-    "openSource": "开源"
+    "openSource": "开源",
+    "text-formatter": {
+      "title": "文本格式化器",
+      "description": "使用高级工具格式化和操作您的文本",
+      "uppercase": "大写",
+      "lowercase": "小写",
+      "capitalize": "标题大小写",
+      "sentence": "句子大小写",
+      "alternating": "交替大小写",
+      "trim": "清除空格",
+      "remove-lines": "单行",
+      "copy-success": "文本已复制到剪贴板",
+      "download-success": "文本已下载",
+      "stats": {
+        "chars": "字符",
+        "words": "单词",
+        "lines": "行"
+      },
+      "apply-to-input": "应用到输入",
+      "upload": "上传",
+      "clear": "清除",
+      "input-text": "输入文本",
+      "formatted-result": "格式化结果",
+      "copy": "复制",
+      "download": "下载",
+      "read-only-result": "只读结果"
+    }
   }
 }
