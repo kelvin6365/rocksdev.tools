@@ -26,37 +26,37 @@ export function TextFormatter() {
     {
       value: "uppercase",
       label: t("uppercase"),
-      description: "Convert text to all uppercase",
+      description: t("uppercase-description"),
     },
     {
       value: "lowercase",
       label: t("lowercase"),
-      description: "Convert text to all lowercase",
+      description: t("lowercase-description"),
     },
     {
       value: "capitalize",
       label: t("capitalize"),
-      description: "Capitalize first letter of each word",
+      description: t("capitalize-description"),
     },
     {
       value: "sentence",
       label: t("sentence"),
-      description: "Capitalize first letter of each sentence",
+      description: t("sentence-description"),
     },
     {
       value: "alternating",
       label: t("alternating"),
-      description: "Alternate between upper and lower case",
+      description: t("alternating-description"),
     },
     {
       value: "trim",
       label: t("trim"),
-      description: "Remove extra spaces and trim",
+      description: t("trim-description"),
     },
     {
       value: "remove-lines",
       label: t("remove-lines"),
-      description: "Remove all line breaks",
+      description: t("remove-lines-description"),
     },
   ];
 
@@ -213,7 +213,7 @@ export function TextFormatter() {
               </div>
               <div className="relative">
                 <Textarea
-                  placeholder="Enter or paste your text here..."
+                  placeholder={t("input-text-placeholder")}
                   className="min-h-[500px] font-mono resize-y p-4"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}

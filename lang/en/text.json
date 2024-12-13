@@ -29,7 +29,15 @@
       "formatted-result": "Formatted Result",
       "copy": "Copy",
       "download": "Download",
-      "read-only-result": "Read-only result"
+      "read-only-result": "Read-only result",
+      "uppercase-description": "Convert text to all uppercase",
+      "lowercase-description": "Convert text to all lowercase",
+      "capitalize-description": "Capitalize first letter of each word",
+      "sentence-description": "Capitalize first letter of each sentence",
+      "alternating-description": "Alternate between upper and lower case",
+      "trim-description": "Remove extra spaces and trim",
+      "remove-lines-description": "Remove all line breaks",
+      "input-text-placeholder": "Enter or paste your text here..."
     }
   }
 }

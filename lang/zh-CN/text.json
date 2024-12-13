@@ -29,7 +29,15 @@
       "formatted-result": "格式化结果",
       "copy": "复制",
       "download": "下载",
-      "read-only-result": "只读结果"
+      "read-only-result": "只读结果",
+      "uppercase-description": "将文本转换为全大写",
+      "lowercase-description": "将文本转换为全小写",
+      "capitalize-description": "将每个单词的首字母大写",
+      "sentence-description": "将每个句子的首字母大写",
+      "alternating-description": "交替大小写",
+      "trim-description": "清除多余空格并修剪",
+      "remove-lines-description": "移除所有换行符",
+      "input-text-placeholder": "输入或粘贴您的文本..."
     }
   }
 }
