@@ -121,7 +121,7 @@ export const defaultSEO: Record<string, SEOConfig> = {
     twitter: {
       card: "summary_large_image",
       site: "@rocksdevtools",
-      creator: "@rocksdevtools",
+      creator: "@teshim_tech",
     },
     additionalMetaTags: [
       {
@@ -193,7 +193,7 @@ export const defaultSEO: Record<string, SEOConfig> = {
     twitter: {
       card: "summary_large_image",
       site: "@rocksdevtools",
-      creator: "@rocksdevtools",
+      creator: "@teshim_tech",
     },
     additionalMetaTags: [
       {
@@ -905,36 +905,191 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "seo.og-image": {
     en: {
-      title: "OG Image Generator | RocksDev Tools",
-      description: "Generate OG images for your website",
-      keywords: ["og image generator", "og image tool", "og image creator"],
+      title:
+        "OG Image Generator | Create Social Media Preview Images | RocksDev Tools",
+      description:
+        "Create professional Open Graph (OG) images for social media previews. Free online tool to generate, crop, and optimize social card images for Facebook, Twitter, LinkedIn, and more.",
+      keywords: [
+        // Primary keywords
+        "og image generator",
+        "open graph image creator",
+        "social media preview generator",
+        "social card generator",
+
+        // Platform-specific
+        "facebook preview image",
+        "twitter card generator",
+        "linkedin post image",
+        "social media image creator",
+
+        // Feature keywords
+        "custom og image",
+        "og image editor",
+        "social preview tool",
+        "image crop tool",
+        "social media image size",
+        "og image dimensions",
+
+        // Technical keywords
+        "1200x630 image generator",
+        "social meta image",
+        "open graph protocol",
+        "meta tags image",
+
+        // User intent keywords
+        "create og image online",
+        "generate social preview",
+        "make social card image",
+        "optimize social images",
+
+        // Action keywords
+        "resize for social media",
+        "crop social images",
+        "customize og images",
+        "edit preview images",
+
+        // Characteristics
+        "free og image tool",
+        "online image generator",
+        "instant preview generator",
+        "bulk og image creator",
+      ],
       openGraph: {
         type: "website",
-        title: "OG Image Generator",
-        description: "Generate OG images for your website",
+        title: "OG Image Generator - Create Social Media Preview Images",
+        description:
+          "Free online tool to create and optimize social media preview images. Generate perfect Open Graph images for Facebook, Twitter, LinkedIn and more.",
         images: [`/api/og?title=OG%20Image%20Generator`],
+        siteName: "RocksDev Tools",
+      },
+      twitter: {
+        card: "summary_large_image",
+        site: "@rocksdevtools",
+        creator: "@teshim_tech",
       },
     },
     "zh-CN": {
-      title: "OG圖像生成器 | RocksDev工具集",
-      description: "生成OG圖像",
-      keywords: ["og圖像生成器", "og圖像工具", "og圖像創建者"],
+      title: "OG图像生成器 | 社交媒体预览图片生成工具 | RocksDev工具集",
+      description:
+        "创建专业的Open Graph（OG）图像，用于社交媒体预览。免费在线工具，可生成、裁剪和优化Facebook、Twitter、LinkedIn等社交卡片图像。",
+      keywords: [
+        // Primary keywords
+        "og图像生成器",
+        "社交媒体预览生成器",
+        "社交卡片生成器",
+        "开放图谱图像创建器",
+
+        // Platform-specific
+        "Facebook预览图片",
+        "Twitter卡片生成器",
+        "领英帖子图片",
+        "社交媒体图片创建器",
+
+        // Feature keywords
+        "自定义og图像",
+        "og图像编辑器",
+        "社交预览工具",
+        "图片裁剪工具",
+        "社交媒体图片尺寸",
+
+        // Technical keywords
+        "1200x630图片生成器",
+        "社交元图像",
+        "开放图谱协议",
+        "元标签图像",
+
+        // User intent keywords
+        "在线创建og图像",
+        "生成社交预览",
+        "制作社交卡片图片",
+        "优化社交图片",
+
+        // Action keywords
+        "社交媒体图片调整",
+        "裁剪社交图片",
+        "自定义og图片",
+        "编辑预览图片",
+
+        // Characteristics
+        "免费og图片工具",
+        "在线图片生成器",
+        "即时预览生成器",
+        "批量og图片创建",
+      ],
       openGraph: {
         type: "website",
-        title: "OG圖像生成器",
-        description: "生成OG圖像",
+        title: "OG图像生成器 - 创建社交媒体预览图片",
+        description:
+          "免费在线工具，创建和优化社交媒体预览图片。为Facebook、Twitter、LinkedIn等生成完美的Open Graph图像。",
         images: [`/api/og?title=OG%20Image%20Generator`],
+        siteName: "RocksDev工具集",
+      },
+      twitter: {
+        card: "summary_large_image",
+        site: "@rocksdevtools",
+        creator: "@teshim_tech",
       },
     },
     "zh-HK": {
-      title: "OG圖像生成器 | RocksDev工具集",
-      description: "生成OG圖像",
-      keywords: ["og圖像生成器", "og圖像工具", "og圖像創建者"],
+      title: "OG圖像生成器 | 社交媒體預覽圖片生成工具 | RocksDev工具集",
+      description:
+        "創建專業的Open Graph（OG）圖像，用於社交媒體預覽。免費在線工具，可生成、裁剪和優化Facebook、Twitter、LinkedIn等社交卡片圖像。",
+      keywords: [
+        // Primary keywords
+        "og圖像生成器",
+        "社交媒體預覽生成器",
+        "社交卡片生成器",
+        "開放圖譜圖像創建器",
+
+        // Platform-specific
+        "Facebook預覽圖片",
+        "Twitter卡片生成器",
+        "LinkedIn帖子圖片",
+        "社交媒體圖片創建器",
+
+        // Feature keywords
+        "自定義og圖像",
+        "og圖像編輯器",
+        "社交預覽工具",
+        "圖片裁剪工具",
+        "社交媒體圖片尺寸",
+
+        // Technical keywords
+        "1200x630圖片生成器",
+        "社交元圖像",
+        "開放圖譜協議",
+        "元標籤圖像",
+
+        // User intent keywords
+        "在線創建og圖像",
+        "生成社交預覽",
+        "製作社交卡片圖片",
+        "優化社交圖片",
+
+        // Action keywords
+        "社交媒體圖片調整",
+        "裁剪社交圖片",
+        "自定義og圖片",
+        "編輯預覽圖片",
+
+        // Characteristics
+        "免費og圖片工具",
+        "在線圖片生成器",
+        "即時預覽生成器",
+        "批量og圖片創建",
+      ],
       openGraph: {
         type: "website",
-        title: "OG圖像生成器",
-        description: "生成OG圖像",
+        title: "OG圖像生成器 - 創建社交媒體預覽圖片",
+        description:
+          "免費在線工具，創建和優化社交媒體預覽圖片。為Facebook、Twitter、LinkedIn等生成完美的Open Graph圖像。",
         images: [`/api/og?title=OG%20Image%20Generator`],
+        siteName: "RocksDev工具集",
+      },
+      twitter: {
+        card: "summary_large_image",
+        site: "@rocksdevtools",
+        creator: "@teshim_tech",
       },
     },
   },

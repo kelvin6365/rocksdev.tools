@@ -10,7 +10,7 @@ import {
 import { useDebounceEffect } from "@/hooks/use-debounce-effect";
 import { Move, Trash2, ZoomIn } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import ReactCrop, { Crop, PixelCrop } from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 import { canvasPreview } from "./canvas-preview";
@@ -48,42 +48,94 @@ export function ImageEditor({
   const setInitialCrop = () => {
     if (!imgRef.current) return;
 
-    // Get the displayed dimensions of the image
-    const { width, height } = imgRef.current.getBoundingClientRect();
+    const img = imgRef.current;
+    const rect = img.getBoundingClientRect();
 
-    // First, determine if the image is taller or wider than OG aspect ratio
-    const imageAspect = width / height;
-    const ogAspect = OG_ASPECT; // 1.91:1
+    // Reset scale when setting initial crop
+    setScale(1);
 
+    // Get the actual displayed dimensions
+    const displayWidth = rect.width;
+    const displayHeight = rect.height;
+
+    // Calculate crop dimensions maintaining OG aspect ratio
     let cropWidth, cropHeight;
 
-    if (imageAspect > ogAspect) {
+    const imageAspect = displayWidth / displayHeight;
+    if (imageAspect > OG_ASPECT) {
       // Image is wider than OG ratio
-      cropHeight = height;
-      cropWidth = height * ogAspect;
+      cropHeight = Math.min(displayHeight, PREVIEW_HEIGHT);
+      cropWidth = cropHeight * OG_ASPECT;
     } else {
       // Image is taller than OG ratio
-      cropWidth = width;
-      cropHeight = width / ogAspect;
+      cropWidth = Math.min(displayWidth, PREVIEW_WIDTH);
+      cropHeight = cropWidth / OG_ASPECT;
     }
 
     // Center the crop
-    const x = Math.max(0, (width - cropWidth) / 2);
-    const y = Math.max(0, (height - cropHeight) / 2);
+    const x = (displayWidth - cropWidth) / 2;
+    const y = (displayHeight - cropHeight) / 2;
 
-    setCrop({
-      unit: "px",
-      x,
-      y,
-      width: cropWidth,
-      height: cropHeight,
-    });
+    // Ensure crop doesn't exceed image bounds
+    const finalCrop = {
+      unit: "px" as const,
+      x: Math.max(0, x),
+      y: Math.max(0, y),
+      width: Math.min(cropWidth, displayWidth),
+      height: Math.min(cropHeight, displayHeight),
+    };
+
+    setCrop(finalCrop);
+    setCompletedCrop(finalCrop);
   };
+
+  // Update crop when scale changes
+  useEffect(() => {
+    if (!imgRef.current || !completedCrop) return;
+
+    const img = imgRef.current;
+    const rect = img.getBoundingClientRect();
+
+    // Adjust crop dimensions based on scale
+    const scaledCrop = {
+      ...completedCrop,
+      x: completedCrop.x / scale,
+      y: completedCrop.y / scale,
+      width: completedCrop.width / scale,
+      height: completedCrop.height / scale,
+    };
+
+    // Ensure crop stays within bounds
+    const boundedCrop = {
+      ...scaledCrop,
+      x: Math.max(0, Math.min(rect.width - scaledCrop.width, scaledCrop.x)),
+      y: Math.max(0, Math.min(rect.height - scaledCrop.height, scaledCrop.y)),
+    };
+
+    setCrop(boundedCrop);
+  }, [scale, completedCrop]);
+
+  // Handle orientation change
+  useEffect(() => {
+    const handleResize = () => {
+      // Add a small delay to ensure new dimensions are calculated correctly
+      setTimeout(setInitialCrop, 100);
+    };
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("orientationchange", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("orientationchange", handleResize);
+    };
+  }, []);
 
   const handleImageLoad = () => {
     setInitialCrop();
   };
 
+  // Update preview with proper scaling
   useDebounceEffect(
     async () => {
       if (
@@ -92,11 +144,23 @@ export function ImageEditor({
         imgRef.current &&
         previewCanvasRef.current
       ) {
-        await canvasPreview(
-          imgRef.current,
-          previewCanvasRef.current,
-          completedCrop,
-        );
+        try {
+          const scaledCrop = {
+            ...completedCrop,
+            x: completedCrop.x * scale,
+            y: completedCrop.y * scale,
+            width: completedCrop.width * scale,
+            height: completedCrop.height * scale,
+          };
+
+          await canvasPreview(
+            imgRef.current,
+            previewCanvasRef.current,
+            scaledCrop,
+          );
+        } catch (e) {
+          console.error("Preview error:", e);
+        }
       }
     },
     100,
@@ -138,7 +202,9 @@ export function ImageEditor({
             onChange={(_, percentCrop) => setCrop(percentCrop)}
             onComplete={(c) => setCompletedCrop(c)}
             aspect={OG_ASPECT}
-            className="max-h-[630px] mx-auto w-auto"
+            className="max-h-[630px] mx-auto w-auto touch-none"
+            minWidth={100} // Add minimum crop size
+            minHeight={100 / OG_ASPECT}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -146,8 +212,13 @@ export function ImageEditor({
               alt="Crop me"
               src={image.preview}
               className="max-h-[630px] w-auto mx-auto"
-              style={{ transform: `scale(${scale})` }}
+              style={{
+                transform: `scale(${scale})`,
+                transformOrigin: "center",
+                touchAction: "none",
+              }}
               onLoad={handleImageLoad}
+              draggable={false}
             />
           </ReactCrop>
         </div>
