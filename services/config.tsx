@@ -94,8 +94,8 @@ export const config = {
         },
         {
           label: "Meta Tags Generator",
-          value: "seo.meta-tag",
-          href: "/tools/seo/meta-tag",
+          value: "seo.meta-tags",
+          href: "/tools/seo/meta-tags",
           description: "Generate meta tags for your website",
           icon: "🏷️",
         },

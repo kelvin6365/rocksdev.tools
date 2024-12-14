@@ -16,8 +16,10 @@ import {
 } from "@/components/ui/tooltip";
 import { HelpCircle } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export function SocialMediaForm({ data, onChange }: FormProps) {
+  const t = useTranslations("seo.meta-tags.social");
   const handleChange =
     (field: string) => (e: React.ChangeEvent<HTMLInputElement> | string) => {
       const value = typeof e === "string" ? e : e.target.value;
@@ -28,7 +30,7 @@ export function SocialMediaForm({ data, onChange }: FormProps) {
     <div className="space-y-4">
       <div className="space-y-4">
         <div className="flex items-center gap-2">
-          <h3 className="font-medium">Open Graph (Facebook)</h3>
+          <h3 className="font-medium">{t("title-facebook")}</h3>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -36,10 +38,7 @@ export function SocialMediaForm({ data, onChange }: FormProps) {
               </TooltipTrigger>
               <TooltipContent side="right" className="w-[450px] p-0">
                 <div className="p-2">
-                  <p className="mb-2 text-sm">
-                    A sample result of how your content appears when shared on
-                    Facebook:
-                  </p>
+                  <p className="mb-2 text-sm">{t("tooltips.sample-fb")}</p>
                   <Image
                     src="/images/og-tag-demo.png"
                     alt="Open Graph preview example"
@@ -48,14 +47,14 @@ export function SocialMediaForm({ data, onChange }: FormProps) {
                     className="rounded-md mx-auto"
                   />
                   <p className="mt-2 text-xs text-muted-foreground">
-                    Reference:{" "}
+                    {t("tooltips.reference")}:{" "}
                     <a
                       href="https://developers.facebook.com/docs/sharing/webmasters/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-500 hover:underline"
                     >
-                      Facebook Sharing Guide
+                      {t("tooltips.reference-link-fb")}
                     </a>
                   </p>
                 </div>
@@ -66,17 +65,14 @@ export function SocialMediaForm({ data, onChange }: FormProps) {
 
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <Label htmlFor="ogTitle">OG Title</Label>
+            <Label htmlFor="ogTitle">{t("og-title")}</Label>
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <HelpCircle className="h-4 w-4 text-muted-foreground" />
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>
-                    The title of your article without any branding such as your
-                    site name. Keep it brief and engaging.
-                  </p>
+                  <p>{t("tooltips.og-title-description")}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -85,23 +81,20 @@ export function SocialMediaForm({ data, onChange }: FormProps) {
             id="ogTitle"
             value={data.ogTitle}
             onChange={handleChange("ogTitle")}
-            placeholder="Enter Open Graph title"
+            placeholder={t("og-title-placeholder")}
           />
         </div>
 
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <Label htmlFor="ogDescription">OG Description</Label>
+            <Label htmlFor="ogDescription">{t("og-description")}</Label>
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <HelpCircle className="h-4 w-4 text-muted-foreground" />
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>
-                    A brief description of the content, usually between 2 and 4
-                    sentences. This will be displayed below the title.
-                  </p>
+                  <p>{t("tooltips.og-description-description")}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -110,23 +103,20 @@ export function SocialMediaForm({ data, onChange }: FormProps) {
             id="ogDescription"
             value={data.ogDescription}
             onChange={handleChange("ogDescription")}
-            placeholder="Enter Open Graph description"
+            placeholder={t("og-description-placeholder")}
           />
         </div>
 
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <Label htmlFor="ogType">OG Type</Label>
+            <Label htmlFor="ogType">{t("og-type")}</Label>
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <HelpCircle className="h-4 w-4 text-muted-foreground" />
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>
-                    The type of your content. This impacts how your content
-                    shows up in Facebook Feed. Default is &quot;website&quot;.
-                  </p>
+                  <p>{t("tooltips.og-type-description")}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -136,20 +126,20 @@ export function SocialMediaForm({ data, onChange }: FormProps) {
             onValueChange={(value) => handleChange("ogType")(value)}
           >
             <SelectTrigger>
-              <SelectValue placeholder="Select type" />
+              <SelectValue placeholder={t("og-type-placeholder")} />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="website">Website</SelectItem>
-              <SelectItem value="article">Article</SelectItem>
-              <SelectItem value="product">Product</SelectItem>
-              <SelectItem value="profile">Profile</SelectItem>
+              <SelectItem value="website">{t("og-type-website")}</SelectItem>
+              <SelectItem value="article">{t("og-type-article")}</SelectItem>
+              <SelectItem value="product">{t("og-type-product")}</SelectItem>
+              <SelectItem value="profile">{t("og-type-profile")}</SelectItem>
             </SelectContent>
           </Select>
         </div>
 
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <Label htmlFor="ogImage">OG Image URL</Label>
+            <Label htmlFor="ogImage">{t("og-image")}</Label>
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
@@ -157,13 +147,12 @@ export function SocialMediaForm({ data, onChange }: FormProps) {
                 </TooltipTrigger>
                 <TooltipContent className="max-w-[300px]">
                   <div className="space-y-2">
-                    <p>The URL for your page&apos;s preview image.</p>
+                    <p>{t("tooltips.og-image-description")}</p>
                     <ul className="list-disc pl-4 text-sm">
-                      <li>Recommended size: 1200×630 pixels</li>
-                      <li>Minimum size: 600×315 pixels</li>
-                      <li>Aspect ratio: 1.91:1</li>
-                      <li>Max file size: 8MB</li>
-                      <li>Supported formats: JPG, PNG, GIF</li>
+                      <li>{t("tooltips.recommended-image-dimensions")}</li>
+                      <li>{t("tooltips.minimum-image-dimensions")}</li>
+                      <li>{t("tooltips.max-file-size")}</li>
+                      <li>{t("tooltips.supported-formats")}</li>
                     </ul>
                   </div>
                 </TooltipContent>
@@ -174,23 +163,20 @@ export function SocialMediaForm({ data, onChange }: FormProps) {
             id="ogImage"
             value={data.ogImage}
             onChange={handleChange("ogImage")}
-            placeholder="Enter image URL (https://...)"
+            placeholder={t("og-image-placeholder")}
           />
         </div>
 
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <Label htmlFor="ogUrl">OG URL</Label>
+            <Label htmlFor="ogUrl">{t("og-url")}</Label>
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <HelpCircle className="h-4 w-4 text-muted-foreground" />
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>
-                    The canonical URL for your page. This should be the
-                    undecorated URL without session variables or parameters.
-                  </p>
+                  <p>{t("tooltips.og-url-description")}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -199,14 +185,14 @@ export function SocialMediaForm({ data, onChange }: FormProps) {
             id="ogUrl"
             value={data.ogUrl}
             onChange={handleChange("ogUrl")}
-            placeholder="Enter canonical URL"
+            placeholder={t("og-url-placeholder")}
           />
         </div>
       </div>
 
       <div className="space-y-4 mt-6">
         <div className="flex items-center gap-2">
-          <h3 className="font-medium">Twitter Card</h3>
+          <h3 className="font-medium">{t("twitter-card")}</h3>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -215,8 +201,7 @@ export function SocialMediaForm({ data, onChange }: FormProps) {
               <TooltipContent side="right" className="w-[450px] p-0">
                 <div className="p-2 space-y-2">
                   <p className="mb-2 text-sm">
-                    A sample result of how your content appears when shared on X
-                    (Twitter):
+                    {t("tooltips.twitter-card-description")}
                   </p>
                   <Image
                     src="/images/og-tag-x-demo.png"
@@ -226,14 +211,14 @@ export function SocialMediaForm({ data, onChange }: FormProps) {
                     className="rounded-md mx-auto"
                   />
                   <p className="text-sm text-muted-foreground">
-                    Reference:{" "}
+                    {t("tooltips.reference")}:{" "}
                     <a
                       href="https://developer.x.com/en/docs/x-for-websites/cards/overview/markup"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-500 hover:underline"
                     >
-                      Cards Markup Tag Reference
+                      {t("tooltips.reference-link-x")}
                     </a>
                   </p>
                 </div>
@@ -243,18 +228,14 @@ export function SocialMediaForm({ data, onChange }: FormProps) {
         </div>
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <Label htmlFor="twitterCard">Card Type</Label>
+            <Label htmlFor="twitterCard">{t("card-type")}</Label>
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <HelpCircle className="h-4 w-4 text-muted-foreground" />
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>
-                    Determines how your content appears when shared on Twitter.
-                    Summary cards include a small image, while Summary Large
-                    Image cards feature a prominent image.
-                  </p>
+                  <p>{t("tooltips.card-type-description")}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -264,36 +245,36 @@ export function SocialMediaForm({ data, onChange }: FormProps) {
             onValueChange={(value) => handleChange("twitterCard")(value)}
           >
             <SelectTrigger>
-              <SelectValue placeholder="Select card type" />
+              <SelectValue placeholder={t("card-type-placeholder")} />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="summary">Summary</SelectItem>
+              <SelectItem value="summary">{t("card-type-summary")}</SelectItem>
               <SelectItem value="summary_large_image">
-                Summary Large Image
+                {t("card-type-summary-large-image")}
               </SelectItem>
-              <SelectItem value="app">App</SelectItem>
-              <SelectItem value="player">Player</SelectItem>
+              <SelectItem value="app">{t("card-type-app")}</SelectItem>
+              <SelectItem value="player">{t("card-type-player")}</SelectItem>
             </SelectContent>
           </Select>
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="twitterTitle">Twitter Title</Label>
+          <Label htmlFor="twitterTitle">{t("twitter-title")}</Label>
           <Input
             id="twitterTitle"
             value={data.twitterTitle}
             onChange={handleChange("twitterTitle")}
-            placeholder="Enter Twitter title"
+            placeholder={t("twitter-title-placeholder")}
           />
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="twitterImage">Twitter Image URL</Label>
+          <Label htmlFor="twitterImage">{t("twitter-image")}</Label>
           <Input
             id="twitterImage"
             value={data.twitterImage}
             onChange={handleChange("twitterImage")}
-            placeholder="Enter image URL"
+            placeholder={t("twitter-image-placeholder")}
           />
         </div>
       </div>

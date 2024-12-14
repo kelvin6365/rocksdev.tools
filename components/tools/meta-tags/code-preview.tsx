@@ -3,11 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Copy } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { MetaTagsData } from "@/types/tool";
+import { useTranslations } from "next-intl";
 interface PreviewProps {
   data: MetaTagsData;
 }
 
 export function Preview({ data }: PreviewProps) {
+  const t = useTranslations("seo.meta-tags");
   const { toast } = useToast();
 
   const generateMetaTags = () => {
@@ -17,6 +19,9 @@ export function Preview({ data }: PreviewProps) {
 ${data.keywords ? `<meta name="keywords" content="${data.keywords}">` : ""}
 ${data.canonicalUrl ? `<link rel="canonical" href="${data.canonicalUrl}">` : ""}
 <meta name="robots" content="${data.robots}">
+
+<!-- Viewport -->
+<meta name="viewport" content="${data.viewport}">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="${data.ogType}">
@@ -54,7 +59,7 @@ ${
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-medium">Preview</h2>
+        <h2 className="text-lg font-medium">{t("preview")}</h2>
         <Button
           variant="outline"
           size="sm"
@@ -62,7 +67,7 @@ ${
           className="flex items-center gap-2"
         >
           <Copy className="h-4 w-4" />
-          Copy
+          {t("copy")}
         </Button>
       </div>
       <Card className="p-4">

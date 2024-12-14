@@ -8,12 +8,12 @@ type Props = {
 
 export const generateMetadata = async ({ params }: Props) => {
   const { locale } = await params;
-  return getMetadata({ path: "seo.meta-tag", locale });
+  return getMetadata({ path: "seo.meta-tags", locale });
 };
 
 export default function MetaTagPage() {
   return (
-    <ToolLayout translationKey="seo.meta-tag">
+    <ToolLayout translationKey="seo.meta-tags">
       <MetaTagsGenerator />
     </ToolLayout>
   );

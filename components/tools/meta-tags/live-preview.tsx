@@ -1,14 +1,15 @@
-import { MetaTagsData } from "@/types/tool";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { MetaTagsData } from "@/types/tool";
 import { Chrome, Globe, Search, Share2 } from "lucide-react";
-import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 interface BrowserPreviewProps {
   data: MetaTagsData;
 }
 
 export function BrowserPreview({ data }: BrowserPreviewProps) {
+  const t = useTranslations("seo.meta-tags");
   // Helper function to determine Twitter card dimensions
   const getTwitterCardDimensions = (cardType: string) => {
     switch (cardType) {
@@ -29,30 +30,29 @@ export function BrowserPreview({ data }: BrowserPreviewProps) {
         <TabsList className="grid w-full grid-cols-1 lg:grid-cols-3 h-auto">
           <TabsTrigger value="search" className="flex items-center gap-2">
             <Search className="h-4 w-4" />
-            Search Result
+            {t("search-result")}
           </TabsTrigger>
           <TabsTrigger value="browser" className="flex items-center gap-2">
             <Chrome className="h-4 w-4" />
-            Browser Tab
+            {t("browser-tab")}
           </TabsTrigger>
           <TabsTrigger value="social" className="flex items-center gap-2">
             <Share2 className="h-4 w-4" />
-            Social Share
+            {t("social-share")}
           </TabsTrigger>
         </TabsList>
 
         <TabsContent value="search" className="mt-4">
           <div className="space-y-2">
             <div className="text-blue-600 hover:underline text-xl cursor-pointer">
-              {data.title || "Your Page Title"}
+              {data.title || t("your-page-title")}
             </div>
             <div className="text-sm text-emerald-700">
               {window.location.origin}
               {data.canonicalUrl && `/${data.canonicalUrl}`}
             </div>
             <div className="text-sm text-gray-600">
-              {data.description ||
-                "Your meta description will appear here. Make it compelling to increase click-through rates."}
+              {data.description || t("your-page-description-placeholder")}
             </div>
           </div>
         </TabsContent>
@@ -61,11 +61,11 @@ export function BrowserPreview({ data }: BrowserPreviewProps) {
           <div className="border rounded-t-lg bg-gray-100 p-2 flex items-center gap-2">
             <Chrome className="h-4 w-4 text-gray-500" />
             <div className="text-sm truncate max-w-[300px]">
-              {data.title || "Your Page Title"}
+              {data.title || t("your-page-title")}
             </div>
           </div>
           <div className="border-x border-b rounded-b-lg p-4 text-center text-gray-500">
-            Browser Content Area
+            {t("browser-content-area")}
           </div>
         </TabsContent>
 
@@ -74,7 +74,7 @@ export function BrowserPreview({ data }: BrowserPreviewProps) {
             {/* Facebook Preview */}
             <div className="space-y-2">
               <h3 className="text-sm font-medium text-muted-foreground">
-                Facebook Preview
+                {t("facebook-preview")}
               </h3>
               <Card className="max-w-[500px] overflow-hidden">
                 {data.ogImage ? (
@@ -89,10 +89,10 @@ export function BrowserPreview({ data }: BrowserPreviewProps) {
                 ) : (
                   <div className="w-full aspect-[1.91/1] bg-muted flex items-center justify-center text-muted-foreground">
                     <p className="text-sm text-center px-4">
-                      No image provided
+                      {t("no-image-provided")}
                       <br />
                       <span className="text-xs">
-                        Recommended: 1200×630 pixels
+                        {t("recommended-image-dimensions-fb")}
                       </span>
                     </p>
                   </div>
@@ -103,12 +103,12 @@ export function BrowserPreview({ data }: BrowserPreviewProps) {
                     {window.location.origin}
                   </div>
                   <h4 className="font-bold line-clamp-1">
-                    {data.ogTitle || data.title || "Your Page Title"}
+                    {data.ogTitle || data.title || t("your-page-title")}
                   </h4>
                   <p className="text-sm text-muted-foreground line-clamp-2">
                     {data.ogDescription ||
                       data.description ||
-                      "Your page description"}
+                      t("your-page-description")}
                   </p>
                 </div>
               </Card>
@@ -118,11 +118,11 @@ export function BrowserPreview({ data }: BrowserPreviewProps) {
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-medium text-muted-foreground">
-                  Twitter Preview ({data.twitterCard})
+                  {t("twitter-preview")} ({data.twitterCard})
                 </h3>
                 {data.twitterSite && (
                   <span className="text-sm text-muted-foreground">
-                    via {data.twitterSite}
+                    {t("via")} {data.twitterSite}
                   </span>
                 )}
               </div>
@@ -149,28 +149,28 @@ export function BrowserPreview({ data }: BrowserPreviewProps) {
                     } bg-muted flex items-center justify-center text-muted-foreground`}
                   >
                     <p className="text-sm text-center px-4">
-                      No image provided
+                      {t("no-image-provided")}
                       <br />
                       <span className="text-xs">
                         {data.twitterCard === "summary"
-                          ? "Recommended: 144×144 pixels"
-                          : "Recommended: 1200×628 pixels"}
+                          ? t("recommended-image-dimensions-twitter-144")
+                          : t("recommended-image-dimensions-twitter-1200")}
                       </span>
                     </p>
                   </div>
                 )}
                 <div className="p-3 space-y-2">
                   <h4 className="font-bold line-clamp-1">
-                    {data.twitterTitle || data.title || "Your Page Title"}
+                    {data.twitterTitle || data.title || t("your-page-title")}
                   </h4>
                   <p className="text-sm text-muted-foreground line-clamp-2">
                     {data.twitterDescription ||
                       data.description ||
-                      "Your page description"}
+                      t("your-page-description")}
                   </p>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Globe className="h-4 w-4" />
-                    {window.location.origin}
+                    {typeof window !== "undefined" && window?.location?.origin}
                   </div>
                 </div>
               </Card>

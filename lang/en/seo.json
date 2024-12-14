@@ -2,7 +2,112 @@
   "seo": {
     "description": "Tools for optimizing your website's search engine visibility",
     "free": "Free",
+    "meta-tags": {
+      "advanced": {
+        "canonical-url": "Canonical URL",
+        "canonical-url-placeholder": "Enter canonical URL",
+        "keywords": "Meta Keywords",
+        "keywords-description": "While less important for SEO today, some search engines still use keywords in their search algorithms. Use this field to include relevant keywords for your page.",
+        "keywords-placeholder": "Enter keywords (comma-separated)",
+        "robots": "Robots",
+        "robots-index-follow": "Index, Follow",
+        "robots-index-nofollow": "Index, No Follow",
+        "robots-noindex-follow": "No Index, Follow",
+        "robots-noindex-nofollow": "No Index, No Follow",
+        "robots-placeholder": "Select robots directives",
+        "tooltips": {
+          "canonical-url-description": "Specifies the preferred version of a page when similar content exists at multiple URLs. Helps prevent duplicate content issues.",
+          "keywords-description": "While less important for SEO today, some search engines still use keywords in their search algorithms. Use this field to include relevant keywords for your page.",
+          "robots-description": "Controls how search engines crawl and index your page. &quot;Index, Follow&quot; allows both indexing and following links."
+        }
+      },
+      "basic": {
+        "canonical-url": "Canonical URL",
+        "keywords": "Keywords",
+        "meta-description": "Meta Description",
+        "meta-description-description": "A brief summary of your page content. This appears in search results below the title.",
+        "meta-description-placeholder": "Enter your page description",
+        "recommended-characters": "Recommended: {min}-{max} characters",
+        "robots": "Robots",
+        "title-tag": "Title Tag",
+        "title-tag-description": "The title tag is crucial for SEO. It appears in search results and browser tabs.",
+        "title-tag-placeholder": "Enter your page title",
+        "viewport": "Viewport"
+      },
+      "browser-content-area": "Browser Content Area",
+      "browser-tab": "Browser Tab",
+      "characters": "characters",
+      "copy": "Copy",
+      "description": "Generate meta tags for your website",
+      "facebook-preview": "Facebook Preview",
+      "no-image-provided": "No image provided",
+      "optimal": "optimal",
+      "preview": "Preview",
+      "recommended": "Recommended",
+      "recommended-image-dimensions-fb": "Recommended: 1200×630 pixels (1.91:1 aspect ratio)",
+      "recommended-image-dimensions-twitter-144": "Recommended: 144×144 pixels",
+      "recommended-image-dimensions-twitter-1200": "Recommended: 1200×628 pixels",
+      "search-result": "Search Result",
+      "social": {
+        "card-type": "Card Type",
+        "card-type-app": "App",
+        "card-type-placeholder": "Select card type",
+        "card-type-player": "Player",
+        "card-type-summary": "Summary",
+        "card-type-summary-large-image": "Summary Large Image",
+        "og-description": "OG Description",
+        "og-description-placeholder": "Enter your page description",
+        "og-image": "OG Image URL",
+        "og-image-placeholder": "Enter image URL (https://...)",
+        "og-title": "OG Title",
+        "og-title-placeholder": "Enter your page title",
+        "og-type": "OG Type",
+        "og-type-article": "Article",
+        "og-type-placeholder": "Select type",
+        "og-type-product": "Product",
+        "og-type-profile": "Profile",
+        "og-type-website": "Website",
+        "og-url": "OG URL",
+        "og-url-placeholder": "Enter canonical URL",
+        "title-facebook": "Open Graph (Facebook)",
+        "tooltips": {
+          "card-type-description": "Determines how your content appears when shared on Twitter. Summary cards include a small image, while Summary Large Image cards feature a prominent image.",
+          "max-file-size": "Max file size: 8MB",
+          "minimum-image-dimensions": "Minimum size: 600×315 pixels",
+          "og-description-description": "A brief description of the content, usually between 2 and 4 sentences. This will be displayed below the title.",
+          "og-image-description": "The URL for your page&apos;s preview image.",
+          "og-title-description": "The title of your article without any branding such as your site name. Keep it brief and engaging",
+          "og-type-description": "The type of your content. This impacts how your content shows up in Facebook Feed. Default is &quot;website&quot;.",
+          "og-url-description": "The canonical URL for your page. This should be the undecorated URL without session variables or parameters.",
+          "recommended-image-dimensions": "Recommended size: 1200×630 pixels (1.91:1 aspect ratio)",
+          "reference": "Reference:",
+          "reference-link-fb": "Facebook Sharing Guide",
+          "reference-link-x": "Cards Markup Tag Reference",
+          "sample-fb": "A sample result of how your content appears when shared on Facebook:",
+          "supported-formats": "Supported formats: JPG, PNG, GIF",
+          "twitter-card-description": "A sample result of how your content appears when shared on X (Twitter):"
+        },
+        "twitter-card": "Twitter Card",
+        "twitter-image": "Twitter Image URL",
+        "twitter-image-placeholder": "Enter image URL",
+        "twitter-title": "Twitter Title",
+        "twitter-title-placeholder": "Enter Twitter title"
+      },
+      "social-share": "Social Share",
+      "tab": {
+        "advanced": "Advanced",
+        "basic": "Basic SEO",
+        "social": "Social Media"
+      },
+      "title": "Meta Tags Generator",
+      "twitter-preview": "Twitter Preview",
+      "via": "via",
+      "your-page-description": "Your page description",
+      "your-page-description-placeholder": "Your page description will appear here. Make it compelling to increase click-through rates.",
+      "your-page-title": "Your Page Title"
+    },
     "og-image": {
+      "cancel": "Cancel",
       "description": "Create perfect Open Graph images for social media sharing. Supports batch processing with custom dimensions and cropping.",
       "download": {
         "all": {
@@ -11,44 +116,43 @@
         },
         "single": "Download"
       },
+      "edit": {
+        "description": "Crop and adjust your image to the perfect Open Graph dimensions",
+        "title": "Edit",
+        "tooltip": "Crop and adjust the image"
+      },
+      "edited": "Edited",
       "editor": {
         "cancel": "Cancel",
         "save": "Save Changes",
+        "save-description": "Save your cropped image at {width}x{height}",
         "title": "Edit Image",
         "zoom": "Zoom",
-        "zoom-description": "Adjust zoom level to fine-tune your image composition",
-        "save-description": "Save your cropped image at {width}x{height}"
+        "zoom-description": "Adjust zoom level to fine-tune your image composition"
       },
-      "title": "OG Image Generator",
-      "upload": {
-        "description": "Drag & drop images here, or click to select files",
-        "title": "Upload Images",
-        "formats": "Supports PNG, JPG, JPEG, and WebP formats"
+      "images": {
+        "alt": "Preview {index}",
+        "count": "Images ({count})"
       },
       "info": {
         "description": "Open Graph images are used by social media platforms when your content is shared. The recommended size is 1200×630 pixels (1.91:1 aspect ratio).",
         "dimensions": "Standard Open Graph image dimensions"
       },
-      "images": {
-        "count": "Images ({count})",
-        "alt": "Preview {index}"
-      },
-      "edit": {
-        "title": "Edit",
-        "tooltip": "Crop and adjust the image",
-        "description": "Crop and adjust your image to the perfect Open Graph dimensions"
+      "instructions": {
+        "drag": "Drag to reposition",
+        "zoom": "Use slider to zoom"
       },
       "remove": {
         "title": "Remove",
         "tooltip": "This action cannot be undone"
       },
-      "edited": "Edited",
-      "instructions": {
-        "drag": "Drag to reposition",
-        "zoom": "Use slider to zoom"
-      },
-      "cancel": "Cancel",
-      "save": "Save Changes"
+      "save": "Save Changes",
+      "title": "OG Image Generator",
+      "upload": {
+        "description": "Drag & drop images here, or click to select files",
+        "formats": "Supports PNG, JPG, JPEG, and WebP formats",
+        "title": "Upload Images"
+      }
     },
     "openSource": "Open Source",
     "title": "SEO Tools",

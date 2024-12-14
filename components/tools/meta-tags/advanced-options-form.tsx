@@ -15,8 +15,10 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { HelpCircle } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function AdvancedOptionsForm({ data, onChange }: FormProps) {
+  const t = useTranslations("seo.meta-tags.advanced");
   const handleChange =
     (field: string) => (e: React.ChangeEvent<HTMLInputElement> | string) => {
       const value = typeof e === "string" ? e : e.target.value;
@@ -27,18 +29,14 @@ export function AdvancedOptionsForm({ data, onChange }: FormProps) {
     <div className="space-y-4">
       <div className="space-y-2">
         <div className="flex items-center gap-2">
-          <Label htmlFor="canonicalUrl">Canonical URL</Label>
+          <Label htmlFor="canonicalUrl">{t("canonical-url")}</Label>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
                 <HelpCircle className="h-4 w-4 text-muted-foreground" />
               </TooltipTrigger>
               <TooltipContent>
-                <p>
-                  Specifies the preferred version of a page when similar content
-                  exists at multiple URLs. Helps prevent duplicate content
-                  issues.
-                </p>
+                <p>{t("tooltips.canonical-url-description")}</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -47,24 +45,20 @@ export function AdvancedOptionsForm({ data, onChange }: FormProps) {
           id="canonicalUrl"
           value={data.canonicalUrl}
           onChange={handleChange("canonicalUrl")}
-          placeholder="Enter canonical URL"
+          placeholder={t("canonical-url-placeholder")}
         />
       </div>
 
       <div className="space-y-2">
         <div className="flex items-center gap-2">
-          <Label htmlFor="robots">Robots Directives</Label>
+          <Label htmlFor="robots">{t("robots")}</Label>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
                 <HelpCircle className="h-4 w-4 text-muted-foreground" />
               </TooltipTrigger>
               <TooltipContent>
-                <p>
-                  Controls how search engines crawl and index your page.
-                  &quot;Index, Follow&quot; allows both indexing and following
-                  links.
-                </p>
+                <p>{t("tooltips.robots-description")}</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -74,14 +68,20 @@ export function AdvancedOptionsForm({ data, onChange }: FormProps) {
           onValueChange={(value) => handleChange("robots")(value)}
         >
           <SelectTrigger>
-            <SelectValue placeholder="Select robots directives" />
+            <SelectValue placeholder={t("robots-placeholder")} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="index,follow">Index, Follow</SelectItem>
-            <SelectItem value="noindex,follow">No Index, Follow</SelectItem>
-            <SelectItem value="index,nofollow">Index, No Follow</SelectItem>
+            <SelectItem value="index,follow">
+              {t("robots-index-follow")}
+            </SelectItem>
+            <SelectItem value="noindex,follow">
+              {t("robots-noindex-follow")}
+            </SelectItem>
+            <SelectItem value="index,nofollow">
+              {t("robots-index-nofollow")}
+            </SelectItem>
             <SelectItem value="noindex,nofollow">
-              No Index, No Follow
+              {t("robots-noindex-nofollow")}
             </SelectItem>
           </SelectContent>
         </Select>
@@ -89,17 +89,14 @@ export function AdvancedOptionsForm({ data, onChange }: FormProps) {
 
       <div className="space-y-2">
         <div className="flex items-center gap-2">
-          <Label htmlFor="keywords">Meta Keywords</Label>
+          <Label htmlFor="keywords">{t("keywords")}</Label>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
                 <HelpCircle className="h-4 w-4 text-muted-foreground" />
               </TooltipTrigger>
               <TooltipContent>
-                <p>
-                  While less important for SEO today, some search engines still
-                  use keywords. Separate multiple keywords with commas.
-                </p>
+                <p>{t("tooltips.keywords-description")}</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -108,7 +105,7 @@ export function AdvancedOptionsForm({ data, onChange }: FormProps) {
           id="keywords"
           value={data.keywords}
           onChange={handleChange("keywords")}
-          placeholder="Enter keywords (comma-separated)"
+          placeholder={t("keywords-placeholder")}
         />
       </div>
     </div>

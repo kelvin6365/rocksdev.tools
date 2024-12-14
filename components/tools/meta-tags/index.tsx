@@ -9,6 +9,7 @@ import { AdvancedOptionsForm } from "./advanced-options-form";
 import { Preview } from "./code-preview";
 import { BrowserPreview } from "./live-preview";
 import { MetaTagsData } from "@/types/tool";
+import { useTranslations } from "next-intl";
 const defaultMetaData: MetaTagsData = {
   title: "",
   description: "",
@@ -29,6 +30,7 @@ const defaultMetaData: MetaTagsData = {
 };
 
 export function MetaTagsGenerator() {
+  const t = useTranslations("seo.meta-tags");
   const [metaData, setMetaData] = useState<MetaTagsData>(defaultMetaData);
 
   return (
@@ -37,10 +39,16 @@ export function MetaTagsGenerator() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-6">
           <Tabs defaultValue="basic" className="w-full">
-            <TabsList className="w-full flex flex-wrap h-auto">
-              <TabsTrigger value="basic">Basic SEO</TabsTrigger>
-              <TabsTrigger value="social">Social Media</TabsTrigger>
-              <TabsTrigger value="advanced">Advanced</TabsTrigger>
+            <TabsList className="w-full grid grid-cols-3 h-auto">
+              <TabsTrigger className="text-wrap" value="basic">
+                {t("tab.basic")}
+              </TabsTrigger>
+              <TabsTrigger className="text-wrap" value="social">
+                {t("tab.social")}
+              </TabsTrigger>
+              <TabsTrigger className="text-wrap" value="advanced">
+                {t("tab.advanced")}
+              </TabsTrigger>
             </TabsList>
             <Card className="mt-4 p-4">
               <TabsContent value="basic">
