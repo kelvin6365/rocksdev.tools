@@ -1033,7 +1033,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
     "zh-HK": {
       title: "OG圖像生成器 | 社交媒體預覽圖片生成工具 | RocksDev工具集",
       description:
-        "創建專業的Open Graph（OG）圖像，用於社交媒體預覽。免費在線工具，可生成、裁剪和優化Facebook、Twitter、LinkedIn等社交卡片圖像。",
+        "創建專業的Open Graph（OG）圖像，用於社���媒體預覽。免費在線工具，可生成、裁剪和優化Facebook、Twitter、LinkedIn等社交卡片圖像。",
       keywords: [
         // Primary keywords
         "og圖像生成器",
@@ -1056,7 +1056,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
 
         // Technical keywords
         "1200x630圖片生成器",
-        "社交元圖像",
+        "社��元圖像",
         "開放圖譜協議",
         "元標籤圖像",
 
@@ -1125,6 +1125,174 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         title: "文本格式化器",
         description: "使用高级工具格式化和操作您的文本",
         images: [`/api/og?title=Text%20Formatter`],
+      },
+    },
+  },
+  "seo.meta-tags": {
+    en: {
+      title:
+        "Meta Tags Generator | Create SEO & Social Media Tags | RocksDev Tools",
+      description:
+        "Free online Meta Tags Generator for SEO optimization. Create perfect meta tags for search engines (Google, Bing) and social media (Facebook, Twitter, LinkedIn). Features include title tag optimization, meta descriptions, Open Graph tags, Twitter Cards, and real-time preview.",
+      keywords: [
+        // Primary keywords
+        "meta tags generator",
+        "meta tag creator",
+        "seo meta tags",
+        "social media tags",
+
+        // Feature keywords
+        "open graph generator",
+        "twitter card generator",
+        "meta description generator",
+        "title tag optimizer",
+
+        // Platform-specific
+        "facebook meta tags",
+        "twitter meta tags",
+        "google meta tags",
+        "linkedin meta tags",
+
+        // Technical keywords
+        "html meta tags",
+        "meta tag optimization",
+        "seo tags",
+        "og tags generator",
+
+        // User intent keywords
+        "create meta tags",
+        "generate meta tags",
+        "optimize meta tags",
+        "meta tags for seo",
+
+        // Action keywords
+        "improve seo ranking",
+        "boost social sharing",
+        "enhance search visibility",
+        "optimize website metadata",
+
+        // Characteristics
+        "free meta tags tool",
+        "online meta generator",
+        "instant meta preview",
+        "meta tags best practices",
+      ],
+      openGraph: {
+        type: "website",
+        title: "Meta Tags Generator - Create SEO & Social Media Tags",
+        description:
+          "Free online tool to generate and optimize meta tags for SEO and social media. Create perfect meta tags for Google, Facebook, Twitter, and LinkedIn with real-time preview.",
+        images: [`/api/og?title=Meta%20Tags%20Generator`],
+      },
+    },
+    "zh-CN": {
+      title: "Meta标签生成器 | SEO和社交媒体标签生成工具 | RocksDev工具集",
+      description:
+        "专业的在线Meta标签生成工具，为搜索引擎（百度、Google）和社交媒体（微信、微博、知乎）优化您的网站。支持标题标签优化、Meta描述、Open Graph标签、Twitter卡片，并提供实时预览功能。",
+      keywords: [
+        // Primary keywords
+        "meta标签生成器",
+        "meta标签制作",
+        "SEO标签生成器",
+        "社交媒体标签",
+
+        // Feature keywords
+        "Open Graph生成器",
+        "Twitter卡片生成器",
+        "meta描述生成器",
+        "标题标签优化",
+
+        // Platform-specific
+        "百度meta标签",
+        "微信分享标签",
+        "微博meta标签",
+        "知乎meta标签",
+
+        // Technical keywords
+        "HTML meta标签",
+        "meta标签优化",
+        "SEO标签",
+        "OG标签生成器",
+
+        // User intent keywords
+        "创建meta标签",
+        "生成meta标签",
+        "优化meta标签",
+        "SEO元标签",
+
+        // Action keywords
+        "提升搜索排名",
+        "优化社交分享",
+        "提高搜索可见度",
+        "优化网站元数据",
+
+        // Characteristics
+        "免费meta标签工具",
+        "在线meta生成器",
+        "即时meta预览",
+        "meta标签最佳实践",
+      ],
+      openGraph: {
+        type: "website",
+        title: "Meta标签生成器 - 创建SEO和社交媒体标签",
+        description:
+          "免费在线工具，生成和优化用于SEO和社交媒体的Meta标签。为百度、Google、微信、微博创建完美的Meta标签，支持实时预览。",
+        images: [`/api/og?title=Meta%20Tags%20Generator`],
+      },
+    },
+    "zh-HK": {
+      title: "Meta標籤生成器 | SEO和社交媒體標籤生成工具 | RocksDev工具集",
+      description:
+        "專業的在線Meta標籤生成工具，為搜尋引擎（Google、Bing）和社交媒體（Facebook、Twitter、LinkedIn）優化您的網站。支援標題標籤優化、Meta描述、Open Graph標籤、Twitter卡片，並提供實時預覽功能。",
+      keywords: [
+        // Primary keywords
+        "meta標籤生成器",
+        "meta標籤製作",
+        "SEO標籤生成器",
+        "社交媒體標籤",
+
+        // Feature keywords
+        "Open Graph生成器",
+        "Twitter卡片生成器",
+        "meta描述生成器",
+        "標題標籤優化",
+
+        // Platform-specific
+        "Google meta標籤",
+        "Facebook分享標籤",
+        "Twitter meta標籤",
+        "LinkedIn meta標籤",
+
+        // Technical keywords
+        "HTML meta標籤",
+        "meta標籤優化",
+        "SEO標籤",
+        "OG標籤生成器",
+
+        // User intent keywords
+        "創建meta標籤",
+        "生成meta標籤",
+        "優化meta標籤",
+        "SEO元標籤",
+
+        // Action keywords
+        "提升搜尋排名",
+        "優化社交分享",
+        "提高搜尋可見度",
+        "優化網站元數據",
+
+        // Characteristics
+        "免費meta標籤工具",
+        "在線meta生成器",
+        "即時meta預覽",
+        "meta標籤最佳實踐",
+      ],
+      openGraph: {
+        type: "website",
+        title: "Meta標籤生成器 - 創建SEO和社交媒體標籤",
+        description:
+          "免費在線工具，生成和優化用於SEO和社交媒體的Meta標籤。為Google、Facebook、Twitter、LinkedIn創建完美的Meta標籤，支援實時預覽。",
+        images: [`/api/og?title=Meta%20Tags%20Generator`],
       },
     },
   },
