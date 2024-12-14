@@ -69,6 +69,10 @@
       },
       "seo": {
         "description": "搜尋引擎最佳化工具",
+        "meta-tags": {
+          "description": "生成網站的 meta 標籤",
+          "title": "Meta 標籤生成器"
+        },
         "og-image": {
           "description": "生成 OG 圖像",
           "title": "OG 圖像生成器"
@@ -77,11 +81,11 @@
       },
       "text": {
         "description": "文字處理和格式化工具",
-        "title": "文字工具",
         "text-formatter": {
           "description": "使用進階工具格式化和操縱您的文字",
           "title": "文字格式化工具"
-        }
+        },
+        "title": "文字工具"
       },
       "title": "工具"
     }

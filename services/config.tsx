@@ -92,6 +92,13 @@ export const config = {
           description: "Generate OG images for your website",
           icon: "🖼️",
         },
+        {
+          label: "Meta Tags Generator",
+          value: "seo.meta-tags",
+          href: "/tools/seo/meta-tags",
+          description: "Generate meta tags for your website",
+          icon: "🏷️",
+        },
       ],
     },
     {

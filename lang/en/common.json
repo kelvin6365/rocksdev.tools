@@ -69,6 +69,10 @@
       },
       "seo": {
         "description": "Tools for search engine optimization",
+        "meta-tags": {
+          "description": "Generate meta tags for your website",
+          "title": "Meta Tags Generator"
+        },
         "og-image": {
           "description": "Generate OG images for your website",
           "title": "OG Image Generator"

@@ -69,6 +69,10 @@
       },
       "seo": {
         "description": "搜索引擎优化工具",
+        "meta-tags": {
+          "description": "生成 Meta 标签",
+          "title": "Meta 标签生成器"
+        },
         "og-image": {
           "description": "生成 OG 图像",
           "title": "OG 图像生成器"
