@@ -50,16 +50,16 @@
       "json": {
         "description": "JSON 工具",
         "diff": {
-          "description": "比較和尋找 JSON 檔案之間的差異",
-          "title": "JSON 比較工具"
+          "description": "比較和尋找 JSON Object 之間的差異",
+          "title": "JSON 差異工具"
         },
         "formatter": {
           "description": "使用進階工具格式化和驗證 JSON 數據",
           "title": "JSON 格式化工具"
         },
         "minifier": {
-          "description": "壓縮和精簡 JSON 數據",
-          "title": "JSON 壓縮工具"
+          "description": "壓縮和精簡 JSON Object",
+          "title": "JSON Minifier 工具"
         },
         "title": "JSON 工具",
         "validator": {

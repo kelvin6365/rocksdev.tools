@@ -4,7 +4,7 @@
       "added": "額外",
       "addedProperties": "新增的屬性",
       "compare": "比較",
-      "description": "比較兩個 JSON 物件並找出它們的差異",
+      "description": "比較兩個 JSON Object 並找出它們的差異",
       "differences": "差異",
       "error": {
         "empty": "兩個輸入都是必需的",
@@ -18,22 +18,22 @@
       "leftInput": "原始 JSON",
       "modified": "修改的",
       "modifiedProperties": "修改屬性",
-      "newValue": "新價值",
+      "newValue": "新值",
       "oldValue": "舊值",
-      "path": "小路",
-      "placeholder": "粘貼你的 JSON 數據...",
+      "path": "路徑",
+      "placeholder": "粘貼你的 JSON Object...",
       "removed": "已刪除",
       "removedProperties": "刪除的屬性",
       "rightInput": "修改後的 JSON",
       "share": "分享",
       "title": "JSON 差異",
       "upload": "上傳 JSON",
-      "value": "價值"
+      "value": "值"
     },
     "formatter": {
       "copied": "已複製到剪貼簿！",
       "copy": "複製",
-      "description": "Format and validate your JSON data with advanced tools.",
+      "description": "使用進階工具格式化和驗證您的 JSON Object",
       "download": "下載 JSON",
       "error": {
         "empty": "輸入不能為空",
@@ -42,7 +42,7 @@
       "format": "格式化",
       "input": "輸入 JSON",
       "output": "格式化輸出",
-      "placeholder": "粘貼你的 JSON 數據...",
+      "placeholder": "粘貼你的 JSON Object...",
       "share": "分享",
       "title": "JSON 格式化器",
       "upload": "上傳 JSON"
@@ -50,7 +50,7 @@
     "minifier": {
       "copied": "已複製到剪貼簿！",
       "copy": "複製到剪貼簿",
-      "description": "壓縮和壓縮你的 JSON 數據",
+      "description": "壓縮原始JSON Object",
       "download": "下載",
       "error": {
         "empty": "輸入不能為空",
@@ -61,15 +61,15 @@
       },
       "minifiedOutput": "壓縮輸出",
       "minify": "壓縮 JSON",
-      "placeholder": "粘貼你的 JSON 數據...",
-      "title": "JSON 壓縮器",
+      "placeholder": "粘貼你的 JSON Object...",
+      "title": "JSON Minifier",
       "upload": "上傳 JSON"
     },
     "validator": {
       "clear": "清除",
       "copied": "已複製到剪貼簿！",
       "copy": "複製到剪貼簿",
-      "description": "Validate your JSON data with advanced tools.",
+      "description": "使用進階工具驗證您的 JSON Object",
       "error": {
         "clipboard": "從剪貼簿粘貼失敗",
         "copy": "無法複製到剪貼簿",

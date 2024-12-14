@@ -9,9 +9,9 @@ import {
 import { config } from "@/services/config";
 import { Github } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { Button } from "../../components/ui/button";
 import ProductHuntFollow from "../../components/product-hunt-button";
+import { Link } from "../../i18n/routing";
 
 export default function HomePage() {
   const tNav = useTranslations("nav");
