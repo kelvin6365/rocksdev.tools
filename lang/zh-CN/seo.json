@@ -1,14 +1,14 @@
 {
   "seo": {
-    "description": "优化您网站搜索引擎可见性的工具",
+    "description": "优化你的网站搜索引擎曝光率的工具",
     "free": "免费",
     "meta-tags": {
       "advanced": {
         "canonical-url": "规范网址",
         "canonical-url-placeholder": "输入规范网址",
-        "keywords": "关键字标签",
-        "keywords-description": "虽然在现今的搜索引擎优化中不太重要，但某些搜索引擎仍然使用关键字。使用此字段包含您页面的相关关键字。",
-        "keywords-placeholder": "输入关键字（以逗号分隔）",
+        "keywords": "关键词标签",
+        "keywords-description": "虽然在现今的搜索引擎优化中不太重要，但部分搜索引擎仍然使用关键词。可以在此栏位添加你网页的相关关键词。",
+        "keywords-placeholder": "输入关键词（以逗号分隔）",
         "robots": "机器人指令",
         "robots-index-follow": "索引，跟随",
         "robots-index-nofollow": "索引，不跟随",
@@ -16,29 +16,29 @@
         "robots-noindex-nofollow": "不索引，不跟随",
         "robots-placeholder": "选择机器人指令",
         "tooltips": {
-          "canonical-url-description": "当相似内容存在于多个网址时，指定首选版本。有助于防止重复内容问题。",
-          "keywords-description": "虽然在现今的搜索引擎优化中不太重要，但某些搜索引擎仍然使用关键字。使用此字段包含您页面的相关关键字。",
-          "robots-description": "控制搜索引擎如何爬取和索引您的页面。\"索引，跟随\"允许索引和跟随链接。"
+          "canonical-url-description": "当相似内容存在于多个网址时，指定主要版本。有助于避免重复内容问题。",
+          "keywords-description": "虽然在现今的搜索引擎优化中不太重要，但某些搜索引擎仍然使用关键词。使用此栏位包含您页面的相关关键词。",
+          "robots-description": "控制搜索引擎如何爬取和索引你的网页。\"索引，跟随\"允许索引和跟随链接。"
         }
       },
       "basic": {
         "canonical-url": "规范网址",
-        "keywords": "关键字",
+        "keywords": "关键词",
         "meta-description": "Meta 描述",
-        "meta-description-description": "页面内容的简短摘要。这会显示在搜索结果的标题下方。",
+        "meta-description-description": "网页内容的简短摘要。会在搜索结果的标题下方显示。",
         "meta-description-placeholder": "输入您的页面描述",
         "recommended-characters": "建议：{min}-{max} 个字符",
         "robots": "机器人",
         "title-tag": "标题标签",
-        "title-tag-description": "标题标签对SEO至关重要。它会显示在搜索结果和浏览器标签中。",
+        "title-tag-description": "标题标签对SEO非常重要。会在搜索结果及浏览器标签页中显示。",
         "title-tag-placeholder": "输入您的页面标题",
         "viewport": "视口"
       },
       "browser-content-area": "浏览器内容区域",
-      "browser-tab": "浏览器标签",
+      "browser-tab": "浏览器标签页",
       "characters": "字符",
       "copy": "复制",
-      "description": "生成网站的 meta 标签",
+      "description": "生成网站 meta 标签",
       "facebook-preview": "Facebook 预览",
       "no-image-provided": "未提供图片",
       "optimal": "最佳",
@@ -56,11 +56,11 @@
         "card-type-summary": "摘要",
         "card-type-summary-large-image": "大图摘要",
         "og-description": "OG 描述",
-        "og-description-placeholder": "输入您的页面描述",
+        "og-description-placeholder": "输入你的网页描述",
         "og-image": "OG 图片网址",
         "og-image-placeholder": "输入图片网址 (https://...)",
         "og-title": "OG 标题",
-        "og-title-placeholder": "输入您的页面标题",
+        "og-title-placeholder": "输入你的网页标题",
         "og-type": "OG 类型",
         "og-type-article": "文章",
         "og-type-placeholder": "选择类型",
@@ -71,27 +71,27 @@
         "og-url-placeholder": "输入规范网址",
         "title-facebook": "Open Graph (Facebook)",
         "tooltips": {
-          "card-type-description": "决定您的内容在 Twitter 上的显示方式。摘要卡片包含小图片，而大图摘要卡片则显示突出的图片。",
+          "card-type-description": "决定你的内容在 Twitter 上的显示方式。摘要卡片包含小图片，大图摘要卡片则显示大图片。",
           "max-file-size": "最大文件大小：8MB",
           "minimum-image-dimensions": "最小尺寸：600×315 像素",
-          "og-description-description": "内容的简短描述，通常在2到4句之间。这将显示在标题下方。",
-          "og-image-description": "您页面预览图片的网址。",
-          "og-title-description": "您文章的标题，不包含任何品牌名称。保持简短和吸引人。",
-          "og-type-description": "您的内容类型。这会影响您的内容在 Facebook 动态消息中的显示方式。默认为\"网站\"。",
-          "og-url-description": "您页面的规范网址。这应该是没有会话变量或参数的原始网址。",
+          "og-description-description": "内容的简短描述，通常为2到4句。会在标题下方显示。",
+          "og-image-description": "你的网页预览图片网址。",
+          "og-title-description": "你的文章标题，无需包含品牌名称。保持简短且吸引人。",
+          "og-type-description": "你的内容类型。会影响你的内容在 Facebook 信息流中的显示方式。默认为\"网站\"。",
+          "og-url-description": "你的网页的规范网址。这应该是没有会话变量或参数的原始网址。",
           "recommended-image-dimensions": "建议尺寸：1200×630 像素（1.91:1 宽高比）",
           "reference": "参考",
           "reference-link-fb": "Facebook 分享指南",
           "reference-link-x": "卡片标记参考",
-          "sample-fb": "在 Facebook 上分享时内容的显示示例：",
+          "sample-fb": "在 Facebook 分享时内容的显示示例：",
           "supported-formats": "支持格式：JPG、PNG、GIF",
-          "twitter-card-description": "在 X (Twitter) 上分享时内容的显示示例："
+          "twitter-card-description": "在 X (Twitter) 分享时内容的显示示例："
         },
         "twitter-card": "Twitter 卡片",
         "twitter-image": "Twitter 图片网址",
         "twitter-image-placeholder": "输入图片网址",
         "twitter-title": "Twitter 标题",
-        "twitter-title-placeholder": "输入 Twitter 标题"
+        "twitter-title-placeholder": "输入你的 Twitter 标题"
       },
       "social-share": "社交分享",
       "tab": {
@@ -102,12 +102,11 @@
       "title": "Meta 标签生成器",
       "twitter-preview": "Twitter 预览",
       "via": "来自",
-      "your-page-description": "您的页面描述",
-      "your-page-description-placeholder": "您的页面描述将显示在这里。让它更吸引人以提高点击率。",
-      "your-page-title": "您的页面标题"
+      "your-page-description": "你的网页描述",
+      "your-page-description-placeholder": "你的网页描述会在此处显示。内容吸引人可提高点击率。",
+      "your-page-title": "你的网页标题"
     },
     "og-image": {
-      "cancel": "取消",
       "description": "创建完美的社交媒体分享图片。支持批量处理、自定义尺寸和裁剪。",
       "download": {
         "all": {
@@ -116,43 +115,44 @@
         },
         "single": "下载"
       },
-      "edit": {
-        "description": "将图片调整为完美的 Open Graph 尺寸",
-        "title": "编辑",
-        "tooltip": "裁剪和调整图片"
-      },
-      "edited": "已编辑",
       "editor": {
         "cancel": "取消",
         "save": "保存更改",
-        "save-description": "将裁剪后的图片保存为 {width}x{height}",
         "title": "编辑图片",
         "zoom": "缩放",
-        "zoom-description": "调整缩放级别以微调图片构图"
+        "zoom-description": "调整缩放级别以微调图片构图",
+        "save-description": "将裁剪后的图片保存为 {width}x{height}"
       },
-      "images": {
-        "alt": "预览 {index}",
-        "count": "图片 ({count})"
+      "title": "OG 图片生成器",
+      "upload": {
+        "description": "拖放图片到此处，或点击选择文件",
+        "title": "上传图片",
+        "formats": "支持 PNG、JPG、JPEG 和 WebP 格式"
       },
       "info": {
         "description": "当您的内容在社交媒体上分享时，Open Graph 图片会被显示。推荐尺寸为 1200×630 像素（1.91:1 宽高比）。",
         "dimensions": "标准 Open Graph 图片尺寸"
       },
-      "instructions": {
-        "drag": "拖动以重新定位",
-        "zoom": "使用滑块缩放"
+      "images": {
+        "count": "图片 ({count})",
+        "alt": "预览 {index}"
+      },
+      "edit": {
+        "title": "编辑",
+        "tooltip": "裁剪和调整图片",
+        "description": "将图片调整为完美的 Open Graph 尺寸"
       },
       "remove": {
         "title": "删除",
         "tooltip": "此操作无法撤销"
       },
-      "save": "保存更改",
-      "title": "OG 图片生成器",
-      "upload": {
-        "description": "拖放图片到此处，或点击选择文件",
-        "formats": "支持 PNG、JPG、JPEG 和 WebP 格式",
-        "title": "上传图片"
-      }
+      "edited": "已编辑",
+      "instructions": {
+        "drag": "拖动以重新定位",
+        "zoom": "使用滑块缩放"
+      },
+      "cancel": "取消",
+      "save": "保存更改"
     },
     "openSource": "开源",
     "title": "SEO 工具",

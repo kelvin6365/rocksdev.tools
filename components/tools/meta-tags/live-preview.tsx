@@ -48,7 +48,7 @@ export function BrowserPreview({ data }: BrowserPreviewProps) {
               {data.title || t("your-page-title")}
             </div>
             <div className="text-sm text-emerald-700">
-              {window.location.origin}
+              {typeof window !== "undefined" && window.location.origin}
               {data.canonicalUrl && `/${data.canonicalUrl}`}
             </div>
             <div className="text-sm text-gray-600">
@@ -100,7 +100,7 @@ export function BrowserPreview({ data }: BrowserPreviewProps) {
                 <div className="p-3 space-y-2">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Globe className="h-4 w-4" />
-                    {window.location.origin}
+                    {typeof window !== "undefined" && window.location.origin}
                   </div>
                   <h4 className="font-bold line-clamp-1">
                     {data.ogTitle || data.title || t("your-page-title")}
