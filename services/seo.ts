@@ -764,7 +764,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "JSON 壓縮工具 | RocksDev 工具集",
+      title: "JSON Minifier | RocksDev 工具集",
       description:
         "使用我們強大的在線 JSON 壓縮工具立即壓縮您的 JSON 數據。在保持數據完整性的同時減小文件大小，完美用於優化和部署。",
       keywords: [
@@ -773,6 +773,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "json壓縮器",
         "json最小化",
         "json文件壓縮",
+        "json minifier",
 
         // Feature keywords
         "在線壓縮json",
@@ -805,9 +806,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       ],
       openGraph: {
         type: "website",
-        title: "JSON 壓縮工具 - 在線壓縮 JSON 數據",
+        title: "JSON Minifier - 在線壓縮 JSON 數據",
         description:
-          "免費的在線 JSON 壓縮工具，壓縮和優化您的 JSON 數據。刪除空白並減小文件大小，同時保持數據完整性。",
+          "免費的在線 JSON Minifier，壓縮和優化您的 JSON 數據。刪除空白並減小文件大小，同時保持數據完整性。",
         images: [`/api/og?title=JSON%20Minifier`],
       },
     },

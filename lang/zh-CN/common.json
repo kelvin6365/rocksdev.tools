@@ -51,7 +51,7 @@
         "description": "JSON 工具",
         "diff": {
           "description": "比较和查找 JSON 文件之间的差异",
-          "title": "JSON 对比工具"
+          "title": "JSON 差异比较"
         },
         "formatter": {
           "description": "使用高级工具格式化和验证 JSON 数据",

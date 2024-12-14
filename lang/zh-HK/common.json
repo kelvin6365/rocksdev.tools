@@ -59,7 +59,7 @@
         },
         "minifier": {
           "description": "壓縮和精簡 JSON Object",
-          "title": "JSON Minifier 工具"
+          "title": "JSON Minifier"
         },
         "title": "JSON 工具",
         "validator": {
