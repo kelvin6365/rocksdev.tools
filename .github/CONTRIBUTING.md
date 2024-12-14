@@ -68,36 +68,38 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │       ├── page.tsx          # Homepage
 │       └── tools/            # Developer tools
 │           └── json/         # JSON tools
-│               └── formatter/ # JSON formatter tool
-│               └── validator/ # JSON validator tool
-│               └── diff/      # JSON diff tool
+│               ├── formatter/ # JSON formatter tool
+│               ├── validator/ # JSON validator tool
+│               ├── diff/      # JSON diff tool
 │               └── minifier/  # JSON minifier tool
 │           └── converters/   # Conversion tools
 │               └── base64/   # Base64 converter tool
 │           └── dev/          # Developer tools
 │               └── regex/   # Regex tester tool
 │           └── seo/          # SEO tools
-│               └── og-image/ # OG image generator tool
+│               ├── og-image/ # OG image generator tool
+│               └── meta-tags/ # Meta tags generator tool
 ├── components/
 │   ├── tools/               # Tools components
 │   │   ├── json-formatter # JSON formatter component
 │   │   ├── json-validator # JSON validator component
 │   │   ├── json-diff      # JSON diff component
 │   │   ├── json-minifier  # JSON minifier component
-│   │   └── base64         # Base64 converter component
-│   │   └── regex          # Regex tester component
-│   │   └── og-image       # OG image generator component
+│   │   ├── base64         # Base64 converter component
+│   │   ├── regex          # Regex tester component
+│   │   ├── og-image       # OG image generator component
+│   │   └── meta-tags      # Meta tags generator component
 │   ├── layouts/
 │   │   └── tool-layout   # Common tool layout
 │   └── ui/                   # UI Components
-│       ├── shadcn            # shadcn components
+│       └── shadcn            # shadcn components
 │
 ├── lang/                     # i18n translations
 │   ├── en/
 │   │   ├── common.json
-│   │   └── json.json
-│   │   └── converters.json
-│   │   └── dev.json
+│   │   ├── json.json
+│   │   ├── converters.json
+│   │   ├── dev.json
 │   │   └── seo.json
 │   ├── zh-CN/
 │   │   └── common.json

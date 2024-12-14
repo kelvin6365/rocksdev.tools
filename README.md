@@ -50,6 +50,7 @@ This project is built with modern web technologies and best practices:
 │               └── regex/   # Regex tester tool
 │           └── seo/          # SEO tools
 │               └── og-image/ # OG image generator tool
+│               └── meta-tags/ # Meta tags generator tool
 │           └── text/         # Text tools
 │               └── text-formatter/ # Text formatter tool
 │
@@ -62,6 +63,7 @@ This project is built with modern web technologies and best practices:
 │   │   ├── base64         # Base64 converter component
 │   │   ├── regex          # Regex tester component
 │   │   ├── og-image       # OG image generator component
+│   │   └── meta-tags      # Meta tags generator component
 │   │   └── text-formatter # Text formatter component
 │   ├── layouts/
 │   │   └── tool-layout   # Common tool layout
@@ -160,7 +162,7 @@ This project is built with modern web technologies and best practices:
 
 #### SEO Tools Cluster
 
-- [ ] Meta Tags Generator
+- [x] Meta Tags Generator
 - [ ] Robots.txt Generator
 - [ ] XML Sitemap Generator
 - [ ] SEO Analyzer
