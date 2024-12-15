@@ -4,6 +4,7 @@ import { Copy } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { MetaTagsData } from "@/types/tool";
 import { useTranslations } from "next-intl";
+import { useTool } from "../../../contexts/tool-context";
 interface PreviewProps {
   data: MetaTagsData;
 }
@@ -11,6 +12,7 @@ interface PreviewProps {
 export function Preview({ data }: PreviewProps) {
   const t = useTranslations("seo.meta-tags");
   const { toast } = useToast();
+  const { incrementToolUsage } = useTool();
 
   const generateMetaTags = () => {
     return `<!-- Primary Meta Tags -->
@@ -54,6 +56,7 @@ ${
       title: "Copied to clipboard",
       description: "Meta tags have been copied to your clipboard",
     });
+    incrementToolUsage("meta-tags");
   };
 
   return (
