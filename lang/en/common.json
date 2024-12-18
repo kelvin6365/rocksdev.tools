@@ -45,6 +45,10 @@
           "description": "Test and validate regular expressions",
           "title": "Regex Tester"
         },
+        "app-icon": {
+          "description": "Generate iOS and Android app icons in various sizes",
+          "title": "App Icon Generator"
+        },
         "title": "Dev Tools"
       },
       "json": {

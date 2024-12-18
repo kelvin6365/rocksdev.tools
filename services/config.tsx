@@ -154,6 +154,13 @@ export const config = {
           description: "Test regular expressions",
           icon: "🎯",
         },
+        {
+          label: "App Icon Generator",
+          value: "dev.app-icon",
+          href: "/tools/dev/app-icon",
+          description: "Generate app icons for iOS and Android",
+          icon: "🖼️",
+        },
       ],
     },
   ],

@@ -1297,4 +1297,142 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
   },
+  "dev.app-icon": {
+    en: {
+      title:
+        "App Icon Generator | Create iOS & Android App Icons | Free Online Tool",
+      description:
+        "Free online app icon generator for iOS and Android apps. Easily create, resize and export app icons in all required sizes. Perfect for App Store and Play Store submissions.",
+      keywords: [
+        // Primary keywords
+        "app icon maker",
+        "app icon generator",
+        "ios app icon",
+        "android app icon",
+
+        // Feature keywords
+        "resize app icon",
+        "create app icon",
+        "app icon converter",
+        "app store icon maker",
+
+        // Platform specific
+        "iphone icon generator",
+        "android icon maker",
+        "app store icon size",
+        "play store icon size",
+
+        // Technical keywords
+        "app icon size guide",
+        "app icon dimensions",
+        "app icon format",
+        "app icon template",
+
+        // User intent keywords
+        "how to make app icon",
+        "app icon design tool",
+        "app icon resizer online",
+        "app icon creator free",
+
+        // Characteristics
+        "free icon generator",
+        "online icon maker",
+        "easy icon creator",
+        "quick icon resizer",
+      ],
+      openGraph: {
+        type: "website",
+        title: "Free App Icon Generator - Create iOS & Android Icons Online",
+        description:
+          "Free online tool to create and resize app icons for iOS and Android. Perfect for App Store and Play Store submissions.",
+        images: [`/api/og?title=App%20Icon%20Generator`],
+      },
+    },
+    "zh-CN": {
+      title: "APP图标生成器 | iOS安卓应用图标制作工具",
+      description:
+        "免费在线APP图标生成工具，一键生成iOS和安卓应用所需的各种尺寸图标。支持App Store和Play Store发布要求，简单易用，快速导出。",
+      keywords: [
+        // Primary keywords
+        "app图标制作",
+        "应用图标生成器",
+        "手机图标制作",
+        "图标设计工具",
+
+        // Feature keywords
+        "图标尺寸转换",
+        "一键生成图标",
+        "批量制作图标",
+        "图标在线处理",
+
+        // Technical keywords
+        "应用商店图标",
+        "图标尺寸规范",
+        "图标格式转换",
+        "图标模板下载",
+
+        // User intent keywords
+        "怎么制作app图标",
+        "app图标怎么做",
+        "制作应用图标",
+        "图标在线制作",
+
+        // Characteristics
+        "免费图标工具",
+        "在线图标生成",
+        "简单图标制作",
+        "快速生成图标",
+      ],
+      openGraph: {
+        type: "website",
+        title: "免费APP图标生成器 - 在线制作iOS和安卓应用图标",
+        description:
+          "免费在线工具，轻松制作iOS和安卓应用图标，支持所有尺寸规格，一键导出。",
+        images: [`/api/og?title=App%20Icon%20Generator`],
+      },
+    },
+    "zh-HK": {
+      title: "APP圖示產生器 | iOS安卓應用圖示製作工具",
+      description:
+        "免費線上APP圖示產生工具，一鍵製作iOS和安卓應用所需的各種尺寸圖示。完全支援App Store和Play Store發佈要求，簡單易用，快速匯出。",
+      keywords: [
+        // Primary keywords
+        "app圖示製作",
+        "應用圖示產生器",
+        "手機圖示設計",
+        "圖示製作工具",
+
+        // Feature keywords
+        "圖示尺寸轉換",
+        "一鍵產生圖示",
+        "批量製作圖示",
+        "圖示線上處理",
+
+        // Technical keywords
+        "應用商店圖示",
+        "圖示尺寸規範",
+        "圖示格式轉換",
+        "圖示模板下載",
+
+        // User intent keywords
+        "如何製作app圖示",
+        "app圖示怎麼做",
+        "製作應用圖示",
+        "圖示線上製作",
+
+        // Characteristics
+        "免費圖示工具",
+        "線上圖示產生",
+        "簡單圖示製作",
+        "快速產生圖示",
+      ],
+      openGraph: {
+        type: "website",
+        title: "免費APP圖示產生器 - 線上製作iOS和安卓應用圖示",
+        description:
+          "免費線上工具，輕鬆製作iOS和安卓應用圖示，支援所有尺寸規格，一鍵匯出。",
+        images: [`/api/og?title=App%20Icon%20Generator`],
+      },
+    },
+  },
 };

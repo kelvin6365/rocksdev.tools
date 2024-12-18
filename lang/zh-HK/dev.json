@@ -1,8 +1,50 @@
 {
   "dev": {
-    "title": "開發工具",
+    "app-icon": {
+      "description": "產生各種尺寸的 iOS 和 Android 應用程式圖示",
+      "file-name": "檔案名稱",
+      "file-name-description": "更改所有產生的 Android 圖片的檔案名稱",
+      "generating": "產生中...",
+      "instructions": {
+        "android": "Android",
+        "android-description": "4 種不同尺寸和檔案",
+        "for-android": "對於 Android:",
+        "for-android-1": "1. 解壓下載的檔案",
+        "for-android-2": "2. 導航到您的 Android 專案的 <code>app/src/main/res</code> 目錄",
+        "for-android-3": "3. 複製所有生成的 <code>mipmap-*</code> 檔案夾",
+        "for-android-4": "4. 將它們粘貼到您的 <code>res</code> 目錄中，替換現有檔案（如果需要）",
+        "for-android-5": "5. 將現有專案中的圖示替換為新圖示",
+        "for-ios": "對於 iOS:",
+        "how-to-use": "如何使用生成的圖示：",
+        "how-to-use-ios-1": "1. 解壓下載的檔案",
+        "how-to-use-ios-2": "2. 將生成的 AppIcon.appiconset 檔案夾拖入您的專案",
+        "how-to-use-ios-3": "3. 在您的專案導航器中，找到 <code>Assets.xcassets</code> 檔案夾",
+        "how-to-use-ios-4": "4. 將生成的 <code>AppIcon.appiconset</code> 檔案夾拖入其中",
+        "how-to-use-ios-5": "5. Xcode 將自動識別並應用圖示",
+        "ios": "iOS 和 macOS",
+        "ipad": "iPad",
+        "ipad-description": "13 種不同尺寸和檔案",
+        "iphone": "iPhone",
+        "iphone-description": "11 種不同尺寸和檔案",
+        "macos": "macOS",
+        "macos-description": "11 種不同尺寸和檔案",
+        "store-submissions": "商店提交：",
+        "store-submissions-android": "Play Store: 使用 <code>playstore.png</code> (512x512) 從根目錄",
+        "store-submissions-both": "兩個商店還接收一個 <code>appstore.png</code> 在根目錄中，方便使用",
+        "store-submissions-ios": "App Store: 使用 <code>1024x1024.png</code> 從 <code>AppIcon.appiconset</code> 中",
+        "watchos": "watchOS",
+        "watchos-description": "8 種不同尺寸和檔案"
+      },
+      "reset": "重設",
+      "title": "應用程式圖示產生器",
+      "upload-button": "選擇檔案",
+      "upload-button-change": "更換圖片",
+      "upload-button-generate": "產生圖示",
+      "upload-description": "上傳一張 1024x1024px 的 PNG 圖片以產生所有平台的圖示。",
+      "upload-placeholder": "將圖示拖放到此處",
+      "upload-placeholder-description": "建議使用 1024x1024px 的正方形 PNG 或 JPG"
+    },
     "description": "為您的網站提供開發工具",
-    "tryNow": "立即試用",
     "free": "免費",
     "openSource": "開源",
     "regex": {
@@ -39,6 +81,8 @@
       "unicode": "Unicode (u)",
       "url": "URL",
       "use": "使用"
-    }
+    },
+    "title": "開發工具",
+    "tryNow": "立即試用"
   }
 }

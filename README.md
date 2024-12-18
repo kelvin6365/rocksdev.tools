@@ -148,6 +148,7 @@ This project is built with modern web technologies and best practices:
   - [x] URL-safe encoding
 - [x] Markdown to HTML
 - [ ] CSV to JSON
+- [ ] QR Code Generator
 
 #### Developer Tools
 
@@ -157,6 +158,7 @@ This project is built with modern web technologies and best practices:
   - [x] Match highlighting
 - [ ] CSS Formatter/Minifier
 - [ ] HTML Formatter/Validator
+- [ ] Tailwind Config Generator
 
 ### Phase 3: Traffic Generation Tools (2-3 weeks)
 
@@ -169,6 +171,7 @@ This project is built with modern web technologies and best practices:
 - [x] OG Image Generator (Open Graph Image)
   - [x] Support batch generation
   - [x] Support crop / resize
+- [ ] Social Media Image Size Generator
 
 #### Text Processing Tools
 
@@ -176,6 +179,7 @@ This project is built with modern web technologies and best practices:
 - [ ] Case Converter
 - [ ] Word Counter
 - [ ] Markdown Editor
+- [ ] Random Data Generator
 
 ### Phase 4: Monetization & Growth (Ongoing)
 
