@@ -45,6 +45,10 @@
           "description": "測試和驗證Regex",
           "title": "Regex測試工具"
         },
+        "app-icon": {
+          "description": "生成iOS和Android應用程式圖示",
+          "title": "應用程式圖示產生器"
+        },
         "title": "開發工具"
       },
       "json": {

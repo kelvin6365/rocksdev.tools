@@ -45,6 +45,10 @@
           "description": "测试和验证正则表达式",
           "title": "正则表达式测试工具"
         },
+        "app-icon": {
+          "description": "生成iOS和Android应用图标",
+          "title": "应用图标生成器"
+        },
         "title": "开发工具"
       },
       "json": {

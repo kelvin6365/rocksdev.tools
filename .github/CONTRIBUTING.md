@@ -76,6 +76,7 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │               └── base64/   # Base64 converter tool
 │           └── dev/          # Developer tools
 │               └── regex/   # Regex tester tool
+│               └── app-icon-generator/ # App icon generator tool
 │           └── seo/          # SEO tools
 │               ├── og-image/ # OG image generator tool
 │               └── meta-tags/ # Meta tags generator tool
@@ -88,7 +89,8 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │   │   ├── base64         # Base64 converter component
 │   │   ├── regex          # Regex tester component
 │   │   ├── og-image       # OG image generator component
-│   │   └── meta-tags      # Meta tags generator component
+│   │   ├── meta-tags      # Meta tags generator component
+│   │   └── app-icon-generator # App icon generator component
 │   ├── layouts/
 │   │   └── tool-layout   # Common tool layout
 │   └── ui/                   # UI Components

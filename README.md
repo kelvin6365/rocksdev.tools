@@ -48,6 +48,7 @@ This project is built with modern web technologies and best practices:
 │               └── base64/   # Base64 converter tool
 │           └── dev/          # Developer tools
 │               └── regex/   # Regex tester tool
+│               └── app-icon-generator/ # App icon generator tool
 │           └── seo/          # SEO tools
 │               └── og-image/ # OG image generator tool
 │               └── meta-tags/ # Meta tags generator tool
@@ -63,8 +64,9 @@ This project is built with modern web technologies and best practices:
 │   │   ├── base64         # Base64 converter component
 │   │   ├── regex          # Regex tester component
 │   │   ├── og-image       # OG image generator component
-│   │   └── meta-tags      # Meta tags generator component
-│   │   └── text-formatter # Text formatter component
+│   │   ├── meta-tags      # Meta tags generator component
+│   │   ├── text-formatter # Text formatter component
+│   │   └── app-icon-generator # App icon generator component
 │   ├── layouts/
 │   │   └── tool-layout   # Common tool layout
 │   └── ui/                   # UI Components
@@ -148,6 +150,7 @@ This project is built with modern web technologies and best practices:
   - [x] URL-safe encoding
 - [x] Markdown to HTML
 - [ ] CSV to JSON
+- [ ] QR Code Generator
 
 #### Developer Tools
 
@@ -157,6 +160,8 @@ This project is built with modern web technologies and best practices:
   - [x] Match highlighting
 - [ ] CSS Formatter/Minifier
 - [ ] HTML Formatter/Validator
+- [ ] Tailwind Config Generator
+- [x] App Icon Generator
 
 ### Phase 3: Traffic Generation Tools (2-3 weeks)
 
@@ -169,6 +174,7 @@ This project is built with modern web technologies and best practices:
 - [x] OG Image Generator (Open Graph Image)
   - [x] Support batch generation
   - [x] Support crop / resize
+- [ ] Social Media Image Size Generator
 
 #### Text Processing Tools
 
@@ -176,6 +182,7 @@ This project is built with modern web technologies and best practices:
 - [ ] Case Converter
 - [ ] Word Counter
 - [ ] Markdown Editor
+- [ ] Random Data Generator
 
 ### Phase 4: Monetization & Growth (Ongoing)
 

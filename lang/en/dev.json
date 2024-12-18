@@ -1,8 +1,50 @@
 {
   "dev": {
-    "title": "Dev Tools",
+    "app-icon": {
+      "description": "Generate iOS and Android app icons in various sizes",
+      "file-name": "File name",
+      "file-name-description": "Change file name for all generated Android images",
+      "generating": "Generating...",
+      "instructions": {
+        "android": "Android",
+        "android-description": "4 different sizes and files",
+        "for-android": "For Android:",
+        "for-android-1": "1. Unzip the downloaded file",
+        "for-android-2": "2. Navigate to your Android project's <code>app/src/main/res</code> directory",
+        "for-android-3": "3. Copy all the <code>mipmap-*</code> folders from the generated package",
+        "for-android-4": "4. Paste them into your <code>res</code> directory, replacing existing ones if needed",
+        "for-android-5": "5. Replace the existing icons in your project with the new ones",
+        "for-ios": "For iOS:",
+        "how-to-use": "How to use the generated icons:",
+        "how-to-use-ios-1": "1. Unzip the downloaded file",
+        "how-to-use-ios-2": "2. Drag the generated AppIcon.appiconset folder into your project",
+        "how-to-use-ios-3": "3. In your project navigator, locate the <code>Assets.xcassets</code> folder",
+        "how-to-use-ios-4": "4. Drag the generated <code>AppIcon.appiconset</code> folder into it",
+        "how-to-use-ios-5": "5. Xcode will automatically recognize and apply the app icons",
+        "ios": "iOS and macOS",
+        "ipad": "iPad",
+        "ipad-description": "13 different sizes and files",
+        "iphone": "iPhone",
+        "iphone-description": "11 different sizes and files",
+        "macos": "macOS",
+        "macos-description": "11 different sizes and files",
+        "store-submissions": "Store Submissions:",
+        "store-submissions-android": "Play Store: Use <code>playstore.png</code> (512x512) from the root folder",
+        "store-submissions-both": "Both stores also receive an <code>appstore.png</code> in the root for convenience",
+        "store-submissions-ios": "App Store: Use <code>1024x1024.png</code> from <code>AppIcon.appiconset</code>",
+        "watchos": "watchOS",
+        "watchos-description": "8 different sizes and files"
+      },
+      "reset": "Reset",
+      "title": "App Icon Generator",
+      "upload-button": "Select File",
+      "upload-button-change": "Change Image",
+      "upload-button-generate": "Generate Icons",
+      "upload-description": "Upload a 1024x1024px PNG image to generate icons for all platforms.",
+      "upload-placeholder": "Drop your icon here",
+      "upload-placeholder-description": "Square PNG or JPG, 1024x1024px recommended"
+    },
     "description": "Dev tools for your website",
-    "tryNow": "Try Now",
     "free": "Free",
     "openSource": "Open Source",
     "regex": {
@@ -39,6 +81,8 @@
       "unicode": "Unicode (u)",
       "url": "URL",
       "use": "Use"
-    }
+    },
+    "title": "Dev Tools",
+    "tryNow": "Try Now"
   }
 }

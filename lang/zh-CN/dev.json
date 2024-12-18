@@ -1,8 +1,50 @@
 {
   "dev": {
-    "title": "开发工具",
+    "app-icon": {
+      "description": "生成各种尺寸的 iOS 和 Android 应用图标",
+      "file-name": "文件名",
+      "file-name-description": "更改所有生成的 Android 图片的文件名",
+      "generating": "生成中...",
+      "instructions": {
+        "android": "Android",
+        "android-description": "4 种不同尺寸和文件",
+        "for-android": "对于 Android:",
+        "for-android-1": "1. 解压下载的文件",
+        "for-android-2": "2. 导航到您的 Android 项目的 <code>app/src/main/res</code> 目录",
+        "for-android-3": "3. 复制所有生成的 <code>mipmap-*</code> 文件夹",
+        "for-android-4": "4. 将它们粘贴到您的 <code>res</code> 目录中，替换现有文件（如果需要）",
+        "for-android-5": "5. 将现有项目中的图标替换为新图标",
+        "for-ios": "对于 iOS:",
+        "how-to-use": "如何使用生成的图标：",
+        "how-to-use-ios-1": "1. 解压下载的文件",
+        "how-to-use-ios-2": "2. 将生成的 AppIcon.appiconset 文件夹拖入您的项目",
+        "how-to-use-ios-3": "3. 在您的项目导航器中，找到 <code>Assets.xcassets</code> 文件夹",
+        "how-to-use-ios-4": "4. 将生成的 <code>AppIcon.appiconset</code> 文件夹拖入其中",
+        "how-to-use-ios-5": "5. Xcode 将自动识别并应用图标",
+        "ios": "iOS 和 macOS",
+        "ipad": "iPad",
+        "ipad-description": "13 种不同尺寸和文件",
+        "iphone": "iPhone",
+        "iphone-description": "11 种不同尺寸和文件",
+        "macos": "macOS",
+        "macos-description": "11 种不同尺寸和文件",
+        "store-submissions": "商店提交：",
+        "store-submissions-android": "Play Store: 使用 <code>playstore.png</code> (512x512) 从根目录",
+        "store-submissions-both": "两个商店还接收一个 <code>appstore.png</code> 在根目录中，方便使用",
+        "store-submissions-ios": "App Store: 使用 <code>1024x1024.png</code> 从 <code>AppIcon.appiconset</code> 中",
+        "watchos": "watchOS",
+        "watchos-description": "8 种不同尺寸和文件"
+      },
+      "reset": "重置",
+      "title": "应用图标生成器",
+      "upload-button": "选择文件",
+      "upload-button-change": "更换图片",
+      "upload-button-generate": "生成图标",
+      "upload-description": "上传一张 1024x1024px 的 PNG 图片以生成所有平台的图标。",
+      "upload-placeholder": "将图标拖放到此处",
+      "upload-placeholder-description": "建议使用 1024x1024px 的正方形 PNG 或 JPG"
+    },
     "description": "为您的网站提供开发工具",
-    "tryNow": "立即试用",
     "free": "免费",
     "openSource": "开源",
     "regex": {
@@ -39,6 +81,8 @@
       "unicode": "Unicode (u)",
       "url": "URL",
       "use": "使用"
-    }
+    },
+    "title": "开发工具",
+    "tryNow": "立即试用"
   }
 }
