@@ -48,6 +48,7 @@ This project is built with modern web technologies and best practices:
 │               └── base64/   # Base64 converter tool
 │           └── dev/          # Developer tools
 │               └── regex/   # Regex tester tool
+│               └── app-icon-generator/ # App icon generator tool
 │           └── seo/          # SEO tools
 │               └── og-image/ # OG image generator tool
 │               └── meta-tags/ # Meta tags generator tool
@@ -63,8 +64,9 @@ This project is built with modern web technologies and best practices:
 │   │   ├── base64         # Base64 converter component
 │   │   ├── regex          # Regex tester component
 │   │   ├── og-image       # OG image generator component
-│   │   └── meta-tags      # Meta tags generator component
-│   │   └── text-formatter # Text formatter component
+│   │   ├── meta-tags      # Meta tags generator component
+│   │   ├── text-formatter # Text formatter component
+│   │   └── app-icon-generator # App icon generator component
 │   ├── layouts/
 │   │   └── tool-layout   # Common tool layout
 │   └── ui/                   # UI Components
@@ -159,6 +161,7 @@ This project is built with modern web technologies and best practices:
 - [ ] CSS Formatter/Minifier
 - [ ] HTML Formatter/Validator
 - [ ] Tailwind Config Generator
+- [x] App Icon Generator
 
 ### Phase 3: Traffic Generation Tools (2-3 weeks)
 
