@@ -1,13 +1,10 @@
 "use client";
 
-import {
-  createSearchEngine,
-  SearchResult,
-  Tool,
-  SearchableTool,
-} from "@/lib/search";
 import { useLocale } from "next-intl";
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { SearchableTool, SearchResult } from "../types/tool";
+import { Tool } from "../types/tool";
+import { createSearchEngine } from "../lib/search";
 
 export function useToolSearch(tools: Tool[], initialQuery: string = "") {
   const [query, setQuery] = useState(initialQuery);
