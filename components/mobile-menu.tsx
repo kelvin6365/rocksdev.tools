@@ -1,14 +1,15 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "motion/react";
-import { Button } from "./ui/button";
-import { X, ChevronRight, Github, Star, Twitter } from "lucide-react";
-import { useTranslations } from "next-intl";
 import { config } from "@/services/config";
-import { usePathname, Link } from "../i18n/routing";
-import { LanguageSwitcher } from "./language-switcher";
+import { ChevronRight, Github, Star, Twitter, X } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import { useEffect } from "react";
+import { Link, usePathname } from "../i18n/routing";
+import { LanguageSwitcher } from "./language-switcher";
+import { SearchButton } from "./search";
+import { Button } from "./ui/button";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -35,6 +36,13 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       document.body.style.touchAction = "";
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    if (isOpen) {
+      onClose();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   return (
     <AnimatePresence>
@@ -71,13 +79,16 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
             {/* Menu Items */}
             <div className="flex-1 overflow-y-auto">
+              {/* Search Button */}
+              <div className="p-4 border-b">
+                <SearchButton />
+              </div>
               <div className="py-2">
                 {config.tools.map((category) => (
                   <div key={category.value} className="px-2 py-1">
                     {/* Category */}
                     <Link
                       href={category.href}
-                      onClick={onClose}
                       className={cn(
                         "flex items-center justify-between p-2 rounded-md",
                         "text-sm font-medium transition-colors",
@@ -99,7 +110,6 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                           <Link
                             key={tool.value}
                             href={tool.href}
-                            onClick={onClose}
                             className={cn(
                               "block px-2 py-1.5 rounded-md text-sm",
                               "transition-colors",
