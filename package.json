@@ -58,6 +58,7 @@
     "date-fns": "^3.6.0",
     "dayjs": "^1.11.11",
     "embla-carousel-react": "^8.5.1",
+    "fuse.js": "^7.0.0",
     "input-otp": "^1.4.1",
     "js-cookie": "^3.0.5",
     "json-edit-react": "^1.17.1",

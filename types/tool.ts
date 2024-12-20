@@ -1,8 +1,3 @@
-export interface Tool {
-  id: string;
-  href: string | null;
-}
-
 export interface MetaTagsData {
   title: string;
   description: string;

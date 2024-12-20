@@ -92,7 +92,13 @@
         "title": "Text Tools"
       },
       "title": "Tools"
-    }
+    },
+    "recentlyUsed": "Recently Used",
+    "search": "Search...",
+    "searchTools": "Search Tools...",
+    "noResults": "No results found.",
+    "typeToSearch": "Type to search...",
+    "searchResults": "Search Results"
   },
   "not-found": {
     "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",

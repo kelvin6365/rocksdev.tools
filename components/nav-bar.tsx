@@ -9,6 +9,7 @@ import { usePathname, Link } from "@/i18n/routing";
 import * as React from "react";
 import { useTranslations } from "next-intl";
 import { MobileMenu } from "./mobile-menu";
+import SearchCommand from "./search-command";
 
 const routes = config.tools;
 
@@ -54,6 +55,7 @@ export function NavBar() {
             ))}
           </div>
           <div className="flex items-center gap-4 ml-auto">
+            <SearchCommand />
             <LanguageSwitcher />
             <Button variant="outline" size="icon" asChild>
               <Link
