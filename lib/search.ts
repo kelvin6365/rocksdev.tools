@@ -1,43 +1,7 @@
 "use client";
 
-import Fuse, { FuseResultMatch } from "fuse.js";
-
-// Types
-export interface BaseTool {
-  label: string;
-  value: string;
-  href: string;
-  description: string;
-  category: string;
-  icon?: string;
-}
-
-export interface Tool extends BaseTool {
-  subTools?: SubTool[];
-}
-
-export interface SubTool extends BaseTool {}
-
-export interface SearchableTool {
-  id: string;
-  href: string;
-  icon?: string;
-  category: string;
-  parentId?: string;
-  translations: {
-    [key: string]: {
-      label: string;
-      description: string;
-      tags: string[];
-      searchableText: string;
-    };
-  };
-}
-
-export interface SearchResult {
-  item: SearchableTool;
-  matches: FuseResultMatch[];
-}
+import Fuse from "fuse.js";
+import { BaseTool, SearchableTool, SearchResult, Tool } from "../types/tool";
 
 export function createSearchEngine(tools: Tool[], locale: string = "en") {
   const processTools = (tools: Tool[]): SearchableTool[] => {

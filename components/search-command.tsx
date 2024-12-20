@@ -2,7 +2,6 @@
 
 import { useToolSearch } from "@/hooks/use-search-tools";
 import { useRouter } from "@/i18n/routing";
-import { SearchableTool, SearchResult, Tool } from "@/lib/search";
 import { config } from "@/services/config";
 import { sendGAEvent } from "@next/third-parties/google";
 import { ArrowRight, Clock } from "lucide-react";
@@ -17,6 +16,7 @@ import {
   CommandItem,
   CommandList,
 } from "./ui/command";
+import { SearchableTool, SearchResult, Tool } from "../types/tool";
 
 const SearchCommand = () => {
   const t = useTranslations("nav");

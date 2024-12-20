@@ -1,3 +1,5 @@
+import { Tool } from "../types/tool";
+
 export const config = {
   name: "Rocks Dev",
   description: "A comprehensive collection of developer tools",
@@ -163,5 +165,5 @@ export const config = {
         },
       ],
     },
-  ],
+  ] as Tool[],
 };

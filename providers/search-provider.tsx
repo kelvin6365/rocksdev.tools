@@ -1,9 +1,9 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
-import { useRouter } from "@/i18n/routing";
 import { useToolSearch } from "@/hooks/use-search-tools";
+import { useRouter } from "@/i18n/routing";
 import { config } from "@/services/config";
-import { SearchableTool, Tool } from "@/lib/search";
 import { sendGAEvent } from "@next/third-parties/google";
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { SearchableTool, Tool } from "../types/tool";
 
 interface SearchContextType {
   open: boolean;
