@@ -92,7 +92,13 @@
         "title": "文字工具"
       },
       "title": "工具"
-    }
+    },
+    "recentlyUsed": "最近使用",
+    "search": "搜索...",
+    "searchTools": "搜索工具...",
+    "noResults": "沒有找到結果。",
+    "typeToSearch": "輸入要搜索的命令或內容...",
+    "searchResults": "搜索結果"
   },
   "not-found": {
     "description": "您正在尋找的頁面可能已被刪除、名稱已更改或暫時不可用。",

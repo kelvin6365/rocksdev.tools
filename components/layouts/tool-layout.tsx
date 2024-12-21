@@ -15,6 +15,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../ui/tooltip";
+import { Tool } from "../../types/tool";
 
 interface ToolLayoutProps {
   children: React.ReactNode;
@@ -78,7 +79,7 @@ export function ToolLayout({
                       {
                         id: translationKey,
                         href: `/tools/${translationKey.replace(/\./g, "/")}`,
-                      },
+                      } as Tool,
                     ]);
                   }}
                 >

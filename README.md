@@ -93,9 +93,11 @@ This project is built with modern web technologies and best practices:
 │   │   └── seo.json
 ├── providers/
 │   └── toast-provider.tsx    # Toast notifications provider
+│   └── search-provider.tsx    # Search provider
 │
 ├── types/
 │   └── next-auth.d.ts       # NextAuth type definitions
+│   └── tool.d.ts           # Tool type definitions
 │
 ├── middleware.ts             # Next.js middleware
 ├── tsconfig.json            # TypeScript configuration
@@ -201,11 +203,12 @@ This project is built with modern web technologies and best practices:
 #### User Experience
 
 - [ ] Tool suggestions
-- [ ] Recently used tools
+- [x] Recently used tools
 - [x] Save preferences (dock)
   - [x] Dock drop out remove tool bug (Not able to remove tool from dock)
 - [ ] Share configurations
 - [x] Mobile menu
+- [x] Search tool
 
 ## Installed Libraries
 

@@ -80,6 +80,8 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │           └── seo/          # SEO tools
 │               ├── og-image/ # OG image generator tool
 │               └── meta-tags/ # Meta tags generator tool
+│           └── text/         # Text tools
+│               └── text-formatter/ # Text formatter tool
 ├── components/
 │   ├── tools/               # Tools components
 │   │   ├── json-formatter # JSON formatter component
@@ -117,9 +119,11 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │   │   └── seo.json
 ├── providers/
 │   └── toast-provider.tsx    # Toast notifications provider
+│   └── search-provider.tsx   # Search provider
 │
 ├── types/
 │   └── next-auth.d.ts       # NextAuth type definitions
+│   └── tool.d.ts           # Tool type definitions
 │
 ├── middleware.ts             # Next.js middleware
 ├── tsconfig.json            # TypeScript configuration
