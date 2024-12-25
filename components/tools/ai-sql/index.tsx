@@ -21,7 +21,9 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import * as React from "react";
+import { useEffect } from "react";
 import { toast } from "sonner";
+import { Message } from "../../../types/api";
 
 const ChatItem = ({
   title,
@@ -123,10 +125,23 @@ export function AiSqlBot() {
     switchConversation,
     deleteConversation,
     updateLanguage,
-    updateDialect,
+    updateTitle,
     currentLanguage,
     currentDialect,
   } = useSQLGenerator();
+
+  const viewportRef = React.useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    viewportRef.current?.scrollTo({
+      top: viewportRef?.current?.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [currentConversation?.messages]);
 
   const handleSend = async () => {
     if (!input.trim() || isProcessing) return;
@@ -134,20 +149,28 @@ export function AiSqlBot() {
     try {
       setIsProcessing(true);
 
-      // Add user message
       await addMessage(input, "user");
 
-      // TODO: Detect language from input
-      const detectedLanguage = "java"; // This should be determined by AI
-      await updateLanguage(detectedLanguage);
-
-      // TODO: API call to generate SQL
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const messages: Message[] = [{ role: "user", content: input }];
+      const fullMessages: Message[] = [
+        ...(currentConversation?.messages.slice(-20).map(
+          (msg) =>
+            ({
+              role: msg.type,
+              content: msg.content,
+            }) as Message,
+        ) || []),
+        ...messages,
+      ];
+      const sql = await generateSQL(fullMessages);
+      const jsonResponseContent = JSON.parse(sql);
+      await updateLanguage(jsonResponseContent.language);
+      await updateTitle(jsonResponseContent.title);
 
       // Add AI response
-      await addMessage("hi", "system", {
-        language: detectedLanguage,
-        sqlDialect: currentDialect || "mysql",
+      await addMessage(jsonResponseContent.output, "system", {
+        language: jsonResponseContent.language,
+        sqlDialect: jsonResponseContent.type,
       });
 
       incrementToolUsage("ai-sql");
@@ -173,6 +196,36 @@ export function AiSqlBot() {
     if (!sql) return;
     navigator.clipboard.writeText(sql);
     toast.success(t("dev.ai-sql.message.copied"));
+  };
+
+  const generateSQL = async (messages: Message[]) => {
+    try {
+      const response = await fetch("/api/sql-generator", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ messages }),
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.message || "Failed to generate SQL");
+      }
+
+      const data = await response.json();
+      return data.choices[0].message.content;
+    } catch (error) {
+      console.error("Error generating SQL:", error);
+      throw error;
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault(); // Prevent default to avoid new line
+      handleSend();
+    }
   };
 
   const renderMainContent = () => {
@@ -204,29 +257,45 @@ export function AiSqlBot() {
           </Button>
         </div>
 
-        <ScrollArea className="flex-1 p-4">
-          <div className="space-y-4">
+        <ScrollArea viewportRef={viewportRef} className="flex-1 px-4">
+          <div className="space-y-4 my-4">
             {currentConversation.messages.map((msg, idx) => (
               <Card
                 key={idx}
                 className={msg.type === "user" ? "ml-12" : "mr-12"}
               >
                 <CardContent className="p-4">
-                  <div className="prose dark:prose-invert">{msg.content}</div>
-                  {msg.type === "system" && msg.sql && (
-                    <div className="mt-2">
-                      <div className="bg-muted p-3 rounded-md">
-                        <pre className="text-sm">{msg.sql}</pre>
+                  {msg.type === "system" &&
+                    msg.content &&
+                    (idx !== 0 ? (
+                      <div className="mt-2">
+                        <div className="bg-muted p-3 rounded-md overflow-x-auto">
+                          <pre className="text-sm break-words whitespace-pre-wrap">
+                            <code>{msg.content}</code>
+                          </pre>
+                        </div>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="mt-2"
+                          onClick={() => handleCopy(msg.content)}
+                        >
+                          <Copy className="w-4 h-4 mr-2" />
+                          {t("dev.ai-sql.copy-sql")}
+                        </Button>
                       </div>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="mt-2"
-                        onClick={() => handleCopy(msg.sql)}
-                      >
-                        <Copy className="w-4 h-4 mr-2" />
-                        {t("dev.ai-sql.copy-sql")}
-                      </Button>
+                    ) : (
+                      <div className="prose dark:prose-invert">
+                        <pre className="text-sm break-words whitespace-pre-wrap">
+                          {msg.content}
+                        </pre>
+                      </div>
+                    ))}
+                  {msg.type === "user" && msg.content && (
+                    <div className="prose dark:prose-invert">
+                      <pre className="text-sm break-words whitespace-pre-wrap">
+                        {msg.content}
+                      </pre>
                     </div>
                   )}
                 </CardContent>
@@ -250,8 +319,10 @@ export function AiSqlBot() {
             <Textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyDown}
               placeholder={t("dev.ai-sql.input.placeholder")}
               className="flex-1"
+              disabled={isProcessing}
               rows={3}
             />
             <Button
@@ -280,7 +351,7 @@ export function AiSqlBot() {
   }
 
   return (
-    <div className="flex min-h-[calc(100vh-20rem)] p-2">
+    <div className="flex min-h-[calc(100vh-20rem)] max-h-[calc(100vh-20rem)] p-2">
       {/* Left sidebar */}
       <div className="w-[240px] border-r flex flex-col">
         <div className="p-4 border-b">

@@ -205,6 +205,7 @@ export const config = {
           href: "/tools/dev/ai-sql",
           description: "Generate SQL queries with AI",
           icon: "🤖",
+          tags: ["ai"],
         },
       ],
     },

@@ -1,5 +1,71 @@
 {
   "dev": {
+    "ai-sql": {
+      "current-conversion": "當前轉換",
+      "copy-sql": "複製 SQL",
+      "conversion-type": "轉換類型",
+      "description": "使用 AI 將您的代碼 DTO 和實體轉換為 SQL 命令",
+      "error": {
+        "generation": "生成失敗"
+      },
+      "example_title": "例子",
+      "guide": {
+        "features": {
+          "automatic-language-detection": "自動語言檢測",
+          "chat-history-saved-locally-in-your-browser": "聊天記錄本地保存在瀏覽器中",
+          "copy-generated-sql-with-one-click": "一鍵複製生成的 SQL",
+          "sql-schema-generation": "SQL 結構生成",
+          "support-for-multiple-programming-languages": "支持多種程式語言",
+          "title": "功能特點"
+        },
+        "input": {
+          "description": "貼上您的代碼（類、接口或類型定義），AI 將生成相應的 SQL 表結構。",
+          "title": "輸入格式"
+        },
+        "storage": {
+          "description": "所有對話都存儲在您的瀏覽器中。除了您要轉換的代碼外，不會向我們的服務器發送任何數據。",
+          "title": "本地存儲"
+        },
+        "title": "如何使用 SQL 生成器"
+      },
+      "how_to_use": "如何使用 SQL 生成器：",
+      "input": {
+        "placeholder": "在此輸入或貼上代碼...（按 Enter 發送，Shift + Enter 換行）"
+      },
+      "message": {
+        "copied": "已複製到剪貼簿！"
+      },
+      "new-conversion": "開始新轉換",
+      "paste-code": "貼上代碼",
+      "privacy": {
+        "data_storage": {
+          "all-chat-histories-are-stored-locally-in-your-browser": "所有聊天記錄都存儲在您的瀏覽器中",
+          "clearing-your-browser-data-will-remove-all-conversations": "清除瀏覽器數據將刪除所有對話",
+          "no-data-is-stored-on-our-servers": "不在服務器上存儲任何數據",
+          "title": "數據存儲"
+        },
+        "data_usage": {
+          "conversations-remain-private-to-your-browser": "對話保持在您的瀏覽器中私密",
+          "title": "數據使用",
+          "we-do-not-store-share-or-analyze-your-code": "我們不存儲、分享或分析您的代碼",
+          "your-code-is-only-used-to-generate-sql-schemas": "您的代碼僅用於生成 SQL 結構"
+        },
+        "disclaimer": "使用此工具即表示您確認所有數據都存儲在您的瀏覽器中，我們對因清除瀏覽器數據或瀏覽器存儲限制而可能發生的任何數據丟失不承擔責任。",
+        "storage_management": {
+          "clearing-your-browser-data-will-remove-all-conversations": "清除瀏覽器數據以刪除所有對話",
+          "description": "您可以通過以下方式管理數據：",
+          "manually-deleting-individual-conversations-in-the-app": "在應用中手動刪除單個對話",
+          "title": "本地存儲管理",
+          "using-browser-developer-tools-to-inspect-stored-data": "使用瀏覽器的開發者工具檢查存儲的數據"
+        },
+        "title": "隱私和條款"
+      },
+      "recent": "最近轉換",
+      "start_new": "開始新轉換",
+      "title": "AI SQL 生成器",
+      "upload-file": "上傳檔案",
+      "welcome": "歡迎使用 SQL 生成器！我可以帮助您將代碼轉換為 SQL。您可以開始粘貼代碼或上傳文件。"
+    },
     "app-icon": {
       "description": "產生各種尺寸的 iOS 和 Android 應用程式圖示",
       "file-name": "檔案名稱",
@@ -17,7 +83,7 @@
         "for-ios": "對於 iOS:",
         "how-to-use": "如何使用生成的圖示：",
         "how-to-use-ios-1": "1. 解壓下載的檔案",
-        "how-to-use-ios-2": "2. 將生成的 AppIcon.appiconset 檔案夾拖入您的專案",
+        "how-to-use-ios-2": "2. 將生成的 AppIcon.appiconset 檔案夾拖���您的專案",
         "how-to-use-ios-3": "3. 在您的專案導航器中，找到 <code>Assets.xcassets</code> 檔案夾",
         "how-to-use-ios-4": "4. 將生成的 <code>AppIcon.appiconset</code> 檔案夾拖入其中",
         "how-to-use-ios-5": "5. Xcode 將自動識別並應用圖示",
@@ -81,30 +147,6 @@
       "unicode": "Unicode (u)",
       "url": "URL",
       "use": "使用"
-    },
-    "ai-sql": {
-      "title": "AI SQL 生成器",
-      "description": "使用 AI 將您的代碼 DTO 和實體轉換為 SQL 命令",
-      "start_new": "開始新的轉換",
-      "how_to_use": "如何使用 SQL 生成器：",
-      "example_title": "示例",
-      "welcome": "歡迎使用 SQL 生成器！我可以幫您將代碼轉換為 SQL。您可以開始貼上代碼或上傳文件。",
-      "recent": "最近轉換",
-      "new-conversion": "新的轉換",
-      "copy-sql": "複製 SQL",
-      "paste-code": "貼上代碼",
-      "upload-file": "上傳文件",
-      "input": {
-        "placeholder": "在此貼上您的代碼..."
-      },
-      "current-conversion": "當前轉換",
-      "conversion-type": "轉換類型",
-      "error": {
-        "generation": "生成失敗"
-      },
-      "message": {
-        "copied": "已複製到剪貼簿！"
-      }
     },
     "title": "開發工具",
     "tryNow": "立即試用"

@@ -17,7 +17,11 @@ export function useSQLGenerator() {
 
   // Load conversations
   const loadConversations = useCallback(async () => {
-    const convs = await db.getConversations();
+    const convs = await db?.getConversations();
+    if (!convs) {
+      setIsLoading(false);
+      return;
+    }
     setConversations(convs);
 
     // Set first conversation as current if none selected
@@ -34,7 +38,11 @@ export function useSQLGenerator() {
       return;
     }
 
-    const conv = await db.getConversationWithMessages(currentConversationId);
+    const conv = await db?.getConversationWithMessages(currentConversationId);
+    if (!conv) {
+      setCurrentConversation(null);
+      return;
+    }
     setCurrentConversation(conv);
   }, [db, currentConversationId]);
 
@@ -50,7 +58,7 @@ export function useSQLGenerator() {
 
   // Create new chat
   const createNewChat = useCallback(async () => {
-    const newConversation = await db.createConversation({
+    const newConversation = await db?.createConversation({
       title: "New Conversion",
       preview: "Code → SQL",
       metadata: {
@@ -77,7 +85,7 @@ export function useSQLGenerator() {
     ) => {
       if (!currentConversationId) return;
 
-      await db.addMessage(currentConversationId, {
+      await db?.addMessage(currentConversationId, {
         content,
         type,
         metadata,
@@ -93,7 +101,7 @@ export function useSQLGenerator() {
   const updateLanguage = useCallback(
     async (language: string) => {
       if (!currentConversationId) return;
-      await db.updateDetectedLanguage(currentConversationId, language);
+      await db?.updateDetectedLanguage(currentConversationId, language);
       await loadCurrentConversation();
       await loadConversations();
     },
@@ -104,7 +112,17 @@ export function useSQLGenerator() {
   const updateDialect = useCallback(
     async (dialect: string) => {
       if (!currentConversationId) return;
-      await db.updateSQLDialect(currentConversationId, dialect);
+      await db?.updateSQLDialect(currentConversationId, dialect);
+      await loadCurrentConversation();
+      await loadConversations();
+    },
+    [db, currentConversationId, loadCurrentConversation, loadConversations],
+  );
+
+  const updateTitle = useCallback(
+    async (title: string) => {
+      if (!currentConversationId) return;
+      await db?.updateConversation(currentConversationId, { title });
       await loadCurrentConversation();
       await loadConversations();
     },
@@ -115,7 +133,7 @@ export function useSQLGenerator() {
   const updateMetadata = useCallback(
     async (metadata: Partial<Conversation["metadata"]>) => {
       if (!currentConversationId) return;
-      await db.updateConversation(currentConversationId, {
+      await db?.updateConversation(currentConversationId, {
         metadata: {
           ...currentConversation?.metadata,
           ...metadata,
@@ -134,7 +152,7 @@ export function useSQLGenerator() {
   // Delete conversation
   const deleteConversation = useCallback(
     async (id: number) => {
-      await db.deleteConversation(id);
+      await db?.deleteConversation(id);
       await loadConversations();
 
       if (currentConversationId === id) {
@@ -154,6 +172,7 @@ export function useSQLGenerator() {
     deleteConversation,
     updateLanguage,
     updateDialect,
+    updateTitle,
     updateMetadata,
     // Helper getters for current conversation
     currentLanguage: currentConversation?.inputType,

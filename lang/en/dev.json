@@ -1,5 +1,71 @@
 {
   "dev": {
+    "ai-sql": {
+      "conversion-type": "Conversion Type",
+      "copy-sql": "Copy SQL",
+      "current-conversion": "Current Conversion",
+      "description": "Use AI to convert your code DTO and entity to SQL commands",
+      "error": {
+        "generation": "Generation failed"
+      },
+      "example_title": "Example",
+      "guide": {
+        "features": {
+          "automatic-language-detection": "Automatic language detection",
+          "chat-history-saved-locally-in-your-browser": "Chat history saved locally in your browser",
+          "copy-generated-sql-with-one-click": "Copy generated SQL with one click",
+          "sql-schema-generation": "SQL schema generation",
+          "support-for-multiple-programming-languages": "Support for multiple programming languages",
+          "title": "Features"
+        },
+        "input": {
+          "description": "Paste your code (class, interface, or type definition) and the AI will generate appropriate SQL table schemas.",
+          "title": "Input Format"
+        },
+        "storage": {
+          "description": "All conversations are stored locally in your browser. No data is sent to our servers except the code you want to convert.",
+          "title": "Local Storage"
+        },
+        "title": "How to Use SQL Generator"
+      },
+      "how_to_use": "How to use the SQL Generator:",
+      "input": {
+        "placeholder": "Paste your code here..."
+      },
+      "message": {
+        "copied": "Copied to clipboard!"
+      },
+      "new-conversion": "New Conversion",
+      "paste-code": "Paste Code",
+      "privacy": {
+        "data_storage": {
+          "all-chat-histories-are-stored-locally-in-your-browser": "All chat histories are stored locally in your browser",
+          "clearing-your-browser-data-will-remove-all-conversations": "Clearing your browser data will remove all conversations",
+          "no-data-is-stored-on-our-servers": "No data is stored on our servers",
+          "title": "Data Storage"
+        },
+        "data_usage": {
+          "conversations-remain-private-to-your-browser": "Conversations remain private to your browser",
+          "title": "Data Usage",
+          "we-do-not-store-share-or-analyze-your-code": "We do not store, share, or analyze your code",
+          "your-code-is-only-used-to-generate-sql-schemas": "Your code is only used to generate SQL schemas"
+        },
+        "disclaimer": "By using this tool, you acknowledge that all data is stored locally in your browser, and we are not responsible for any data loss that may occur from clearing browser data or browser storage limitations.",
+        "storage_management": {
+          "clearing-your-browser-data-will-remove-all-conversations": "Clearing your browser data will remove all conversations",
+          "description": "You can manage your data by:",
+          "manually-deleting-individual-conversations-in-the-app": "Manually deleting individual conversations in the app",
+          "title": "Local Storage Management",
+          "using-browser-developer-tools-to-inspect-stored-data": "Using browser's developer tools to inspect stored data"
+        },
+        "title": "Privacy & Terms"
+      },
+      "recent": "Recent Conversions",
+      "start_new": "Start new conversion",
+      "title": "AI SQL Generator",
+      "upload-file": "Upload File",
+      "welcome": "Welcome to the SQL Generator! I can help you convert your code to SQL. You can start pasting code or uploading a file."
+    },
     "app-icon": {
       "description": "Generate iOS and Android app icons in various sizes",
       "file-name": "File name",
@@ -81,30 +147,6 @@
       "unicode": "Unicode (u)",
       "url": "URL",
       "use": "Use"
-    },
-    "ai-sql": {
-      "title": "AI SQL Generator",
-      "description": "Use AI to convert your code DTO and entity to SQL commands",
-      "start_new": "Start new conversion",
-      "how_to_use": "How to use the SQL Generator:",
-      "example_title": "Example",
-      "welcome": "Welcome to the SQL Generator! I can help you convert your code to SQL. You can start pasting code or uploading a file.",
-      "recent": "Recent Conversions",
-      "new-conversion": "New Conversion",
-      "copy-sql": "Copy SQL",
-      "paste-code": "Paste Code",
-      "upload-file": "Upload File",
-      "input": {
-        "placeholder": "Paste your code here..."
-      },
-      "current-conversion": "Current Conversion",
-      "conversion-type": "Conversion Type",
-      "error": {
-        "generation": "Generation failed"
-      },
-      "message": {
-        "copied": "Copied to clipboard!"
-      }
     },
     "title": "Dev Tools",
     "tryNow": "Try Now"

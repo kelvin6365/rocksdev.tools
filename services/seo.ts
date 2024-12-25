@@ -1405,4 +1405,62 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
   },
+  "dev.ai-sql": {
+    en: {
+      title: "AI SQL Generator | Generate SQL from Code",
+      description:
+        "Easily convert your code into SQL with our advanced AI SQL generator. Save time, reduce errors, and optimize your database queries effortlessly.",
+      keywords: [
+        "ai sql generator",
+        "automated sql generation",
+        "sql query builder",
+        "convert code to sql online",
+        "ai code to sql converter",
+        "sql optimization tool",
+      ],
+      openGraph: {
+        type: "website",
+        title: "Transform Your Code into SQL Effortlessly - AI SQL Generator",
+        description:
+          "Convert your code into optimized SQL queries with our AI-powered tool. Start generating today!",
+        images: [`/api/og?title=AI%20SQL%20Generator`],
+      },
+    },
+    "zh-CN": {
+      title: "轻松将代码转换为SQL - AI SQL生成器",
+      description:
+        "使用我们的AI SQL生成器，轻松将代码转换为高效的SQL查询，节省时间，提高工作效率。",
+      keywords: [
+        "ai sql生成器",
+        "代码转sql工具",
+        "自动化sql生成",
+        "ai代码转换器",
+        "在线sql生成器",
+      ],
+      openGraph: {
+        type: "website",
+        title: "轻松将代码转换为SQL - AI SQL生成器",
+        description: "使用我们的AI SQL生成器，轻松将代码转换为高效的SQL查询。",
+        images: ["/api/og?title=AI%20SQL%20生成器"],
+      },
+    },
+    "zh-HK": {
+      title: "輕鬆將代碼轉換為SQL - AI SQL生成器",
+      description:
+        "使用我們的AI SQL生成器，輕鬆將代碼轉換為高效的SQL查詢，節省時間，提高工作效率。",
+      keywords: [
+        "ai sql生成器",
+        "代碼轉sql工具",
+        "自動化sql生成",
+        "ai代碼轉換器",
+        "在線sql生成器",
+      ],
+      openGraph: {
+        type: "website",
+        title: "輕鬆將代碼轉換為SQL - AI SQL生成器",
+        description: "使用我們的AI SQL生成器，輕鬆將代碼轉換為高效的SQL查詢。",
+        images: ["/api/og?title=AI%20SQL%20生成器"],
+      },
+    },
+  },
 };

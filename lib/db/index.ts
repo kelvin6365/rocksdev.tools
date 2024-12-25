@@ -7,7 +7,6 @@ export interface Message {
   conversationId: number;
   type: "user" | "system" | "ai";
   content: string;
-  sql?: string;
   timestamp: number;
   metadata?: {
     language?: string; // Detected language
