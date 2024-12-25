@@ -42,17 +42,18 @@ This project is built with modern web technologies and best practices:
 │       ├── page.tsx          # Homepage
 │       └── tools/            # Developer tools
 │           └── json/         # JSON tools
-│               └── formatter/ # JSON formatter tool
-│               └── validator/ # JSON validator tool
-│               └── diff/      # JSON diff tool
+│               ├── formatter/ # JSON formatter tool
+│               ├── validator/ # JSON validator tool
+│               ├── diff/      # JSON diff tool
 │               └── minifier/  # JSON minifier tool
 │           └── converters/   # Conversion tools
 │               └── base64/   # Base64 converter tool
 │           └── dev/          # Developer tools
-│               └── regex/   # Regex tester tool
-│               └── app-icon-generator/ # App icon generator tool
+│               ├── regex/   # Regex tester tool
+│               ├── app-icon-generator/ # App icon generator tool
+│               └── ai-sql-generator/ # AI SQL generator tool
 │           └── seo/          # SEO tools
-│               └── og-image/ # OG image generator tool
+│               ├── og-image/ # OG image generator tool
 │               └── meta-tags/ # Meta tags generator tool
 │           └── text/         # Text tools
 │               └── text-formatter/ # Text formatter tool
@@ -68,7 +69,8 @@ This project is built with modern web technologies and best practices:
 │   │   ├── og-image       # OG image generator component
 │   │   ├── meta-tags      # Meta tags generator component
 │   │   ├── text-formatter # Text formatter component
-│   │   └── app-icon-generator # App icon generator component
+│   │   ├── app-icon-generator # App icon generator component
+│   │   └── ai-sql-generator # AI SQL generator component
 │   ├── layouts/
 │   │   └── tool-layout   # Common tool layout
 │   └── ui/                   # UI Components
@@ -166,6 +168,7 @@ This project is built with modern web technologies and best practices:
 - [ ] HTML Formatter/Validator
 - [ ] Tailwind Config Generator
 - [x] App Icon Generator
+- [x] AI SQL Generator
 
 ### Phase 3: Traffic Generation Tools (2-3 weeks)
 
@@ -273,6 +276,8 @@ Create a `.env.local` file:
 NEXT_PUBLIC_API_URL=your_api_url
 NEXT_PUBLIC_GA_ID=your_google_analytics_id
 NEXT_PUBLIC_ADSENSE_ID=your_adsense_id
+NEXT_PUBLIC_BASE_URL=your_base_url
+OPENROUTER_API_KEY=your_openrouter_api_key
 # Add other environment variables
 ```
 
