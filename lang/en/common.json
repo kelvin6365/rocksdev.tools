@@ -1,4 +1,30 @@
 {
+  "contact-us": {
+    "feedback": {
+      "description": "We value your feedback! If you have any suggestions or find any issues, please let us know.",
+      "title": "Feedback"
+    },
+    "github": {
+      "description": "If you find any issues or want to contribute code, please visit our GitHub repository.",
+      "repository": "RocksDev.Tools Repository",
+      "submit-issue": "Submit an Issue",
+      "title": "GitHub"
+    },
+    "introduction": "Thank you for using RocksDev Tools. If you have any questions, suggestions, or opportunities for collaboration, please reach out to us through the following channels:",
+    "social": {
+      "description": "You can find us on the following platforms:",
+      "title": "Social Media"
+    },
+    "social-links": {
+      "dailydev": "Follow on daily.dev",
+      "github": "Follow on GitHub",
+      "instagram": "Follow on Instagram",
+      "threads": "Follow on Threads",
+      "twitter": "Follow on Twitter",
+      "xiaohongshu": "Follow on Xiaohongshu"
+    },
+    "title": "Contact Us"
+  },
   "dock": {
     "add": "Add to dock"
   },
@@ -25,6 +51,11 @@
     "home": "Home",
     "language": "Language",
     "menu": "Menu",
+    "noResults": "No results found.",
+    "recentlyUsed": "Recently Used",
+    "search": "Search...",
+    "searchResults": "Search Results",
+    "searchTools": "Search Tools...",
     "star": "Star on GitHub",
     "tools": {
       "converters": {
@@ -40,14 +71,18 @@
         "title": "Converters"
       },
       "dev": {
-        "description": "Developer utilities and formatters",
-        "regex": {
-          "description": "Test and validate regular expressions",
-          "title": "Regex Tester"
+        "ai-sql": {
+          "description": "Use AI to convert your code DTO and entity to SQL commands",
+          "title": "AI SQL Generator"
         },
         "app-icon": {
           "description": "Generate iOS and Android app icons in various sizes",
           "title": "App Icon Generator"
+        },
+        "description": "Developer utilities and formatters",
+        "regex": {
+          "description": "Test and validate regular expressions",
+          "title": "Regex Tester"
         },
         "title": "Dev Tools"
       },
@@ -93,18 +128,34 @@
       },
       "title": "Tools"
     },
-    "recentlyUsed": "Recently Used",
-    "search": "Search...",
-    "searchTools": "Search Tools...",
-    "noResults": "No results found.",
-    "typeToSearch": "Type to search...",
-    "searchResults": "Search Results"
+    "typeToSearch": "Type to search..."
   },
   "not-found": {
     "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
     "go-back": "Go Back",
     "return-home": "Return Home",
     "title": "Page Not Found"
+  },
+  "privacy-policy": {
+    "changes": {
+      "description": "We reserve the right to update this privacy policy at any time. Significant changes will be notified through the website.",
+      "title": "Policy Changes"
+    },
+    "cookies": {
+      "description": "We use necessary cookies to remember your language preferences and Google Analytics cookies to help us improve our services.",
+      "title": "Use of Cookies"
+    },
+    "introduction": "Welcome to RocksDev Tools. We value your privacy and are committed to protecting your personal data.",
+    "last-updated": "Last Updated: December 25, 2024",
+    "no-data-collection": {
+      "description": "Apart from basic analytics data, we do not collect any personal information. All tools run locally in your browser.",
+      "title": "Data Collection"
+    },
+    "third-party": {
+      "description": "Our website is hosted on Vercel and uses Google Analytics for visitor analytics. These services may collect basic access data such as IP addresses and browser types.",
+      "title": "Third-Party Services"
+    },
+    "title": "Privacy Policy"
   },
   "site": {
     "description": "A comprehensive collection of developer tools",
@@ -119,51 +170,7 @@
     "title": "Enjoying Our Developer Tools?",
     "yourStarHelps": "Your star helps others discover these tools too!"
   },
-  "privacy-policy": {
-    "title": "Privacy Policy",
-    "last-updated": "Last Updated: December 25, 2024",
-    "introduction": "Welcome to RocksDev Tools. We value your privacy and are committed to protecting your personal data.",
-    "no-data-collection": {
-      "title": "Data Collection",
-      "description": "Apart from basic analytics data, we do not collect any personal information. All tools run locally in your browser."
-    },
-    "cookies": {
-      "title": "Use of Cookies",
-      "description": "We use necessary cookies to remember your language preferences and Google Analytics cookies to help us improve our services."
-    },
-    "third-party": {
-      "title": "Third-Party Services",
-      "description": "Our website is hosted on Vercel and uses Google Analytics for visitor analytics. These services may collect basic access data such as IP addresses and browser types."
-    },
-    "changes": {
-      "title": "Policy Changes",
-      "description": "We reserve the right to update this privacy policy at any time. Significant changes will be notified through the website."
-    }
-  },
-  "contact-us": {
-    "title": "Contact Us",
-    "introduction": "Thank you for using RocksDev Tools. If you have any questions, suggestions, or opportunities for collaboration, please reach out to us through the following channels:",
-    "social": {
-      "title": "Social Media",
-      "description": "You can find us on the following platforms:"
-    },
-    "github": {
-      "title": "GitHub",
-      "description": "If you find any issues or want to contribute code, please visit our GitHub repository.",
-      "repository": "RocksDev.Tools Repository",
-      "submit-issue": "Submit an Issue"
-    },
-    "feedback": {
-      "title": "Feedback",
-      "description": "We value your feedback! If you have any suggestions or find any issues, please let us know."
-    },
-    "social-links": {
-      "github": "Follow on GitHub",
-      "twitter": "Follow on Twitter",
-      "threads": "Follow on Threads",
-      "instagram": "Follow on Instagram",
-      "xiaohongshu": "Follow on Xiaohongshu",
-      "dailydev": "Follow on daily.dev"
-    }
+  "tags": {
+    "ai": "AI"
   }
 }

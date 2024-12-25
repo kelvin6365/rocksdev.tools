@@ -1,5 +1,71 @@
 {
   "dev": {
+    "ai-sql": {
+      "current-conversion": "当前转换",
+      "copy-sql": "复制 SQL",
+      "conversion-type": "转换类型",
+      "description": "使用 AI 将您的代码 DTO 和实体转换为 SQL 命令",
+      "error": {
+        "generation": "生成失败"
+      },
+      "example_title": "例子",
+      "guide": {
+        "features": {
+          "automatic-language-detection": "自动语言检测",
+          "chat-history-saved-locally-in-your-browser": "聊天记录本地保存在浏览器中",
+          "copy-generated-sql-with-one-click": "一键复制生成的 SQL",
+          "sql-schema-generation": "SQL 结构生成",
+          "support-for-multiple-programming-languages": "支持多种编程语言",
+          "title": "功能特点"
+        },
+        "input": {
+          "description": "粘贴您的代码（类、接口或类型定义），AI 将生成相应的 SQL 表结构。",
+          "title": "输入格式"
+        },
+        "storage": {
+          "description": "所有对话都存储在您的浏览器中。除了您要转换的代码外，不会向我们的服务器发送任何数据。",
+          "title": "本地存储"
+        },
+        "title": "如何使用 SQL 生成器"
+      },
+      "how_to_use": "如何使用 SQL 生成器：",
+      "input": {
+        "placeholder": "在此输入或粘贴代码...（按 Enter 发送，Shift + Enter 换行）"
+      },
+      "message": {
+        "copied": "已复制到剪贴板！"
+      },
+      "new-conversion": "开始新转换",
+      "paste-code": "粘贴代码",
+      "privacy": {
+        "data_storage": {
+          "all-chat-histories-are-stored-locally-in-your-browser": "所有聊天记录都存储在您的浏览器中",
+          "clearing-your-browser-data-will-remove-all-conversations": "清除浏览器数据将删除所有对话",
+          "no-data-is-stored-on-our-servers": "不在服务器上存储任何数据",
+          "title": "数据存储"
+        },
+        "data_usage": {
+          "conversations-remain-private-to-your-browser": "对话保持在您的浏览器中私密",
+          "title": "数据使用",
+          "we-do-not-store-share-or-analyze-your-code": "我们不存储、分享或分析您的代码",
+          "your-code-is-only-used-to-generate-sql-schemas": "您的代码仅用于生成 SQL 结构"
+        },
+        "disclaimer": "使用此工具即表示您确认所有数据都存储在您的浏览器中，我们对因清除浏览器数据或浏览器存储限制而可能发生的任何数据丢失不承担责任。",
+        "storage_management": {
+          "clearing-your-browser-data-will-remove-all-conversations": "清除浏览器数据以删除所有对话",
+          "description": "您可以通过以下方式管理数据：",
+          "manually-deleting-individual-conversations-in-the-app": "在应用中手动删除单个对话",
+          "title": "本地存储管理",
+          "using-browser-developer-tools-to-inspect-stored-data": "使用浏览器的开发者工具检查存储的数据"
+        },
+        "title": "隐私和条款"
+      },
+      "recent": "最近转换",
+      "start_new": "开始新转换",
+      "title": "AI SQL 生成器",
+      "upload-file": "上传文件",
+      "welcome": "欢迎使用 SQL 生成器！我可以帮助您将代码转换为 SQL。您可以开始粘贴代码或上传文件。"
+    },
     "app-icon": {
       "description": "生成各种尺寸的 iOS 和 Android 应用图标",
       "file-name": "文件名",
@@ -17,7 +83,7 @@
         "for-ios": "对于 iOS:",
         "how-to-use": "如何使用生成的图标：",
         "how-to-use-ios-1": "1. 解压下载的文件",
-        "how-to-use-ios-2": "2. 将生成的 AppIcon.appiconset 文件夹拖入您的项目",
+        "how-to-use-ios-2": "2. 将生成的 AppIcon.appiconset 文件夹拖入您的项���",
         "how-to-use-ios-3": "3. 在您的项目导航器中，找到 <code>Assets.xcassets</code> 文件夹",
         "how-to-use-ios-4": "4. 将生成的 <code>AppIcon.appiconset</code> 文件夹拖入其中",
         "how-to-use-ios-5": "5. Xcode 将自动识别并应用图标",

@@ -24,6 +24,8 @@ interface ToolLayoutProps {
   className?: string;
   showBackButton?: boolean;
   showGithubLink?: boolean;
+  childrenClassName?: string;
+  guideSection?: React.ReactNode;
 }
 
 export function ToolLayout({
@@ -33,6 +35,8 @@ export function ToolLayout({
   className,
   showBackButton = true,
   showGithubLink = true,
+  childrenClassName,
+  guideSection,
 }: ToolLayoutProps) {
   const t = useTranslations();
   const { setTools, tools } = useTool();
@@ -107,7 +111,10 @@ export function ToolLayout({
       </div>
 
       {/* Main Content */}
-      <Card className="p-4 md:p-6">{children}</Card>
+      <div className="flex flex-col gap-4">
+        <Card className={cn("p-2 md:p-4", childrenClassName)}>{children}</Card>
+        {guideSection}
+      </div>
     </div>
   );
 }

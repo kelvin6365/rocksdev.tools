@@ -32,6 +32,7 @@ export interface BaseTool {
   description: string;
   category: string;
   icon?: string;
+  tags?: string[];
 }
 
 export interface Tool extends BaseTool {
