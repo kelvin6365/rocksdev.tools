@@ -350,16 +350,16 @@ export function AiSqlBot() {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center min-h-[calc(100vh-20rem)]">
+      <div className="flex items-center justify-center min-h-[calc(100vh)] md:min-h-[calc(100vh-20rem)]">
         <Loader2 className="w-6 h-6 animate-spin" />
       </div>
     );
   }
 
   return (
-    <div className="flex min-h-[calc(100vh-20rem)] max-h-[calc(100vh-20rem)] p-2">
+    <div className="flex min-h-[calc(100vh)] md:min-h-[calc(100vh-20rem)] md:max-h-[calc(100vh-20rem)] p-2 flex-col md:flex-row gap-4 md:gap-0">
       {/* Left sidebar */}
-      <div className="w-[240px] border-r flex flex-col">
+      <div className="w-full md:w-[240px] border-b md:border-b-0 md:border-r flex flex-col max-h-[300px] md:max-h-none">
         <div className="p-4 border-b">
           <Button variant="outline" className="w-full" onClick={handleNewChat}>
             <MessagesSquare className="w-4 h-4 mr-2" />
