@@ -9,7 +9,7 @@ export function GuideSection() {
   return (
     <div className="mt-8 space-y-4">
       <Tabs defaultValue="guide" className="w-full">
-        <TabsList>
+        <TabsList className="flex flex-col md:flex-row h-auto">
           <TabsTrigger value="guide">{t("guide.title")}</TabsTrigger>
           <TabsTrigger value="privacy">{t("privacy.title")}</TabsTrigger>
         </TabsList>

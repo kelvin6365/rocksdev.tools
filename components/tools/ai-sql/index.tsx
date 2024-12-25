@@ -311,7 +311,7 @@ export function AiSqlBot() {
         </ScrollArea>
 
         <div className="border-t p-4 bg-background">
-          <div className="flex gap-2 mb-2">
+          <div className="flex gap-2 mb-2 flex-col md:flex-row">
             <Button variant="outline" size="sm">
               <Code className="w-4 h-4 mr-2" />
               {t("dev.ai-sql.paste-code")}
@@ -321,7 +321,7 @@ export function AiSqlBot() {
               {t("dev.ai-sql.upload-file")}
             </Button>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-col md:flex-row">
             <Textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
@@ -333,7 +333,7 @@ export function AiSqlBot() {
             />
             <Button
               onClick={handleSend}
-              className="self-end"
+              className="self-end w-full md:w-auto"
               disabled={isProcessing || !input.trim()}
             >
               {isProcessing ? (
