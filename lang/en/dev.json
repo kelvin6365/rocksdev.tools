@@ -82,6 +82,30 @@
       "url": "URL",
       "use": "Use"
     },
+    "ai-sql": {
+      "title": "AI SQL Generator",
+      "description": "Use AI to convert your code DTO and entity to SQL commands",
+      "start_new": "Start new conversion",
+      "how_to_use": "How to use the SQL Generator:",
+      "example_title": "Example",
+      "welcome": "Welcome to the SQL Generator! I can help you convert your code to SQL. You can start pasting code or uploading a file.",
+      "recent": "Recent Conversions",
+      "new-conversion": "New Conversion",
+      "copy-sql": "Copy SQL",
+      "paste-code": "Paste Code",
+      "upload-file": "Upload File",
+      "input": {
+        "placeholder": "Paste your code here..."
+      },
+      "current-conversion": "Current Conversion",
+      "conversion-type": "Conversion Type",
+      "error": {
+        "generation": "Generation failed"
+      },
+      "message": {
+        "copied": "Copied to clipboard!"
+      }
+    },
     "title": "Dev Tools",
     "tryNow": "Try Now"
   }

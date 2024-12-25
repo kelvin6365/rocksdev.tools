@@ -199,6 +199,13 @@ export const config = {
           description: "Generate app icons for iOS and Android",
           icon: "🖼️",
         },
+        {
+          label: "AI SQL",
+          value: "dev.ai-sql",
+          href: "/tools/dev/ai-sql",
+          description: "Generate SQL queries with AI",
+          icon: "🤖",
+        },
       ],
     },
   ] as Tool[],

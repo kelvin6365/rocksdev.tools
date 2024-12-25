@@ -24,6 +24,7 @@ interface ToolLayoutProps {
   className?: string;
   showBackButton?: boolean;
   showGithubLink?: boolean;
+  childrenClassName?: string;
 }
 
 export function ToolLayout({
@@ -33,6 +34,7 @@ export function ToolLayout({
   className,
   showBackButton = true,
   showGithubLink = true,
+  childrenClassName,
 }: ToolLayoutProps) {
   const t = useTranslations();
   const { setTools, tools } = useTool();
@@ -107,7 +109,7 @@ export function ToolLayout({
       </div>
 
       {/* Main Content */}
-      <Card className="p-4 md:p-6">{children}</Card>
+      <Card className={cn("p-2 md:p-4", childrenClassName)}>{children}</Card>
     </div>
   );
 }

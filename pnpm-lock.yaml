@@ -142,6 +142,9 @@ importers:
       dayjs:
         specifier: ^1.11.11
         version: 1.11.13
+      dexie:
+        specifier: ^4.0.10
+        version: 4.0.10
       embla-carousel-react:
         specifier: ^8.5.1
         version: 8.5.1(react@19.0.0-rc.1)
@@ -3731,6 +3734,12 @@ packages:
     resolution:
       {
         integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==,
+      }
+
+  dexie@4.0.10:
+    resolution:
+      {
+        integrity: sha512-eM2RzuR3i+M046r2Q0Optl3pS31qTWf8aFuA7H9wnsHTwl8EPvroVLwvQene/6paAs39Tbk6fWZcn2aZaHkc/w==,
       }
 
   didyoumean@1.2.2:
@@ -9752,6 +9761,8 @@ snapshots:
   devlop@1.1.0:
     dependencies:
       dequal: 2.0.3
+
+  dexie@4.0.10: {}
 
   didyoumean@1.2.2: {}
 

@@ -82,6 +82,30 @@
       "url": "URL",
       "use": "使用"
     },
+    "ai-sql": {
+      "title": "AI SQL 生成器",
+      "description": "使用 AI 將您的代碼 DTO 和實體轉換為 SQL 命令",
+      "start_new": "開始新的轉換",
+      "how_to_use": "如何使用 SQL 生成器：",
+      "example_title": "示例",
+      "welcome": "歡迎使用 SQL 生成器！我可以幫您將代碼轉換為 SQL。您可以開始貼上代碼或上傳文件。",
+      "recent": "最近轉換",
+      "new-conversion": "新的轉換",
+      "copy-sql": "複製 SQL",
+      "paste-code": "貼上代碼",
+      "upload-file": "上傳文件",
+      "input": {
+        "placeholder": "在此貼上您的代碼..."
+      },
+      "current-conversion": "當前轉換",
+      "conversion-type": "轉換類型",
+      "error": {
+        "generation": "生成失敗"
+      },
+      "message": {
+        "copied": "已複製到剪貼簿！"
+      }
+    },
     "title": "開發工具",
     "tryNow": "立即試用"
   }

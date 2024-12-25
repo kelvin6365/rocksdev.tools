@@ -41,6 +41,10 @@
       },
       "dev": {
         "description": "开发者实用工具和格式化工具",
+        "ai-sql": {
+          "description": "使用 AI 将您的代码 DTO 和实体转换为 SQL 命令",
+          "title": "AI SQL 生成器"
+        },
         "regex": {
           "description": "测试和验证正则表达式",
           "title": "正则表达式测试工具"
@@ -129,7 +133,7 @@
     },
     "cookies": {
       "title": "Cookies 使用",
-      "description": "我们使用必要的 cookies 来记住您的语言偏好设置，以及 Google Analytics cookies 来帮助我们改进服务。"
+      "description": "我们使用必��的 cookies 来记住您的语言偏好设置，以及 Google Analytics cookies 来帮助我们改进服务。"
     },
     "third-party": {
       "title": "第三方服务",
@@ -149,9 +153,7 @@
     },
     "github": {
       "title": "GitHub",
-      "description": "如果您发现任何问题或想要贡献代码，请访问我们的 GitHub 仓库。",
-      "repository": "RocksDev.Tools 仓库",
-      "submit-issue": "提交问题"
+      "description": "如果您发现任何问题或想要贡献代码，请访问我们的 GitHub 仓库。"
     },
     "feedback": {
       "title": "意见反馈",

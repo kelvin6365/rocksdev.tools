@@ -41,6 +41,10 @@
       },
       "dev": {
         "description": "開發者實用工具和格式化工具",
+        "ai-sql": {
+          "title": "AI SQL 生成器",
+          "description": "使用 AI 將您的代碼 DTO 和實體轉換為 SQL 命令"
+        },
         "regex": {
           "description": "測試和驗證Regex",
           "title": "Regex測試工具"

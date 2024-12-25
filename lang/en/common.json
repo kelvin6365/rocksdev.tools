@@ -41,6 +41,10 @@
       },
       "dev": {
         "description": "Developer utilities and formatters",
+        "ai-sql": {
+          "title": "AI SQL Generator",
+          "description": "Use AI to convert your code DTO and entity to SQL commands"
+        },
         "regex": {
           "description": "Test and validate regular expressions",
           "title": "Regex Tester"
