@@ -9,9 +9,13 @@ export function GuideSection() {
   return (
     <div className="mt-8 space-y-4">
       <Tabs defaultValue="guide" className="w-full">
-        <TabsList className="flex flex-col md:flex-row h-auto">
-          <TabsTrigger value="guide">{t("guide.title")}</TabsTrigger>
-          <TabsTrigger value="privacy">{t("privacy.title")}</TabsTrigger>
+        <TabsList className="flex flex-col md:flex-row h-auto md:w-fit">
+          <TabsTrigger className="w-full md:w-auto" value="guide">
+            {t("guide.title")}
+          </TabsTrigger>
+          <TabsTrigger className="w-full md:w-auto" value="privacy">
+            {t("privacy.title")}
+          </TabsTrigger>
         </TabsList>
 
         <TabsContent value="guide">
