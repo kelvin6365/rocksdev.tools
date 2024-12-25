@@ -13,6 +13,10 @@ export function getMetadata({
 }: SEOProps): Metadata {
   // Get tool-specific SEO if path matches a tool
   const toolSEO = path ? toolsSEO[path]?.[locale] : undefined;
+  const _privacyPolicySEO =
+    path === "privacy-policy" ? privacyPolicySEO[locale] : undefined;
+  const _contactUsSEO =
+    path === "contact-us" ? contactUsSEO[locale] : undefined;
 
   // Merge configurations in order of priority: default < tool-specific < page-specific
   const mergedConfig = {
@@ -20,6 +24,8 @@ export function getMetadata({
     ...(path === "not-found" ? notFoundSEO[locale] : {}),
     ...toolSEO,
     ...config,
+    ..._privacyPolicySEO,
+    ..._contactUsSEO,
   };
 
   const {
@@ -393,6 +399,37 @@ export const notFoundSEO: Record<string, SEOConfig> = {
   "zh-HK": {
     title: "頁面未找到 | RocksDev 工具集",
     description: "您正在尋找的頁面可能已被刪除、名稱已更改或暫時不可用。",
+  },
+};
+
+export const privacyPolicySEO: Record<string, SEOConfig> = {
+  en: {
+    title: "Privacy Policy | RocksDev Tools",
+    description:
+      "Learn how RocksDev Tools protects your privacy and personal data.",
+  },
+  "zh-CN": {
+    title: "隐私政策 | RocksDev 工具集",
+    description: "了解 RocksDev 工具如何保护您的隐私和个人数据。",
+  },
+  "zh-HK": {
+    title: "隱私政策 | RocksDev 工具集",
+    description: "了解 RocksDev 工具如何保護您的隱私和個人資料。",
+  },
+};
+
+export const contactUsSEO: Record<string, SEOConfig> = {
+  en: {
+    title: "Contact Us | RocksDev Tools",
+    description: "Contact RocksDev Tools for any questions or suggestions.",
+  },
+  "zh-CN": {
+    title: "联系我们 | RocksDev 工具集",
+    description: "联系 RocksDev 工具集以提出任何问题或建议。",
+  },
+  "zh-HK": {
+    title: "聯絡我們 | RocksDev 工具集",
+    description: "聯絡 RocksDev 工具集以提出任何問題或建議。",
   },
 };
 

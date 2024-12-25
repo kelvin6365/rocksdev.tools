@@ -62,7 +62,7 @@
           "title": "JSON 格式化工具"
         },
         "minifier": {
-          "description": "压缩和精简 JSON 数据",
+          "description": "压缩和精简 JSON ��据",
           "title": "JSON 压缩工具"
         },
         "title": "JSON 工具",
@@ -101,7 +101,7 @@
     "searchResults": "搜索结果"
   },
   "not-found": {
-    "description": "您正在寻找的页面可能已被删除、名称已更改或暂时不可用。",
+    "description": "您正在寻找的页面可能已被删除、名称已更改或暂时不可用��",
     "go-back": "返回",
     "return-home": "返回首页",
     "title": "页面未找到"
@@ -118,5 +118,52 @@
     "starOnGitHub": "在 GitHub 上点赞",
     "title": "享受我们的开发者工具？",
     "yourStarHelps": "您的星星有助于其他人发现这些工具！"
+  },
+  "privacy-policy": {
+    "title": "隐私政策",
+    "last-updated": "最后更新：2024年12月25日",
+    "introduction": "欢迎使用 RocksDev 工具。我们重视您的隐私，并致力于保护您的个人数据。",
+    "no-data-collection": {
+      "title": "无数据收集",
+      "description": "除了基本的分析数据外，我们不收集任何个人数据。所有工具都在您的浏览器中本地运行。"
+    },
+    "cookies": {
+      "title": "Cookies 使用",
+      "description": "我们使用必��的 cookies 来记住您的语言偏好设置，以及 Google Analytics cookies 来帮助我们改进服务。"
+    },
+    "third-party": {
+      "title": "第三方服务",
+      "description": "我们的网站使用 Vercel 进行托管，并使用 Google Analytics 进行访问分析。这些服务可能收集基本的访问数据，如 IP 地址、浏览器类型等。"
+    },
+    "changes": {
+      "title": "政策变更",
+      "description": "我们保留随时更新此隐私政策的权利。重大变更将通过网站通知。"
+    }
+  },
+  "contact-us": {
+    "title": "联系我们",
+    "introduction": "感谢您使用 RocksDev 工具。如果您有任何问题、建议或合作机会，欢迎通过以下方式联系我们：",
+    "social": {
+      "title": "社交媒体",
+      "description": "您可以在以下平台找到我们："
+    },
+    "github": {
+      "title": "GitHub",
+      "description": "如果您发现任何问题或想要贡献代码，请访问我们的 GitHub 仓库。",
+      "repository": "RocksDev.Tools 仓库",
+      "submit-issue": "提交问题"
+    },
+    "feedback": {
+      "title": "意见反馈",
+      "description": "我们重视您的意见！如果您有任何建议或发现问题，请告诉我们。"
+    },
+    "social-links": {
+      "github": "在 GitHub 上关注",
+      "twitter": "在 Twitter 上关注",
+      "threads": "在 Threads 上关注",
+      "instagram": "在 Instagram 上关注",
+      "xiaohongshu": "在小红书上关注",
+      "dailydev": "在 daily.dev 上关注"
+    }
   }
 }

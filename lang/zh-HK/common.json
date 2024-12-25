@@ -101,7 +101,7 @@
     "searchResults": "搜索結果"
   },
   "not-found": {
-    "description": "您正在尋找的頁面可能已被刪除、名稱已更改或暫時不可用。",
+    "description": "您正在尋找的頁面可能已被刪除、名稱已更改或暫時不可用���",
     "go-back": "返回",
     "return-home": "返回首頁",
     "title": "頁面未找到"
@@ -118,5 +118,52 @@
     "starOnGitHub": "在 GitHub 上點贊",
     "title": "享受我們的開發者工具？",
     "yourStarHelps": "您的星星有助於其他人發現這些工具！"
+  },
+  "privacy-policy": {
+    "title": "隱私政策",
+    "last-updated": "最後更新：2024年12月25日",
+    "introduction": "歡迎使用 RocksDev 工具。我們重視您的隱私，並致力於保護您的個人資料。",
+    "no-data-collection": {
+      "title": "無數據收集",
+      "description": "除了基本的分析數據外，我們不收集任何個人資料。所有工具都在您的瀏覽器中本地運行。"
+    },
+    "cookies": {
+      "title": "Cookies 使用",
+      "description": "我們使用必���的 cookies 來記住您的語言偏好設置，以及 Google Analytics cookies 來幫助我們改進服務。"
+    },
+    "third-party": {
+      "title": "第三方服務",
+      "description": "我們的網站使用 Vercel 進行託管，並使用 Google Analytics 進行訪問分析。這些服務可能收集基本的訪問數據，如 IP 地址、瀏覽器類型等。"
+    },
+    "changes": {
+      "title": "政策變更",
+      "description": "我們保留隨時更新此隱私政策的權利。重大變更將通過網站通知。"
+    }
+  },
+  "contact-us": {
+    "title": "聯絡我們",
+    "introduction": "感謝您使用 RocksDev 工具。如果您有任何問題、建議或合作機會，歡迎通過以下方式聯繫我們：",
+    "social": {
+      "title": "社交媒體",
+      "description": "您可以在以下平台找到我們："
+    },
+    "github": {
+      "title": "GitHub",
+      "description": "如果您發現任何問題或想要貢獻代碼，請訪問我們的 GitHub。",
+      "repository": "RocksDev.Tools Repository",
+      "submit-issue": "提交問題"
+    },
+    "feedback": {
+      "title": "意見反饋",
+      "description": "我們重視您的意見！如果您有任何建議或發現問題，請告訴我們。"
+    },
+    "social-links": {
+      "github": "在 GitHub 上關注",
+      "twitter": "在 Twitter 上關注",
+      "threads": "在 Threads 上關注",
+      "instagram": "在 Instagram 上關注",
+      "xiaohongshu": "在小紅書上關注",
+      "dailydev": "在 daily.dev 上關注"
+    }
   }
 }

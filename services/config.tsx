@@ -1,4 +1,7 @@
+import { DailyDevIcon } from "../components/icons/social";
+import { Github, Instagram, MessageCircle, Twitter } from "lucide-react";
 import { Tool } from "../types/tool";
+import { XiaoHongShuIcon } from "../components/icons/social";
 
 export const config = {
   name: "Rocks Dev",
@@ -40,6 +43,39 @@ export const config = {
       [key: string]: { title: string; description: string; note: string };
     };
   }[],
+
+  socialLinks: [
+    {
+      name: "github",
+      url: "https://github.com/kelvin6365",
+      icon: <Github className="h-4 w-4" />,
+    },
+    {
+      name: "twitter",
+      url: "https://x.com/tszhim_tech",
+      icon: <Twitter className="h-4 w-4" />,
+    },
+    {
+      name: "threads",
+      url: "https://www.threads.net/@tszhim_tech",
+      icon: <MessageCircle className="h-4 w-4" />,
+    },
+    {
+      name: "instagram",
+      url: "https://www.instagram.com/tszhim_tech",
+      icon: <Instagram className="h-4 w-4" />,
+    },
+    {
+      name: "xiaohongshu",
+      url: "https://www.xiaohongshu.com/user/profile/60e9c552000000000101ef5d",
+      icon: <XiaoHongShuIcon className="h-4 w-4" />,
+    },
+    {
+      name: "dailydev",
+      url: "https://app.daily.dev/squads/rocksdev_tools",
+      icon: <DailyDevIcon className="h-4 w-4" />,
+    },
+  ],
 
   // Tool categories and routes
   tools: [

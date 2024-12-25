@@ -36,6 +36,8 @@ This project is built with modern web technologies and best practices:
 .
 ├── app/
 │   └── [locale]/              # Internationalized routes
+│       ├── privacy-policy/    # Privacy policy page
+│       ├── contact-us/        # Contact us page
 │       ├── layout.tsx         # Root layout with providers
 │       ├── page.tsx          # Homepage
 │       └── tools/            # Developer tools
