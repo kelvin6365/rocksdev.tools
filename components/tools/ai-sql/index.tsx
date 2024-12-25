@@ -168,10 +168,16 @@ export function AiSqlBot() {
       await updateTitle(jsonResponseContent.title);
 
       // Add AI response
-      await addMessage(jsonResponseContent.output, "system", {
-        language: jsonResponseContent.language,
-        sqlDialect: jsonResponseContent.type,
-      });
+      await addMessage(
+        jsonResponseContent?.error
+          ? jsonResponseContent.error
+          : jsonResponseContent.output,
+        "system",
+        {
+          language: jsonResponseContent.language,
+          sqlDialect: jsonResponseContent.type,
+        },
+      );
 
       incrementToolUsage("ai-sql");
       setInput("");
