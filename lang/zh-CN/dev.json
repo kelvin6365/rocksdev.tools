@@ -83,7 +83,7 @@
         "for-ios": "对于 iOS:",
         "how-to-use": "如何使用生成的图标：",
         "how-to-use-ios-1": "1. 解压下载的文件",
-        "how-to-use-ios-2": "2. 将生成的 AppIcon.appiconset 文件夹拖入您的项���",
+        "how-to-use-ios-2": "2. 将生成的 AppIcon.appiconset 文件夹拖入您的项目",
         "how-to-use-ios-3": "3. 在您的项目导航器中，找到 <code>Assets.xcassets</code> 文件夹",
         "how-to-use-ios-4": "4. 将生成的 <code>AppIcon.appiconset</code> 文件夹拖入其中",
         "how-to-use-ios-5": "5. Xcode 将自动识别并应用图标",
