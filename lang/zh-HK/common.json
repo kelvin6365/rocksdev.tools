@@ -225,5 +225,9 @@
     "madeWith": "Made with",
     "by": "by",
     "developer": "開發者"
+  },
+  "tools": {
+    "title": "RocksDev.工具",
+    "description": "選擇一個工具類別以開始。"
   }
 }

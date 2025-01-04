@@ -225,5 +225,9 @@
     "madeWith": "Made with",
     "by": "by",
     "developer": "Developer"
+  },
+  "tools": {
+    "title": "RocksDev.Tools",
+    "description": "Select a tool category to get started."
   }
 }
