@@ -21,10 +21,16 @@ import { config } from "../../services/config";
 import Script from "next/dist/client/script";
 import ProductHuntBanner from "../../components/product-hunt-banner";
 
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = getMetadata({});
-
+export const generateMetadata = async ({ params }: Props) => {
+  const { locale } = await params;
+  return getMetadata({ locale });
+};
 export default async function RootLayout({
   children,
   params,

@@ -161,7 +161,7 @@ export const defaultSEO: Record<string, SEOConfig> = {
     ],
   },
   "zh-CN": {
-    title: "RocksDev 工具集 | 全面的开发者工具集合",
+    title: "RocksDev.Tools | 全面的开发者工具集合",
     description: "全面的开发者工具集合",
     keywords: [
       // Primary keywords
@@ -196,7 +196,7 @@ export const defaultSEO: Record<string, SEOConfig> = {
 
     openGraph: {
       type: "website",
-      siteName: "RocksDev 工具集",
+      siteName: "RocksDev.Tools",
       images: [`/api/og`],
       url: process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools",
     },
@@ -216,7 +216,7 @@ export const defaultSEO: Record<string, SEOConfig> = {
       },
       {
         name: "application-name",
-        content: "RocksDev 工具集",
+        content: "RocksDev.Tools",
       },
       {
         name: "format-detection",
@@ -229,7 +229,7 @@ export const defaultSEO: Record<string, SEOConfig> = {
     ],
   },
   "zh-HK": {
-    title: "RocksDev 工具集 | 全面的开发者工具集合",
+    title: "RocksDev.Tools | 全面的開發者工具集合",
     description: "全面的開發者工具集合",
     keywords: [
       // Primary keywords
@@ -264,7 +264,7 @@ export const defaultSEO: Record<string, SEOConfig> = {
 
     openGraph: {
       type: "website",
-      siteName: "RocksDev 工具集",
+      siteName: "RocksDev.Tools",
       images: [`/api/og`],
       url: process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools",
     },
@@ -283,7 +283,7 @@ export const defaultSEO: Record<string, SEOConfig> = {
       },
       {
         name: "application-name",
-        content: "RocksDev 工具集",
+        content: "RocksDev.Tools",
       },
       {
         name: "format-detection",
