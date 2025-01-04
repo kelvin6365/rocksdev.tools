@@ -83,7 +83,6 @@ export const config = {
       label: "JSON Tools",
       value: "json",
       href: "/tools/json",
-      description: "Format, validate, and transform JSON data",
       category: "json",
       subTools: [
         {
@@ -120,7 +119,6 @@ export const config = {
       label: "SEO Tools",
       value: "seo",
       href: "/tools/seo",
-      description: "Meta tags, robots.txt, and sitemap generators",
       category: "seo",
       subTools: [
         {
@@ -143,7 +141,6 @@ export const config = {
       label: "Converters",
       value: "converters",
       href: "/tools/converters",
-      description: "Convert between different data formats",
       category: "converters",
       subTools: [
         {
@@ -166,7 +163,6 @@ export const config = {
       label: "Text Tools",
       value: "text",
       href: "/tools/text",
-      description: "Text manipulation and formatting tools",
       category: "text",
       subTools: [
         {
@@ -182,7 +178,6 @@ export const config = {
       label: "Dev Tools",
       value: "dev",
       href: "/tools/dev",
-      description: "Developer utilities and formatters",
       category: "dev",
       subTools: [
         {

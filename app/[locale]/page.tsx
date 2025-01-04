@@ -122,7 +122,7 @@ export default function HomePage() {
                           className="flex items-center gap-2 text-sm text-muted-foreground"
                         >
                           <span className="text-lg">{subTool.icon}</span>
-                          <span>{subTool.label}</span>
+                          <span>{tNav(`tools.${subTool.value}.title`)}</span>
                         </div>
                       ))}
                     </div>

@@ -79,7 +79,7 @@
           "description": "Convert between Base64 and other formats",
           "title": "Base64 Converter"
         },
-        "description": "Convert between different data formats",
+        "description": "Complete SEO toolkit for optimizing your web presence. Generate meta tags, OG images, and more for better search visibility.",
         "md2html": {
           "description": "Convert Markdown to HTML",
           "title": "Markdown to HTML Converter"
@@ -95,7 +95,7 @@
           "description": "Generate iOS and Android app icons in various sizes",
           "title": "App Icon Generator"
         },
-        "description": "Developer utilities and formatters",
+        "description": "Essential developer utilities including regex tester, icon generator, and more. Built by developers, for developers.",
         "regex": {
           "description": "Test and validate regular expressions",
           "title": "Regex Tester"
@@ -103,7 +103,7 @@
         "title": "Dev Tools"
       },
       "json": {
-        "description": "JSON tools",
+        "description": "Professional JSON processing suite with formatter, validator, differ and minifier. Perfect for debugging, comparing and optimizing JSON data.",
         "diff": {
           "description": "Compare and find differences between JSON files",
           "title": "JSON Diff"
@@ -123,7 +123,7 @@
         }
       },
       "seo": {
-        "description": "Tools for search engine optimization",
+        "description": "Complete SEO toolkit for optimizing your web presence. Generate meta tags, OG images, and more for better search visibility.",
         "meta-tags": {
           "description": "Generate meta tags for your website",
           "title": "Meta Tags Generator"
@@ -135,7 +135,7 @@
         "title": "SEO Tools"
       },
       "text": {
-        "description": "Text manipulation and formatting tools",
+        "description": "Advanced text manipulation tools for formatting, case conversion, and content organization. Streamline your text processing workflow.",
         "text-formatter": {
           "description": "Format and manipulate your text with advanced tools",
           "title": "Text Formatter"

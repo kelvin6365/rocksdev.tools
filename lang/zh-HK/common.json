@@ -79,7 +79,7 @@
           "description": "將 Base64 轉換為其他格式",
           "title": "Base64 轉換器"
         },
-        "description": "在不同數據格式之間轉換",
+        "description": "快速可靠的數據格式轉換器。支援 Base64、Markdown 等格式轉換，即時預覽結果。",
         "md2html": {
           "description": "將 Markdown 轉換為 HTML",
           "title": "Markdown 轉換器"
@@ -95,7 +95,7 @@
           "description": "生成iOS和Android應用程式圖示",
           "title": "應用程式圖示產生器"
         },
-        "description": "開發者實用工具和格式化工具",
+        "description": "基礎開發工具集，包含正則測試器、圖標生成器等。由開發者建構，服務開發者。",
         "regex": {
           "description": "測試和驗證Regex",
           "title": "Regex測試工具"
@@ -103,7 +103,7 @@
         "title": "開發工具"
       },
       "json": {
-        "description": "JSON 工具",
+        "description": "專業的 JSON 處理套件，包含格式化、驗證、對比和壓縮工具。完美支援 JSON 數據的調試、比較和優化。",
         "diff": {
           "description": "比較和尋找 JSON Object 之間的差異",
           "title": "JSON 差異工具"
@@ -123,7 +123,7 @@
         }
       },
       "seo": {
-        "description": "搜尋引擎最佳化工具",
+        "description": "完整的搜尋引擎優化工具包，生成元標籤、社交媒體圖片等，提升網站搜尋可見度。",
         "meta-tags": {
           "description": "生成網站的 meta 標籤",
           "title": "Meta 標籤生成器"
@@ -135,7 +135,7 @@
         "title": "SEO 工具"
       },
       "text": {
-        "description": "文字處理和格式化工具",
+        "description": "進階文本處理工具，用於格式化、大小寫轉換和內容整理。簡化您的文本處理工作流程。",
         "text-formatter": {
           "description": "使用進階工具格式化和操縱您的文字",
           "title": "文字格式化工具"
