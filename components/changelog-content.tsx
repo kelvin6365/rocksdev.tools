@@ -13,7 +13,6 @@ interface ChangelogContentProps {
 }
 
 export function ChangelogContent({ releases }: ChangelogContentProps) {
-  console.log(releases);
   const t = useTranslations();
 
   const getTypeColor = (type: string) => {

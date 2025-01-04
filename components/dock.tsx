@@ -185,7 +185,6 @@ export function Dock() {
 
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
-    console.log(active, over);
     setActiveId(null);
 
     // If dropped in remove zone

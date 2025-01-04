@@ -7,7 +7,6 @@ function useMediaQuery(query: string): boolean {
     const matchQueryList = window.matchMedia(query);
     setMatches(matchQueryList.matches);
     function handleChange(e: MediaQueryListEvent) {
-      console.log(e);
       setMatches(e.matches);
     }
     matchQueryList.addEventListener("change", handleChange);
