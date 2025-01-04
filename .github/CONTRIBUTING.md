@@ -77,6 +77,7 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │           └── dev/          # Developer tools
 │               └── regex/   # Regex tester tool
 │               └── app-icon-generator/ # App icon generator tool
+│               └── ai-sql-generator/ # AI SQL generator tool
 │           └── seo/          # SEO tools
 │               ├── og-image/ # OG image generator tool
 │               └── meta-tags/ # Meta tags generator tool
@@ -93,6 +94,7 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │   │   ├── og-image       # OG image generator component
 │   │   ├── meta-tags      # Meta tags generator component
 │   │   └── app-icon-generator # App icon generator component
+│   │   └── ai-sql-generator # AI SQL generator component
 │   ├── layouts/
 │   │   └── tool-layout   # Common tool layout
 │   └── ui/                   # UI Components
@@ -105,18 +107,24 @@ Thank you for your interest in contributing to RocksDev Tools! This guide will h
 │   │   ├── converters.json
 │   │   ├── dev.json
 │   │   └── seo.json
+│   │   └── changelog.json
+│   │   └── terms.json
 │   ├── zh-CN/
 │   │   └── common.json
 │   │   └── json.json
 │   │   └── converters.json
 │   │   └── dev.json
 │   │   └── seo.json
+│   │   └── changelog.json
+│   │   └── terms.json
 │   ├── zh-HK/
 │   │   └── common.json
 │   │   └── json.json
 │   │   └── converters.json
 │   │   └── dev.json
 │   │   └── seo.json
+│   │   └── changelog.json
+│   │   └── terms.json
 ├── providers/
 │   └── toast-provider.tsx    # Toast notifications provider
 │   └── search-provider.tsx   # Search provider

@@ -83,18 +83,24 @@ This project is built with modern web technologies and best practices:
 │   │   └── converters.json
 │   │   └── dev.json
 │   │   └── seo.json
+│   │   └── changelog.json
+│   │   └── terms.json
 │   ├── zh-CN/
 │   │   └── common.json
 │   │   └── json.json
 │   │   └── converters.json
 │   │   └── dev.json
 │   │   └── seo.json
+│   │   └── changelog.json
+│   │   └── terms.json
 │   ├── zh-HK/
 │   │   └── common.json
 │   │   └── json.json
 │   │   └── converters.json
 │   │   └── dev.json
 │   │   └── seo.json
+│   │   └── changelog.json
+│   │   └── terms.json
 ├── providers/
 │   └── toast-provider.tsx    # Toast notifications provider
 │   └── search-provider.tsx    # Search provider
@@ -196,7 +202,6 @@ This project is built with modern web technologies and best practices:
 #### Monetization
 
 - [ ] Strategic ad placement
-- [ ] Premium features (API access)
 
 #### Marketing
 
