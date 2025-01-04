@@ -42,7 +42,23 @@
     "rocksDevTools": "RocksDev.工具",
     "starOnGitHub": "在 GitHub 上點贊",
     "tools": "工具",
-    "tryNow": "立即試用"
+    "tryNow": "立即試用",
+    "whyChooseRocksDevTools": "為什麼選擇 RocksDev 工具？",
+    "whyChooseRocksDevToolsDescription": "為開發者打造，專注於效率和可靠性",
+    "whyChooseRocksDevToolsModernUI": "現代 UI/UX",
+    "whyChooseRocksDevToolsPrivacyFirst": "隱私優先",
+    "whyChooseRocksDevToolsRegularUpdates": "定期更新",
+    "whyChooseRocksDevToolsDeveloperFocused": "開發者優先",
+    "whyChooseRocksDevToolsMultiLanguageSupport": "多語言支持",
+    "whyChooseRocksDevToolsCommunityDriven": "社區驅動",
+    "whyChooseRocksDevToolsModernUIDescription": "乾淨、響應式界面，支持暗模式和直觀導航",
+    "whyChooseRocksDevToolsPrivacyFirstDescription": "無跟踪、無數據收集，所有處理都在您的瀏覽器中進行",
+    "whyChooseRocksDevToolsRegularUpdatesDescription": "持續改進和基於開發者反饋的新功能",
+    "whyChooseRocksDevToolsDeveloperFocusedDescription": "為開發者打造，專注於效率和可靠性",
+    "whyChooseRocksDevToolsMultiLanguageSupportDescription": "支持多種語言，包括英語、中文等",
+    "whyChooseRocksDevToolsCommunityDrivenDescription": "社區驅動開發，定期更新和基於用戶反饋的新功能",
+    "professionalDeveloperTools": "專業開發者工具",
+    "professionalDeveloperToolsDescription": "現代開發工作流的全面工具集"
   },
   "nav": {
     "back": "返回",
@@ -172,5 +188,42 @@
   },
   "tags": {
     "ai": "AI"
+  },
+  "footer": {
+    "about": {
+      "title": "關於",
+      "description": "RocksDev 工具是一組開發者工具，旨在使您的開發過程更高效、更愉快。"
+    },
+    "tools": {
+      "title": "工具",
+      "description": "探索我們的開發者工具集合，每個工具都旨在幫助您構建更好的軟件。"
+    },
+    "resources": {
+      "title": "資源",
+      "description": "找到有用的資源，包括教程、文章等。",
+      "blog": "博客",
+      "github": "GitHub",
+      "changelog": "更新日誌",
+      "privacy-policy": "隱私政策",
+      "terms-of-service": "服務條款",
+      "roadmap": "路線圖"
+    },
+    "legal": {
+      "title": "法律",
+      "description": "了解我們的法律政策和服務條款。",
+      "privacy-policy": "隱私政策",
+      "terms": "服務條款",
+      "contact-us": "聯絡我們"
+    },
+    "newsletter": {
+      "title": "新聞",
+      "description": "保持更新我們的最新工具和功能。",
+      "join": "加入我們的新聞 在 Daily.dev",
+      "subscribe": "訂閱"
+    },
+    "rights": "保留所有權利。",
+    "madeWith": "Made with",
+    "by": "by",
+    "developer": "開發者"
   }
 }

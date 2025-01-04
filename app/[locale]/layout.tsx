@@ -69,12 +69,17 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className={cn(inter.className, "bg-background overflow-x-hidden")}>
+      <body
+        className={cn(
+          inter.className,
+          "bg-background overflow-x-hidden flex flex-col min-h-screen",
+        )}
+      >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ToolProvider>
             <NavBar />
             <ProductHuntBanner />
-            <main className="container py-6">{children}</main>
+            <main className="container py-6 flex-1">{children}</main>
             <ToastProvider />
             <Analytics />
             <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />

@@ -42,7 +42,23 @@
     "rocksDevTools": "RocksDev.Tools",
     "starOnGitHub": "Star on GitHub",
     "tools": "tools",
-    "tryNow": "Try Now"
+    "tryNow": "Try Now",
+    "whyChooseRocksDevTools": "Why Choose RocksDev Tools?",
+    "whyChooseRocksDevToolsDescription": "Built with developers in mind, focusing on efficiency and reliability",
+    "whyChooseRocksDevToolsModernUI": "Modern UI/UX",
+    "whyChooseRocksDevToolsPrivacyFirst": "Privacy First",
+    "whyChooseRocksDevToolsRegularUpdates": "Regular Updates",
+    "whyChooseRocksDevToolsDeveloperFocused": "Developer Focused",
+    "whyChooseRocksDevToolsMultiLanguageSupport": "Multi-Language Support",
+    "whyChooseRocksDevToolsCommunityDriven": "Community Driven",
+    "whyChooseRocksDevToolsModernUIDescription": "Clean, responsive interface with dark mode support and intuitive navigation",
+    "whyChooseRocksDevToolsPrivacyFirstDescription": "No tracking, no data collection, and all processing done in your browser",
+    "whyChooseRocksDevToolsRegularUpdatesDescription": "Continuous improvements and new features based on developer feedback",
+    "whyChooseRocksDevToolsDeveloperFocusedDescription": "Built with developers in mind, focusing on efficiency and reliability",
+    "whyChooseRocksDevToolsMultiLanguageSupportDescription": "Support for multiple languages, including English, Chinese, and more",
+    "whyChooseRocksDevToolsCommunityDrivenDescription": "Community-driven development, with regular updates and new features based on user feedback",
+    "professionalDeveloperTools": "Professional Developer Tools",
+    "professionalDeveloperToolsDescription": "Comprehensive suite of tools for modern development workflows"
   },
   "nav": {
     "back": "back",
@@ -172,5 +188,42 @@
   },
   "tags": {
     "ai": "AI"
+  },
+  "footer": {
+    "about": {
+      "title": "About",
+      "description": "RocksDev Tools is a collection of developer tools designed to make your development process more efficient and enjoyable."
+    },
+    "tools": {
+      "title": "Tools",
+      "description": "Explore our collection of developer tools, each designed to help you build better software."
+    },
+    "resources": {
+      "title": "Resources",
+      "description": "Find useful resources for developers, including tutorials, articles, and more.",
+      "blog": "Blog",
+      "github": "GitHub",
+      "changelog": "Changelog",
+      "privacy-policy": "Privacy Policy",
+      "terms-of-service": "Terms of Service",
+      "roadmap": "Roadmap"
+    },
+    "legal": {
+      "title": "Legal",
+      "description": "Learn about our legal policies and terms of service.",
+      "privacy-policy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "contact-us": "Contact Us"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Stay updated with our latest tools and features.",
+      "join": "Join Our Newsletter in Daily.dev",
+      "subscribe": "Subscribe"
+    },
+    "rights": "All rights reserved.",
+    "madeWith": "Made with",
+    "by": "by",
+    "developer": "Developer"
   }
 }

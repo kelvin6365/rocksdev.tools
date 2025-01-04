@@ -31,6 +31,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
+import useMediaQuery from "../hooks/use-media-query";
 
 function DockItem({
   tool,
@@ -168,6 +169,7 @@ function DroppableDock({ tools }: { tools: Tool[] }) {
 export function Dock() {
   const { tools, setTools } = useTool();
   const [_, setActiveId] = useState<string | null>(null);
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -202,10 +204,9 @@ export function Dock() {
     }
   };
 
-  if (tools.length === 0) {
+  if (tools.length === 0 || isMobile) {
     return null;
   }
-
   return (
     <div
       className={cn(

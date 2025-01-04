@@ -1,0 +1,83 @@
+{
+  "terms": {
+    "title": "Terms of Service",
+    "introduction": "Please read these terms of service carefully before using RocksDev Tools. By accessing or using our services, you agree to be bound by these terms.",
+    "last-updated": "Last updated: January 4 2025",
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "description": "By accessing or using RocksDev Tools, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.",
+      "points": {
+        "access": "Your access to and use of our services is conditioned upon your acceptance of these terms.",
+        "binding": "These terms apply to all visitors, users, and others who wish to access or use our services.",
+        "changes": "We reserve the right to modify these terms at any time, and your continued use constitutes acceptance of those changes."
+      }
+    },
+    "use-of-services": {
+      "title": "Use of Services",
+      "description": "Our services are provided for developer use and must be used in accordance with these terms.",
+      "points": {
+        "lawful": "You agree to use our services only for lawful purposes and in accordance with these terms.",
+        "prohibited": "You must not use our services for any illegal or unauthorized purpose.",
+        "security": "You are responsible for maintaining the security of your use of the services."
+      }
+    },
+    "intellectual-property": {
+      "title": "Intellectual Property",
+      "description": "All content, features, and functionality of our services are owned by RocksDev Tools and are protected by international copyright, trademark, and other intellectual property laws.",
+      "points": {
+        "ownership": "The service and its original content, features, and functionality are owned by RocksDev Tools.",
+        "license": "We grant you a limited, non-exclusive, non-transferable license to use our services.",
+        "restrictions": "You may not modify, distribute, or create derivative works based on our services."
+      }
+    },
+    "user-content": {
+      "title": "User Content",
+      "description": "Any data or content you input into our tools remains your property, but you grant us certain rights to provide our services.",
+      "points": {
+        "responsibility": "You are solely responsible for any content you input into our services.",
+        "rights": "You retain all rights to your content, but grant us the right to provide our services.",
+        "removal": "We reserve the right to remove any content that violates these terms."
+      }
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "description": "Our services are provided 'as is' without any warranties, express or implied.",
+      "points": {
+        "as-is": "The services are provided without warranties of any kind, whether express or implied.",
+        "availability": "We do not guarantee that our services will be uninterrupted, timely, secure, or error-free.",
+        "accuracy": "We make no warranties regarding the accuracy or reliability of any results from the use of our services."
+      }
+    },
+    "limitation-of-liability": {
+      "title": "Limitation of Liability",
+      "description": "We shall not be liable for any damages arising from the use of our services.",
+      "points": {
+        "direct": "We shall not be liable for any direct damages resulting from your use of our services.",
+        "indirect": "We shall not be liable for any indirect, incidental, special, or consequential damages.",
+        "exclusions": "Some jurisdictions do not allow the exclusion of certain warranties or limitations of liability."
+      }
+    },
+    "changes": {
+      "title": "Changes to Terms",
+      "description": "We reserve the right to modify or replace these terms at any time.",
+      "points": {
+        "modifications": "We may modify these terms at any time without prior notice.",
+        "notice": "We will notify users of any material changes to these terms.",
+        "continued-use": "Your continued use of our services after changes constitutes acceptance of the new terms."
+      }
+    },
+    "governing-law": {
+      "title": "Governing Law",
+      "description": "These terms shall be governed by and construed in accordance with the laws of Hong Kong.",
+      "points": {
+        "jurisdiction": "Any disputes shall be subject to the exclusive jurisdiction of the courts of Hong Kong.",
+        "disputes": "Any dispute arising from these terms shall be resolved through arbitration.",
+        "severability": "If any provision of these terms is found to be invalid, the remaining provisions shall remain in effect."
+      }
+    },
+    "contact": {
+      "title": "Contact Information",
+      "description": "If you have any questions about these Terms of Service, please contact us through our GitHub repository or social media channels."
+    }
+  }
+}

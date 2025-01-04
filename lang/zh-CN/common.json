@@ -17,7 +17,7 @@
     },
     "social-links": {
       "dailydev": "在 daily.dev 上关注",
-      "github": "在 GitHub 上��注",
+      "github": "在 GitHub 上关注",
       "instagram": "在 Instagram 上关注",
       "threads": "在 Threads 上关注",
       "twitter": "在 Twitter 上关注",
@@ -42,7 +42,23 @@
     "rocksDevTools": "RocksDev.工具",
     "starOnGitHub": "在 GitHub 上点赞",
     "tools": "工具",
-    "tryNow": "立即试用"
+    "tryNow": "立即试用",
+    "whyChooseRocksDevTools": "为什么选择 RocksDev 工具？",
+    "whyChooseRocksDevToolsDescription": "为开发者打造，专注于效率和可靠性",
+    "whyChooseRocksDevToolsModernUI": "现代 UI/UX",
+    "whyChooseRocksDevToolsPrivacyFirst": "隐私优先",
+    "whyChooseRocksDevToolsRegularUpdates": "定期更新",
+    "whyChooseRocksDevToolsDeveloperFocused": "开发者优先",
+    "whyChooseRocksDevToolsMultiLanguageSupport": "多语言支持",
+    "whyChooseRocksDevToolsCommunityDriven": "社区驱动",
+    "whyChooseRocksDevToolsModernUIDescription": "干净、响应式界面，支持暗模式和直观导航",
+    "whyChooseRocksDevToolsPrivacyFirstDescription": "无跟踪、无数据收集，所有处理都在您的浏览器中进行",
+    "whyChooseRocksDevToolsRegularUpdatesDescription": "持续改进和基于开发者反馈的新功能",
+    "whyChooseRocksDevToolsDeveloperFocusedDescription": "为开发者打造，专注于效率和可靠性",
+    "whyChooseRocksDevToolsMultiLanguageSupportDescription": "支持多种语言，包括英语、中文等",
+    "whyChooseRocksDevToolsCommunityDrivenDescription": "社区驱动开发，定期更新和基于用户反馈的新功能",
+    "professionalDeveloperTools": "专业开发者工具",
+    "professionalDeveloperToolsDescription": "现代开发工作流的全面工具集"
   },
   "nav": {
     "back": "返回",
@@ -172,5 +188,42 @@
   },
   "tags": {
     "ai": "AI"
+  },
+  "footer": {
+    "about": {
+      "title": "关于",
+      "description": "RocksDev Tools 是一组开发者工具，旨在使您的开发过程更高效、更愉快。"
+    },
+    "tools": {
+      "title": "工具",
+      "description": "探索我们的开发者工具集合，每个工具都旨在帮助您构建更好的软件。"
+    },
+    "resources": {
+      "title": "资源",
+      "description": "找到有用的资源，包括教程、文章等。",
+      "blog": "博客",
+      "github": "GitHub",
+      "changelog": "更新日志",
+      "privacy-policy": "隐私政策",
+      "terms-of-service": "服务条款",
+      "roadmap": "路线图"
+    },
+    "legal": {
+      "title": "法律",
+      "description": "了解我们的法律政策和服务条款。",
+      "privacy-policy": "隐私政策",
+      "terms": "服务条款",
+      "contact-us": "联系我们"
+    },
+    "newsletter": {
+      "title": "新闻",
+      "description": "保持更新我们的最新工具和功能。",
+      "join": "加入我们的新闻 在 Daily.dev",
+      "subscribe": "订阅"
+    },
+    "rights": "保留所有权利。",
+    "madeWith": "Made with",
+    "by": "by",
+    "developer": "开发者"
   }
 }

@@ -17,6 +17,8 @@ export function getMetadata({
     path === "privacy-policy" ? privacyPolicySEO[locale] : undefined;
   const _contactUsSEO =
     path === "contact-us" ? contactUsSEO[locale] : undefined;
+  const _termsSEO = path === "terms" ? termsSEO[locale] : undefined;
+  const _changelogSEO = path === "changelog" ? changelogSEO[locale] : undefined;
 
   // Merge configurations in order of priority: default < tool-specific < page-specific
   const mergedConfig = {
@@ -26,6 +28,8 @@ export function getMetadata({
     ...config,
     ..._privacyPolicySEO,
     ..._contactUsSEO,
+    ..._termsSEO,
+    ..._changelogSEO,
   };
 
   const {
@@ -562,90 +566,58 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "json.diff": {
     en: {
-      title: "JSON Diff | RocksDev Tools",
+      title: "JSON Diff Tool - Compare JSON Objects Online | RocksDev Tools",
       description:
-        "Compare two JSON objects and find their differences with our powerful online JSON diff tool. Easily spot changes, additions, and deletions between JSON files.",
+        "Free online JSON comparison tool. Compare two JSON objects, find differences, track changes, and analyze JSON data structures. Features include visual diff highlighting, nested object comparison, and export options.",
       keywords: [
-        // Primary keywords
         "json diff",
         "json compare",
-        "json difference",
+        "json difference checker",
         "json comparison tool",
-
-        // Feature keywords
-        "compare json files",
         "compare json objects",
-        "json diff checker",
-        "json difference finder",
-        "json file comparison",
-
-        // Technical keywords
         "json diff viewer",
-        "json delta",
-        "json comparison viewer",
-        "side by side json compare",
-
-        // User intent keywords
-        "find differences in json",
-        "check json changes",
-        "spot json differences",
-        "compare json online",
-
-        // Action keywords
-        "visualize json differences",
-        "highlight json changes",
-        "detect json modifications",
-
-        // Characteristics
-        "free json diff tool",
-        "online json comparison",
-        "instant json diff",
+        "online json diff",
+        "json structure comparison",
+        "json change tracker",
+        "nested json comparison",
       ],
       openGraph: {
-        type: "website",
-        title: "JSON Diff - Compare JSON Files Online",
+        title: "JSON Diff - Visual JSON Comparison Tool",
         description:
-          "Compare two JSON objects and find their differences instantly. Visual comparison tool with side-by-side view and difference highlighting.",
+          "Compare JSON objects and visualize differences with our free online JSON diff tool. Perfect for developers tracking changes in JSON data.",
+        type: "website",
         images: [`/api/og?title=JSON%20Diff`],
       },
+      additionalMetaTags: [
+        {
+          name: "application-name",
+          content: "RocksDev JSON Diff",
+        },
+        {
+          name: "format-detection",
+          content: "telephone=no",
+        },
+        {
+          property: "article:tag",
+          content: "JSON, Development Tools, Code Comparison",
+        },
+      ],
     },
     "zh-CN": {
-      title: "JSON 差异对比工具 | RocksDev 工具集",
+      title: "JSON 差异对比工具 - 在线比较 JSON 对象 | RocksDev Tools",
       description:
-        "使用我们强大的在线 JSON 差异对比工具比较两个 JSON 对象并找出它们的差异。轻松发现 JSON 文件之间的更改、添加和删除。",
+        "免费的在线 JSON 比较工具。对比两个 JSON 对象，查找差异，跟踪更改，分析 JSON 数据结构。功能包括可视化差异突出显示，嵌套对象比较和导出选项。",
       keywords: [
-        // Primary keywords
-        "json差异",
-        "json对比",
         "json比较",
-        "json差异工具",
-
-        // Feature keywords
-        "json文件对比",
-        "json对象比较",
+        "json对比",
         "json差异检查器",
-        "json文件比较",
-
-        // Technical keywords
+        "json比较工具",
+        "比较json对象",
         "json差异查看器",
-        "json对比工具",
-        "并排json比较",
-
-        // User intent keywords
-        "查找json差异",
-        "检查json变化",
-        "发现json不同",
-        "在线比较json",
-
-        // Action keywords
-        "可视化json差异",
-        "高亮json变化",
-        "检测json修改",
-
-        // Characteristics
-        "免费json对比工具",
         "在线json比较",
-        "即时json差异",
+        "json结构比较",
+        "json变更跟踪",
+        "嵌套json比较",
       ],
       openGraph: {
         type: "website",
@@ -1071,7 +1043,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
     "zh-HK": {
       title: "OG圖像生成器 | 社交媒體預覽圖片生成工具 | RocksDev工具集",
       description:
-        "創建專業的Open Graph（OG）圖像，用於社���媒體預覽。免費在線工具，可生成、裁剪和優化Facebook、Twitter、LinkedIn等社交卡片圖像。",
+        "創建專業的Open Graph（OG）圖像，用於社會媒體預覽。免費在線工具，可生成、裁剪和優化Facebook、Twitter、LinkedIn等社交卡片圖像。",
       keywords: [
         // Primary keywords
         "og圖像生成器",
@@ -1094,7 +1066,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
 
         // Technical keywords
         "1200x630圖片生成器",
-        "社��元圖像",
+        "社交元圖像",
         "開放圖譜協議",
         "元標籤圖像",
 
@@ -1407,24 +1379,77 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "dev.ai-sql": {
     en: {
-      title: "AI SQL Generator | Generate SQL from Code",
+      title: "AI SQL Generator | Smart Database Query Builder | RocksDev Tools",
       description:
-        "Easily convert your code into SQL with our advanced AI SQL generator. Save time, reduce errors, and optimize your database queries effortlessly.",
+        "Transform natural language and code into optimized SQL queries with our advanced AI-powered SQL generator. Features include multi-dialect support (MySQL, PostgreSQL, SQLite), intelligent query optimization, and real-time syntax validation. Perfect for developers, database administrators, and data analysts.",
       keywords: [
+        // Primary keywords
         "ai sql generator",
-        "automated sql generation",
         "sql query builder",
-        "convert code to sql online",
-        "ai code to sql converter",
+        "code to sql converter",
+        "database query generator",
+
+        // Technical features
+        "mysql query generator",
+        "postgresql query builder",
+        "sqlite query creator",
         "sql optimization tool",
+
+        // Use cases
+        "database schema to sql",
+        "entity relationship to sql",
+        "typescript to sql converter",
+        "json to sql transformation",
+
+        // User roles
+        "developer sql tool",
+        "dba query builder",
+        "data analyst sql helper",
+
+        // Benefits
+        "automated sql generation",
+        "sql query optimization",
+        "database performance tuning",
+        "sql syntax validation",
+
+        // Features
+        "real-time sql preview",
+        "multi dialect support",
+        "query history tracking",
+        "collaborative sql editing",
       ],
       openGraph: {
         type: "website",
-        title: "Transform Your Code into SQL Effortlessly - AI SQL Generator",
+        title: "AI SQL Generator - Transform Code to Optimized SQL Queries",
         description:
-          "Convert your code into optimized SQL queries with our AI-powered tool. Start generating today!",
+          "Convert code and natural language into efficient SQL queries with our AI-powered tool. Support for MySQL, PostgreSQL, SQLite, and more.",
         images: [`/api/og?title=AI%20SQL%20Generator`],
       },
+      twitter: {
+        card: "summary_large_image",
+        site: "@rocksdevtools",
+        creator: "@teshim_tech",
+        image: `/api/og?title=AI%20SQL%20Generator`,
+      },
+      additionalMetaTags: [
+        {
+          name: "application-name",
+          content: "RocksDev AI SQL Generator",
+        },
+        {
+          name: "format-detection",
+          content: "telephone=no",
+        },
+        {
+          property: "article:tag",
+          content:
+            "SQL Generation, Database Tools, AI Tools, Developer Utilities, AI SQL Generator",
+        },
+        {
+          name: "apple-mobile-web-app-title",
+          content: "AI SQL Generator",
+        },
+      ],
     },
     "zh-CN": {
       title: "轻松将代码转换为SQL - AI SQL生成器",
@@ -1436,6 +1461,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "自动化sql生成",
         "ai代码转换器",
         "在线sql生成器",
+        "ai sql工具",
       ],
       openGraph: {
         type: "website",
@@ -1461,6 +1487,155 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         description: "使用我們的AI SQL生成器，輕鬆將代碼轉換為高效的SQL查詢。",
         images: ["/api/og?title=AI%20SQL%20生成器"],
       },
+    },
+  },
+};
+
+export const termsSEO: Record<string, SEOConfig> = {
+  en: {
+    title: "Terms of Service | RocksDev Tools",
+    description:
+      "Read our Terms of Service to understand your rights and responsibilities when using RocksDev Tools. Our terms outline usage conditions, privacy practices, and legal requirements.",
+    keywords: [
+      "terms of service",
+      "legal terms",
+      "user agreement",
+      "service conditions",
+      "privacy terms",
+      "developer tools terms",
+      "usage policy",
+      "legal agreement",
+      "service terms",
+      "user rights",
+      "user responsibilities",
+    ],
+    openGraph: {
+      type: "website",
+      title: "Terms of Service - RocksDev Tools",
+      description:
+        "Read our Terms of Service to understand your rights and responsibilities when using RocksDev Tools.",
+      images: [`/api/og?title=Terms%20of%20Service`],
+    },
+  },
+  "zh-CN": {
+    title: "服务条款 | RocksDev 工具集",
+    description:
+      "阅读我们的服务条款，了解使用 RocksDev 工具时的权利和责任。我们的条款概述了使用条件、隐私实践和法律要求。",
+    keywords: [
+      "服务条款",
+      "法律条款",
+      "用户协议",
+      "服务条件",
+      "隐私条款",
+      "开发者工具条款",
+      "使用政策",
+      "法律协议",
+      "服务条款",
+      "用户权利",
+      "用户责任",
+    ],
+    openGraph: {
+      type: "website",
+      title: "服务条款 - RocksDev 工具集",
+      description: "阅读我们的服务条款，了解使用 RocksDev 工具时的权利和责任。",
+      images: [`/api/og?title=Terms%20of%20Service`],
+    },
+  },
+  "zh-HK": {
+    title: "服務條款 | RocksDev 工具集",
+    description:
+      "閱讀我們的服務條款，了解使用 RocksDev 工具時的權利和責任。我們的條款概述了使用條件、隱私實踐和法律要求。",
+    keywords: [
+      "服務條款",
+      "法律條款",
+      "用戶協議",
+      "服務條件",
+      "隱私條款",
+      "開發者工具條款",
+      "使用政策",
+      "法律協議",
+      "服務條款",
+      "用戶權利",
+      "用戶責任",
+    ],
+    openGraph: {
+      type: "website",
+      title: "服務條款 - RocksDev 工具集",
+      description: "閱讀我們的服務條款，了解使用 RocksDev 工具時的權利和責任。",
+      images: [`/api/og?title=Terms%20of%20Service`],
+    },
+  },
+};
+
+export const changelogSEO: Record<string, SEOConfig> = {
+  en: {
+    title: "Changelog | RocksDev Tools",
+    description:
+      "Stay up to date with the latest updates and improvements to RocksDev Tools. View our changelog to see new features, bug fixes, and enhancements.",
+    keywords: [
+      "changelog",
+      "updates",
+      "release notes",
+      "version history",
+      "new features",
+      "improvements",
+      "bug fixes",
+      "developer tools updates",
+      "software changes",
+      "product updates",
+    ],
+    openGraph: {
+      type: "website",
+      title: "Changelog - RocksDev Tools",
+      description:
+        "Stay up to date with the latest updates and improvements to RocksDev Tools.",
+      images: [`/api/og?title=Changelog`],
+    },
+  },
+  "zh-CN": {
+    title: "更新日志 | RocksDev 工具集",
+    description:
+      "了解 RocksDev Tools 的最新更新和改进。查看我们的更新日志以了解新功能、错误修复和增强功能。",
+    keywords: [
+      "更新日志",
+      "更新",
+      "发布说明",
+      "版本历史",
+      "新功能",
+      "改进",
+      "错误修复",
+      "开发者工具更新",
+      "软件变更",
+      "产品更新",
+    ],
+    openGraph: {
+      type: "website",
+      title: "更新日志 - RocksDev 工具集",
+      description: "了解 RocksDev Tools 的最新更新和改进。",
+      images: [`/api/og?title=Changelog`],
+    },
+  },
+  "zh-HK": {
+    title: "更新日誌 | RocksDev 工具集",
+    description:
+      "了解 RocksDev Tools 的最新更新和改進。查看我們的更新日誌以了解新功能、錯誤修復和增強功能。",
+    keywords: [
+      "更新日誌",
+      "更新",
+      "發布說明",
+      "版本歷史",
+      "新功能",
+      "改進",
+      "錯誤修復",
+      "開發者工具更新",
+      "軟件變更",
+      "產品更新",
+    ],
+    openGraph: {
+      type: "website",
+      title: "更新日誌 - RocksDev 工具集",
+      description: "了解 RocksDev Tools 的最新更新和改進。",
+      images: [`/api/og?title=Changelog`],
     },
   },
 };
