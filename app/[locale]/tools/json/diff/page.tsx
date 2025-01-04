@@ -1,6 +1,7 @@
 import { ToolLayout } from "@/components/layouts/tool-layout";
 import { JsonDiff } from "@/components/tools/json-diff";
 import { getMetadata } from "../../../../../services/seo";
+import { GuideSection } from "@/components/tools/json-diff/guide-section";
 
 type Props = {
   params: Promise<{
@@ -15,7 +16,7 @@ export const generateMetadata = async ({ params }: Props) => {
 
 export default function JsonDiffPage() {
   return (
-    <ToolLayout translationKey="json.diff">
+    <ToolLayout translationKey="json.diff" guideSection={<GuideSection />}>
       <JsonDiff />
     </ToolLayout>
   );

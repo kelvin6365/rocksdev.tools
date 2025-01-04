@@ -1,9 +1,9 @@
 {
   "dev": {
     "ai-sql": {
-      "current-conversion": "當前轉換",
-      "copy-sql": "複製 SQL",
       "conversion-type": "轉換類型",
+      "copy-sql": "複製 SQL",
+      "current-conversion": "當前轉換",
       "description": "使用 AI 將您的代碼 DTO 和實體轉換為 SQL 命令",
       "error": {
         "generation": "生成失敗"
@@ -115,38 +115,87 @@
     "openSource": "開源",
     "regex": {
       "basePattern": "基本模式",
-      "caseInsensitive": "不分大小寫 (i)",
-      "commonPatterns": "常見模式",
-      "copied": "已複製到剪貼簿！",
+      "caseInsensitive": "忽略大小寫",
+      "commonPatterns": "常用模式",
+      "copied": "模式已複製到剪貼板",
       "copy": "複製",
-      "description": "測試和驗證Regex",
-      "dotAll": "點號匹配所有字符 (s)",
+      "description": "使用實時反饋測試和驗證正則表達式",
+      "dotAll": "點匹配所有",
       "email": "電子郵件",
       "error": {
-        "copy": "複製失敗"
+        "copy": "複製模式失敗"
       },
-      "example": "例子",
-      "explanation": "解釋",
-      "global": "全域 (g)",
-      "groups": "群組",
-      "indexLength": "索引：{index}，長度：{length}",
-      "match": "匹配 {index}",
-      "matchCount": "匹配數量：{count}",
+      "example": "示例",
+      "explanation": "模式說明",
+      "global": "全局",
+      "groups": "命名組",
+      "guide": {
+        "basic": {
+          "description": "學習如何有效使用正則表達式測試器。",
+          "flags": {
+            "case": "i（忽略大小寫）- 不區分大小寫匹配",
+            "dotAll": "s（點匹配所有）- 點號也匹配換行符",
+            "global": "g（全局）- 查找所有匹配而不是在第一個匹配後停止",
+            "multiline": "m（多行）- ^ 和 $ 匹配每行的開始和結束",
+            "sticky": "y（粘性）- 僅從 lastIndex 開始匹配",
+            "title": "正則表達式標誌",
+            "unicode": "u（Unicode）- 啟用完整的 Unicode 匹配"
+          },
+          "patterns": {
+            "date": "日期 - 匹配日期格式（YYYY-MM-DD，MM/DD/YYYY）",
+            "email": "電子郵件 - 驗證電子郵件地址",
+            "password": "密碼 - 驗證密碼要求",
+            "phone": "電話號碼 - 匹配各種電話號碼格式",
+            "simple": "簡單文本 - 匹配精確的文本或單詞",
+            "title": "常用模式",
+            "url": "網址 - 匹配網址和域名"
+          },
+          "title": "基本使用"
+        },
+        "features": {
+          "list": {
+            "common_patterns": "常用正則表達式模式庫",
+            "flags": "支持所有 JavaScript 正則表達式標誌",
+            "match_details": "包括分組在內的詳細匹配信息",
+            "match_highlighting": "測試文本中的可視化匹配高亮",
+            "pattern_explanation": "詳細的模式分析和說明",
+            "real_time": "實時模式測試和驗證",
+            "title": "可用功能"
+          },
+          "title": "功能"
+        },
+        "tips": {
+          "list": {
+            "escape_chars": "記得轉義特殊字符（.、*、+ 等）",
+            "groups": "使用捕獲組提取匹配的特定部分",
+            "start_simple": "從簡單模式開始，逐步增加複雜性",
+            "test_cases": "使用多個測試用例測試正則表達式",
+            "title": "使用技巧",
+            "use_flags": "根據使用場景選擇適當的標誌"
+          },
+          "note": "注意：正則表達式功能強大但可能很複雜。在生產環境中使用前要進行充分測試。",
+          "title": "提示和最佳實踐"
+        },
+        "title": "指南"
+      },
+      "indexLength": "位置: {{index}}, 長度: {{length}}",
+      "match": "匹配 #{{index}}",
+      "matchCount": "找到 {{count}} 個匹配",
       "matches": "匹配結果",
-      "multiline": "多行 (m)",
+      "multiline": "多行",
       "pattern": "模式",
-      "patternBreakdown": "模式分解",
-      "patternPlaceholder": "在此貼上你的模式...",
+      "patternBreakdown": "模式分析",
+      "patternPlaceholder": "輸入正則表達式模式...",
       "phoneNumber": "電話號碼",
       "placeholder": "在此貼上你的模式...",
-      "regexPattern": "Regex模式",
-      "sticky": "黏性 (y)",
-      "testString": "測試字串",
-      "testStringPlaceholder": "在此貼上你的測試字串...",
-      "title": "Regex測試工具",
-      "unicode": "Unicode (u)",
+      "regexPattern": "正則表達式模式",
+      "sticky": "粘性",
+      "testString": "測試文本",
+      "testStringPlaceholder": "輸入要測試的文本...",
+      "title": "正則表達式測試器",
+      "unicode": "Unicode",
       "url": "URL",
-      "use": "使用"
+      "use": "使用模式"
     },
     "title": "開發工具",
     "tryNow": "立即試用"

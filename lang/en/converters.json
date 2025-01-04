@@ -12,6 +12,54 @@
         "invalid": "Invalid Base64 string"
       },
       "fileConversion": "File Conversion",
+      "guide": {
+        "decode": {
+          "description": "Convert Base64 encoded data back to its original format.",
+          "steps": {
+            "convert": "Select 'Decode' mode to convert back to original format",
+            "input": "Paste Base64 encoded text in the input area",
+            "result": "View or download the decoded result",
+            "title": "Decoding Steps",
+            "verify": "Ensure the input is valid Base64 (should only contain A-Z, a-z, 0-9, +, /, =)"
+          },
+          "title": "Decoding from Base64"
+        },
+        "encode": {
+          "description": "Convert text or files into Base64 format for safe data transmission.",
+          "steps": {
+            "convert": "Your input will be automatically converted to Base64",
+            "copy": "Copy the encoded result using the copy button",
+            "input": "Enter text or upload a file in the input area",
+            "select": "Select 'Encode' mode if not already selected",
+            "title": "Encoding Steps"
+          },
+          "title": "Encoding to Base64"
+        },
+        "features": {
+          "list": {
+            "batch_processing": "Process multiple files at once",
+            "bidirectional": "Two-way conversion (encode and decode)",
+            "copy_paste": "Quick copy and paste functionality",
+            "file_support": "Support for text and file conversion",
+            "title": "Available Features",
+            "validation": "Input validation and error checking"
+          },
+          "title": "Features"
+        },
+        "tips": {
+          "list": {
+            "check_padding": "Ensure proper padding with '=' characters",
+            "encoding": "Consider text encoding (UTF-8 recommended)",
+            "file_size": "Be mindful of file sizes as Base64 increases size by ~33%",
+            "special_chars": "Watch for special characters and line breaks",
+            "title": "Usage Tips",
+            "verify_input": "Always verify your Base64 input for correct formatting"
+          },
+          "note": "Note: Base64 encoding is commonly used for transmitting binary data over text-based systems. It's not a form of encryption and doesn't provide security.",
+          "title": "Tips & Best Practices"
+        },
+        "title": "Guide"
+      },
       "input": "Input",
       "message": {
         "download": "Downloaded",
@@ -52,6 +100,55 @@
       },
       "tooltip": {
         "preview": "The preview styling may differ from your website's styling as it uses a default GitHub-like theme. The HTML output can be styled according to your needs."
+      },
+      "guide": {
+        "title": "Guide",
+        "basic": {
+          "title": "Basic Usage",
+          "description": "Convert your Markdown content to clean, well-formatted HTML.",
+          "steps": {
+            "title": "Basic Steps",
+            "input": "Enter your Markdown text in the input field",
+            "convert": "Click 'Convert to HTML' to transform your content",
+            "preview": "Check the preview to see how your content will look",
+            "copy": "Copy the generated HTML code for your use"
+          }
+        },
+        "syntax": {
+          "title": "Markdown Syntax",
+          "description": "Common Markdown syntax elements supported by the converter.",
+          "elements": {
+            "title": "Basic Elements",
+            "headings": "Headings: Use # for h1, ## for h2, etc.",
+            "emphasis": "Emphasis: *italic* or **bold**",
+            "lists": "Lists: Use - or * for bullets, 1. for numbered lists",
+            "links": "Links: [text](url)",
+            "code": "Code: `inline code` or ```code blocks```"
+          }
+        },
+        "features": {
+          "title": "Features",
+          "list": {
+            "title": "Available Features",
+            "live_preview": "Live preview with GitHub-like styling",
+            "syntax_highlighting": "Code syntax highlighting",
+            "github_flavored": "GitHub Flavored Markdown support",
+            "copy_html": "One-click HTML copying",
+            "sample_markdown": "Sample Markdown content for reference"
+          }
+        },
+        "tips": {
+          "title": "Tips & Best Practices",
+          "list": {
+            "title": "Usage Tips",
+            "preview_first": "Always preview your content before using the HTML",
+            "syntax_check": "Double-check your Markdown syntax if the output looks wrong",
+            "use_sample": "Use the sample content to learn Markdown syntax",
+            "styling": "Remember that the preview styling is just a reference",
+            "extensions": "Supports GitHub Flavored Markdown extensions"
+          },
+          "note": "Note: The converter uses GitHub Flavored Markdown syntax and includes support for tables, task lists, and syntax highlighting."
+        }
       }
     },
     "openSource": "Open Source",

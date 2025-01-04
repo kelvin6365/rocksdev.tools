@@ -23,35 +23,132 @@
       "title": "Base64 轉換器",
       "upload": "上傳",
       "uploadFile": "上傳文件",
-      "urlSafe": "URL-safe 編碼 (將 + 替換為 - 和 / 替換為 _)"
+      "urlSafe": "URL-safe 編碼 (將 + 替換為 - 和 / 替換為 _)",
+      "guide": {
+        "title": "指南",
+        "encode": {
+          "title": "编码到 Base64",
+          "description": "将文本或文件转换为 Base64 格式，以便安全传输。",
+          "steps": {
+            "title": "编码步骤",
+            "input": "在输入区域输入文本或上传文件",
+            "select": "如果尚未选择 '编码' 模式，请选择它",
+            "convert": "您的输入将自动转换为 Base64",
+            "copy": "使用复制按钮复制编码结果"
+          }
+        },
+        "decode": {
+          "title": "从 Base64 解码",
+          "description": "将 Base64 编码的数据转换回原始格式。",
+          "steps": {
+            "title": "解码步骤",
+            "input": "在输入区域粘贴 Base64 编码的文本",
+            "verify": "确保输入是有效的 Base64 (应仅包含 A-Z, a-z, 0-9, +, /, =)",
+            "result": "查看或下载解码结果",
+            "convert": "选择 '解码' 模式以转换回原始格式"
+          }
+        },
+        "features": {
+          "title": "功能",
+          "list": {
+            "title": "可用功能",
+            "bidirectional": "双向转换 (编码和解码)",
+            "file_support": "支持文本和文件转换",
+            "batch_processing": "一次处理多个文件",
+            "validation": "输入验证和错误检查",
+            "copy_paste": "快速复制和粘贴功能"
+          }
+        },
+        "tips": {
+          "title": "使用技巧和最佳实践",
+          "list": {
+            "title": "使用技巧",
+            "verify_input": "始终验证您的 Base64 输入是否正确格式化",
+            "check_padding": "确保使用正确的填充字符 '='",
+            "file_size": "注意文件大小，因为 Base64 会增加约 33% 的大小",
+            "encoding": "考虑文本编码 (UTF-8 推荐)",
+            "special_chars": "注意特殊字符和换行符"
+          },
+          "note": "注意：Base64 编码通常用于在文本基础系统上传输二进制数据。它不是一种加密形式，也不提供安全性。"
+        }
+      }
     },
     "description": "工具用於將數據轉換為不同格式",
     "free": "免費",
     "md2html": {
+      "title": "Markdown 转换器",
+      "description": "将 Markdown 转换为 HTML",
       "actions": {
         "clear": "清除",
-        "convert": "轉換為 HTML",
-        "copy": "複製 HTML",
-        "loadSample": "載入範例"
+        "convert": "转换为 HTML",
+        "copy": "复制 HTML",
+        "loadSample": "加载示例"
       },
-      "converting": "正在轉換...",
-      "description": "將 Markdown 轉換為 HTML",
+      "converting": "正在转换...",
       "input": {
-        "placeholder": "輸入你的 Markdown 文件",
-        "title": "Markdown 輸入"
+        "title": "Markdown 输入",
+        "placeholder": "在此输入 Markdown 内容..."
       },
       "output": {
+        "title": "HTML 输出",
         "html": "HTML",
-        "preview": "預覽",
-        "title": "HTML 輸出"
+        "preview": "预览"
       },
-      "title": "Markdown 轉換器",
       "toast": {
-        "converted": "轉換完成",
-        "copied": "已複製到剪貼簿"
+        "converted": "转换完成",
+        "copied": "已复制到剪贴板"
       },
       "tooltip": {
-        "preview": "預覽樣式可能與您的網站樣式不同，因為它使用的是預設的 GitHub 樣式。HTML 輸出可以根據您的需求進行樣式化。"
+        "preview": "预览样式可能与您的网站样式不同，因为它使用默认的 GitHub 主题。HTML 输出可以根据您的需求进行样式设置。"
+      },
+      "guide": {
+        "title": "使用指南",
+        "basic": {
+          "title": "基本使用",
+          "description": "将您的 Markdown 内容转换为整洁、格式良好的 HTML。",
+          "steps": {
+            "title": "基本步骤",
+            "input": "在输入框中输入您的 Markdown 文本",
+            "convert": "点击\"转换为 HTML\"来转换您的内容",
+            "preview": "查看预览以了解内容的显示效果",
+            "copy": "复制生成的 HTML 代码供您使用"
+          }
+        },
+        "syntax": {
+          "title": "Markdown 语法",
+          "description": "转换器支持的常用 Markdown 语法元素。",
+          "elements": {
+            "title": "基本元素",
+            "headings": "标题：使用 # 表示 h1，## 表示 h2，以此类推",
+            "emphasis": "强调：*斜体* 或 **粗体**",
+            "lists": "列表：使用 - 或 * 表示无序列表，1. 表示有序列表",
+            "links": "链接：[文本](网址)",
+            "code": "代码：`行内代码` 或 ```代码块```"
+          }
+        },
+        "features": {
+          "title": "功能特点",
+          "list": {
+            "title": "可用功能",
+            "live_preview": "使用 GitHub 风格的实时预览",
+            "syntax_highlighting": "代码语法高亮",
+            "github_flavored": "支持 GitHub 风格的 Markdown",
+            "copy_html": "一键复制 HTML",
+            "sample_markdown": "提供 Markdown 参考示例"
+          }
+        },
+        "tips": {
+          "title": "使用技巧",
+          "list": {
+            "title": "使用建议",
+            "preview_first": "使用 HTML 之前先预览内容",
+            "syntax_check": "如果输出看起来不正确，请检查 Markdown 语法",
+            "use_sample": "使用示例内容来学习 Markdown 语法",
+            "styling": "请记住预览样式仅供参考",
+            "extensions": "支持 GitHub 风格的 Markdown 扩展"
+          },
+          "note": "注意：转换器使用 GitHub 风格的 Markdown 语法，支持表格、任务列表和语法高亮。"
+        }
       }
     },
     "openSource": "開源",

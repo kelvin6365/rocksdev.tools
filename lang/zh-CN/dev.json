@@ -1,9 +1,9 @@
 {
   "dev": {
     "ai-sql": {
-      "current-conversion": "当前转换",
-      "copy-sql": "复制 SQL",
       "conversion-type": "转换类型",
+      "copy-sql": "复制 SQL",
+      "current-conversion": "当前转换",
       "description": "使用 AI 将您的代码 DTO 和实体转换为 SQL 命令",
       "error": {
         "generation": "生成失败"
@@ -129,6 +129,55 @@
       "explanation": "解释",
       "global": "全局 (g)",
       "groups": "分组",
+      "guide": {
+        "basic": {
+          "description": "学习如何有效使用正则表达式测试工具。",
+          "flags": {
+            "case": "i（不区分大小写）- 匹配无论大小写",
+            "dotAll": "s（点号匹配所有）- 点号匹配新行",
+            "global": "g（全局）- 查找所有匹配而不是在第一个匹配后停止",
+            "multiline": "m（多行）- ^ 和 $ 匹配每行的开始和结束",
+            "sticky": "y（粘性）- 仅从lastIndex匹配",
+            "title": "正则表达式标志",
+            "unicode": "u（Unicode）- 启用完整的Unicode匹配"
+          },
+          "patterns": {
+            "date": "日期 - 匹配日期格式（YYYY-MM-DD，MM/DD/YYYY）",
+            "email": "电子邮件 - 验证电子邮件地址",
+            "password": "密码 - 验证密码要求",
+            "phone": "电话号码 - 匹配各种电话号码格式",
+            "simple": "简单文本 - 匹配精确的文本或单词",
+            "title": "常用模式",
+            "url": "URLs - 匹配网址和域名"
+          },
+          "title": "基本使用"
+        },
+        "features": {
+          "list": {
+            "common_patterns": "常用正则表达式库",
+            "flags": "支持所有JavaScript正则表达式标志",
+            "match_details": "匹配详细信息包括分组",
+            "match_highlighting": "测试字符串中匹配高亮显示",
+            "pattern_explanation": "详细模式分解和解释",
+            "real_time": "实时模式测试和验证",
+            "title": "可用功能"
+          },
+          "title": "功能"
+        },
+        "tips": {
+          "list": {
+            "escape_chars": "记住要转义特殊字符（., *, +, 等）",
+            "groups": "使用捕获组来提取匹配的特定部分",
+            "start_simple": "从简单模式开始，逐步增加复杂性",
+            "test_cases": "测试您的正则表达式与多个测试用例",
+            "title": "使用技巧",
+            "use_flags": "使用适当的标志来满足您的需求"
+          },
+          "note": "注意：正则表达式功能强大但可能复杂。在生产环境中使用前进行充分测试。",
+          "title": "提示"
+        },
+        "title": "指南"
+      },
       "indexLength": "索引：{index}，长度：{length}",
       "match": "匹配 {index}",
       "matchCount": "匹配数量：{count}",

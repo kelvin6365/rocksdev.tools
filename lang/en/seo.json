@@ -75,7 +75,7 @@
           "max-file-size": "Max file size: 8MB",
           "minimum-image-dimensions": "Minimum size: 600×315 pixels",
           "og-description-description": "A brief description of the content, usually between 2 and 4 sentences. This will be displayed below the title.",
-          "og-image-description": "The URL for your page&apos;s preview image.",
+          "og-image-description": "The URL for your page's preview image.",
           "og-title-description": "The title of your article without any branding such as your site name. Keep it brief and engaging",
           "og-type-description": "The type of your content. This impacts how your content shows up in Facebook Feed. Default is &quot;website&quot;.",
           "og-url-description": "The canonical URL for your page. This should be the undecorated URL without session variables or parameters.",
@@ -104,7 +104,65 @@
       "via": "via",
       "your-page-description": "Your page description",
       "your-page-description-placeholder": "Your page description will appear here. Make it compelling to increase click-through rates.",
-      "your-page-title": "Your Page Title"
+      "your-page-title": "Your Page Title",
+      "guide": {
+        "title": "Guide",
+        "basic": {
+          "title": "Basic SEO Settings",
+          "description": "Configure essential meta tags for search engine optimization.",
+          "settings": {
+            "title": "Basic Settings",
+            "title_tag": "Title Tag - The main title of your page that appears in search results",
+            "meta_description": "Meta Description - A brief summary of your page content",
+            "keywords": "Keywords - Relevant terms for search engines",
+            "canonical_url": "Canonical URL - The preferred version of your page"
+          }
+        },
+        "social": {
+          "title": "Social Media Settings",
+          "description": "Customize how your content appears when shared on social media platforms.",
+          "settings": {
+            "title": "Social Media Tags",
+            "og_title": "Open Graph Title - Title for social media sharing",
+            "og_description": "Open Graph Description - Description for social media",
+            "og_image": "Open Graph Image - Preview image for social sharing",
+            "twitter_card": "Twitter Card - Control how content appears on Twitter"
+          }
+        },
+        "advanced": {
+          "title": "Advanced Options",
+          "description": "Fine-tune additional meta tags for better control over your page's behavior.",
+          "settings": {
+            "title": "Advanced Settings",
+            "robots": "Robots Directives - Control search engine behavior",
+            "viewport": "Viewport Settings - Mobile display configuration",
+            "additional_tags": "Additional Meta Tags - Custom meta tags as needed"
+          }
+        },
+        "features": {
+          "title": "Features",
+          "list": {
+            "title": "Available Features",
+            "live_preview": "Live preview of search results appearance",
+            "social_preview": "Social media sharing previews",
+            "character_count": "Character count with recommendations",
+            "code_generation": "Automatic meta tags code generation",
+            "copy_paste": "Easy copy and paste functionality"
+          }
+        },
+        "tips": {
+          "title": "Tips & Best Practices",
+          "list": {
+            "title": "Usage Tips",
+            "unique_titles": "Create unique, descriptive titles for each page",
+            "descriptive_meta": "Write compelling meta descriptions that encourage clicks",
+            "relevant_keywords": "Use relevant, focused keywords naturally",
+            "image_optimization": "Optimize images for social sharing",
+            "preview_testing": "Test previews across different platforms"
+          },
+          "note": "Note: Keep your meta tags concise, relevant, and optimized for both search engines and social media platforms. Regular testing and updating is recommended for best results."
+        }
+      }
     },
     "og-image": {
       "cancel": "Cancel",
@@ -129,6 +187,52 @@
         "title": "Edit Image",
         "zoom": "Zoom",
         "zoom-description": "Adjust zoom level to fine-tune your image composition"
+      },
+      "guide": {
+        "features": {
+          "list": {
+            "customization": "Full text customization",
+            "download": "High-quality image download",
+            "fonts": "Various font options",
+            "layouts": "Different layout styles",
+            "preview": "Real-time preview",
+            "themes": "Multiple color themes",
+            "title": "Available Features"
+          },
+          "title": "Features"
+        },
+        "input": {
+          "description": "Customize your Open Graph image with various settings to create the perfect social media preview.",
+          "dimensions": {
+            "description": "The generated image will be 1200x630 pixels, the recommended size for Open Graph images.",
+            "title": "Generated Image Dimensions"
+          },
+          "settings": {
+            "description": "Description text - Supporting text below the title",
+            "font": "Font family - Select from sans-serif, serif, or monospace fonts",
+            "layout": "Layout style - Different arrangements of title and description",
+            "theme": "Color theme - Choose between light, dark, or gradient themes",
+            "title": "Title text - The main heading of your image"
+          },
+          "title": "Input Settings"
+        },
+        "output": {
+          "description": "Preview your image in real-time as you make changes, and download it when you're satisfied with the result.",
+          "title": "Generated Image"
+        },
+        "tips": {
+          "list": {
+            "contrast": "Ensure good contrast between text and background",
+            "dimensions": "Maintain the recommended 1200x630 pixel size",
+            "platforms": "Consider how the image will appear on different platforms",
+            "preview-test": "Test your image in social media preview tools",
+            "text-length": "Keep titles concise and descriptions brief for better readability",
+            "title": "Usage Tips"
+          },
+          "note": "Note: The generator creates optimized images for social media sharing. Test your images across different platforms to ensure they display correctly.",
+          "title": "Tips & Best Practices"
+        },
+        "title": "Guide"
       },
       "images": {
         "alt": "Preview {index}",

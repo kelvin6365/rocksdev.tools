@@ -129,6 +129,55 @@
       "explanation": "Explanation",
       "global": "Global (g)",
       "groups": "Groups",
+      "guide": {
+        "basic": {
+          "description": "Learn how to use regular expressions effectively with our tester.",
+          "flags": {
+            "case": "i (Case Insensitive) - Match regardless of case",
+            "dotAll": "s (Dot All) - Dot matches newlines too",
+            "global": "g (Global) - Find all matches rather than stopping at first match",
+            "multiline": "m (Multiline) - ^ and $ match start/end of each line",
+            "sticky": "y (Sticky) - Match only from lastIndex",
+            "title": "Regex Flags",
+            "unicode": "u (Unicode) - Enable full Unicode matching"
+          },
+          "patterns": {
+            "date": "Dates - Match date formats (YYYY-MM-DD, MM/DD/YYYY)",
+            "email": "Email - Validate email addresses",
+            "password": "Passwords - Validate password requirements",
+            "phone": "Phone Numbers - Match various phone number formats",
+            "simple": "Simple Text - Match exact text or words",
+            "title": "Common Patterns",
+            "url": "URLs - Match web addresses and domains"
+          },
+          "title": "Basic Usage"
+        },
+        "features": {
+          "list": {
+            "common_patterns": "Library of common regex patterns",
+            "flags": "Support for all JavaScript regex flags",
+            "match_details": "Detailed match information including groups",
+            "match_highlighting": "Visual match highlighting in test string",
+            "pattern_explanation": "Detailed pattern breakdown and explanation",
+            "real_time": "Real-time pattern testing and validation",
+            "title": "Available Features"
+          },
+          "title": "Features"
+        },
+        "tips": {
+          "list": {
+            "escape_chars": "Remember to escape special characters (., *, +, etc.)",
+            "groups": "Use capturing groups to extract specific parts of matches",
+            "start_simple": "Start with simple patterns and build up complexity",
+            "test_cases": "Test your regex against multiple test cases",
+            "title": "Usage Tips",
+            "use_flags": "Use appropriate flags for your use case"
+          },
+          "note": "Note: Regular expressions are powerful but can be complex. Test thoroughly before using in production.",
+          "title": "Tips & Best Practices"
+        },
+        "title": "Guide"
+      },
       "indexLength": "Index: {index}, Length: {length}",
       "match": "Match {index}",
       "matchCount": "Match Count: {count}",

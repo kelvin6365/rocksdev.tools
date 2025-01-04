@@ -23,7 +23,55 @@
       "title": "Base64 轉換器",
       "upload": "上傳",
       "uploadFile": "上傳文件",
-      "urlSafe": "URL-safe 編碼 (將 + 替換為 - 和 / 替換為 _)"
+      "urlSafe": "URL-safe 編碼 (將 + 替換為 - 和 / 替換為 _)",
+      "guide": {
+        "title": "指南",
+        "encode": {
+          "title": "編碼到 Base64",
+          "description": "將文本或文件轉換為 Base64 格式，以便安全傳輸。",
+          "steps": {
+            "title": "編碼步驟",
+            "input": "在輸入區域輸入文本或上傳文件",
+            "select": "如果尚未選擇 '編碼' 模式，請選擇它",
+            "convert": "您的輸入將自動轉換為 Base64",
+            "copy": "使用複製按鈕複製編碼結果"
+          }
+        },
+        "decode": {
+          "title": "從 Base64 解碼",
+          "description": "將 Base64 編碼的數據轉換回原始格式。",
+          "steps": {
+            "title": "解碼步驟",
+            "input": "在輸入區域粘貼 Base64 編碼的文本",
+            "verify": "確保輸入是有效的 Base64 (應僅包含 A-Z, a-z, 0-9, +, /, =)",
+            "result": "查看或下載解碼結果",
+            "convert": "選擇 '解碼' 模式以轉換回原始格式"
+          }
+        },
+        "features": {
+          "title": "功能",
+          "list": {
+            "title": "可用功能",
+            "bidirectional": "雙向轉換 (編碼和解碼)",
+            "file_support": "支持文本和文件轉換",
+            "batch_processing": "一次處理多個文件",
+            "validation": "輸入驗證和錯誤檢查",
+            "copy_paste": "快速複製和粘貼功能"
+          }
+        },
+        "tips": {
+          "title": "使用技巧和最佳實踐",
+          "list": {
+            "title": "使用技巧",
+            "verify_input": "始終驗證您的 Base64 輸入是否正確格式化",
+            "check_padding": "確保使用正確的填充字符 '='",
+            "file_size": "注意文件大小，因為 Base64 會增加約 33% 的大小",
+            "encoding": "考慮文本編碼 (UTF-8 推薦)",
+            "special_chars": "注意特殊字符和換行符"
+          },
+          "note": "注意：Base64 編碼通常用於在文本基礎系統上傳輸二進制數據。它不是一種加密形式，也不提供安全性。"
+        }
+      }
     },
     "description": "用於在不同格式之間轉換資料的工具",
     "free": "自由的",
@@ -52,6 +100,55 @@
       },
       "tooltip": {
         "preview": "預覽樣式可能與您的網站樣式不同，因為它使用的是預設的 GitHub 樣式。HTML 輸出可以根據您的需求進行樣式化。"
+      },
+      "guide": {
+        "title": "使用指南",
+        "basic": {
+          "title": "基本使用",
+          "description": "將您的 Markdown 內容轉換為整潔、格式良好的 HTML。",
+          "steps": {
+            "title": "基本步驟",
+            "input": "在輸入框中輸入您的 Markdown 文本",
+            "convert": "點擊「轉換為 HTML」來轉換您的內容",
+            "preview": "查看預覽以了解內容的顯示效果",
+            "copy": "複製生成的 HTML 代碼供您使用"
+          }
+        },
+        "syntax": {
+          "title": "Markdown 語法",
+          "description": "轉換器支援的常用 Markdown 語法元素。",
+          "elements": {
+            "title": "基本元素",
+            "headings": "標題：使用 # 表示 h1，## 表示 h2，以此類推",
+            "emphasis": "強調：*斜體* 或 **粗體**",
+            "lists": "列表：使用 - 或 * 表示無序列表，1. 表示有序列表",
+            "links": "連結：[文字](網址)",
+            "code": "程式碼：`行內程式碼` 或 ```程式碼區塊```"
+          }
+        },
+        "features": {
+          "title": "功能特點",
+          "list": {
+            "title": "可用功能",
+            "live_preview": "使用 GitHub 風格的即時預覽",
+            "syntax_highlighting": "程式碼語法高亮",
+            "github_flavored": "支援 GitHub 風格的 Markdown",
+            "copy_html": "一鍵複製 HTML",
+            "sample_markdown": "提供 Markdown 參考範例"
+          }
+        },
+        "tips": {
+          "title": "使用技巧",
+          "list": {
+            "title": "使用建議",
+            "preview_first": "使用 HTML 之前先預覽內容",
+            "syntax_check": "如果輸出看起來不正確，請檢查 Markdown 語法",
+            "use_sample": "使用範例內容來學習 Markdown 語法",
+            "styling": "請記住預覽樣式僅供參考",
+            "extensions": "支援 GitHub 風格的 Markdown 擴展"
+          },
+          "note": "注意：轉換器使用 GitHub 風格的 Markdown 語法，支援表格、任務列表和語法高亮。"
+        }
       }
     },
     "openSource": "開源",

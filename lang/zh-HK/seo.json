@@ -104,9 +104,68 @@
       "via": "來自",
       "your-page-description": "你的網頁描述",
       "your-page-description-placeholder": "你的網頁描述會在此處顯示。內容吸引可提高點擊率。",
-      "your-page-title": "你的網頁標題"
+      "your-page-title": "你的網頁標題",
+      "guide": {
+        "title": "使用指南",
+        "basic": {
+          "title": "基本 SEO 設置",
+          "description": "配置搜尋引擎優化所需的基本元標籤。",
+          "settings": {
+            "title": "基本設置",
+            "title_tag": "標題標籤 - 在搜尋結果中顯示的主要標題",
+            "meta_description": "Meta 描述 - 網頁內容的簡短摘要",
+            "keywords": "關鍵字 - 搜尋引擎相關術語",
+            "canonical_url": "規範網址 - 頁面的首選版本"
+          }
+        },
+        "social": {
+          "title": "社交媒體設置",
+          "description": "自定義內容在社交媒體平台上的顯示方式。",
+          "settings": {
+            "title": "社交媒體標籤",
+            "og_title": "Open Graph 標題 - 社交媒體分享標題",
+            "og_description": "Open Graph 描述 - 社交媒體描述",
+            "og_image": "Open Graph 圖片 - 社交分享預覽圖",
+            "twitter_card": "Twitter 卡片 - 控制內容在 Twitter 上的顯示方式"
+          }
+        },
+        "advanced": {
+          "title": "進階選項",
+          "description": "微調其他元標籤以更好地控制頁面行為。",
+          "settings": {
+            "title": "進階設置",
+            "robots": "機器人指令 - 控制搜尋引擎行為",
+            "viewport": "視口設置 - 移動端顯示配置",
+            "additional_tags": "其他元標籤 - 根據需要自定義元標籤"
+          }
+        },
+        "features": {
+          "title": "功能特點",
+          "list": {
+            "title": "可用功能",
+            "live_preview": "搜尋結果外觀即時預覽",
+            "social_preview": "社交媒體分享預覽",
+            "character_count": "字符計數及建議",
+            "code_generation": "自動生成元標籤代碼",
+            "copy_paste": "便捷的複製貼上功能"
+          }
+        },
+        "tips": {
+          "title": "使用技巧",
+          "list": {
+            "title": "使用建議",
+            "unique_titles": "為每個頁面創建獨特的描述性標題",
+            "descriptive_meta": "編寫吸引人的元描述以鼓勵點擊",
+            "relevant_keywords": "自然使用相關的重點關鍵字",
+            "image_optimization": "優化社交分享的圖片",
+            "preview_testing": "在不同平台上測試預覽效果"
+          },
+          "note": "注意：保持元標籤簡潔、相關且針對搜尋引擎和社交媒體平台優化。建議定期測試和更新以獲得最佳效果。"
+        }
+      }
     },
     "og-image": {
+      "cancel": "取消",
       "description": "創建完美的社交媒體分享圖片。支持批量處理、自定義尺寸和裁剪。",
       "download": {
         "all": {
@@ -115,44 +174,89 @@
         },
         "single": "下載"
       },
+      "edit": {
+        "description": "將圖片調整為完美的 Open Graph 尺寸",
+        "title": "編輯",
+        "tooltip": "裁剪和調整圖片"
+      },
+      "edited": "已編輯",
       "editor": {
         "cancel": "取消",
         "save": "保存更改",
+        "save-description": "將裁剪後的圖片保存為 {width}x{height}",
         "title": "編輯圖片",
         "zoom": "縮放",
-        "zoom-description": "調整縮放級別以微調圖片構圖",
-        "save-description": "將裁剪後的圖片保存為 {width}x{height}"
+        "zoom-description": "調整縮放級別以微調圖片構圖"
       },
-      "title": "OG 圖片生成器",
-      "upload": {
-        "description": "拖放圖片到此處，或點擊選擇文件",
-        "title": "上傳圖片",
-        "formats": "支持 PNG、JPG、JPEG 和 WebP 格式"
+      "guide": {
+        "features": {
+          "list": {
+            "customization": "完整文本自定義",
+            "download": "高質量圖片下載",
+            "fonts": "多種字體選項",
+            "layouts": "不同佈局樣式",
+            "preview": "實時預覽",
+            "themes": "多種顏色主題",
+            "title": "可用功能"
+          },
+          "title": "功能特點"
+        },
+        "input": {
+          "description": "在輸入框中輸入您的 JSON 資料。您可以直接貼上、上傳檔案或使用範例資料按鈕開始。",
+          "dimensions": {
+            "description": "生成的圖片尺寸為 1200x630 像素，這是 Open Graph 圖片的推薦尺寸。",
+            "title": "生成的圖片尺寸"
+          },
+          "settings": {
+            "description": "描述文本 - 標題下方的輔助文本",
+            "font": "字體系列 - 選擇無襯線、襯線或等寬字體",
+            "layout": "佈局樣式 - 標題和描述的不同排列方式",
+            "theme": "顏色主題 - 選擇明亮、暗色或漸變主題",
+            "title": "標題文本 - 圖片的主要標題"
+          },
+          "title": "輸入格式"
+        },
+        "output": {
+          "description": "進行更改時實時預覽您的圖片，對結果滿意後即可下載。",
+          "title": "生成的圖片"
+        },
+        "tips": {
+          "list": {
+            "contrast": "確保文本和背景之間有良好的對比度",
+            "dimensions": "保持推薦的 1200x630 像素尺寸",
+            "platforms": "考慮圖片在不同平台上的顯示效果",
+            "preview-test": "在社交媒體預覽工具中測試您的圖片",
+            "text-length": "保持標題簡潔、描述簡短以提高可讀性",
+            "title": "使用技巧"
+          },
+          "note": "注意：生成器會創建針對社交媒體分享優化的圖片。請在不同平台上測試您的圖片以確保正確顯示。",
+          "title": "技巧和最佳實踐"
+        },
+        "title": "使用指南"
+      },
+      "images": {
+        "alt": "預覽 {index}",
+        "count": "圖片 ({count})"
       },
       "info": {
         "description": "當您的內容在社交媒體上分享時，Open Graph 圖片會被顯示。推薦尺寸為 1200×630 像素（1.91:1 寬高比）。",
         "dimensions": "標準 Open Graph 圖片尺寸"
       },
-      "images": {
-        "count": "圖片 ({count})",
-        "alt": "預覽 {index}"
-      },
-      "edit": {
-        "title": "編輯",
-        "tooltip": "裁剪和調整圖片",
-        "description": "將圖片調整為完美的 Open Graph 尺寸"
+      "instructions": {
+        "drag": "拖動以重新定位",
+        "zoom": "使用滑塊縮放"
       },
       "remove": {
         "title": "刪除",
         "tooltip": "此操作無法撤銷"
       },
-      "edited": "已編輯",
-      "instructions": {
-        "drag": "拖動以重新定位",
-        "zoom": "使用滑塊縮放"
-      },
-      "cancel": "取消",
-      "save": "保存更改"
+      "save": "保存更改",
+      "title": "OG 圖片生成器",
+      "upload": {
+        "description": "拖放圖片到此處，或點擊選擇文件",
+        "formats": "支持 PNG、JPG、JPEG 和 WebP 格式",
+        "title": "上傳圖片"
+      }
     },
     "openSource": "開源",
     "title": "SEO 工具",

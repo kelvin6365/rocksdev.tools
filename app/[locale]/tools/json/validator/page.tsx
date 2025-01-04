@@ -1,6 +1,7 @@
 import { ToolLayout } from "@/components/layouts/tool-layout";
 import { getMetadata } from "@/services/seo";
 import { JsonValidator } from "@/components/tools/json-validator";
+import { GuideSection } from "@/components/tools/json-validator/guide-section";
 
 type Props = {
   params: Promise<{
@@ -15,7 +16,7 @@ export const generateMetadata = async ({ params }: Props) => {
 
 export default function JsonValidatorPage() {
   return (
-    <ToolLayout translationKey="json.validator">
+    <ToolLayout translationKey="json.validator" guideSection={<GuideSection />}>
       <JsonValidator />
     </ToolLayout>
   );

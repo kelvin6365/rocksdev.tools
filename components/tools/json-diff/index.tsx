@@ -123,10 +123,10 @@ export function JsonDiff() {
               {t("leftInput")}
             </CardTitle>
           </CardHeader>
-          <CardContent className="relative px-0 h-[300px]">
+          <CardContent className="relative px-0 h-[300px] max-w-[479px]">
             <Textarea
               placeholder={t("placeholder")}
-              className="h-full font-mono max-w-[479px]"
+              className="h-full font-mono"
               value={leftInput}
               onChange={(e) => setLeftInput(e.target.value)}
             />
@@ -157,10 +157,10 @@ export function JsonDiff() {
               {t("rightInput")}
             </CardTitle>
           </CardHeader>
-          <CardContent className="relative px-0 h-[300px]">
+          <CardContent className="relative px-0 h-[300px] max-w-[479px]">
             <Textarea
               placeholder={t("placeholder")}
-              className="h-full font-mono max-w-[479px]"
+              className="h-full font-mono"
               value={rightInput}
               onChange={(e) => setRightInput(e.target.value)}
             />

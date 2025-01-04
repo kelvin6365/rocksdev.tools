@@ -37,7 +37,49 @@
       "alternating-description": "交替大小寫",
       "trim-description": "清除多餘空格並修剪",
       "remove-lines-description": "移除所有換行符",
-      "input-text-placeholder": "輸入或貼上您的文字..."
+      "input-text-placeholder": "輸入或貼上您的文字...",
+      "guide": {
+        "title": "指南",
+        "basic": {
+          "title": "基本使用",
+          "description": "使用各種格式化選項轉換您的文字。",
+          "formats": {
+            "title": "可用格式",
+            "uppercase": "大寫 - 將所有字母轉換為大寫",
+            "lowercase": "小寫 - 將所有字母轉換為小寫",
+            "capitalize": "首字母大寫 - 將每個單詞的首字母大寫",
+            "sentence": "句子大小寫 - 將每個句子的首字母大寫",
+            "alternating": "交替大小寫 - 在大小寫之間交替",
+            "trim": "清理空格 - 刪除單詞之間的多餘空格",
+            "remove_lines": "刪除換行 - 將換行符轉換為空格"
+          }
+        },
+        "features": {
+          "title": "功能",
+          "description": "使用各種格式化選項轉換您的文字。",
+          "list": {
+            "title": "可用功能",
+            "real_time": "實時文字格式化",
+            "multiple_formats": "多種格式化選項",
+            "file_support": "文字文件上傳和下載",
+            "clipboard": "快速剪貼板操作",
+            "stats": "文字統計（字元數、字詞數、行數）"
+          }
+        },
+        "tips": {
+          "title": "提示",
+          "description": "使用各種格式化選項轉換您的文字。",
+          "list": {
+            "title": "使用技巧",
+            "preview": "在複製或下載之前預覽格式化文字",
+            "large_files": "對於大文件，請使用文件上傳功能",
+            "apply_input": "使用'應用到輸入'來鏈接多個格式化操作",
+            "check_stats": "監控文字統計以確保所需輸出",
+            "backup": "在格式化之前備份重要文字"
+          },
+          "note": "注意：格式化器保留您的文字內容，同時修改其格式。不會存儲任何數據。"
+        }
+      }
     }
   }
 }

@@ -33,7 +33,41 @@
       "share": "分享",
       "title": "JSON 差异比较",
       "upload": "上传 JSON",
-      "value": "值"
+      "value": "值",
+      "guide": {
+        "title": "使用指南",
+        "input": {
+          "title": "输入格式",
+          "description": "输入两个要比较的 JSON 对象。左侧输入被视为原始 JSON，右侧输入被视为修改后的版本。"
+        },
+        "output": {
+          "title": "比较结果",
+          "description": "工具将显示两个 JSON 对象之间新增、移除和修改的属性，并使用颜色编码指示器以便于识别。"
+        },
+        "features": {
+          "title": "功能特点",
+          "list": {
+            "title": "可用功能",
+            "visual-diff": "可视化差异高亮显示",
+            "property-tracking": "属性路径跟踪",
+            "export-options": "将结果导出为 JSON 或 CSV",
+            "file-upload": "支持两个输入的文件上传",
+            "detailed-view": "显示带有新旧值的详细更改视图"
+          }
+        },
+        "tips": {
+          "title": "使用技巧",
+          "list": {
+            "title": "使用建议",
+            "validate-first": "比较前先验证两个 JSON 对象",
+            "organize-json": "保持 JSON 结构一致以便更好地比较",
+            "use-export": "使用导出功能保存和分享差异",
+            "check-paths": "注意嵌套结构中的属性路径",
+            "large-files": "对于大文件，请使用文件上传功能而不是粘贴"
+          },
+          "note": "注意：差异比较工具帮助您识别两个 JSON 对象之间的结构和值变化。我们的服务器不会存储任何数据。"
+        }
+      }
     },
     "formatter": {
       "copied": "已复制到剪贴板！",
@@ -50,7 +84,42 @@
       "placeholder": "在此粘贴您的 JSON...",
       "share": "分享",
       "title": "JSON 格式化工具",
-      "upload": "上传 JSON"
+      "upload": "上传 JSON",
+      "guide": {
+        "title": "使用指南",
+        "input": {
+          "title": "输入格式",
+          "description": "将未格式化的 JSON 粘贴到输入框中。您也可以使用上传按钮上传 JSON 文件。"
+        },
+        "output": {
+          "title": "输出格式",
+          "description": "格式化后的 JSON 将在输出框中显示，具有适当的缩进和语法高亮。"
+        },
+        "features": {
+          "title": "功能特点",
+          "list": {
+            "title": "可用功能",
+            "syntax-highlighting": "实时语法高亮",
+            "error-detection": "即时错误检测和验证",
+            "copy-to-clipboard": "一键复制到剪贴板",
+            "download-json": "下载格式化后的 JSON",
+            "file-upload": "支持文件上传",
+            "instant-validation": "即时 JSON 验证"
+          }
+        },
+        "tips": {
+          "title": "使用技巧",
+          "list": {
+            "title": "使用建议",
+            "validate-first": "在生产环境使用前务必验证您的 JSON",
+            "use-file-upload": "对于大型 JSON 文件，请使用文件上传功能",
+            "check-errors": "注意错误信息以快速调试",
+            "download-backup": "下载格式化后的 JSON 作为备份",
+            "large-files": "对于非常大的文件，建议将其分割成较小的块"
+          },
+          "note": "注意：格式化器在改善可读性的同时保留所有数据。我们的服务器不会存储任何数据。"
+        }
+      }
     },
     "minifier": {
       "copied": "已复制到剪贴板！",
@@ -68,7 +137,43 @@
       "minify": "压缩 JSON",
       "placeholder": "在此粘贴您的 JSON...",
       "title": "JSON 压缩工具",
-      "upload": "上传 JSON"
+      "upload": "上传 JSON",
+      "guide": {
+        "title": "使用指南",
+        "input": {
+          "title": "输入格式",
+          "description": "在输入框中输入已格式化的 JSON 数据。压缩工具将移除所有不必要的空格和格式，同时保持数据结构。",
+          "before": "压缩前",
+          "after": "压缩后"
+        },
+        "process": {
+          "title": "压缩过程",
+          "description": "压缩工具会移除所有不必要的空格、换行和缩进，同时保持 JSON 结构和数据完整性。"
+        },
+        "features": {
+          "title": "功能特点",
+          "list": {
+            "title": "可用功能",
+            "minification": "高效的 JSON 压缩",
+            "validation": "压缩前的 JSON 验证",
+            "clipboard": "快速剪贴板操作",
+            "file-handling": "支持文件上传和下载",
+            "size-reduction": "显著的文件大小减少"
+          }
+        },
+        "tips": {
+          "title": "使用技巧",
+          "list": {
+            "title": "使用建议",
+            "validate-first": "压缩前先验证您的 JSON",
+            "backup": "保留原始格式化 JSON 的备份",
+            "check-size": "比较压缩前后的文件大小",
+            "readability": "压缩前考虑可读性需求",
+            "large-files": "对于大文件，请使用文件上传功能"
+          },
+          "note": "注意：压缩工具在移除不必要的格式的同时保留您的数据结构。我们的服务器不会存储任何数据。"
+        }
+      }
     },
     "validator": {
       "clear": "清除",
@@ -92,7 +197,43 @@
       "title": "JSON 验证工具",
       "valid": "JSON 有效",
       "validate": "验证",
-      "validating": "正在验证..."
+      "validating": "正在验证...",
+      "placeholder": "在此粘贴您的 JSON...",
+      "upload": "上传 JSON",
+      "guide": {
+        "title": "使用指南",
+        "input": {
+          "title": "输入格式",
+          "description": "在输入框中输入您的 JSON 数据。您可以直接粘贴、上传文件或使用示例数据按钮开始。"
+        },
+        "validation": {
+          "title": "验证过程",
+          "description": "验证器会检查 JSON 语法的正确性，包括引号、逗号和括号的使用。它会高亮显示 JSON 中发现的任何错误。"
+        },
+        "features": {
+          "title": "功能特点",
+          "list": {
+            "title": "可用功能",
+            "real-time": "实时输入验证",
+            "error-location": "精确的错误位置标识",
+            "clipboard": "快速剪贴板操作（复制/粘贴）",
+            "file-upload": "支持文件上传",
+            "sample-data": "提供示例 JSON 数据"
+          }
+        },
+        "tips": {
+          "title": "使用技巧",
+          "list": {
+            "title": "使用建议",
+            "check-quotes": "确保所有字符串都使用双引号",
+            "common-errors": "注意列表中缺失的逗号和末尾多余的逗号",
+            "use-sample": "使用示例数据了解正确的 JSON 结构",
+            "error-messages": "关注错误信息以快速修复问题",
+            "large-files": "对于大文件，建议使用文件上传功能"
+          },
+          "note": "注意：我们的验证器确保您的 JSON 在语法上正确并符合 JSON 规范。我们的服务器不会存储任何数据。"
+        }
+      }
     }
   }
 }

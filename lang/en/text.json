@@ -37,7 +37,49 @@
       "alternating-description": "Alternate between upper and lower case",
       "trim-description": "Remove extra spaces and trim",
       "remove-lines-description": "Remove all line breaks",
-      "input-text-placeholder": "Enter or paste your text here..."
+      "input-text-placeholder": "Enter or paste your text here...",
+      "guide": {
+        "title": "Guide",
+        "basic": {
+          "title": "Basic Usage",
+          "description": "Transform your text using various formatting options.",
+          "formats": {
+            "title": "Available Formats",
+            "uppercase": "UPPERCASE - Convert all letters to uppercase",
+            "lowercase": "lowercase - Convert all letters to lowercase",
+            "capitalize": "Capitalize Words - Capitalize first letter of each word",
+            "sentence": "Sentence case - Capitalize first letter of each sentence",
+            "alternating": "aLtErNaTiNg CaSe - Alternate between lowercase and uppercase",
+            "trim": "Trim Spaces - Remove extra spaces between words",
+            "remove_lines": "Remove Line Breaks - Convert line breaks to spaces"
+          }
+        },
+        "features": {
+          "title": "Features",
+          "description": "Transform your text using various formatting options.",
+          "list": {
+            "title": "Available Features",
+            "real_time": "Real-time text formatting",
+            "multiple_formats": "Multiple formatting options",
+            "file_support": "Text file upload and download",
+            "clipboard": "Quick clipboard operations",
+            "stats": "Text statistics (characters, words, lines)"
+          }
+        },
+        "tips": {
+          "title": "Tips & Best Practices",
+          "description": "Transform your text using various formatting options.",
+          "list": {
+            "title": "Usage Tips",
+            "preview": "Preview the formatted text before copying or downloading",
+            "large_files": "For large files, use the file upload feature",
+            "apply_input": "Use 'Apply to Input' to chain multiple formatting operations",
+            "check_stats": "Monitor text statistics to ensure desired output",
+            "backup": "Keep a backup of important text before formatting"
+          },
+          "note": "Note: The formatter preserves your text content while modifying its format. No data is stored on our servers."
+        }
+      }
     }
   }
 }

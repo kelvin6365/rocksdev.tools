@@ -33,7 +33,41 @@
       "share": "Share",
       "title": "JSON Diff",
       "upload": "Upload JSON",
-      "value": "Value"
+      "value": "Value",
+      "guide": {
+        "title": "Guide",
+        "input": {
+          "title": "Input Format",
+          "description": "Enter two JSON objects to compare. The left input is considered the original JSON, and the right input is the modified version."
+        },
+        "output": {
+          "title": "Comparison Results",
+          "description": "The tool will display added, removed, and modified properties between the two JSON objects, with color-coded indicators for easy identification."
+        },
+        "features": {
+          "title": "Features",
+          "list": {
+            "title": "Available Features",
+            "visual-diff": "Visual difference highlighting",
+            "property-tracking": "Property path tracking",
+            "export-options": "Export results as JSON or CSV",
+            "file-upload": "File upload support for both inputs",
+            "detailed-view": "Detailed view of changes with old and new values"
+          }
+        },
+        "tips": {
+          "title": "Tips & Best Practices",
+          "list": {
+            "title": "Usage Tips",
+            "validate-first": "Validate both JSON objects before comparing",
+            "organize-json": "Keep your JSON structures consistent for better comparison",
+            "use-export": "Use export feature to save and share differences",
+            "check-paths": "Pay attention to property paths in nested structures",
+            "large-files": "For large files, use the file upload feature instead of pasting"
+          },
+          "note": "Note: The diff tool helps you identify structural and value changes between two JSON objects. No data is stored on our servers."
+        }
+      }
     },
     "formatter": {
       "copied": "Copied to clipboard!",
@@ -50,7 +84,42 @@
       "placeholder": "Paste your JSON here...",
       "share": "Share",
       "title": "JSON Formatter",
-      "upload": "Upload JSON"
+      "upload": "Upload JSON",
+      "guide": {
+        "title": "Guide",
+        "input": {
+          "title": "Input Format",
+          "description": "Paste your unformatted JSON into the input field. You can also upload a JSON file using the upload button."
+        },
+        "output": {
+          "title": "Output Format",
+          "description": "The formatted JSON will be displayed in the output field with proper indentation and syntax highlighting."
+        },
+        "features": {
+          "title": "Features",
+          "list": {
+            "title": "Available Features",
+            "syntax-highlighting": "Real-time syntax highlighting",
+            "error-detection": "Instant error detection and validation",
+            "copy-to-clipboard": "One-click copy to clipboard",
+            "download-json": "Download formatted JSON",
+            "file-upload": "File upload support",
+            "instant-validation": "Instant JSON validation"
+          }
+        },
+        "tips": {
+          "title": "Tips & Best Practices",
+          "list": {
+            "title": "Usage Tips",
+            "validate-first": "Always validate your JSON before using it in production",
+            "use-file-upload": "Use file upload for large JSON files",
+            "check-errors": "Pay attention to error messages for quick debugging",
+            "download-backup": "Download a backup of your formatted JSON",
+            "large-files": "For very large files, consider splitting them into smaller chunks"
+          },
+          "note": "Note: The formatter preserves all data while improving readability. No data is stored on our servers."
+        }
+      }
     },
     "minifier": {
       "copied": "Copied to clipboard!",
@@ -68,7 +137,43 @@
       "minify": "Minify JSON",
       "placeholder": "Paste your JSON here...",
       "title": "JSON Minifier",
-      "upload": "Upload JSON"
+      "upload": "Upload JSON",
+      "guide": {
+        "title": "Guide",
+        "input": {
+          "title": "Input Format",
+          "description": "Enter your formatted JSON data in the input field. The minifier will remove all unnecessary whitespace and formatting while preserving the data structure.",
+          "before": "Before Minification",
+          "after": "After Minification"
+        },
+        "process": {
+          "title": "Minification Process",
+          "description": "The minifier removes all unnecessary whitespace, newlines, and indentation while maintaining the JSON structure and data integrity."
+        },
+        "features": {
+          "title": "Features",
+          "list": {
+            "title": "Available Features",
+            "minification": "Efficient JSON minification",
+            "validation": "JSON validation before minification",
+            "clipboard": "Quick clipboard operations",
+            "file-handling": "File upload and download support",
+            "size-reduction": "Significant file size reduction"
+          }
+        },
+        "tips": {
+          "title": "Tips & Best Practices",
+          "list": {
+            "title": "Usage Tips",
+            "validate-first": "Validate your JSON before minification",
+            "backup": "Keep a backup of the original formatted JSON",
+            "check-size": "Compare file sizes before and after minification",
+            "readability": "Consider readability needs before minifying",
+            "large-files": "For large files, use the file upload feature"
+          },
+          "note": "Note: The minifier preserves your data structure while removing unnecessary formatting. No data is stored on our servers."
+        }
+      }
     },
     "validator": {
       "clear": "Clear",
@@ -92,7 +197,43 @@
       "title": "JSON Validator",
       "valid": "JSON is valid",
       "validate": "Validate",
-      "validating": "Validating..."
+      "validating": "Validating...",
+      "placeholder": "Paste your JSON here...",
+      "upload": "Upload JSON",
+      "guide": {
+        "title": "Guide",
+        "input": {
+          "title": "Input Format",
+          "description": "Enter your JSON data in the input field. You can paste directly, upload a file, or use the sample data button to get started."
+        },
+        "validation": {
+          "title": "Validation Process",
+          "description": "The validator checks for proper JSON syntax, including correct quotes, commas, and brackets. It will highlight any errors found in your JSON."
+        },
+        "features": {
+          "title": "Features",
+          "list": {
+            "title": "Available Features",
+            "real-time": "Real-time validation as you type",
+            "error-location": "Precise error location identification",
+            "clipboard": "Quick clipboard operations (copy/paste)",
+            "file-upload": "File upload support",
+            "sample-data": "Sample JSON data for testing"
+          }
+        },
+        "tips": {
+          "title": "Tips & Best Practices",
+          "list": {
+            "title": "Usage Tips",
+            "check-quotes": "Ensure all strings are enclosed in double quotes",
+            "common-errors": "Watch for missing commas and extra commas at the end of lists",
+            "use-sample": "Use the sample data to understand correct JSON structure",
+            "error-messages": "Pay attention to error messages for quick fixes",
+            "large-files": "For large files, consider using the file upload feature"
+          },
+          "note": "Note: Our validator ensures your JSON is syntactically correct and follows the JSON specification. No data is stored on our servers."
+        }
+      }
     }
   }
 }

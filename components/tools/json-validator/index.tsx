@@ -1,171 +1,165 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
-import { useTranslations } from "next-intl";
-import { useState } from "react";
-import { toast } from "sonner";
-import {
-  Copy,
-  CheckCircle2,
-  XCircle,
-  FileJson,
-  RotateCcw,
-  Clipboard,
-} from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 import { useTool } from "@/contexts/tool-context";
+import { Copy, FileJson, Loader2, Upload } from "lucide-react";
+import { useTranslations } from "next-intl";
+import * as React from "react";
+import { toast } from "sonner";
 
 export function JsonValidator() {
   const t = useTranslations("json.validator");
-  const [input, setInput] = useState("");
-  const [isValid, setIsValid] = useState<boolean | null>(null);
-  const [errorMessage, setErrorMessage] = useState<string>("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [input, setInput] = React.useState("");
+  const [isValid, setIsValid] = React.useState<boolean | null>(null);
+  const [isValidating, setIsValidating] = React.useState(false);
+  const [errorPosition, setErrorPosition] = React.useState<number | null>(null);
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
   const { incrementToolUsage } = useTool();
 
   const validateJson = () => {
     if (!input.trim()) {
-      toast.warning(t("error.empty"));
+      toast.warning(t("error.empty"), {});
       return;
     }
 
-    setIsLoading(true);
+    setIsValidating(true);
     try {
       JSON.parse(input);
       setIsValid(true);
-      setErrorMessage("");
-      toast.success(t("valid"));
+      setErrorPosition(null);
+      incrementToolUsage("json_validator");
     } catch (error) {
       setIsValid(false);
-      setErrorMessage((error as Error).message);
-      toast.error(t("error.invalid"));
+      if (error instanceof SyntaxError) {
+        const match = error.message.match(/position (\d+)/);
+        if (match) {
+          setErrorPosition(parseInt(match[1], 10));
+        }
+      }
     } finally {
-      incrementToolUsage("json_validator");
-      setIsLoading(false);
+      setIsValidating(false);
     }
   };
 
-  const getErrorPosition = (message: string): number | null => {
-    const match = message.match(/position (\d+)/);
-    return match ? parseInt(match[1]) : null;
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(input);
+      toast.success(t("copied"), {});
+    } catch (error) {
+      toast.error(t("error.copy"), {});
+    }
   };
 
-  const handlePaste = async () => {
+  const pasteFromClipboard = async () => {
     try {
       const text = await navigator.clipboard.readText();
       setInput(text);
-      toast.success(t("pasted"));
+      toast.success(t("pasted"), {});
     } catch (error) {
-      toast.error(t("error.paste"));
+      toast.error(t("error.paste"), {});
     }
   };
 
-  const loadSampleJson = () => {
-    const sample = {
+  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const content = e.target?.result as string;
+      setInput(content);
+    };
+    reader.readAsText(file);
+  };
+
+  const loadSample = () => {
+    const sampleJson = {
       name: "John Doe",
       age: 30,
-      email: "john@example.com",
-      isActive: true,
-      hobbies: ["reading", "music"],
+      isStudent: false,
+      hobbies: ["reading", "gaming"],
       address: {
         street: "123 Main St",
-        city: "Boston",
+        city: "New York",
         country: "USA",
       },
     };
-    setInput(JSON.stringify(sample, null, 2));
+    setInput(JSON.stringify(sampleJson, null, 2));
   };
 
-  const resetValidator = () => {
+  const reset = () => {
     setInput("");
     setIsValid(null);
-    setErrorMessage("");
-    toast.info(t("reset"));
-  };
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(input);
-      toast.success(t("copied"));
-    } catch (error) {
-      toast.error(t("error.copy"));
-    }
+    setErrorPosition(null);
   };
 
   return (
-    <div className="space-y-4">
-      <div className="flex flex-wrap gap-2">
-        <Button variant="outline" onClick={handlePaste} size="sm">
-          <Clipboard className="w-4 h-4 mr-1" />
-          {t("paste")}
-        </Button>
-        <Button variant="outline" onClick={loadSampleJson} size="sm">
-          <FileJson className="w-4 h-4 mr-1" />
-          {t("loadSample")}
-        </Button>
-        <Button
-          variant="outline"
-          onClick={handleCopy}
-          size="sm"
-          disabled={!input}
-        >
-          <Copy className="w-4 h-4 mr-1" />
-          {t("copy")}
-        </Button>
-        <Button
-          variant="outline"
-          onClick={resetValidator}
-          size="sm"
-          disabled={!input}
-        >
-          <RotateCcw className="w-4 h-4 mr-1" />
-          {t("reset")}
-        </Button>
-      </div>
-
-      <Textarea
-        placeholder={t("input")}
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        className="min-h-[300px] font-mono"
-      />
-
-      <div className="flex justify-end">
-        <Button onClick={validateJson} disabled={isLoading}>
-          {isLoading ? t("validating") : t("validate")}
-        </Button>
-      </div>
-
-      {isValid !== null && (
-        <Card>
-          <CardContent className="pt-6">
-            {isValid ? (
-              <div className="flex items-center text-green-600 gap-2">
-                <CheckCircle2 className="w-5 h-5" />
-                <span>{t("valid")}</span>
-              </div>
-            ) : (
-              <div className="space-y-2">
-                <div className="flex items-center text-red-600 gap-2">
-                  <XCircle className="w-5 h-5" />
-                  <span>{t("invalid")}</span>
-                </div>
-                <div className="bg-red-50 p-4 rounded-md text-red-800 font-mono text-sm">
-                  {errorMessage}
-                  {getErrorPosition(errorMessage) && (
-                    <div className="mt-2 text-red-600">
-                      {t("errorPosition", {
-                        position: getErrorPosition(errorMessage),
-                      })}
-                    </div>
-                  )}
-                </div>
+    <div className="flex flex-col">
+      <CardHeader className="px-0 pt-0">
+        <CardTitle className="flex items-center gap-2">
+          <FileJson className="h-5 w-5" />
+          {t("input")}
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="relative px-0">
+        <div className="flex gap-2 mb-2">
+          <Button onClick={validateJson} disabled={isValidating}>
+            {isValidating && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {t("validate")}
+          </Button>
+          <Button variant="outline" onClick={copyToClipboard}>
+            <Copy className="mr-2 h-4 w-4" />
+            {t("copy")}
+          </Button>
+          <Button variant="outline" onClick={pasteFromClipboard}>
+            {t("paste")}
+          </Button>
+          <input
+            type="file"
+            ref={fileInputRef}
+            accept=".json"
+            className="hidden"
+            onChange={handleFileUpload}
+          />
+          <Button
+            variant="outline"
+            onClick={() => fileInputRef.current?.click()}
+            title={t("upload")}
+          >
+            <Upload className="h-4 w-4" />
+          </Button>
+          <Button variant="outline" onClick={loadSample}>
+            {t("loadSample")}
+          </Button>
+          <Button variant="outline" onClick={reset}>
+            {t("reset")}
+          </Button>
+        </div>
+        <Textarea
+          placeholder={t("placeholder")}
+          className="min-h-[300px] font-mono"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        {isValid !== null && (
+          <div
+            className={`mt-4 p-4 rounded-md ${
+              isValid
+                ? "bg-green-100 dark:bg-green-900/20 text-green-700 dark:text-green-300"
+                : "bg-red-100 dark:bg-red-900/20 text-red-700 dark:text-red-300"
+            }`}
+          >
+            {isValid ? t("valid") : t("invalid")}
+            {errorPosition !== null && (
+              <div className="mt-2">
+                {t("errorPosition", { position: errorPosition })}
               </div>
             )}
-          </CardContent>
-        </Card>
-      )}
+          </div>
+        )}
+      </CardContent>
     </div>
   );
 }
