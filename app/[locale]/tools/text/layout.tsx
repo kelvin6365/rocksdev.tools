@@ -1,15 +1,21 @@
-"use client";
-
-import { cn } from "@/lib/utils";
 import { config } from "@/services/config";
-import { usePathname, Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { ToolsMenuItem } from "@/components/tools-menu-item";
+import { getMetadata } from "@/services/seo";
 
 const textTools =
   config.tools.find((tool) => tool.value === "text")?.subTools || [];
 
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export const generateMetadata = async ({ params }: Props) => {
+  const { locale } = await params;
+  return getMetadata({ locale, path: "text" });
+};
+
 export default function SeoLayout({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
   const t = useTranslations();
 
   return (
@@ -23,18 +29,11 @@ export default function SeoLayout({ children }: { children: React.ReactNode }) {
             </h2>
             <div className="space-y-1">
               {textTools.map((tool) => (
-                <Link
+                <ToolsMenuItem
                   key={tool.value}
-                  href={tool.href}
-                  className={cn(
-                    "block rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground",
-                    pathname === tool.href
-                      ? "bg-accent text-accent-foreground"
-                      : "text-muted-foreground",
-                  )}
-                >
-                  {t(`nav.tools.text.${tool.value.split(".")[1]}.title`)}
-                </Link>
+                  tool={tool}
+                  label={t(`nav.tools.text.${tool.value.split(".")[1]}.title`)}
+                />
               ))}
             </div>
           </div>

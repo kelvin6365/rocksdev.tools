@@ -1,18 +1,24 @@
-"use client";
-
-import * as React from "react";
-import { cn } from "@/lib/utils";
-import { config } from "@/services/config";
-import { usePathname, Link } from "@/i18n/routing";
 import { ToolBreadcrumb } from "@/components/breadcrumb";
+import { ToolsMenuItem } from "@/components/tools-menu-item";
+import { config } from "@/services/config";
+import { getMetadata } from "@/services/seo";
 import { useTranslations } from "next-intl";
+import * as React from "react";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export const generateMetadata = async ({ params }: Props) => {
+  const { locale } = await params;
+  return getMetadata({ locale });
+};
 
 export default function ToolsLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname();
   const t = useTranslations();
 
   return (
@@ -28,18 +34,11 @@ export default function ToolsLayout({
               </h2>
               <div className="space-y-1">
                 {config.tools.map((tool) => (
-                  <Link
+                  <ToolsMenuItem
                     key={tool.value}
-                    href={tool.href}
-                    className={cn(
-                      "block rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground",
-                      pathname.startsWith(tool.href)
-                        ? "bg-accent text-accent-foreground"
-                        : "text-muted-foreground",
-                    )}
-                  >
-                    {t(`nav.tools.${tool.value}.title`)}
-                  </Link>
+                    tool={tool}
+                    label={t(`nav.tools.${tool.value}.title`)}
+                  />
                 ))}
               </div>
             </div>

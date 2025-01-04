@@ -5,8 +5,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { config } from "@/services/config";
 import { Link } from "@/i18n/routing";
+import { config } from "@/services/config";
 import { useTranslations } from "next-intl";
 
 const seoTools = config.tools.find((tool) => tool.value === "seo");

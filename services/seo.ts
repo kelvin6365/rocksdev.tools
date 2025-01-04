@@ -19,6 +19,12 @@ export function getMetadata({
     path === "contact-us" ? contactUsSEO[locale] : undefined;
   const _termsSEO = path === "terms" ? termsSEO[locale] : undefined;
   const _changelogSEO = path === "changelog" ? changelogSEO[locale] : undefined;
+  const _textToolsSEO = path === "text" ? textToolsSEO[locale] : undefined;
+  const _seoToolsSEO = path === "seo" ? seoToolsSEO[locale] : undefined;
+  const _convertersSEO =
+    path === "converters" ? convertersSEO[locale] : undefined;
+  const _jsonToolsSEO = path === "json" ? jsonToolsSEO[locale] : undefined;
+  const _devToolsSEO = path === "dev" ? devToolsSEO[locale] : undefined;
 
   // Merge configurations in order of priority: default < tool-specific < page-specific
   const mergedConfig = {
@@ -30,6 +36,11 @@ export function getMetadata({
     ..._contactUsSEO,
     ..._termsSEO,
     ..._changelogSEO,
+    ..._textToolsSEO,
+    ..._seoToolsSEO,
+    ..._convertersSEO,
+    ..._jsonToolsSEO,
+    ..._devToolsSEO,
   };
 
   const {
@@ -397,11 +408,11 @@ export const notFoundSEO: Record<string, SEOConfig> = {
       "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
   },
   "zh-CN": {
-    title: "页面未找到 | RocksDev 工具集",
+    title: "页面未找到 | RocksDev.Tools",
     description: "您正在寻找的页面可能已被删除、名称已更改或暂时不可用。",
   },
   "zh-HK": {
-    title: "頁面未找到 | RocksDev 工具集",
+    title: "頁面未找到 | RocksDev.Tools",
     description: "您正在尋找的頁面可能已被刪除、名稱已更改或暫時不可用。",
   },
 };
@@ -413,11 +424,11 @@ export const privacyPolicySEO: Record<string, SEOConfig> = {
       "Learn how RocksDev Tools protects your privacy and personal data.",
   },
   "zh-CN": {
-    title: "隐私政策 | RocksDev 工具集",
+    title: "隐私政策 | RocksDev.Tools",
     description: "了解 RocksDev 工具如何保护您的隐私和个人数据。",
   },
   "zh-HK": {
-    title: "隱私政策 | RocksDev 工具集",
+    title: "隱私政策 | RocksDev.Tools",
     description: "了解 RocksDev 工具如何保護您的隱私和個人資料。",
   },
 };
@@ -428,12 +439,12 @@ export const contactUsSEO: Record<string, SEOConfig> = {
     description: "Contact RocksDev Tools for any questions or suggestions.",
   },
   "zh-CN": {
-    title: "联系我们 | RocksDev 工具集",
-    description: "联系 RocksDev 工具集以提出任何问题或建议。",
+    title: "联系我们 | RocksDev.Tools",
+    description: "联系 RocksDev.Tools以提出任何问题或建议。",
   },
   "zh-HK": {
-    title: "聯絡我們 | RocksDev 工具集",
-    description: "聯絡 RocksDev 工具集以提出任何問題或建議。",
+    title: "聯絡我們 | RocksDev.Tools",
+    description: "聯絡 RocksDev.Tools以提出任何問題或建議。",
   },
 };
 
@@ -478,7 +489,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-CN": {
-      title: "JSON 格式化工具 | RocksDev 工具集",
+      title: "JSON 格式化工具 | RocksDev.Tools",
       description:
         "使用我们强大的在线 JSON 格式化工具来格式化、验证和美化您的 JSON。包括语法高亮、错误检测等功能。",
       keywords: [
@@ -503,7 +514,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "JSON 格式化工具 | RocksDev 工具集",
+      title: "JSON 格式化工具 | RocksDev.Tools",
       description:
         "使用我們強大的在線 JSON 格式化工具來格式化、驗證和美化您的 JSON。包括語法高亮、錯誤檢測等功能。",
       keywords: [
@@ -542,7 +553,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-CN": {
-      title: "JSON 验证工具 | RocksDev 工具集",
+      title: "JSON 验证工具 | RocksDev.Tools",
       description: "使用我们强大的在线 JSON 验证工具验证您的 JSON 数据。",
       keywords: ["json验证器", "json验证", "json工具"],
       openGraph: {
@@ -553,7 +564,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "JSON 驗證工具 | RocksDev 工具集",
+      title: "JSON 驗證工具 | RocksDev.Tools",
       description: "使用我們強大的在線 JSON 驗證工具驗證您的 JSON 數據。",
       keywords: ["json驗證器", "json驗證", "json工具"],
       openGraph: {
@@ -628,7 +639,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "JSON 差異對比工具 | RocksDev 工具集",
+      title: "JSON 差異對比工具 | RocksDev.Tools",
       description:
         "使用我們強大的在線 JSON 差異對比工具比較兩個 JSON 對象並找出它們的差異。輕鬆發現 JSON 文件之間的更改、添加和刪除。",
       keywords: [
@@ -725,7 +736,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-CN": {
-      title: "JSON 压缩工具 | RocksDev 工具集",
+      title: "JSON 压缩工具 | RocksDev.Tools",
       description:
         "使用我们强大的在线 JSON 压缩工具立即压缩您的 JSON 数据。在保持数据完整性的同时减小文件大小，完美用于优化和部署。",
       keywords: [
@@ -773,7 +784,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "JSON Minifier | RocksDev 工具集",
+      title: "JSON Minifier | RocksDev.Tools",
       description:
         "使用我們強大的在線 JSON 壓縮工具立即壓縮您的 JSON 數據。在保持數據完整性的同時減小文件大小，完美用於優化和部署。",
       keywords: [
@@ -842,7 +853,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-CN": {
-      title: "Base64 轉換器 | RocksDev 工具集",
+      title: "Base64 轉換器 | RocksDev.Tools",
       description:
         "使用我們強大的在線 Base64 轉換器工具在 Base64 和其他格式之間轉換。",
       keywords: [
@@ -860,7 +871,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "Base64 轉換器 | RocksDev 工具集",
+      title: "Base64 轉換器 | RocksDev.Tools",
       description:
         "使用我們強大的在線 Base64 轉換器工具在 Base64 和其他格式之間轉換。",
       keywords: [
@@ -891,7 +902,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-CN": {
-      title: "Regex測試工具 | RocksDev 工具集",
+      title: "Regex測試工具 | RocksDev.Tools",
       description: "測試和驗證Regex",
       keywords: ["Regex測試器", "Regex驗證器", "Regex工具"],
       openGraph: {
@@ -902,7 +913,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "Regex測試工具 | RocksDev 工具集",
+      title: "Regex測試工具 | RocksDev.Tools",
       description: "測試和驗證Regex",
       keywords: ["Regex測試器", "Regex驗證器", "Regex工具"],
       openGraph: {
@@ -1116,7 +1127,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-CN": {
-      title: "文本格式化器 | RocksDev 工具集",
+      title: "文本格式化器 | RocksDev.Tools",
       description: "使用高级工具格式化和操作您的文本",
       keywords: ["文本格式化器", "文本工具", "文本格式化"],
       openGraph: {
@@ -1127,7 +1138,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "文本格式化器 | RocksDev 工具集",
+      title: "文本格式化器 | RocksDev.Tools",
       description: "使用高级工具格式化和操作您的文本",
       keywords: ["文本格式化器", "文本工具", "文本格式化"],
       openGraph: {
@@ -1518,7 +1529,7 @@ export const termsSEO: Record<string, SEOConfig> = {
     },
   },
   "zh-CN": {
-    title: "服务条款 | RocksDev 工具集",
+    title: "服务条款 | RocksDev.Tools",
     description:
       "阅读我们的服务条款，了解使用 RocksDev 工具时的权利和责任。我们的条款概述了使用条件、隐私实践和法律要求。",
     keywords: [
@@ -1536,13 +1547,13 @@ export const termsSEO: Record<string, SEOConfig> = {
     ],
     openGraph: {
       type: "website",
-      title: "服务条款 - RocksDev 工具集",
+      title: "服务条款 - RocksDev.Tools",
       description: "阅读我们的服务条款，了解使用 RocksDev 工具时的权利和责任。",
       images: [`/api/og?title=Terms%20of%20Service`],
     },
   },
   "zh-HK": {
-    title: "服務條款 | RocksDev 工具集",
+    title: "服務條款 | RocksDev.Tools",
     description:
       "閱讀我們的服務條款，了解使用 RocksDev 工具時的權利和責任。我們的條款概述了使用條件、隱私實踐和法律要求。",
     keywords: [
@@ -1560,7 +1571,7 @@ export const termsSEO: Record<string, SEOConfig> = {
     ],
     openGraph: {
       type: "website",
-      title: "服務條款 - RocksDev 工具集",
+      title: "服務條款 - RocksDev.Tools",
       description: "閱讀我們的服務條款，了解使用 RocksDev 工具時的權利和責任。",
       images: [`/api/og?title=Terms%20of%20Service`],
     },
@@ -1569,7 +1580,7 @@ export const termsSEO: Record<string, SEOConfig> = {
 
 export const changelogSEO: Record<string, SEOConfig> = {
   en: {
-    title: "Changelog | RocksDev Tools",
+    title: "Changelog | RocksDev.Tools",
     description:
       "Stay up to date with the latest updates and improvements to RocksDev Tools. View our changelog to see new features, bug fixes, and enhancements.",
     keywords: [
@@ -1586,14 +1597,14 @@ export const changelogSEO: Record<string, SEOConfig> = {
     ],
     openGraph: {
       type: "website",
-      title: "Changelog - RocksDev Tools",
+      title: "Changelog - RocksDev.Tools",
       description:
-        "Stay up to date with the latest updates and improvements to RocksDev Tools.",
+        "Stay up to date with the latest updates and improvements to RocksDev.Tools.",
       images: [`/api/og?title=Changelog`],
     },
   },
   "zh-CN": {
-    title: "更新日志 | RocksDev 工具集",
+    title: "更新日志 | RocksDev.Tools",
     description:
       "了解 RocksDev Tools 的最新更新和改进。查看我们的更新日志以了解新功能、错误修复和增强功能。",
     keywords: [
@@ -1610,13 +1621,13 @@ export const changelogSEO: Record<string, SEOConfig> = {
     ],
     openGraph: {
       type: "website",
-      title: "更新日志 - RocksDev 工具集",
+      title: "更新日志 - RocksDev.Tools",
       description: "了解 RocksDev Tools 的最新更新和改进。",
       images: [`/api/og?title=Changelog`],
     },
   },
   "zh-HK": {
-    title: "更新日誌 | RocksDev 工具集",
+    title: "更新日誌 | RocksDev.Tools",
     description:
       "了解 RocksDev Tools 的最新更新和改進。查看我們的更新日誌以了解新功能、錯誤修復和增強功能。",
     keywords: [
@@ -1633,9 +1644,244 @@ export const changelogSEO: Record<string, SEOConfig> = {
     ],
     openGraph: {
       type: "website",
-      title: "更新日誌 - RocksDev 工具集",
+      title: "更新日誌 - RocksDev.Tools",
       description: "了解 RocksDev Tools 的最新更新和改進。",
       images: [`/api/og?title=Changelog`],
+    },
+  },
+};
+
+export const textToolsSEO: Record<string, SEOConfig> = {
+  en: {
+    title: "Text Tools | RocksDev.Tools",
+    description:
+      "Explore our collection of text tools for efficient text processing. From character counting to text formatting, our tools help you manage and manipulate text with ease.",
+    keywords: [
+      "text tools",
+      "text processing",
+      "character counting",
+      "text formatting",
+      "text manipulation",
+    ],
+    openGraph: {
+      type: "website",
+      title: "Text Tools - RocksDev.Tools",
+      description:
+        "Explore our collection of text tools for efficient text processing. From character counting to text formatting, our tools help you manage and manipulate text with ease.",
+      images: [`/api/og?title=Text%20Tools`],
+    },
+  },
+  "zh-CN": {
+    title: "文本工具 | RocksDev.Tools",
+    description:
+      "探索我们的文本工具集，用于高效文本处理。从字符计数到文本格式化，我们的工具帮助您轻松管理文本。",
+    keywords: ["文本工具", "文本处理", "字符计数", "文本格式化", "文本操作"],
+    openGraph: {
+      type: "website",
+      title: "文本工具 - RocksDev.Tools",
+      description:
+        "探索我们的文本工具集，用于高效文本处理。从字符计数到文本格式化，我们的工具帮助您轻松管理文本。",
+      images: [`/api/og?title=Text%20Tools`],
+    },
+  },
+  "zh-HK": {
+    title: "文本工具 | RocksDev.Tools",
+    description:
+      "探索我們的文本工具集，用於高效文本處理。從字符計數到文本格式化，我們的工具幫助您輕鬆管理文本。",
+    keywords: ["文本工具", "文本處理", "字符計數", "文本格式化", "文本操作"],
+    openGraph: {
+      type: "website",
+      title: "文本工具 - RocksDev.Tools",
+      description:
+        "探索我們的文本工具集，用於高效文本處理。從字符計數到文本格式化，我們的工具幫助您輕鬆管理文本。",
+      images: [`/api/og?title=Text%20Tools`],
+    },
+  },
+};
+
+export const seoToolsSEO: Record<string, SEOConfig> = {
+  en: {
+    title: "SEO Tools | RocksDev.Tools",
+    description:
+      "Explore our collection of SEO tools for efficient SEO processing. From keyword analysis to content optimization, our tools help you manage and manipulate text with ease.",
+    keywords: [
+      "seo tools",
+      "seo processing",
+      "keyword analysis",
+      "content optimization",
+      "seo tools",
+    ],
+    openGraph: {
+      type: "website",
+      title: "SEO Tools - RocksDev.Tools",
+      description:
+        "Explore our collection of SEO tools for efficient SEO processing. From keyword analysis to content optimization, our tools help you manage and manipulate text with ease.",
+      images: [`/api/og?title=SEO%20Tools`],
+    },
+  },
+  "zh-CN": {
+    title: "SEO工具 | RocksDev.Tools",
+    description:
+      "探索我们的SEO工具集，用于高效SEO处理。从关键词分析到内容优化，我们的工具帮助您轻松管理SEO。",
+    keywords: ["seo工具", "seo处理", "关键词分析", "内容优化", "seo工具"],
+    openGraph: {
+      type: "website",
+      title: "SEO Tools - RocksDev.Tools",
+      description:
+        "探索我们的SEO工具集，用于高效SEO处理。从关键词分析到内容优化，我们的工具帮助您轻松管理SEO。",
+      images: [`/api/og?title=SEO%20Tools`],
+    },
+  },
+  "zh-HK": {
+    title: "SEO工具 | RocksDev.Tools",
+    description:
+      "探索我們的SEO工具集，用於高效SEO處理。從關鍵詞分析到內容優化，我們的工具幫助您輕鬆管理SEO。",
+    keywords: ["seo工具", "seo處理", "關鍵詞分析", "內容優化", "seo工具"],
+    openGraph: {
+      type: "website",
+      title: "SEO Tools - RocksDev.Tools",
+      description:
+        "探索我們的SEO工具集，用於高效SEO處理。從關鍵詞分析到內容優化，我們的工具幫助您輕鬆管理SEO。",
+      images: [`/api/og?title=SEO%20Tools`],
+    },
+  },
+};
+
+export const convertersSEO: Record<string, SEOConfig> = {
+  en: {
+    title: "Converters | RocksDev.Tools",
+    description:
+      "Explore our collection of converters for efficient conversion tasks. From text to JSON, our tools help you manage and manipulate text with ease.",
+    keywords: [
+      "converters",
+      "conversion tools",
+      "text to json",
+      "text to csv",
+      "text to xml",
+    ],
+    openGraph: {
+      type: "website",
+      title: "Converters - RocksDev.Tools",
+      description:
+        "Explore our collection of converters for efficient conversion tasks. From text to JSON, our tools help you manage and manipulate text with ease.",
+      images: [`/api/og?title=Converters`],
+    },
+  },
+  "zh-CN": {
+    title: "转换器 | RocksDev.Tools",
+    description:
+      "探索我们的转换器工具集，用于高效转换任务。从文本到JSON，我们的工具帮助您轻松管理转换。",
+    keywords: ["转换器", "转换工具", "文本到JSON", "文本到CSV", "文本到XML"],
+    openGraph: {
+      type: "website",
+      title: "转换器 - RocksDev.Tools",
+      description:
+        "探索我们的转换器工具集，用于高效转换任务。从文本到JSON，我们的工具帮助您轻松管理转换。",
+      images: [`/api/og?title=Converters`],
+    },
+  },
+  "zh-HK": {
+    title: "轉換器 | RocksDev.Tools",
+    description:
+      "探索我們的轉換器工具集，用於高效轉換任務。從文本到JSON，我們的工具幫助您輕鬆管理轉換。",
+    keywords: ["轉換器", "轉換工具", "文本到JSON", "文本到CSV", "文本到XML"],
+    openGraph: {
+      type: "website",
+      title: "轉換器 - RocksDev.Tools",
+      description:
+        "探索我們的轉換器工具集，用於高效轉換任務。從文本到JSON，我們的工具幫助您輕鬆管理轉換。",
+      images: [`/api/og?title=Converters`],
+    },
+  },
+};
+
+export const jsonToolsSEO: Record<string, SEOConfig> = {
+  en: {
+    title: "JSON Tools | RocksDev.Tools",
+    description:
+      "Explore our collection of JSON tools for efficient JSON processing. From JSON to CSV, our tools help you manage and manipulate JSON with ease.",
+    keywords: [
+      "json tools",
+      "json processing",
+      "json to csv",
+      "json to xml",
+      "json to json",
+    ],
+    openGraph: {
+      type: "website",
+      title: "JSON Tools - RocksDev.Tools",
+      description:
+        "Explore our collection of JSON tools for efficient JSON processing. From JSON to CSV, our tools help you manage and manipulate JSON with ease.",
+      images: [`/api/og?title=JSON%20Tools`],
+    },
+  },
+  "zh-CN": {
+    title: "JSON工具 | RocksDev.Tools",
+    description:
+      "探索我们的JSON工具集，用于高效JSON处理。从JSON到CSV，我们的工具帮助您轻松管理JSON。",
+    keywords: ["json工具", "json处理", "json到csv", "json到xml", "json到json"],
+    openGraph: {
+      type: "website",
+      title: "JSON Tools - RocksDev.Tools",
+      description:
+        "探索我们的JSON工具集，用于高效JSON处理。从JSON到CSV，我们的工具帮助您轻松管理JSON。",
+      images: [`/api/og?title=JSON%20Tools`],
+    },
+  },
+  "zh-HK": {
+    title: "JSON工具 | RocksDev.Tools",
+    description:
+      "探索我們的JSON工具集，用於高效JSON處理。從JSON到CSV，我們的工具幫助您輕鬆管理JSON。",
+    keywords: ["json工具", "json处理", "json到csv", "json到xml", "json到json"],
+    openGraph: {
+      type: "website",
+      title: "JSON Tools - RocksDev.Tools",
+      description:
+        "探索我們的JSON工具集，用於高效JSON處理。從JSON到CSV，我們的工具幫助您輕鬆管理JSON。",
+      images: [`/api/og?title=JSON%20Tools`],
+    },
+  },
+};
+
+export const devToolsSEO: Record<string, SEOConfig> = {
+  en: {
+    title: "Developer Tools | RocksDev.Tools",
+    description:
+      "Explore our collection of developer tools for efficient development.",
+    keywords: [
+      "developer tools",
+      "development tools",
+      "developer tools",
+      "development tools",
+    ],
+    openGraph: {
+      type: "website",
+      title: "Developer Tools - RocksDev.Tools",
+      description:
+        "Explore our collection of developer tools for efficient development.",
+      images: [`/api/og?title=Developer%20Tools`],
+    },
+  },
+  "zh-CN": {
+    title: "开发者工具 | RocksDev.Tools",
+    description: "探索我们的开发者工具集，用于高效开发。",
+    keywords: ["开发者工具", "开发工具", "开发者工具", "开发工具"],
+    openGraph: {
+      type: "website",
+      title: "开发者工具 - RocksDev.Tools",
+      description: "探索我们的开发者工具集，用于高效开发。",
+      images: [`/api/og?title=Developer%20Tools`],
+    },
+  },
+  "zh-HK": {
+    title: "開發者工具 | RocksDev.Tools",
+    description: "探索我們的開發者工具集，用於高效開發。",
+    keywords: ["開發者工具", "開發工具", "開發者工具", "開發工具"],
+    openGraph: {
+      type: "website",
+      title: "開發者工具 - RocksDev.Tools",
+      description: "探索我們的開發者工具集，用於高效開發。",
+      images: [`/api/og?title=Developer%20Tools`],
     },
   },
 };
