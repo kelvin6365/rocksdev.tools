@@ -13,7 +13,7 @@ export async function fetchGitHubReleases(): Promise<GitHubRelease[]> {
         Accept: "application/vnd.github.v3+json",
       },
       next: {
-        revalidate: 3600, // Cache for 1 hour
+        revalidate: 0,
       },
     },
   );

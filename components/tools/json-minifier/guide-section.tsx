@@ -38,7 +38,7 @@ export function GuideSection() {
                     {t("guide.input.before")}
                   </h4>
                   <div className="bg-muted rounded-md p-4">
-                    <pre className="text-sm">
+                    <pre className="text-sm whitespace-pre-wrap">
                       <code>
                         {`{
   "name": "John Doe",
@@ -61,8 +61,8 @@ export function GuideSection() {
                     {t("guide.input.after")}
                   </h4>
                   <div className="bg-muted rounded-md p-4">
-                    <pre className="text-sm whitespace-pre-wrap">
-                      <code>
+                    <pre className="text-sm break-all">
+                      <code className="whitespace-pre-wrap">
                         {`{"name":"John Doe","age":30,"isActive":true,"hobbies":["reading","gaming"],"address":{"street":"123 Main St","city":"New York","country":"USA"}}`}
                       </code>
                     </pre>

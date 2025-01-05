@@ -35,7 +35,7 @@ export function GuideSection() {
                 </p>
                 <div className="bg-muted rounded-md p-4">
                   <pre className="text-sm">
-                    <code>
+                    <code className="whitespace-pre-wrap">
                       {`{
   "name": "John Doe",
   "age": 30,

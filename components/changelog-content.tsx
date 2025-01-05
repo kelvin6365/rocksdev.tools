@@ -46,7 +46,7 @@ export function ChangelogContent({ releases }: ChangelogContentProps) {
           const changes = parseReleaseBody(release.body);
           return (
             <Card key={release.tag_name} className="p-6">
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center justify-between mb-4 flex-wrap md:flex-nowrap">
                 <div className="flex items-center gap-3">
                   <h2 className="text-2xl font-semibold">{release.tag_name}</h2>
                   <time className="text-sm text-muted-foreground">

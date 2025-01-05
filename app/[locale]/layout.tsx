@@ -85,7 +85,7 @@ export default async function RootLayout({
           <ToolProvider>
             <NavBar />
             <ProductHuntBanner />
-            <main className="container py-6 flex-1">{children}</main>
+            <main className="container py-4 md:py-6 flex-1">{children}</main>
             <ToastProvider />
             <Analytics />
             <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />

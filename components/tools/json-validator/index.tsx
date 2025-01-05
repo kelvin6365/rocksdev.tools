@@ -104,7 +104,7 @@ export function JsonValidator() {
         </CardTitle>
       </CardHeader>
       <CardContent className="relative px-0">
-        <div className="flex gap-2 mb-2">
+        <div className="flex gap-2 mb-2 flex-wrap md:flex-nowrap">
           <Button onClick={validateJson} disabled={isValidating}>
             {isValidating && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             {t("validate")}
