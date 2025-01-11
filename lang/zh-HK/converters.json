@@ -151,6 +151,31 @@
         }
       }
     },
+    "json-to-java-bean": {
+      "title": "JSON 轉 Java Bean 轉換器",
+      "description": "將 JSON 對象轉換為 Java 類，可選擇使用 Lombok 支持",
+      "config": {
+        "title": "配置",
+        "package-name": "包名",
+        "class-name": "類名",
+        "use-lombok": "使用 Lombok 註解（@Data、@NoArgsConstructor、@AllArgsConstructor）"
+      },
+      "input": {
+        "title": "JSON 輸入",
+        "format": "格式化 JSON",
+        "loadExample": "載入範例",
+        "placeholder": "在此貼上您的 JSON"
+      },
+      "output": {
+        "title": "生成的 Java 類",
+        "copy": "複製代碼"
+      },
+      "generate": "生成 Java Bean",
+      "generating": "生成中...",
+      "errors": {
+        "invalid-json": "無效的 JSON 輸入。請檢查您的 JSON 語法。"
+      }
+    },
     "openSource": "開源",
     "title": "轉換器",
     "tryNow": "立即嘗試"

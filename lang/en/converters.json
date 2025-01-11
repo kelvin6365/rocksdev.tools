@@ -151,6 +151,31 @@
         }
       }
     },
+    "json-to-java-bean": {
+      "title": "JSON to Java Bean Converter",
+      "description": "Convert JSON objects into Java classes with optional Lombok support",
+      "config": {
+        "title": "Configuration",
+        "package-name": "Package Name",
+        "class-name": "Class Name",
+        "use-lombok": "Use Lombok annotations (@Data, @NoArgsConstructor, @AllArgsConstructor)"
+      },
+      "input": {
+        "title": "JSON Input",
+        "format": "Format JSON",
+        "loadExample": "Load Example",
+        "placeholder": "Paste your JSON here"
+      },
+      "output": {
+        "title": "Generated Java Class",
+        "copy": "Copy Code"
+      },
+      "generate": "Generate Java Bean",
+      "generating": "Generating...",
+      "errors": {
+        "invalid-json": "Invalid JSON input. Please check your JSON syntax."
+      }
+    },
     "openSource": "Open Source",
     "title": "Converters",
     "tryNow": "Try Now"

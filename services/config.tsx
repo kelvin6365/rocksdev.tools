@@ -149,6 +149,7 @@ export const config = {
           href: "/tools/converters/base64",
           description: "Convert between Base64 and other formats",
           icon: "🔄",
+          tags: ["base64"],
         },
         {
           label: "Markdown to HTML",
@@ -156,6 +157,15 @@ export const config = {
           href: "/tools/converters/md2html",
           description: "Convert Markdown to HTML",
           icon: "📝",
+          tags: ["markdown"],
+        },
+        {
+          label: "JSON to Java Bean",
+          value: "converters.json-to-java-bean",
+          href: "/tools/converters/json-to-java-bean",
+          description: "Convert JSON to Java Bean",
+          icon: "🐶",
+          tags: ["java"],
         },
       ],
     },

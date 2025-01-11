@@ -84,6 +84,10 @@
           "description": "將 Markdown 轉換為 HTML",
           "title": "Markdown 轉換器"
         },
+        "json-to-java-bean": {
+          "description": "將 JSON 轉換為 Java Bean",
+          "title": "JSON 轉 Java Bean 轉換器"
+        },
         "title": "轉換工具"
       },
       "dev": {
@@ -187,7 +191,10 @@
     "yourStarHelps": "您的星星有助於其他人發現這些工具！"
   },
   "tags": {
-    "ai": "AI"
+    "ai": "AI",
+    "base64": "Base64",
+    "java": "Java",
+    "markdown": "Markdown"
   },
   "footer": {
     "about": {

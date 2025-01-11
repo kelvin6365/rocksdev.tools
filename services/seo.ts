@@ -990,7 +990,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-CN": {
-      title: "OG图像生成器 | 社交媒体预览图片生成工具 | RocksDev工具集",
+      title: "OG图像生成器 | 社交媒体预览图片生成工具 | RocksDev.Tools集",
       description:
         "创建专业的Open Graph（OG）图像，用于社交媒体预览。免费在线工具，可生成、裁剪和优化Facebook、Twitter、LinkedIn等社交卡片图像。",
       keywords: [
@@ -1043,7 +1043,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         description:
           "免费在线工具，创建和优化社交媒体预览图片。为Facebook、Twitter、LinkedIn等生成完美的Open Graph图像。",
         images: [`/api/og?title=OG%20Image%20Generator`],
-        siteName: "RocksDev工具集",
+        siteName: "RocksDev.Tools集",
       },
       twitter: {
         card: "summary_large_image",
@@ -1052,7 +1052,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "OG圖像生成器 | 社交媒體預覽圖片生成工具 | RocksDev工具集",
+      title: "OG圖像生成器 | 社交媒體預覽圖片生成工具 | RocksDev.Tools集",
       description:
         "創建專業的Open Graph（OG）圖像，用於社會媒體預覽。免費在線工具，可生成、裁剪和優化Facebook、Twitter、LinkedIn等社交卡片圖像。",
       keywords: [
@@ -1105,7 +1105,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         description:
           "免費在線工具，創建和優化社交媒體預覽圖片。為Facebook、Twitter、LinkedIn等生成完美的Open Graph圖像。",
         images: [`/api/og?title=OG%20Image%20Generator`],
-        siteName: "RocksDev工具集",
+        siteName: "RocksDev.Tools集",
       },
       twitter: {
         card: "summary_large_image",
@@ -1207,7 +1207,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-CN": {
-      title: "Meta标签生成器 | SEO和社交媒体标签生成工具 | RocksDev工具集",
+      title: "Meta标签生成器 | SEO和社交媒体标签生成工具 | RocksDev.Tools集",
       description:
         "专业的在线Meta标签生成工具，为搜索引擎（百度、Google）和社交媒体（微信、微博、知乎）优化您的网站。支持标题标签优化、Meta描述、Open Graph标签、Twitter卡片，并提供实时预览功能。",
       keywords: [
@@ -1262,7 +1262,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "Meta標籤生成器 | SEO和社交媒體標籤生成工具 | RocksDev工具集",
+      title: "Meta標籤生成器 | SEO和社交媒體標籤生成工具 | RocksDev.Tools集",
       description:
         "專業的在線Meta標籤生成工具，為搜尋引擎（Google、Bing）和社交媒體（Facebook、Twitter、LinkedIn）優化您的網站。支援標題標籤優化、Meta描述、Open Graph標籤、Twitter卡片，並提供實時預覽功能。",
       keywords: [
@@ -1497,6 +1497,62 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         title: "輕鬆將代碼轉換為SQL - AI SQL生成器",
         description: "使用我們的AI SQL生成器，輕鬆將代碼轉換為高效的SQL查詢。",
         images: ["/api/og?title=AI%20SQL%20生成器"],
+      },
+    },
+  },
+  "converters.json-to-java-bean": {
+    en: {
+      title: "JSON to Java Bean Converter | RocksDev Tools",
+      description:
+        "Convert JSON to Java Bean with our free online tool. Supports Lombok and custom class names.",
+      keywords: [
+        "json to java bean converter",
+        "json to java",
+        "json to pojo",
+        "json to lombok",
+      ],
+      openGraph: {
+        type: "website",
+        title: "JSON to Java Bean Converter - RocksDev Tools",
+        description:
+          "Convert JSON to Java Bean with our free online tool. Supports Lombok and custom class names.",
+        images: [`/api/og?title=JSON%20to%20Java%20Bean%20Converter`],
+      },
+    },
+    "zh-CN": {
+      title: "JSON转Java Bean转换器 | RocksDev.Tools",
+      description:
+        "使用我们的免费在线工具，将JSON转换为Java Bean。支持Lombok和自定义类名。",
+      keywords: [
+        "json转java bean转换器",
+        "json转java",
+        "json转pojo",
+        "json转lombok",
+      ],
+      openGraph: {
+        type: "website",
+        title: "JSON转Java Bean转换器 - RocksDev.Tools",
+        description:
+          "使用我们的免费在线工具，将JSON转换为Java Bean。支持Lombok和自定义类名。",
+        images: [`/api/og?title=JSON%20to%20Java%20Bean%20Converter`],
+      },
+    },
+    "zh-HK": {
+      title: "JSON轉Java Bean轉換器 | RocksDev.Tools",
+      description:
+        "使用我們的免費線上工具，將JSON轉換為Java Bean。支持Lombok和自定義類名。",
+      keywords: [
+        "json轉java bean轉換器",
+        "json轉java",
+        "json轉pojo",
+        "json轉lombok",
+      ],
+      openGraph: {
+        type: "website",
+        title: "JSON轉Java Bean轉換器 - RocksDev.Tools",
+        description:
+          "使用我們的免費線上工具，將JSON轉換為Java Bean。支持Lombok和自定義類名。",
+        images: [`/api/og?title=JSON%20to%20Java%20Bean%20Converter`],
       },
     },
   },
