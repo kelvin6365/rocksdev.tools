@@ -8,7 +8,7 @@ import {
 import { config } from "@/services/config";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
-
+import { Badge } from "@/components/ui/badge";
 const convertersTools = config.tools.find(
   (tool) => tool.value === "converters",
 );
@@ -36,7 +36,14 @@ export default function ConvertersPage() {
                   {t(`${tool.value}.description`)}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex flex-col gap-2">
+                {tool.tags && (
+                  <div className="flex items-center justify-between">
+                    {tool.tags.map((tag) => (
+                      <Badge key={tag}>{t(`tags.${tag}`)}</Badge>
+                    ))}
+                  </div>
+                )}
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-muted-foreground">
                     {t("converters.free")} & {t("converters.openSource")}

@@ -9,7 +9,6 @@ import { usePathname, Link } from "@/i18n/routing";
 import * as React from "react";
 import { useTranslations } from "next-intl";
 import { MobileMenu } from "./mobile-menu";
-import SearchCommand from "./search-command";
 import { SearchButton, SearchCommandDialog } from "./search";
 import { SearchProvider } from "../providers/search-provider";
 

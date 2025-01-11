@@ -8,7 +8,7 @@ import {
 import { config } from "@/services/config";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
-import { Badge } from "../../../../components/ui/badge";
+import { Badge } from "@/components/ui/badge";
 
 const devTools = config.tools.find((tool) => tool.value === "dev");
 

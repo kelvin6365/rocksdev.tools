@@ -84,6 +84,10 @@
           "description": "将 Markdown 转换为 HTML",
           "title": "Markdown 转换器"
         },
+        "json-to-java-bean": {
+          "description": "将 JSON 转换为 Java Bean",
+          "title": "JSON 转 Java Bean 转换器"
+        },
         "title": "转换工具"
       },
       "dev": {
@@ -147,7 +151,7 @@
     "typeToSearch": "输入要搜索的命令或内容..."
   },
   "not-found": {
-    "description": "您正在寻找的页面可能已被删除、���称已更改或暂时不可用��",
+    "description": "您正在寻找的页面可能已被删除、名称已更改或暂时不可用。",
     "go-back": "返回",
     "return-home": "返回首页",
     "title": "页面未找到"
@@ -158,7 +162,7 @@
       "title": "政策变更"
     },
     "cookies": {
-      "description": "我们使用必��的 cookies 来记住您的语言偏好设置，以及 Google Analytics cookies 来帮助我们改进服务。",
+      "description": "我们使用必要的 cookies 来记住您的语言偏好设置，以及 Google Analytics cookies 来帮助我们改进服务。",
       "title": "Cookies 使用"
     },
     "introduction": "欢迎使用 RocksDev 工具。我们重视您的隐私，并致力于保护您的个人数据。",
@@ -187,7 +191,10 @@
     "yourStarHelps": "您的星星有助于其他人发现这些工具！"
   },
   "tags": {
-    "ai": "AI"
+    "ai": "AI",
+    "base64": "Base64",
+    "java": "Java",
+    "markdown": "Markdown"
   },
   "footer": {
     "about": {

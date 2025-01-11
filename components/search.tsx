@@ -1,4 +1,6 @@
+import { ArrowRight, Clock } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { useSearch } from "../providers/search-provider";
 import { Button } from "./ui/button";
 import {
   CommandDialog,
@@ -8,9 +10,6 @@ import {
   CommandItem,
   CommandList,
 } from "./ui/command";
-import { ArrowRight, Clock } from "lucide-react";
-import { useSearch } from "../providers/search-provider";
-
 export function SearchButton() {
   const { setOpen } = useSearch();
   const t = useTranslations("nav");
@@ -41,7 +40,6 @@ export function SearchCommandDialog() {
     handleToolSelect,
   } = useSearch();
   const t = useTranslations("nav");
-
   return (
     <CommandDialog open={open} onOpenChange={setOpen}>
       <CommandInput

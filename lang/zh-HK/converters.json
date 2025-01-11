@@ -151,6 +151,68 @@
         }
       }
     },
+    "json-to-java-bean": {
+      "title": "JSON 轉 Java Bean 轉換器",
+      "description": "將 JSON 對象轉換為 Java 類，可選擇使用 Lombok 支持",
+      "config": {
+        "title": "配置",
+        "package-name": "包名",
+        "class-name": "類名",
+        "use-lombok": "使用 Lombok 註解（@Data、@NoArgsConstructor、@AllArgsConstructor）"
+      },
+      "input": {
+        "title": "JSON 輸入",
+        "format": "格式化 JSON",
+        "loadExample": "載入範例",
+        "placeholder": "在此貼上您的 JSON"
+      },
+      "output": {
+        "title": "生成的 Java 類",
+        "copy": "複製代碼"
+      },
+      "generate": "生成 Java Bean",
+      "generating": "生成中...",
+      "errors": {
+        "invalid-json": "無效的 JSON 輸入。請檢查您的 JSON 語法。"
+      },
+      "guide": {
+        "title": "使用指南",
+        "basic": {
+          "title": "基本使用",
+          "description": "將您的 JSON 對象轉換為具有適當 getter、setter 和可選 Lombok 支持的 Java Bean 類。",
+          "steps": {
+            "title": "基本步驟",
+            "input": "在輸入框中輸入您的 JSON 或使用載入範例按鈕",
+            "configure": "配置包名、類名和 Lombok 設置",
+            "generate": "點擊「生成 Java Bean」以創建 Java 類",
+            "copy": "複製生成的代碼供您使用"
+          }
+        },
+        "features": {
+          "title": "功能特點",
+          "list": {
+            "title": "可用功能",
+            "lombok_support": "可選的 Lombok 集成（@Data、@NoArgsConstructor、@AllArgsConstructor）",
+            "type_inference": "智能 JSON 值類型推斷",
+            "nested_objects": "支持嵌套對象和數組",
+            "formatting": "適當的代碼格式化和導入",
+            "validation": "JSON 驗證和錯誤檢查"
+          }
+        },
+        "tips": {
+          "title": "使用技巧",
+          "list": {
+            "title": "使用建議",
+            "validate_json": "生成類之前先驗證您的 JSON",
+            "use_lombok": "使用 Lombok 減少樣板代碼",
+            "naming": "使用反映數據結構的有意義類名",
+            "package_naming": "遵循 Java 包命名約定（例如：com.example.model）",
+            "complex_types": "對於複雜類型，考慮生成多個類"
+          },
+          "note": "注意：轉換器生成具有適當封裝的標準 Java Bean 類。Lombok 註解可以顯著減少樣板代碼的數量。"
+        }
+      }
+    },
     "openSource": "開源",
     "title": "轉換器",
     "tryNow": "立即嘗試"
