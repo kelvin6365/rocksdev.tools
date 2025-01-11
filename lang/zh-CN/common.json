@@ -151,7 +151,7 @@
     "typeToSearch": "输入要搜索的命令或内容..."
   },
   "not-found": {
-    "description": "您正在寻找的页面可能已被删除、���称已更改或暂时不可用��",
+    "description": "您正在寻找的页面可能已被删除、名称已更改或暂时不可用。",
     "go-back": "返回",
     "return-home": "返回首页",
     "title": "页面未找到"
@@ -162,7 +162,7 @@
       "title": "政策变更"
     },
     "cookies": {
-      "description": "我们使用必��的 cookies 来记住您的语言偏好设置，以及 Google Analytics cookies 来帮助我们改进服务。",
+      "description": "我们使用必要的 cookies 来记住您的语言偏好设置，以及 Google Analytics cookies 来帮助我们改进服务。",
       "title": "Cookies 使用"
     },
     "introduction": "欢迎使用 RocksDev 工具。我们重视您的隐私，并致力于保护您的个人数据。",

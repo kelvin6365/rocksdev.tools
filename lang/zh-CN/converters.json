@@ -174,6 +174,43 @@
       "generating": "生成中...",
       "errors": {
         "invalid-json": "无效的 JSON 输入。请检查您的 JSON 语法。"
+      },
+      "guide": {
+        "title": "使用指南",
+        "basic": {
+          "title": "基本使用",
+          "description": "将您的 JSON 对象转换为具有适当 getter、setter 和可选 Lombok 支持的 Java Bean 类。",
+          "steps": {
+            "title": "基本步骤",
+            "input": "在输入框中输入您的 JSON 或使用加载示例按钮",
+            "configure": "配置包名、类名和 Lombok 设置",
+            "generate": "点击\"生成 Java Bean\"以创建 Java 类",
+            "copy": "复制生成的代码供您使用"
+          }
+        },
+        "features": {
+          "title": "功能特点",
+          "list": {
+            "title": "可用功能",
+            "lombok_support": "可选的 Lombok 集成（@Data、@NoArgsConstructor、@AllArgsConstructor）",
+            "type_inference": "智能 JSON 值类型推断",
+            "nested_objects": "支持嵌套对象和数组",
+            "formatting": "适当的代码格式化和导入",
+            "validation": "JSON 验证和错误检查"
+          }
+        },
+        "tips": {
+          "title": "使用技巧",
+          "list": {
+            "title": "使用建议",
+            "validate_json": "生成类之前先验证您的 JSON",
+            "use_lombok": "使用 Lombok 减少样板代码",
+            "naming": "使用反映数据结构的有意义类名",
+            "package_naming": "遵循 Java 包命名约定（例如：com.example.model）",
+            "complex_types": "对于复杂类型，考虑生成多个类"
+          },
+          "note": "注意：转换器生成具有适当封装的标准 Java Bean 类。Lombok 注解可以显著减少样板代码的数量。"
+        }
       }
     },
     "openSource": "開源",

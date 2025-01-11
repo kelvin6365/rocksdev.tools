@@ -48,6 +48,8 @@ This project is built with modern web technologies and best practices:
 │               └── minifier/  # JSON minifier tool
 │           └── converters/   # Conversion tools
 │               └── base64/   # Base64 converter tool
+│               └── json-to-java-bean/ # JSON to Java Bean converter tool
+│               └── md2html/ # Markdown to HTML converter tool
 │           └── dev/          # Developer tools
 │               ├── regex/   # Regex tester tool
 │               ├── app-icon-generator/ # App icon generator tool
@@ -70,7 +72,9 @@ This project is built with modern web technologies and best practices:
 │   │   ├── meta-tags      # Meta tags generator component
 │   │   ├── text-formatter # Text formatter component
 │   │   ├── app-icon-generator # App icon generator component
-│   │   └── ai-sql-generator # AI SQL generator component
+│   │   ├── ai-sql-generator # AI SQL generator component
+│   │   ├── json-to-java-bean # JSON to Java Bean converter component
+│   │   └── md2html # Markdown to HTML converter component
 │   ├── layouts/
 │   │   └── tool-layout   # Common tool layout
 │   └── ui/                   # UI Components
@@ -161,6 +165,7 @@ This project is built with modern web technologies and best practices:
   - [x] File encoding/decoding
   - [x] URL-safe encoding
 - [x] Markdown to HTML
+- [x] JSON to Java Bean
 - [ ] CSV to JSON
 - [ ] QR Code Generator
 

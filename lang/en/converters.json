@@ -174,6 +174,43 @@
       "generating": "Generating...",
       "errors": {
         "invalid-json": "Invalid JSON input. Please check your JSON syntax."
+      },
+      "guide": {
+        "title": "Guide",
+        "basic": {
+          "title": "Basic Usage",
+          "description": "Convert your JSON objects into Java Bean classes with proper getters, setters, and optional Lombok support.",
+          "steps": {
+            "title": "Basic Steps",
+            "input": "Enter your JSON in the input field or use the Load Example button",
+            "configure": "Configure package name, class name, and Lombok settings",
+            "generate": "Click 'Generate Java Bean' to create the Java class",
+            "copy": "Copy the generated code for your use"
+          }
+        },
+        "features": {
+          "title": "Features",
+          "list": {
+            "title": "Available Features",
+            "lombok_support": "Optional Lombok integration (@Data, @NoArgsConstructor, @AllArgsConstructor)",
+            "type_inference": "Smart type inference for JSON values",
+            "nested_objects": "Support for nested objects and arrays",
+            "formatting": "Proper code formatting and imports",
+            "validation": "JSON validation and error checking"
+          }
+        },
+        "tips": {
+          "title": "Tips & Best Practices",
+          "list": {
+            "title": "Usage Tips",
+            "validate_json": "Validate your JSON before generating the class",
+            "use_lombok": "Use Lombok to reduce boilerplate code",
+            "naming": "Use meaningful class names that reflect the data structure",
+            "package_naming": "Follow Java package naming conventions (e.g., com.example.model)",
+            "complex_types": "For complex types, consider generating multiple classes"
+          },
+          "note": "Note: The converter generates standard Java Bean classes with proper encapsulation. Lombok annotations can significantly reduce the amount of boilerplate code."
+        }
       }
     },
     "openSource": "Open Source",
