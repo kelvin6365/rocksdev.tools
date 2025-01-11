@@ -990,7 +990,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-CN": {
-      title: "OG图像生成器 | 社交媒体预览图片生成工具 | RocksDev.Tools集",
+      title: "OG图像生成器 | 社交媒体预览图片生成工具 | RocksDev.Tools",
       description:
         "创建专业的Open Graph（OG）图像，用于社交媒体预览。免费在线工具，可生成、裁剪和优化Facebook、Twitter、LinkedIn等社交卡片图像。",
       keywords: [
@@ -1043,7 +1043,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         description:
           "免费在线工具，创建和优化社交媒体预览图片。为Facebook、Twitter、LinkedIn等生成完美的Open Graph图像。",
         images: [`/api/og?title=OG%20Image%20Generator`],
-        siteName: "RocksDev.Tools集",
+        siteName: "RocksDev.Tools",
       },
       twitter: {
         card: "summary_large_image",
@@ -1052,7 +1052,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "OG圖像生成器 | 社交媒體預覽圖片生成工具 | RocksDev.Tools集",
+      title: "OG圖像生成器 | 社交媒體預覽圖片生成工具 | RocksDev.Tools",
       description:
         "創建專業的Open Graph（OG）圖像，用於社會媒體預覽。免費在線工具，可生成、裁剪和優化Facebook、Twitter、LinkedIn等社交卡片圖像。",
       keywords: [
@@ -1105,7 +1105,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         description:
           "免費在線工具，創建和優化社交媒體預覽圖片。為Facebook、Twitter、LinkedIn等生成完美的Open Graph圖像。",
         images: [`/api/og?title=OG%20Image%20Generator`],
-        siteName: "RocksDev.Tools集",
+        siteName: "RocksDev.Tools",
       },
       twitter: {
         card: "summary_large_image",
@@ -1207,7 +1207,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-CN": {
-      title: "Meta标签生成器 | SEO和社交媒体标签生成工具 | RocksDev.Tools集",
+      title: "Meta标签生成器 | SEO和社交媒体标签生成工具 | RocksDev.Tools",
       description:
         "专业的在线Meta标签生成工具，为搜索引擎（百度、Google）和社交媒体（微信、微博、知乎）优化您的网站。支持标题标签优化、Meta描述、Open Graph标签、Twitter卡片，并提供实时预览功能。",
       keywords: [
@@ -1262,7 +1262,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "Meta標籤生成器 | SEO和社交媒體標籤生成工具 | RocksDev.Tools集",
+      title: "Meta標籤生成器 | SEO和社交媒體標籤生成工具 | RocksDev.Tools",
       description:
         "專業的在線Meta標籤生成工具，為搜尋引擎（Google、Bing）和社交媒體（Facebook、Twitter、LinkedIn）優化您的網站。支援標題標籤優化、Meta描述、Open Graph標籤、Twitter卡片，並提供實時預覽功能。",
       keywords: [
