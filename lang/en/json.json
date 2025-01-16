@@ -246,7 +246,8 @@
           "stringify": "Stringify Object"
         },
         "indent": "Indent Size",
-        "escape-unicode": "Escape Unicode"
+        "escape-unicode": "Escape Unicode",
+        "remove-whitespace": "Remove Whitespace"
       },
       "input": {
         "title": "Input",
@@ -267,29 +268,34 @@
       "guide": {
         "overview": {
           "title": "Overview",
-          "description": "The JSON Parser & Stringify tool helps you convert between JSON strings and JavaScript objects. It supports both parsing JSON strings into formatted objects and stringifying objects into JSON format."
+          "description": "The JSON Parser & Stringify tool helps you convert between JSON strings and JSON objects. It supports both parsing JSON strings into formatted objects and stringifying objects into JSON format."
+        },
+        "modes": {
+          "parse": {
+            "title": "JSON parse",
+            "description": "Convert a JSON string into a formatted object. This mode helps you validate and format JSON strings.",
+            "raw": "Raw JSON string",
+            "formatted": "Formatted JSON"
+          },
+          "stringify": {
+            "title": "JSON stringify",
+            "description": "Convert a JSON string into a formatted object. This mode helps you validate and format JSON strings.",
+            "js-object": "JSON object",
+            "converting": "Converting to JSON string",
+            "minified": "Minified JSON string (with escaped quotes)",
+            "pretty": "Pretty-printed JSON string"
+          }
         },
         "features": {
           "title": "Features",
           "list": {
             "1": "Parse JSON strings into formatted objects",
-            "2": "Stringify JavaScript objects into JSON format",
+            "2": "Stringify JSON objects into JSON format",
             "3": "Configurable indentation (2, 4, or 8 spaces)",
             "4": "Unicode character escaping option",
             "5": "Error validation and helpful messages",
             "6": "Copy results to clipboard",
-            "7": "Sample examples for quick testing"
-          }
-        },
-        "modes": {
-          "title": "Modes",
-          "parse": {
-            "title": "Parse Mode",
-            "description": "Convert a JSON string into a formatted object. This mode helps you validate and format JSON strings."
-          },
-          "stringify": {
-            "title": "Stringify Mode",
-            "description": "Convert a JavaScript object into a JSON string. You can input objects using JavaScript object notation."
+            "7": "Quick testing with example data"
           }
         },
         "options": {
@@ -297,7 +303,7 @@
           "list": {
             "1": "Indent Size: Choose between 2, 4, or 8 spaces for formatting",
             "2": "Escape Unicode: Convert Unicode characters to \\uXXXX format",
-            "3": "Mode Toggle: Switch between Parse and Stringify modes"
+            "3": "Remove Whitespace: Output minified JSON without spaces or newlines"
           }
         },
         "tips": {

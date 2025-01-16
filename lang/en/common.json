@@ -124,6 +124,10 @@
         "validator": {
           "description": "Validate JSON structure and schema",
           "title": "JSON Validator"
+        },
+        "parser": {
+          "description": "Parse and stringify JSON data",
+          "title": "JSON Parser"
         }
       },
       "seo": {

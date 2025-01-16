@@ -124,6 +124,10 @@
         "validator": {
           "description": "验证 JSON 结构和模式",
           "title": "JSON 验证工具"
+        },
+        "parser": {
+          "description": "轻松在 JSON stringify 和 JSON parse 之间进行转换",
+          "title": "JSON stringify 和 JSON parse"
         }
       },
       "seo": {

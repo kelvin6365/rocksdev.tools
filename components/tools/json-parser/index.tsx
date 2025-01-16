@@ -27,6 +27,7 @@ const JsonParser = () => {
   const [indentSize, setIndentSize] = useState("2");
   const [isGenerating, setIsGenerating] = useState(false);
   const [escapeUnicode, setEscapeUnicode] = useState(false);
+  const [removeWhitespace, setRemoveWhitespace] = useState(true);
 
   const sampleJsonString = `{"name":"John Doe","age":30,"isStudent":false,"hobbies":["reading","gaming"],"address":{"city":"New York","country":"USA"}}`;
   const sampleJsonObject = {
@@ -55,8 +56,18 @@ const JsonParser = () => {
       setError("");
 
       if (mode === "parse") {
-        const parsed = JSON.parse(input);
-        setOutput(JSON.stringify(parsed, null, Number(indentSize)));
+        const unescapedInput = input
+          .replace(/\\"/g, '"')
+          .replace(/\\\\/g, "\\")
+          .replace(/\\n/g, "\n");
+        const parsed = JSON.parse(unescapedInput);
+        setOutput(
+          JSON.stringify(
+            parsed,
+            null,
+            removeWhitespace ? 0 : Number(indentSize),
+          ),
+        );
       } else {
         // For stringify mode, first try to evaluate the input as a JavaScript object
         let inputObj;
@@ -68,14 +79,25 @@ const JsonParser = () => {
           throw new Error(t("errors.invalid-object"));
         }
 
-        const stringified = JSON.stringify(
+        // First stringify with indentation
+        let stringified = JSON.stringify(
           inputObj,
           (key, value) => {
             if (typeof value === "undefined") return "undefined";
             return value;
           },
-          escapeUnicode ? undefined : Number(indentSize),
+          removeWhitespace ? 0 : Number(indentSize),
         );
+
+        // Then escape the entire string for display
+        stringified = JSON.stringify(stringified)
+          // Remove the surrounding quotes that JSON.stringify adds
+          .slice(1, -1)
+          // Unescape the already escaped quotes to avoid double escaping
+          .replace(/\\"/g, '"')
+          // Now escape all quotes
+          .replace(/"/g, '\\"');
+
         setOutput(stringified);
       }
     } catch (err) {
@@ -123,7 +145,11 @@ const JsonParser = () => {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <Label>{t("config.indent")}</Label>
-                <Select value={indentSize} onValueChange={setIndentSize}>
+                <Select
+                  value={indentSize}
+                  onValueChange={setIndentSize}
+                  disabled={removeWhitespace}
+                >
                   <SelectTrigger className="w-20">
                     <SelectValue />
                   </SelectTrigger>
@@ -133,6 +159,13 @@ const JsonParser = () => {
                     <SelectItem value="8">8</SelectItem>
                   </SelectContent>
                 </Select>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Switch
+                  checked={removeWhitespace}
+                  onCheckedChange={setRemoveWhitespace}
+                />
+                <Label>{t("config.remove-whitespace")}</Label>
               </div>
               {mode === "stringify" && (
                 <div className="flex items-center space-x-2">

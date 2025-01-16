@@ -9,35 +9,11 @@ export function GuideSection() {
 
   const menuExample = {
     title: "Menu of Soups and Salads",
-    images: [
-      {
-        mood: "Informative and appetizing",
-        text: "Mulligatawny Soup, Tomato Soup, Prawns Soup, Mushroom Soup, Chicken Soup, Green Salad, Chicken Chat, Samosa Chat, Cucumber Raita, Kuchumber Salad, Aloo Chat. Prices ranging from $42 to $62.",
-        colors: ["Yellow", "Green", "Orange", "White", "Brown"],
-        objects: ["Soups", "Salads", "Price tags", "Text descriptions"],
-        setting: "Restaurant menu context",
-        activities: [],
-        description:
-          "This image displays a menu offering a variety of soups and salads, categorized neatly with prices indicated for each item. The soups include Mulligatawny, Tomato, Prawns, Chicken, and Mushroom soups. The salads and snacks section presents options like Green Salad, Chicken Chat, Samosa Chat, Cucumber Raita, Kuchumber Salad, and Aloo Chat. Each item is listed with a brief description and its price, making it easy for customers to make selections.",
-        mainSubject: "Food menu featuring soups and salads",
-        peopleCount: 0,
-        potentialUses: [
-          "Restaurant menu design",
-          "Food promotion",
-          "Culinary inspiration",
-        ],
-        uniqueFeatures: [
-          "Visual layout facilitating menu selection",
-          "Multilingual text (in English and Chinese)",
-        ],
-        qualityAssessment: "High",
-      },
-    ],
     category: "Food",
-    overallTheme: "Diverse food options focusing on soups and salads",
-    confidenceScore: 0.95,
-    decisionRelevance:
-      "This image is relevant for restaurant patrons looking to explore food options, helping them make informed dining choices based on preferences and budget.",
+    items: [
+      { name: "Mulligatawny Soup", price: 42 },
+      { name: "Tomato Soup", price: 45 },
+    ],
   };
 
   return (
@@ -72,9 +48,19 @@ export function GuideSection() {
                 <p className="text-sm text-muted-foreground">
                   {t("modes.parse.description")}
                 </p>
-                <pre className="bg-muted p-2 rounded-md text-sm overflow-auto">
-                  {JSON.stringify(menuExample)}
-                </pre>
+                <div className="space-y-2">
+                  <p className="text-sm font-medium">{t("modes.parse.raw")}:</p>
+                  <pre className="bg-muted p-2 rounded-md text-xs overflow-auto whitespace-pre-wrap">
+                    {`{\"title\":\"Menu of Soups and Salads\",\"category\":\"Food\",\"items\":[{\"name\":\"Mulligatawny Soup\",\"price\":42},{\"name\":\"Tomato Soup\",\"price\":45}]}`}
+                  </pre>
+
+                  <p className="text-sm font-medium mt-4">
+                    {t("modes.parse.formatted")}:
+                  </p>
+                  <pre className="bg-muted p-2 rounded-md text-xs overflow-auto whitespace-pre-wrap">
+                    {JSON.stringify(menuExample, null, 2)}
+                  </pre>
+                </div>
               </div>
 
               <div className="space-y-2">
@@ -82,18 +68,39 @@ export function GuideSection() {
                 <p className="text-sm text-muted-foreground">
                   {t("modes.stringify.description")}
                 </p>
-                <pre className="bg-muted p-2 rounded-md text-sm overflow-auto">
-                  {`const menuData = ${JSON.stringify(menuExample, null, 2)};
-// Convert to JSON string
-const jsonString = JSON.stringify(menuData);`}
-                </pre>
+                <div className="space-y-2">
+                  <p className="text-sm font-medium">
+                    {t("modes.stringify.js-object")}:
+                  </p>
+                  <pre className="bg-muted p-2 rounded-md text-xs overflow-auto whitespace-pre-wrap">
+                    {`const menuData = {
+  title: "Menu of Soups and Salads",
+  category: "Food",
+  items: [
+    { name: "Mulligatawny Soup", price: 42 },
+    { name: "Tomato Soup", price: 45 }
+  ]
+};`}
+                  </pre>
+
+                  <p className="text-sm font-medium mt-4">
+                    {t("modes.stringify.converting")}:
+                  </p>
+                  <pre className="bg-muted p-2 rounded-md text-xs overflow-auto whitespace-pre-wrap">
+                    {`// ${t("modes.stringify.minified")}
+const rawJson = "{\\\"title\\\":\\\"Menu of Soups and Salads\\\",\\\"category\\\":\\\"Food\\\",\\\"items\\\":[{\\\"name\\\":\\\"Mulligatawny Soup\\\",\\\"price\\\":42},{\\\"name\\\":\\\"Tomato Soup\\\",\\\"price\\\":45}]}";
+
+// ${t("modes.stringify.pretty")}
+const prettyJson = JSON.stringify(menuData, null, 2);`}
+                  </pre>
+                </div>
               </div>
 
               <div className="space-y-2">
                 <h3 className="font-medium">{t("options.title")}</h3>
                 <ul className="text-sm text-muted-foreground list-disc pl-4 space-y-1">
-                  {Object.values(t("options.list")).map((item, index) => (
-                    <li key={index}>{item}</li>
+                  {Object.entries(t.raw("options.list")).map(([key, value]) => (
+                    <li key={key}>{value as string}</li>
                   ))}
                 </ul>
               </div>
@@ -109,9 +116,11 @@ const jsonString = JSON.stringify(menuData);`}
             <CardContent className="space-y-4">
               <div className="space-y-2">
                 <ul className="text-sm text-muted-foreground list-disc pl-4 space-y-1">
-                  {Object.values(t("features.list")).map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
+                  {Object.entries(t.raw("features.list")).map(
+                    ([key, value]) => (
+                      <li key={key}>{value as string}</li>
+                    ),
+                  )}
                 </ul>
               </div>
             </CardContent>
@@ -126,8 +135,8 @@ const jsonString = JSON.stringify(menuData);`}
             <CardContent className="space-y-4">
               <div className="space-y-2">
                 <ul className="text-sm text-muted-foreground list-disc pl-4 space-y-1">
-                  {Object.values(t("tips.list")).map((item, index) => (
-                    <li key={index}>{item}</li>
+                  {Object.entries(t.raw("tips.list")).map(([key, value]) => (
+                    <li key={key}>{value as string}</li>
                   ))}
                 </ul>
               </div>

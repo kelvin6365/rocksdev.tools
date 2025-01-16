@@ -499,7 +499,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "在线JSON格式化",
         "JSON格式化工具",
         "JSON编辑器",
-        "JSON解析器",
+        "JSON stringify",
         "JSON语法高亮",
         "免费JSON工具",
         "在线JSON美化",
@@ -524,7 +524,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "在線JSON格式化",
         "JSON格式化工具",
         "JSON編輯器",
-        "JSON解析器",
+        "JSON stringify",
         "JSON語法高亮",
         "免費JSON工具",
         "在線JSON美化",
@@ -1553,6 +1553,161 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         description:
           "使用我們的免費線上工具，將JSON轉換為Java Bean。支持Lombok和自定義類名。",
         images: [`/api/og?title=JSON%20to%20Java%20Bean%20Converter`],
+      },
+    },
+  },
+  "json.parser": {
+    en: {
+      title:
+        "JSON Parser & Stringify Tool | Convert JSON Online | RocksDev Tools",
+      description:
+        "Free online JSON Parser and Stringify tool. Convert between JSON strings and JavaScript objects, with support for minification, pretty printing, and Unicode escaping. Perfect for developers working with JSON data.",
+      keywords: [
+        // Primary keywords
+        "json parser",
+        "json stringify",
+        "json converter",
+        "json string converter",
+
+        // Feature keywords
+        "parse json online",
+        "stringify json",
+        "json pretty print",
+        "json minify",
+        "json escape unicode",
+
+        // Technical keywords
+        "json to object converter",
+        "object to json converter",
+        "json string formatter",
+        "json whitespace remover",
+
+        // User intent keywords
+        "convert json to object",
+        "convert object to json",
+        "format json string",
+        "minify json string",
+
+        // Action keywords
+        "parse json string",
+        "stringify javascript object",
+        "escape json quotes",
+        "remove json whitespace",
+
+        // Characteristics
+        "free json parser",
+        "online json tool",
+        "instant json conversion",
+        "json string manipulation",
+      ],
+      openGraph: {
+        type: "website",
+        title: "JSON Parser & Stringify - Convert JSON Online",
+        description:
+          "Free online tool to parse JSON strings into objects and stringify JavaScript objects into JSON format. Features include minification, pretty printing, and Unicode escaping.",
+        images: [`/api/og?title=JSON%20Parser%20%26%20Stringify`],
+      },
+    },
+    "zh-CN": {
+      title:
+        "JSON stringify 和 JSON parse 工具 | 在线转换 JSON | RocksDev.Tools",
+      description:
+        "免费的在线 JSON stringify和字符串化工具。在 JSON 字符串和 JSON 对象之间转换，支持压缩、美化和 Unicode 转义。为开发者处理 JSON 数据提供完美解决方案。",
+      keywords: [
+        // Primary keywords
+        "json stringify",
+        "json字符串化",
+        "json转换器",
+        "json字符串转换",
+
+        // Feature keywords
+        "在线解析json",
+        "json字符串化",
+        "json美化",
+        "json压缩",
+        "json unicode转义",
+
+        // Technical keywords
+        "json转对象",
+        "对象转json",
+        "json字符串格式化",
+        "json空格移除",
+
+        // User intent keywords
+        "json转换对象",
+        "对象转换json",
+        "格式化json字符串",
+        "压缩json字符串",
+
+        // Action keywords
+        "解析json字符串",
+        "字符串化javascript对象",
+        "转义json引号",
+        "移除json空格",
+
+        // Characteristics
+        "免费json stringify",
+        "在线json工具",
+        "即时json转换",
+        "json字符串处理",
+      ],
+      openGraph: {
+        type: "website",
+        title: "JSON stringify 和 JSON parse - 在线转换 JSON",
+        description:
+          "免费在线工具，将 JSON 字符串解析为对象，并将 JSON 对象字符串化为 JSON 格式。功能包括压缩、美化和 Unicode 转义。",
+        images: [`/api/og?title=JSON%20Parser%20%26%20Stringify`],
+      },
+    },
+    "zh-HK": {
+      title:
+        "JSON stringify 和 JSON parse 工具 | 在線轉換 JSON | RocksDev.Tools",
+      description:
+        "免費的在線 JSON stringify 和 JSON parse 工具。在 JSON 字串和 JSON 物件之間轉換，支援壓縮、美化和 Unicode 轉義。為開發者處理 JSON 數據提供完美解決方案。",
+      keywords: [
+        // Primary keywords
+        "json stringify",
+        "json字串化",
+        "json轉換器",
+        "json字串轉換",
+
+        // Feature keywords
+        "在線解析json",
+        "json字串化",
+        "json美化",
+        "json壓縮",
+        "json unicode轉義",
+
+        // Technical keywords
+        "json轉物件",
+        "物件轉json",
+        "json字串格式化",
+        "json空白移除",
+
+        // User intent keywords
+        "json轉換物件",
+        "物件轉換json",
+        "格式化json字串",
+        "壓縮json字串",
+
+        // Action keywords
+        "解析json字串",
+        "字串化javascript物件",
+        "轉義json引號",
+        "移除json空白",
+
+        // Characteristics
+        "免費json stringify",
+        "在線json工具",
+        "即時json轉換",
+        "json字串處理",
+      ],
+      openGraph: {
+        type: "website",
+        title: "JSON stringify 和 JSON parse - 在線轉換 JSON",
+        description:
+          "免費在線工具，將 JSON 字串解析為物件，並將 JSON 物件字串化為 JSON 格式。功能包括壓縮、美化和 Unicode 轉義。",
+        images: [`/api/og?title=JSON%20Parser%20%26%20Stringify`],
       },
     },
   },

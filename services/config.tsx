@@ -117,7 +117,7 @@ export const config = {
           label: "Parser",
           value: "json.parser",
           href: "/tools/json/parser",
-          description: "Convert between JSON strings and JavaScript objects",
+          description: "Parse and stringify JSON data",
           icon: "🔄",
         },
       ],
