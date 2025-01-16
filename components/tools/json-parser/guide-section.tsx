@@ -7,13 +7,15 @@ import { useTranslations } from "next-intl";
 export function GuideSection() {
   const t = useTranslations("json.parser.guide");
 
-  const menuExample = {
-    title: "Menu of Soups and Salads",
-    category: "Food",
-    items: [
-      { name: "Mulligatawny Soup", price: 42 },
-      { name: "Tomato Soup", price: 45 },
-    ],
+  const personExample = {
+    name: "John Doe",
+    age: 30,
+    isStudent: false,
+    hobbies: ["reading", "gaming"],
+    address: {
+      city: "New York",
+      country: "USA",
+    },
   };
 
   return (
@@ -51,14 +53,16 @@ export function GuideSection() {
                 <div className="space-y-2">
                   <p className="text-sm font-medium">{t("modes.parse.raw")}:</p>
                   <pre className="bg-muted p-2 rounded-md text-xs overflow-auto whitespace-pre-wrap">
-                    {`{\"title\":\"Menu of Soups and Salads\",\"category\":\"Food\",\"items\":[{\"name\":\"Mulligatawny Soup\",\"price\":42},{\"name\":\"Tomato Soup\",\"price\":45}]}`}
+                    {
+                      '{\\"name\\":\\"John Doe\\",\\"age\\":30,\\"isStudent\\":false,\\"hobbies\\":[\\"reading\\",\\"gaming\\"],\\"address\\":{\\"city\\":\\"New York\\",\\"country\\":\\"USA\\"}}'
+                    }
                   </pre>
 
                   <p className="text-sm font-medium mt-4">
                     {t("modes.parse.formatted")}:
                   </p>
                   <pre className="bg-muted p-2 rounded-md text-xs overflow-auto whitespace-pre-wrap">
-                    {JSON.stringify(menuExample, null, 2)}
+                    {JSON.stringify(personExample, null, 2)}
                   </pre>
                 </div>
               </div>
@@ -73,13 +77,15 @@ export function GuideSection() {
                     {t("modes.stringify.js-object")}:
                   </p>
                   <pre className="bg-muted p-2 rounded-md text-xs overflow-auto whitespace-pre-wrap">
-                    {`const menuData = {
-  title: "Menu of Soups and Salads",
-  category: "Food",
-  items: [
-    { name: "Mulligatawny Soup", price: 42 },
-    { name: "Tomato Soup", price: 45 }
-  ]
+                    {`const personData = {
+  name: "John Doe",
+  age: 30,
+  isStudent: false,
+  hobbies: ["reading", "gaming"],
+  address: {
+    city: "New York",
+    country: "USA"
+  }
 };`}
                   </pre>
 
@@ -88,10 +94,10 @@ export function GuideSection() {
                   </p>
                   <pre className="bg-muted p-2 rounded-md text-xs overflow-auto whitespace-pre-wrap">
                     {`// ${t("modes.stringify.minified")}
-const rawJson = "{\\\"title\\\":\\\"Menu of Soups and Salads\\\",\\\"category\\\":\\\"Food\\\",\\\"items\\\":[{\\\"name\\\":\\\"Mulligatawny Soup\\\",\\\"price\\\":42},{\\\"name\\\":\\\"Tomato Soup\\\",\\\"price\\\":45}]}";
+const rawJson = "{\\\"name\\\":\\\"John Doe\\\",\\\"age\\\":30,\\\"isStudent\\\":false,\\\"hobbies\\\":[\\\"reading\\\",\\\"gaming\\\"],\\\"address\\\":{\\\"city\\\":\\\"New York\\\",\\\"country\\\":\\\"USA\\\"}}";
 
 // ${t("modes.stringify.pretty")}
-const prettyJson = JSON.stringify(menuData, null, 2);`}
+const prettyJson = JSON.stringify(personData, null, 2);`}
                   </pre>
                 </div>
               </div>

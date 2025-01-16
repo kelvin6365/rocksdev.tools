@@ -127,7 +127,7 @@
         },
         "parser": {
           "description": "Parse and stringify JSON data",
-          "title": "JSON Parser"
+          "title": "JSON Parser & Stringify"
         }
       },
       "seo": {

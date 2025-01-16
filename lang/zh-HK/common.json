@@ -127,7 +127,7 @@
         },
         "parser": {
           "description": "輕鬆在 JSON stringify 和 JSON parse 之間進行轉換",
-          "title": "JSON stringify 和 JSON parse"
+          "title": "JSON Parser & Stringify"
         }
       },
       "seo": {

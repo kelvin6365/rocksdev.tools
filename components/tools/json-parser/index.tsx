@@ -29,25 +29,23 @@ const JsonParser = () => {
   const [escapeUnicode, setEscapeUnicode] = useState(false);
   const [removeWhitespace, setRemoveWhitespace] = useState(true);
 
-  const sampleJsonString = `{"name":"John Doe","age":30,"isStudent":false,"hobbies":["reading","gaming"],"address":{"city":"New York","country":"USA"}}`;
-  const sampleJsonObject = {
-    name: "John Doe",
-    age: 30,
-    isStudent: false,
-    hobbies: ["reading", "gaming"],
-    address: {
-      city: "New York",
-      country: "USA",
-    },
-  };
-
-  const loadExample = () => {
-    setInput(
-      mode === "parse"
-        ? sampleJsonString
-        : JSON.stringify(sampleJsonObject, null, 2),
-    );
-    setError("");
+  const handleLoadExample = () => {
+    if (mode === "parse") {
+      setInput(
+        '{\"name\":\"John Doe\",\"age\":30,\"isStudent\":false,\"hobbies\":[\"reading\",\"gaming\"],\"address\":{\"city\":\"New York\",\"country\":\"USA\"}}',
+      );
+    } else {
+      setInput(`{
+  name: "John Doe",
+  age: 30,
+  isStudent: false,
+  hobbies: ["reading", "gaming"],
+  address: {
+    city: "New York",
+    country: "USA"
+  }
+}`);
+    }
   };
 
   const handleProcess = () => {
@@ -185,7 +183,7 @@ const JsonParser = () => {
           <div className="flex justify-between items-center">
             <Label>{t("input.title")}</Label>
             <div className="flex gap-2">
-              <Button variant="ghost" size="sm" onClick={loadExample}>
+              <Button variant="ghost" size="sm" onClick={handleLoadExample}>
                 <FileJson className="h-4 w-4 mr-2" />
                 {t("input.load-example")}
               </Button>
