@@ -234,6 +234,85 @@
           "note": "注意：我们的验证器确保您的 JSON 在语法上正确并符合 JSON 规范。我们的服务器不会存储任何数据。"
         }
       }
+    },
+    "parser": {
+      "title": "JSON 解析器和字符串化",
+      "description": "轻松在 JSON 字符串和格式化对象之间转换",
+      "config": {
+        "title": "配置",
+        "mode": "模式",
+        "modes": {
+          "parse": "解析 JSON",
+          "stringify": "对象字符串化"
+        },
+        "indent": "缩进大小",
+        "escape-unicode": "转义 Unicode"
+      },
+      "input": {
+        "title": "输入",
+        "load-example": "加载示例",
+        "parse-placeholder": "输入要解析的 JSON 字符串...",
+        "stringify-placeholder": "输入要字符串化的 JavaScript 对象..."
+      },
+      "output": {
+        "title": "输出",
+        "copy": "复制"
+      },
+      "process": "处理",
+      "processing": "处理中...",
+      "errors": {
+        "invalid-json": "无效的 JSON 字符串",
+        "invalid-object": "无效的 JavaScript 对象"
+      },
+      "guide": {
+        "overview": {
+          "title": "概述",
+          "description": "JSON 解析器和字符串化工具帮助您在 JSON 字符串和 JavaScript 对象之间进行转换。它支持将 JSON 字符串解析为格式化对象，以及将对象字符串化为 JSON 格式。"
+        },
+        "features": {
+          "title": "功能特点",
+          "list": {
+            "1": "将 JSON 字符串解析为格式化对象",
+            "2": "将 JavaScript 对象字符串化为 JSON 格式",
+            "3": "可配置的缩进（2、4 或 8 个空格）",
+            "4": "Unicode 字符转义选项",
+            "5": "错误验证和帮助信息",
+            "6": "复制结果到剪贴板",
+            "7": "快速测试的示例"
+          }
+        },
+        "modes": {
+          "title": "模式",
+          "parse": {
+            "title": "解析模式",
+            "description": "将 JSON 字符串转换为格式化对象。此模式帮助您验证和格式化 JSON 字符串。",
+            "example": "输入: '{\"name\":\"John\",\"age\":30}'\n输出: {\n  \"name\": \"John\",\n  \"age\": 30\n}"
+          },
+          "stringify": {
+            "title": "字符串化模式",
+            "description": "将 JavaScript 对象转换为 JSON 字符串。您可以使用 JavaScript 对象表示法输入对象。",
+            "example": "输入: { name: 'John', age: 30 }\n输出: '{\"name\":\"John\",\"age\":30}'"
+          }
+        },
+        "options": {
+          "title": "选项",
+          "list": {
+            "1": "缩进大小：选择 2、4 或 8 个空格进行格式化",
+            "2": "转义 Unicode：将 Unicode 字符转换为 \\uXXXX 格式",
+            "3": "模式切换：在解析和字符串化模式之间切换"
+          }
+        },
+        "tips": {
+          "title": "使用技巧",
+          "list": {
+            "1": "使用\"加载示例\"按钮查看示例输入",
+            "2": "在字符串化模式下，您可以使用带单引号和未加引号键的 JavaScript 对象表示法",
+            "3": "工具会自动使用适当的缩进格式化输出",
+            "4": "使用复制按钮直接将输出复制到剪贴板",
+            "5": "检查错误消息以了解输入中的验证问题"
+          }
+        }
+      }
     }
   }
 }

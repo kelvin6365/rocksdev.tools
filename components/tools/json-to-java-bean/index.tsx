@@ -26,6 +26,7 @@ const JsonToJavaConverter = () => {
   const [error, setError] = useState("");
   const [isConfigOpen, setIsConfigOpen] = useState(true);
   const [isGenerating, setIsGenerating] = useState(false);
+  const generatedClasses = new Map();
 
   const sampleJson = {
     id: 1,
@@ -37,10 +38,33 @@ const JsonToJavaConverter = () => {
     address: {
       street: "123 Main St",
       city: "New York",
+      state: "NY",
       country: "USA",
       zipCode: "10001",
+      location: {
+        latitude: 40.7128,
+        longitude: -74.006,
+      },
+    },
+    contact: {
+      phone: "+1-234-567-8900",
+      alternativeEmail: "john.doe@example.com",
+      socialMedia: {
+        twitter: "@johndoe",
+        linkedin: "linkedin.com/in/johndoe",
+      },
+    },
+    company: {
+      name: "Tech Corp",
+      position: "Senior Developer",
+      department: {
+        name: "Engineering",
+        code: "ENG-001",
+        location: "Building A",
+      },
     },
     createdAt: "2024-01-01T00:00:00Z",
+    updatedAt: "2024-01-01T12:34:56Z",
     score: 95.5,
   };
 
@@ -53,26 +77,76 @@ const JsonToJavaConverter = () => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
 
-  const getJavaType = (value: any): string => {
+  const getJavaType = (value: any, key: string): string => {
     if (value === null) return "Object";
     if (Array.isArray(value)) {
       if (value.length > 0) {
-        return `List<${getJavaType(value[0])}>`;
+        return `List<${getJavaType(value[0], key)}>`;
       }
       return "List<Object>";
     }
     switch (typeof value) {
       case "string":
+        // Check if it's a date string
+        if (/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/.test(value)) {
+          return "LocalDateTime";
+        }
         return "String";
       case "number":
         return Number.isInteger(value) ? "Integer" : "Double";
       case "boolean":
         return "Boolean";
-      case "object":
-        return capitalizeFirstLetter(className);
+      case "object": {
+        // Generate a nested class name based on the parent field name
+        const nestedClassName = capitalizeFirstLetter(key);
+        generatedClasses.set(nestedClassName, value);
+        return nestedClassName;
+      }
       default:
         return "Object";
     }
+  };
+
+  const generateNestedClass = (className: string, jsonObject: any): string => {
+    let nestedClassCode = "\n";
+
+    // Class annotations
+    if (useLombok) {
+      nestedClassCode += "    @Data\n";
+      nestedClassCode += "    @NoArgsConstructor\n";
+      nestedClassCode += "    @AllArgsConstructor\n";
+    }
+
+    // Nested class declaration
+    nestedClassCode += `    public static class ${className} {\n\n`;
+
+    // Fields
+    Object.entries(jsonObject).forEach(([key, value]) => {
+      const javaType = getJavaType(value, key);
+      nestedClassCode += `        private ${javaType} ${key};\n`;
+    });
+
+    // If not using Lombok, generate getters and setters
+    if (!useLombok) {
+      nestedClassCode += "\n";
+      Object.entries(jsonObject).forEach(([key, value]) => {
+        const javaType = getJavaType(value, key);
+        const capitalizedKey = capitalizeFirstLetter(key);
+
+        // Getter
+        nestedClassCode += `        public ${javaType} get${capitalizedKey}() {\n`;
+        nestedClassCode += `            return ${key};\n`;
+        nestedClassCode += "        }\n\n";
+
+        // Setter
+        nestedClassCode += `        public void set${capitalizedKey}(${javaType} ${key}) {\n`;
+        nestedClassCode += `            this.${key} = ${key};\n`;
+        nestedClassCode += "        }\n\n";
+      });
+    }
+
+    nestedClassCode += "    }\n";
+    return nestedClassCode;
   };
 
   const formatJson = () => {
@@ -91,12 +165,15 @@ const JsonToJavaConverter = () => {
       setError("");
       const jsonObject = JSON.parse(jsonInput);
       let javaCode = "";
+      // Clear previously generated classes
+      generatedClasses.clear();
 
       // Package declaration
       javaCode += `package ${packageName};\n\n`;
 
       // Imports
       javaCode += "import java.util.List;\n";
+      javaCode += "import java.time.LocalDateTime;\n";
       if (useLombok) {
         javaCode += "import lombok.Data;\n";
         javaCode += "import lombok.NoArgsConstructor;\n";
@@ -116,7 +193,7 @@ const JsonToJavaConverter = () => {
 
       // Fields
       Object.entries(jsonObject).forEach(([key, value]) => {
-        const javaType = getJavaType(value);
+        const javaType = getJavaType(value, key);
         javaCode += `    private ${javaType} ${key};\n`;
       });
 
@@ -124,7 +201,7 @@ const JsonToJavaConverter = () => {
       if (!useLombok) {
         javaCode += "\n";
         Object.entries(jsonObject).forEach(([key, value]) => {
-          const javaType = getJavaType(value);
+          const javaType = getJavaType(value, key);
           const capitalizedKey = capitalizeFirstLetter(key);
 
           // Getter
@@ -137,6 +214,11 @@ const JsonToJavaConverter = () => {
           javaCode += `        this.${key} = ${key};\n`;
           javaCode += "    }\n\n";
         });
+      }
+
+      // Generate nested classes
+      for (const [nestedClassName, nestedObject] of generatedClasses) {
+        javaCode += generateNestedClass(nestedClassName, nestedObject);
       }
 
       javaCode += "}";

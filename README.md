@@ -157,6 +157,11 @@ This project is built with modern web technologies and best practices:
 - [x] JSON Minifier
   - [x] Minify functionality
   - [x] Copy/Download options
+- **JSON Parser & Stringify**: Convert between JSON strings and JavaScript objects with support for:
+  - Parse JSON strings into formatted objects
+  - Stringify JavaScript objects with custom indentation
+  - Unicode character escaping
+  - Validation and error handling
 
 #### Conversion Tools
 

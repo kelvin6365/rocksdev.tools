@@ -113,6 +113,13 @@ export const config = {
           description: "Compare JSON files",
           icon: "⚖️",
         },
+        {
+          label: "Parser",
+          value: "json.parser",
+          href: "/tools/json/parser",
+          description: "Convert between JSON strings and JavaScript objects",
+          icon: "🔄",
+        },
       ],
     },
     {

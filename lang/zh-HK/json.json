@@ -234,6 +234,85 @@
           "note": "注意：我們的驗證器確保您的 JSON 在語法上正確並符合 JSON 規範。我們的伺服器不會儲存任何資料。"
         }
       }
+    },
+    "parser": {
+      "title": "JSON 解析器和字串化",
+      "description": "輕鬆在 JSON 字串和格式化物件之間轉換",
+      "config": {
+        "title": "配置",
+        "mode": "模式",
+        "modes": {
+          "parse": "解析 JSON",
+          "stringify": "物件字串化"
+        },
+        "indent": "縮排大小",
+        "escape-unicode": "轉義 Unicode"
+      },
+      "input": {
+        "title": "輸入",
+        "load-example": "載入範例",
+        "parse-placeholder": "輸入要解析的 JSON 字串...",
+        "stringify-placeholder": "輸入要字串化的 JavaScript 物件..."
+      },
+      "output": {
+        "title": "輸出",
+        "copy": "複製"
+      },
+      "process": "處理",
+      "processing": "處理中...",
+      "errors": {
+        "invalid-json": "無效的 JSON 字串",
+        "invalid-object": "無效的 JavaScript 物件"
+      },
+      "guide": {
+        "overview": {
+          "title": "概述",
+          "description": "JSON 解析器和字串化工具幫助您在 JSON 字串和 JavaScript 物件之間進行轉換。它支援將 JSON 字串解析為格式化物件，以及將物件字串化為 JSON 格式。"
+        },
+        "features": {
+          "title": "功能特點",
+          "list": {
+            "1": "將 JSON 字串解析為格式化物件",
+            "2": "將 JavaScript 物件字串化為 JSON 格式",
+            "3": "可配置的縮排（2、4 或 8 個空格）",
+            "4": "Unicode 字元轉義選項",
+            "5": "錯誤驗證和幫助訊息",
+            "6": "複製結果到剪貼簿",
+            "7": "快速測試的範例"
+          }
+        },
+        "modes": {
+          "title": "模式",
+          "parse": {
+            "title": "解析模式",
+            "description": "將 JSON 字串轉換為格式化物件。此模式幫助您驗證和格式化 JSON 字串。",
+            "example": "輸入: '{\"name\":\"John\",\"age\":30}'\n輸出: {\n  \"name\": \"John\",\n  \"age\": 30\n}"
+          },
+          "stringify": {
+            "title": "字串化模式",
+            "description": "將 JavaScript 物件轉換為 JSON 字串。您可以使用 JavaScript 物件表示法輸入物件。",
+            "example": "輸入: { name: 'John', age: 30 }\n輸出: '{\"name\":\"John\",\"age\":30}'"
+          }
+        },
+        "options": {
+          "title": "選項",
+          "list": {
+            "1": "縮排大小：選擇 2、4 或 8 個空格進行格式化",
+            "2": "轉義 Unicode：將 Unicode 字元轉換為 \\uXXXX 格式",
+            "3": "模式切換：在解析和字串化模式之間切換"
+          }
+        },
+        "tips": {
+          "title": "使用技巧",
+          "list": {
+            "1": "使用「載入範例」按鈕查看範例輸入",
+            "2": "在字串化模式下，您可以使用帶單引號和未加引號鍵的 JavaScript 物件表示法",
+            "3": "工具會自動使用適當的縮排格式化輸出",
+            "4": "使用複製按鈕直接將輸出複製到剪貼簿",
+            "5": "檢查錯誤訊息以了解輸入中的驗證問題"
+          }
+        }
+      }
     }
   }
 }
