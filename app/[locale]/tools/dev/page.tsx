@@ -9,6 +9,7 @@ import { config } from "@/services/config";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { Badge } from "@/components/ui/badge";
+import AdUnit from "../../../../components/ad-units";
 
 const devTools = config.tools.find((tool) => tool.value === "dev");
 
@@ -55,6 +56,7 @@ export default function DevPage() {
           </Card>
         ))}
       </div>
+      <AdUnit adSlot="4396194595" />
     </div>
   );
 }

@@ -9,6 +9,7 @@ import { config } from "@/services/config";
 import { Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import AdUnit from "../../../components/ad-units";
 export default function ToolsPage() {
   const t = useTranslations();
   return (
@@ -70,6 +71,7 @@ export default function ToolsPage() {
           </Card>
         ))}
       </div>
+      <AdUnit adSlot="4396194595" />
     </div>
   );
 }

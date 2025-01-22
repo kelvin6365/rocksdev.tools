@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { getMetadata } from "../../../services/seo";
+import AdUnit from "../../../components/ad-units";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -50,6 +51,7 @@ export default function PrivacyPolicyPage() {
           <p>{t("changes.description")}</p>
         </section>
       </div>
+      <AdUnit adSlot="2962196569" />
     </div>
   );
 }

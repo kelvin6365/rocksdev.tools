@@ -8,6 +8,7 @@ import {
 import { Link } from "@/i18n/routing";
 import { config } from "@/services/config";
 import { useTranslations } from "next-intl";
+import AdUnit from "../../../../components/ad-units";
 
 const seoTools = config.tools.find((tool) => tool.value === "seo");
 
@@ -46,6 +47,7 @@ export default function SeoPage() {
           </Card>
         ))}
       </div>
+      <AdUnit adSlot="4396194595" />
     </div>
   );
 }

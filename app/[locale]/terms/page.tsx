@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { useTranslations } from "next-intl";
 import { getMetadata } from "@/services/seo";
+import AdUnit from "../../../components/ad-units";
 
 export default function TermsPage() {
   const t = useTranslations("terms");
@@ -138,6 +139,7 @@ export default function TermsPage() {
           <p className="text-muted-foreground">{t("contact.description")}</p>
         </Card>
       </div>
+      <AdUnit adSlot="2962196569" />
     </div>
   );
 }

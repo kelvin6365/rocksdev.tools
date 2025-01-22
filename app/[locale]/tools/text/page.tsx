@@ -8,6 +8,7 @@ import {
 import { config } from "@/services/config";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import AdUnit from "../../../../components/ad-units";
 
 const textTools = config.tools.find((tool) => tool.value === "text");
 
@@ -46,6 +47,7 @@ export default function TextPage() {
           </Card>
         ))}
       </div>
+      <AdUnit adSlot="4396194595" />
     </div>
   );
 }

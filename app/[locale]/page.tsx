@@ -12,6 +12,7 @@ import { useTranslations } from "next-intl";
 import { Button } from "../../components/ui/button";
 import ProductHuntFollow from "../../components/product-hunt-button";
 import { Link } from "../../i18n/routing";
+import AdUnit from "../../components/ad-units";
 
 export default function HomePage() {
   const tNav = useTranslations("nav");
@@ -223,6 +224,7 @@ export default function HomePage() {
         </div>
       </section>
       <div className="h-12"></div>
+      <AdUnit adSlot="2962196569" />
     </div>
   );
 }

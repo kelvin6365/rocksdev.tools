@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { LinkButton } from "../../../components/link-button";
 import { config } from "../../../services/config";
 import { getMetadata } from "../../../services/seo";
+import AdUnit from "../../../components/ad-units";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -61,6 +62,7 @@ export default function ContactUsPage() {
           </div>
         </section>
       </div>
+      <AdUnit adSlot="2962196569" />
     </div>
   );
 }

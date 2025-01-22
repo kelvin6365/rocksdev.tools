@@ -8,6 +8,7 @@ import {
 import { Link } from "@/i18n/routing";
 import { config } from "@/services/config";
 import { useTranslations } from "next-intl";
+import AdUnit from "../../../../components/ad-units";
 
 const jsonTools = config.tools.find((tool) => tool.value === "json");
 
@@ -46,6 +47,7 @@ export default function JsonToolsPage() {
           </Card>
         ))}
       </div>
+      <AdUnit adSlot="4396194595" />
     </div>
   );
 }

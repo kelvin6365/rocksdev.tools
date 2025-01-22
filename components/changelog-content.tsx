@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { parseReleaseBody, type GitHubRelease } from "@/services/github";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import AdUnit from "./ad-units";
 
 interface ChangelogContentProps {
   releases: GitHubRelease[];
@@ -88,6 +89,7 @@ export function ChangelogContent({ releases }: ChangelogContentProps) {
           );
         })}
       </div>
+      <AdUnit adSlot="2962196569" />
     </div>
   );
 }
