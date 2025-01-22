@@ -117,9 +117,7 @@ export function ToolLayout({
         {guideSection}
       </div>
 
-      <div className="flex justify-center">
-        <AdUnit adSlot="4396194595" />
-      </div>
+      <AdUnit adSlot="4396194595" />
     </div>
   );
 }
