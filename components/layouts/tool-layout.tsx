@@ -16,6 +16,7 @@ import {
   TooltipTrigger,
 } from "../ui/tooltip";
 import { Tool } from "../../types/tool";
+import AdUnit from "../ad-units";
 
 interface ToolLayoutProps {
   children: React.ReactNode;
@@ -114,6 +115,10 @@ export function ToolLayout({
       <div className="flex flex-col gap-4">
         <Card className={cn("p-2 md:p-4", childrenClassName)}>{children}</Card>
         {guideSection}
+      </div>
+
+      <div className="flex justify-center">
+        <AdUnit adSlot="4396194595" />
       </div>
     </div>
   );
