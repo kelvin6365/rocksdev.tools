@@ -24,7 +24,7 @@ export default function AdUnit({
 
   return (
     <ins
-      className={cn("adsbygoogle")}
+      className={cn("adsbygoogle mt-4")}
       data-ad-client={`ca-pub-${process.env.NEXT_PUBLIC_ADSENSE_ID}`}
       data-ad-slot={adSlot}
       data-ad-format={adFormat}

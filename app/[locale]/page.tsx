@@ -224,7 +224,9 @@ export default function HomePage() {
         </div>
       </section>
       <div className="h-12"></div>
-      <AdUnit adSlot="2962196569" />
+      <div className="flex justify-center">
+        <AdUnit adSlot="2962196569" />
+      </div>
     </div>
   );
 }
