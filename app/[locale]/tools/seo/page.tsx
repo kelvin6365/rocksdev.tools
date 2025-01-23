@@ -47,7 +47,6 @@ export default function SeoPage() {
           </Card>
         ))}
       </div>
-      <AdUnit adSlot="4396194595" />
     </div>
   );
 }

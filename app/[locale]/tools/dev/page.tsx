@@ -56,7 +56,6 @@ export default function DevPage() {
           </Card>
         ))}
       </div>
-      <AdUnit adSlot="4396194595" />
     </div>
   );
 }

@@ -71,7 +71,6 @@ export default function ToolsPage() {
           </Card>
         ))}
       </div>
-      <AdUnit adSlot="4396194595" />
     </div>
   );
 }

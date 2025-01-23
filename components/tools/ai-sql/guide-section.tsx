@@ -30,7 +30,7 @@ export function GuideSection() {
                   {t("guide.input.description")}
                 </p>
                 <div className="bg-muted rounded-md p-4">
-                  <pre className="text-sm">
+                  <pre className="text-sm break-words whitespace-pre-wrap">
                     <code>
                       {`class User {\n  id: number;\n  name: string;\n  email: string;\n}`}
                     </code>

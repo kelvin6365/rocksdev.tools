@@ -4,6 +4,7 @@ import { config } from "@/services/config";
 import { getMetadata } from "@/services/seo";
 import { useTranslations } from "next-intl";
 import * as React from "react";
+import AdUnit from "@/components/ad-units";
 
 type Props = {
   params: Promise<{ locale: string }>;

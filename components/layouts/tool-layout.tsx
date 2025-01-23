@@ -116,8 +116,6 @@ export function ToolLayout({
         <Card className={cn("p-2 md:p-4", childrenClassName)}>{children}</Card>
         {guideSection}
       </div>
-
-      <AdUnit adSlot="4396194595" />
     </div>
   );
 }

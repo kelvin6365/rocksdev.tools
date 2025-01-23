@@ -82,7 +82,7 @@ const EmptyConversation = ({ onNewChat }: { onNewChat: () => void }) => {
         </div>
         <div className="text-sm text-muted-foreground">
           <p className="mb-2">{t("dev.ai-sql.example_title")}</p>
-          <pre className="bg-muted p-3 rounded-lg text-left overflow-x-auto">
+          <pre className="bg-muted p-3 rounded-lg text-left overflow-x-auto whitespace-pre-wrap">
             <code>
               {`export interface BaseTool {
   id: string;

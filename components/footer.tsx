@@ -1,11 +1,11 @@
 "use client";
 
-import { Link } from "../i18n/routing";
-import { useTranslations } from "next-intl";
 import { config } from "@/services/config";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { Link } from "../i18n/routing";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
-import Image from "next/image";
 
 export function Footer() {
   const t = useTranslations();
