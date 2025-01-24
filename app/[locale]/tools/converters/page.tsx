@@ -58,7 +58,6 @@ export default function ConvertersPage() {
           </Card>
         ))}
       </div>
-      <AdUnit adSlot="4396194595" />
     </div>
   );
 }
