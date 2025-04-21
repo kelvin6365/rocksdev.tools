@@ -139,7 +139,7 @@ export default function TermsPage() {
           <p className="text-muted-foreground">{t("contact.description")}</p>
         </Card>
       </div>
-      <AdUnit adSlot="2962196569" />
+      <AdUnit adSlot="1315419818" />
     </div>
   );
 }

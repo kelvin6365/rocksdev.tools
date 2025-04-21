@@ -62,7 +62,7 @@ export default function ContactUsPage() {
           </div>
         </section>
       </div>
-      <AdUnit adSlot="2962196569" />
+      <AdUnit adSlot="1315419818" />
     </div>
   );
 }

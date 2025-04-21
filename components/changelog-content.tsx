@@ -89,7 +89,7 @@ export function ChangelogContent({ releases }: ChangelogContentProps) {
           );
         })}
       </div>
-      <AdUnit adSlot="2962196569" />
+      <AdUnit adSlot="1315419818" />
     </div>
   );
 }
