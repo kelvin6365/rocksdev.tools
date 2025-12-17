@@ -189,7 +189,7 @@ This project is built with modern web technologies and best practices:
 - [x] App Icon Generator
 - [x] AI SQL Generator
 - [x] JWT Decoder/Encoder
-- [ ] URL Encoder/Decoder
+- [x] URL Encoder/Decoder
 - [ ] Unix Timestamp Converter
 
 ### Phase 3: Traffic Generation Tools (2-3 weeks)
