@@ -75,6 +75,80 @@
     },
     "description": "用於在不同格式之間轉換資料的工具",
     "free": "自由的",
+    "url": {
+      "clear": "清除",
+      "copy": "複製",
+      "decode": "解碼 URL",
+      "description": "編碼和解碼 URL",
+      "download": "下載",
+      "encode": "編碼 URL",
+      "error": {
+        "decoding-failed": "URL 解碼失敗。請檢查您的輸入。",
+        "empty-input": "輸入不能為空",
+        "empty-output": "輸出為空",
+        "encoding-failed": "URL 編碼失敗。請檢查您的輸入。"
+      },
+      "guide": {
+        "decode": {
+          "description": "將 URL 編碼的字符串解碼回其原始格式。",
+          "steps": {
+            "convert": "點擊「解碼 URL」按鈕轉換編碼字符串",
+            "input": "在輸入區域粘貼 URL 編碼的字符串",
+            "title": "解碼步驟",
+            "use": "在您的應用程序中使用解碼結果或進行分析",
+            "view": "查看或下載解碼結果"
+          },
+          "title": "解碼 URL"
+        },
+        "encode": {
+          "description": "將字符串編碼為 URL 安全格式，用於 Web 應用程序。",
+          "steps": {
+            "convert": "點擊「編碼 URL」按鈕轉換您的字符串",
+            "input": "在輸入區域輸入要編碼的字符串",
+            "title": "編碼步驟",
+            "use": "在您的 URL 或 Web 應用程序中使用編碼結果",
+            "copy": "使用複製按鈕複製編碼結果"
+          },
+          "title": "編碼 URL"
+        },
+        "features": {
+          "list": {
+            "copy": "一鍵複製編碼/解碼結果的功能",
+            "decoding": "URL 解碼為人類可讀格式",
+            "download": "將編碼/解碼結果下載為文本文件",
+            "encoding": "URL 編碼為 Web 安全字符串",
+            "sample": "載入示例 URL 進行快速測試",
+            "title": "可用功能",
+            "validation": "輸入驗證和錯誤檢查"
+          },
+          "title": "功能"
+        },
+        "tips": {
+          "list": {
+            "characters": "URL 編碼將特殊字符轉換為 %XX 格式",
+            "encoding": "對查詢參數和表單數據使用 URL 編碼",
+            "security": "URL 編碼不是加密 - 不要用於敏感數據",
+            "testing": "編碼後測試您的 URL 以確保它們正常工作",
+            "title": "最佳實踐",
+            "validation": "在後端處理之前始終驗證 URL"
+          },
+          "note": "注意：URL 編碼（百分號編碼）用於在 URL 中編碼特殊字符。它不是一種加密形式，也不提供安全性。",
+          "title": "使用技巧和最佳實踐"
+        },
+        "title": "指南"
+      },
+      "input": "輸入",
+      "load-sample": "載入示例",
+      "message": {
+        "copied": "已複製到剪貼簿！",
+        "downloaded": "結果下載成功！"
+      },
+      "output": "輸出",
+      "placeholder": {
+        "input": "輸入 URL 或字符串進行編碼/解碼"
+      },
+      "title": "URL 編碼器/解碼器"
+    },
     "md2html": {
       "actions": {
         "clear": "清除",

@@ -75,6 +75,80 @@
     },
     "description": "Tools for converting data between different formats",
     "free": "Free",
+    "url": {
+      "clear": "Clear",
+      "copy": "Copy",
+      "decode": "Decode URL",
+      "description": "Encode and decode URLs",
+      "download": "Download",
+      "encode": "Encode URL",
+      "error": {
+        "decoding-failed": "URL decoding failed. Please check your input.",
+        "empty-input": "Input cannot be empty",
+        "empty-output": "Output is empty",
+        "encoding-failed": "URL encoding failed. Please check your input."
+      },
+      "guide": {
+        "decode": {
+          "description": "Decode URL encoded strings back to their original format.",
+          "steps": {
+            "convert": "Click the 'Decode URL' button to convert the encoded string",
+            "input": "Paste the URL encoded string in the input area",
+            "title": "Decoding Steps",
+            "use": "Use the decoded result in your application or for analysis",
+            "view": "View or download the decoded result"
+          },
+          "title": "Decoding URLs"
+        },
+        "encode": {
+          "description": "Encode strings into URL safe format for use in web applications.",
+          "steps": {
+            "convert": "Click the 'Encode URL' button to convert your string",
+            "input": "Enter the string you want to encode in the input area",
+            "title": "Encoding Steps",
+            "use": "Use the encoded result in your URLs or web applications",
+            "copy": "Copy the encoded result using the copy button"
+          },
+          "title": "Encoding URLs"
+        },
+        "features": {
+          "list": {
+            "copy": "One-click copy functionality for encoded/decoded results",
+            "decoding": "URL decoding to human-readable format",
+            "download": "Download encoded/decoded results as text files",
+            "encoding": "URL encoding for web-safe strings",
+            "sample": "Load sample URLs for quick testing",
+            "title": "Available Features",
+            "validation": "Input validation and error checking"
+          },
+          "title": "Features"
+        },
+        "tips": {
+          "list": {
+            "characters": "URL encoding converts special characters to %XX format",
+            "encoding": "Use URL encoding for query parameters and form data",
+            "security": "URL encoding is not encryption - don't use for sensitive data",
+            "testing": "Test your URLs after encoding to ensure they work correctly",
+            "title": "Best Practices",
+            "validation": "Always validate URLs in your backend before processing"
+          },
+          "note": "Note: URL encoding (percent-encoding) is used to encode special characters in URLs. It's not a form of encryption and doesn't provide security.",
+          "title": "Tips & Best Practices"
+        },
+        "title": "Guide"
+      },
+      "input": "Input",
+      "load-sample": "Load Sample",
+      "message": {
+        "copied": "Copied to clipboard!",
+        "downloaded": "Result downloaded successfully!"
+      },
+      "output": "Output",
+      "placeholder": {
+        "input": "Enter URL or string to encode/decode"
+      },
+      "title": "URL Encoder/Decoder"
+    },
     "md2html": {
       "actions": {
         "clear": "Clear",

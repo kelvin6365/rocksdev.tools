@@ -88,7 +88,11 @@
           "description": "將 JSON 轉換為 Java Bean",
           "title": "JSON 轉 Java Bean 轉換器"
         },
-        "title": "轉換工具"
+        "title": "轉換工具",
+        "url": {
+          "description": "編碼和解碼 URL",
+          "title": "URL 編碼器/解碼器"
+        }
       },
       "dev": {
         "ai-sql": {
@@ -203,7 +207,8 @@
     "base64": "Base64",
     "java": "Java",
     "markdown": "Markdown",
-    "security": "Security"
+    "security": "Security",
+    "encoding": "編碼"
   },
   "footer": {
     "about": {

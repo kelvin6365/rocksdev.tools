@@ -2056,6 +2056,161 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
   },
+  "converters.url": {
+    en: {
+      title: "URL Encoder/Decoder | Percent Encoding Tool | RocksDev Tools",
+      description:
+        "Free online URL Encoder and Decoder tool. Encode URLs for safe web transmission or decode percent-encoded URLs to human-readable format. Perfect for web developers and API testing.",
+      keywords: [
+        // Primary keywords
+        "url encoder",
+        "url decoder",
+        "percent encoding",
+        "url encoding tool",
+        "url decoding tool",
+
+        // Feature keywords
+        "encode url online",
+        "decode url online",
+        "percent encode url",
+        "url parameter encoding",
+        "query string encoding",
+
+        // Technical keywords
+        "uri encoding",
+        "www form url encoding",
+        "url escape characters",
+        "url special characters",
+
+        // User intent keywords
+        "convert url to encoded format",
+        "decode percent encoded url",
+        "encode query parameters",
+        "url encoding for api",
+
+        // Action keywords
+        "encode web urls",
+        "decode encoded urls",
+        "transform url format",
+        "process url strings",
+
+        // Characteristics
+        "free url encoder",
+        "online url tool",
+        "instant url encoding",
+        "client-side url processing",
+      ],
+      openGraph: {
+        type: "website",
+        title: "URL Encoder/Decoder - Percent Encode URLs Online",
+        description:
+          "Free online tool to encode and decode URLs. Convert special characters to percent-encoded format or decode percent-encoded URLs to readable text.",
+        images: [`/api/og?title=URL%20Encoder%2FDecoder`],
+      },
+    },
+    "zh-CN": {
+      title: "URL 编码器/解码器 | 百分号编码工具 | RocksDev.Tools",
+      description:
+        "免费的在线 URL 编码器和解码器工具。编码 URL 以安全传输或解码百分号编码的 URL 为人类可读格式。非常适合 Web 开发人员和 API 测试。",
+      keywords: [
+        // Primary keywords
+        "url编码器",
+        "url解码器",
+        "百分号编码",
+        "url编码工具",
+        "url解码工具",
+
+        // Feature keywords
+        "在线编码url",
+        "在线解码url",
+        "百分号编码url",
+        "url参数编码",
+        "查询字符串编码",
+
+        // Technical keywords
+        "uri编码",
+        "www表单url编码",
+        "url转义字符",
+        "url特殊字符",
+
+        // User intent keywords
+        "将url转换为编码格式",
+        "解码百分号编码的url",
+        "编码查询参数",
+        "api的url编码",
+
+        // Action keywords
+        "编码网页url",
+        "解码编码的url",
+        "转换url格式",
+        "处理url字符串",
+
+        // Characteristics
+        "免费url编码器",
+        "在线url工具",
+        "即时url编码",
+        "客户端url处理",
+      ],
+      openGraph: {
+        type: "website",
+        title: "URL 编码器/解码器 - 在线百分号编码 URL",
+        description:
+          "免费在线工具，用于编码和解码 URL。将特殊字符转换为百分号编码格式或将百分号编码的 URL 解码为可读文本。",
+        images: [`/api/og?title=URL%20Encoder%2FDecoder`],
+      },
+    },
+    "zh-HK": {
+      title: "URL 編碼器/解碼器 | 百分號編碼工具 | RocksDev.Tools",
+      description:
+        "免費的在線 URL 編碼器和解碼器工具。編碼 URL 以安全傳輸或解碼百分號編碼的 URL 為人類可讀格式。非常適合 Web 開發人員和 API 測試。",
+      keywords: [
+        // Primary keywords
+        "url編碼器",
+        "url解碼器",
+        "百分號編碼",
+        "url編碼工具",
+        "url解碼工具",
+
+        // Feature keywords
+        "在線編碼url",
+        "在線解碼url",
+        "百分號編碼url",
+        "url參數編碼",
+        "查詢字符串編碼",
+
+        // Technical keywords
+        "uri編碼",
+        "www表單url編碼",
+        "url轉義字符",
+        "url特殊字符",
+
+        // User intent keywords
+        "將url轉換為編碼格式",
+        "解碼百分號編碼的url",
+        "編碼查詢參數",
+        "api的url編碼",
+
+        // Action keywords
+        "編碼網頁url",
+        "解碼編碼的url",
+        "轉換url格式",
+        "處理url字符串",
+
+        // Characteristics
+        "免費url編碼器",
+        "在線url工具",
+        "即時url編碼",
+        "客戶端url處理",
+      ],
+      openGraph: {
+        type: "website",
+        title: "URL 編碼器/解碼器 - 在線百分號編碼 URL",
+        description:
+          "免費在線工具，用於編碼和解碼 URL。將特殊字符轉換為百分號編碼格式或將百分號編碼的 URL 解碼為可讀文本。",
+        images: [`/api/og?title=URL%20Encoder%2FDecoder`],
+      },
+    },
+  },
 };
 
 export const termsSEO: Record<string, SEOConfig> = {

@@ -174,6 +174,14 @@ export const config = {
           icon: "🐶",
           tags: ["java"],
         },
+        {
+          label: "URL Encoder/Decoder",
+          value: "converters.url",
+          href: "/tools/converters/url",
+          description: "Encode and decode URLs",
+          icon: "🔗",
+          tags: ["encoding"],
+        },
       ],
     },
     {
