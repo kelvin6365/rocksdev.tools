@@ -12,7 +12,24 @@ type Props = {
 
 export const generateMetadata = async ({ params }: Props) => {
   const { locale } = await params;
-  return getMetadata({ locale });
+  return getMetadata({
+    locale,
+    path: "tools",
+    config: {
+      title:
+        "Developer Tools Collection - JSON, SEO, Code Tools | RocksDev Tools",
+      description:
+        "Browse our complete collection of developer tools including JSON processors, SEO optimizers, code converters, and text utilities. All tools are free and run in your browser.",
+      keywords: [
+        "developer tools",
+        "json tools",
+        "seo tools",
+        "code conversion tools",
+        "text processing tools",
+        "free developer utilities",
+      ],
+    },
+  });
 };
 
 export default function ToolsLayout({

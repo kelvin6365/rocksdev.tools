@@ -20,6 +20,14 @@ export default function ToolsPage() {
         </h1>
         <p className="text-muted-foreground">{t("tools.description")}</p>
       </div>
+      <div className="bg-muted p-4 rounded-lg">
+        <h2 className="text-xl font-semibold mb-2">Popular Developer Tools</h2>
+        <p className="text-muted-foreground">
+          Explore our comprehensive collection of developer tools designed to
+          streamline your workflow. From JSON processing to SEO optimization, we
+          have everything you need for efficient development.
+        </p>
+      </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {config.tools.map((tool) => (

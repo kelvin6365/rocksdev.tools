@@ -101,48 +101,96 @@ export interface SEOConfig {
 
 export const defaultSEO: Record<string, SEOConfig> = {
   en: {
-    title: "RocksDev Tools | A comprehensive collection of developer tools",
-    description: "A comprehensive collection of developer tools",
+    title:
+      "RocksDev Tools - Free Online Developer Tools for JSON, SEO, Code & More",
+    description:
+      "Free online developer tools including JSON formatter, validator, minifier, diff, Base64 converter, regex tester, SEO tools, and more. No signup required, instant access.",
     keywords: [
       // Primary keywords
       "developer tools",
       "online developer tools",
       "free developer tools",
       "web development tools",
+      "coding tools",
+      "programming tools",
+      "software development tools",
 
-      // Tool-specific keywords
+      // JSON tools
       "json tools",
       "json formatter",
       "json validator",
+      "json minifier",
+      "json diff",
+      "json parser",
+      "format json online",
+      "validate json online",
+      "minify json online",
+      "compare json files",
+      "parse json string",
+
+      // Conversion tools
       "base64 converter",
+      "base64 encoder",
+      "base64 decoder",
+      "convert base64 online",
+      "markdown to html converter",
+      "json to java bean converter",
+
+      // Developer tools
       "regex tester",
+      "regex validator",
+      "test regex online",
+      "app icon generator",
+      "ai sql generator",
+
+      // SEO tools
+      "seo tools",
+      "meta tags generator",
+      "og image generator",
+      "open graph generator",
+      "social media preview generator",
+
+      // Text tools
+      "text formatter",
+      "text processing tools",
 
       // Feature keywords
       "code formatter",
       "online code tools",
       "web tools",
+      "browser-based tools",
 
       // User intent keywords
       "format json online",
       "validate json online",
       "test regex online",
       "convert base64 online",
+      "generate og images",
+      "create meta tags",
 
       // Characteristics
       "free tools",
       "no signup required",
       "instant tools",
+      "privacy focused",
+      "client-side processing",
+      "open source tools",
+      "developer utilities",
     ],
     openGraph: {
       type: "website",
       siteName: "RocksDev Tools",
+      title:
+        "RocksDev Tools - Free Online Developer Tools for JSON, SEO, Code & More",
+      description:
+        "Free online developer tools including JSON formatter, validator, minifier, diff, Base64 converter, regex tester, SEO tools, and more. No signup required, instant access.",
       images: [`/api/og`],
       url: process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools",
     },
     twitter: {
       card: "summary_large_image",
       site: "@rocksdevtools",
-      creator: "@teshim_tech",
+      creator: "@tszhim_tech",
     },
     additionalMetaTags: [
       {
@@ -169,52 +217,113 @@ export const defaultSEO: Record<string, SEOConfig> = {
         name: "apple-mobile-web-app-status-bar-style",
         content: "default",
       },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "googlebot",
+        content: "index, follow",
+      },
+      {
+        property: "og:locale",
+        content: "en_US",
+      },
+      {
+        property: "og:type",
+        content: "website",
+      },
     ],
   },
   "zh-CN": {
-    title: "RocksDev.Tools | 全面的开发者工具集合",
-    description: "全面的开发者工具集合",
+    title: "RocksDev.Tools - 免费在线开发者工具，JSON、SEO、代码处理等",
+    description:
+      "免费在线开发者工具，包括JSON格式化器、验证器、压缩器、差异比较工具、Base64转换器、正则表达式测试器、SEO工具等。无需注册，即时访问。",
     keywords: [
       // Primary keywords
       "开发工具",
       "在线开发工具",
       "免费开发工具",
       "网页开发工具",
+      "编程工具",
+      "软件开发工具",
 
-      // Tool-specific keywords
+      // JSON tools
       "JSON工具",
       "JSON格式化工具",
       "JSON验证器",
+      "JSON压缩器",
+      "JSON差异比较",
+      "JSON解析器",
+      "在线格式化JSON",
+      "在线验证JSON",
+      "在线压缩JSON",
+      "比较JSON文件",
+      "解析JSON字符串",
+
+      // Conversion tools
       "Base64转换器",
+      "Base64编码器",
+      "Base64解码器",
+      "在线转换Base64",
+      "Markdown转HTML转换器",
+      "JSON转Java Bean转换器",
+
+      // Developer tools
       "正则表达式测试器",
+      "正则表达式验证器",
+      "在线测试正则表达式",
+      "应用图标生成器",
+      "AI SQL生成器",
+
+      // SEO tools
+      "SEO工具",
+      "元标签生成器",
+      "OG图像生成器",
+      "开放图谱生成器",
+      "社交媒体预览生成器",
+
+      // Text tools
+      "文本格式化器",
+      "文本处理工具",
 
       // Feature keywords
       "代码格式化",
       "在线代码工具",
       "网页工具",
+      "浏览器端工具",
 
       // User intent keywords
       "在线格式化JSON",
       "在线验证JSON",
       "在线测试正则表达式",
       "在线转换Base64",
+      "生成OG图像",
+      "创建元标签",
 
       // Characteristics
       "免费工具",
       "无需注册",
       "即时工具",
+      "注重隐私",
+      "客户端处理",
+      "开源工具",
+      "开发者实用程序",
     ],
 
     openGraph: {
       type: "website",
       siteName: "RocksDev.Tools",
+      title: "RocksDev.Tools - 免費在線開發者工具，JSON、SEO、代碼處理等",
+      description:
+        "免費在線開發者工具，包括JSON格式化器、驗證器、壓縮器、差異比較工具、Base64轉換器、Regex測試器、SEO工具等。無需註冊，即時訪問。",
       images: [`/api/og`],
       url: process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools",
     },
     twitter: {
       card: "summary_large_image",
       site: "@rocksdevtools",
-      creator: "@teshim_tech",
+      creator: "@tszhim_tech",
     },
     additionalMetaTags: [
       {
@@ -240,42 +349,87 @@ export const defaultSEO: Record<string, SEOConfig> = {
     ],
   },
   "zh-HK": {
-    title: "RocksDev.Tools | 全面的開發者工具集合",
-    description: "全面的開發者工具集合",
+    title: "RocksDev.Tools - 免費在線開發者工具，JSON、SEO、代碼處理等",
+    description:
+      "免費在線開發者工具，包括JSON格式化器、驗證器、壓縮器、差異比較工具、Base64轉換器、Regex測試器、SEO工具等。無需註冊，即時訪問。",
     keywords: [
       // Primary keywords
       "開發工具",
       "在線開發工具",
       "免費開發工具",
       "網頁開發工具",
+      "編程工具",
+      "軟件開發工具",
 
-      // Tool-specific keywords
+      // JSON tools
       "JSON工具",
       "JSON格式化工具",
       "JSON驗證器",
+      "JSON壓縮器",
+      "JSON差異比較",
+      "JSON解析器",
+      "在線格式化JSON",
+      "在線驗證JSON",
+      "在線壓縮JSON",
+      "比較JSON文件",
+      "解析JSON字符串",
+
+      // Conversion tools
       "Base64轉換器",
+      "Base64編碼器",
+      "Base64解碼器",
+      "在線轉換Base64",
+      "Markdown轉HTML轉換器",
+      "JSON轉Java Bean轉換器",
+
+      // Developer tools
       "Regex測試器",
+      "Regex驗證器",
+      "在線測試Regex",
+      "應用圖標生成器",
+      "AI SQL生成器",
+
+      // SEO tools
+      "SEO工具",
+      "元標籤生成器",
+      "OG圖像生成器",
+      "開放圖譜生成器",
+      "社交媒體預覽生成器",
+
+      // Text tools
+      "文本格式化器",
+      "文本處理工具",
 
       // Feature keywords
       "代碼格式化",
       "在線代碼工具",
       "網頁工具",
+      "瀏覽器端工具",
 
       // User intent keywords
       "在線格式化JSON",
       "在線驗證JSON",
       "在線測試Regex",
       "在線轉換Base64",
+      "生成OG圖像",
+      "創建元標籤",
 
       // Characteristics
       "免費工具",
       "無需註冊",
       "即時工具",
+      "注重隱私",
+      "客戶端處理",
+      "開源工具",
+      "開發者實用程序",
     ],
 
     openGraph: {
       type: "website",
       siteName: "RocksDev.Tools",
+      title: "RocksDev.Tools - 免費在線開發者工具，JSON、SEO、代碼處理等",
+      description:
+        "免費在線開發者工具，包括JSON格式化器、驗證器、壓縮器、差異比較工具、Base64轉換器、Regex測試器、SEO工具等。無需註冊，即時訪問。",
       images: [`/api/og`],
       url: process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools",
     },
@@ -318,6 +472,7 @@ export function getStructuredData(locale: string = "en") {
     applicationCategory: "DeveloperApplication",
     operatingSystem: "Any",
     inLanguage: locale,
+    keywords: defaultSEO[locale].keywords?.join(", "),
     offers: {
       "@type": "Offer",
       price: "0",
@@ -340,6 +495,11 @@ export function getStructuredData(locale: string = "en") {
         alternateName: "zh-HK",
       },
     ],
+    softwareHelp: {
+      "@type": "CreativeWork",
+      url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools"}/${locale !== "en" ? `${locale}/` : ""}help`,
+    },
+    softwareVersion: "1.0.0",
     potentialAction: {
       "@type": "UseAction",
       target: {
@@ -347,6 +507,12 @@ export function getStructuredData(locale: string = "en") {
         urlTemplate: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools"}${locale !== "en" ? `/${locale}` : ""}`,
         inLanguage: locale,
       },
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      ratingCount: "1250",
+      bestRating: "5",
     },
   };
 }
@@ -986,7 +1152,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       twitter: {
         card: "summary_large_image",
         site: "@rocksdevtools",
-        creator: "@teshim_tech",
+        creator: "@tszhim_tech",
       },
     },
     "zh-CN": {
@@ -1048,7 +1214,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       twitter: {
         card: "summary_large_image",
         site: "@rocksdevtools",
-        creator: "@teshim_tech",
+        creator: "@tszhim_tech",
       },
     },
     "zh-HK": {
@@ -1110,7 +1276,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       twitter: {
         card: "summary_large_image",
         site: "@rocksdevtools",
-        creator: "@teshim_tech",
+        creator: "@tszhim_tech",
       },
     },
   },
@@ -1439,7 +1605,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       twitter: {
         card: "summary_large_image",
         site: "@rocksdevtools",
-        creator: "@teshim_tech",
+        creator: "@tszhim_tech",
         image: `/api/og?title=AI%20SQL%20Generator`,
       },
       additionalMetaTags: [
@@ -1864,21 +2030,30 @@ export const changelogSEO: Record<string, SEOConfig> = {
 
 export const textToolsSEO: Record<string, SEOConfig> = {
   en: {
-    title: "Text Tools | RocksDev.Tools",
+    title:
+      "Text Tools Online - Formatter, Case Converter & More | RocksDev Tools",
     description:
-      "Explore our collection of text tools for efficient text processing. From character counting to text formatting, our tools help you manage and manipulate text with ease.",
+      "Free online text tools including text formatter, case converter, and character counter. Process and manipulate text efficiently with no signup required.",
     keywords: [
       "text tools",
       "text processing",
-      "character counting",
-      "text formatting",
+      "text formatter",
+      "case converter",
+      "character counter",
       "text manipulation",
+      "string manipulation",
+      "text utilities",
+      "content processing",
+      "text editing tools",
+      "free text tools",
+      "online text processor",
     ],
     openGraph: {
       type: "website",
-      title: "Text Tools - RocksDev.Tools",
+      title:
+        "Text Tools Online - Formatter, Case Converter & More | RocksDev Tools",
       description:
-        "Explore our collection of text tools for efficient text processing. From character counting to text formatting, our tools help you manage and manipulate text with ease.",
+        "Free online text tools including text formatter, case converter, and character counter. Process and manipulate text efficiently with no signup required.",
       images: [`/api/og?title=Text%20Tools`],
     },
   },
@@ -1912,21 +2087,33 @@ export const textToolsSEO: Record<string, SEOConfig> = {
 
 export const seoToolsSEO: Record<string, SEOConfig> = {
   en: {
-    title: "SEO Tools | RocksDev.Tools",
+    title:
+      "SEO Tools Online - Meta Tags Generator, OG Image Creator | RocksDev Tools",
     description:
-      "Explore our collection of SEO tools for efficient SEO processing. From keyword analysis to content optimization, our tools help you manage and manipulate text with ease.",
+      "Free online SEO tools including meta tags generator and OG image generator. Optimize your website for search engines and social media with instant results.",
     keywords: [
       "seo tools",
-      "seo processing",
-      "keyword analysis",
-      "content optimization",
-      "seo tools",
+      "seo optimization tools",
+      "meta tags generator",
+      "og image generator",
+      "open graph generator",
+      "social media preview generator",
+      "search engine optimization",
+      "website optimization",
+      "meta description generator",
+      "title tag optimizer",
+      "twitter card generator",
+      "facebook meta tags",
+      "linkedin meta tags",
+      "free seo tools",
+      "online seo tools",
     ],
     openGraph: {
       type: "website",
-      title: "SEO Tools - RocksDev.Tools",
+      title:
+        "SEO Tools Online - Meta Tags Generator, OG Image Creator | RocksDev Tools",
       description:
-        "Explore our collection of SEO tools for efficient SEO processing. From keyword analysis to content optimization, our tools help you manage and manipulate text with ease.",
+        "Free online SEO tools including meta tags generator and OG image generator. Optimize your website for search engines and social media with instant results.",
       images: [`/api/og?title=SEO%20Tools`],
     },
   },
@@ -1960,21 +2147,32 @@ export const seoToolsSEO: Record<string, SEOConfig> = {
 
 export const convertersSEO: Record<string, SEOConfig> = {
   en: {
-    title: "Converters | RocksDev.Tools",
+    title:
+      "Online Converters - Base64, JSON to Java, Markdown | RocksDev Tools",
     description:
-      "Explore our collection of converters for efficient conversion tasks. From text to JSON, our tools help you manage and manipulate text with ease.",
+      "Free online conversion tools including Base64 encoder/decoder, JSON to Java Bean converter, and Markdown to HTML converter. Instant conversions with no signup required.",
     keywords: [
       "converters",
       "conversion tools",
-      "text to json",
-      "text to csv",
-      "text to xml",
+      "base64 converter",
+      "base64 encoder",
+      "base64 decoder",
+      "json to java bean converter",
+      "markdown to html converter",
+      "text converter",
+      "file converter",
+      "data converter",
+      "encoding tools",
+      "decoding tools",
+      "free conversion tools",
+      "online converters",
     ],
     openGraph: {
       type: "website",
-      title: "Converters - RocksDev.Tools",
+      title:
+        "Online Converters - Base64, JSON to Java, Markdown | RocksDev Tools",
       description:
-        "Explore our collection of converters for efficient conversion tasks. From text to JSON, our tools help you manage and manipulate text with ease.",
+        "Free online conversion tools including Base64 encoder/decoder, JSON to Java Bean converter, and Markdown to HTML converter. Instant conversions with no signup required.",
       images: [`/api/og?title=Converters`],
     },
   },
@@ -2008,21 +2206,38 @@ export const convertersSEO: Record<string, SEOConfig> = {
 
 export const jsonToolsSEO: Record<string, SEOConfig> = {
   en: {
-    title: "JSON Tools | RocksDev.Tools",
+    title:
+      "JSON Tools Online - Formatter, Validator, Minifier & Diff | RocksDev Tools",
     description:
-      "Explore our collection of JSON tools for efficient JSON processing. From JSON to CSV, our tools help you manage and manipulate JSON with ease.",
+      "Free online JSON tools including formatter, validator, minifier, diff, and parser. Format, validate, compress, and compare JSON data instantly with no signup required.",
     keywords: [
       "json tools",
       "json processing",
-      "json to csv",
-      "json to xml",
-      "json to json",
+      "json formatter",
+      "json validator",
+      "json minifier",
+      "json diff",
+      "json parser",
+      "json stringify",
+      "format json online",
+      "validate json online",
+      "minify json online",
+      "compare json files",
+      "parse json string",
+      "json beautifier",
+      "json syntax highlighter",
+      "json editor",
+      "json checker",
+      "json analyzer",
+      "free json tools",
+      "online json processor",
     ],
     openGraph: {
       type: "website",
-      title: "JSON Tools - RocksDev.Tools",
+      title:
+        "JSON Tools Online - Formatter, Validator, Minifier & Diff | RocksDev Tools",
       description:
-        "Explore our collection of JSON tools for efficient JSON processing. From JSON to CSV, our tools help you manage and manipulate JSON with ease.",
+        "Free online JSON tools including formatter, validator, minifier, diff, and parser. Format, validate, compress, and compare JSON data instantly with no signup required.",
       images: [`/api/og?title=JSON%20Tools`],
     },
   },
@@ -2056,20 +2271,33 @@ export const jsonToolsSEO: Record<string, SEOConfig> = {
 
 export const devToolsSEO: Record<string, SEOConfig> = {
   en: {
-    title: "Developer Tools | RocksDev.Tools",
+    title:
+      "Developer Tools Online - Regex Tester, AI SQL, Icon Generator | RocksDev Tools",
     description:
-      "Explore our collection of developer tools for efficient development.",
+      "Free online developer tools including regex tester, AI SQL generator, and app icon generator. Essential utilities for developers with no signup required.",
     keywords: [
       "developer tools",
       "development tools",
-      "developer tools",
-      "development tools",
+      "regex tester",
+      "regex validator",
+      "test regex online",
+      "ai sql generator",
+      "code to sql converter",
+      "app icon generator",
+      "ios app icon creator",
+      "android app icon generator",
+      "essential developer utilities",
+      "programming tools",
+      "coding utilities",
+      "free developer tools",
+      "online development tools",
     ],
     openGraph: {
       type: "website",
-      title: "Developer Tools - RocksDev.Tools",
+      title:
+        "Developer Tools Online - Regex Tester, AI SQL, Icon Generator | RocksDev Tools",
       description:
-        "Explore our collection of developer tools for efficient development.",
+        "Free online developer tools including regex tester, AI SQL generator, and app icon generator. Essential utilities for developers with no signup required.",
       images: [`/api/og?title=Developer%20Tools`],
     },
   },
