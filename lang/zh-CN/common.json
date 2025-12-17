@@ -104,7 +104,11 @@
           "description": "测试和验证正则表达式",
           "title": "正则表达式测试工具"
         },
-        "title": "开发工具"
+        "title": "开发工具",
+        "jwt": {
+          "description": "生成和验证 JWT 令牌",
+          "title": "JWT 生成器"
+        }
       },
       "json": {
         "description": "专业的 JSON 处理套件，包含格式化、验证、对比和压缩工具。完美支持 JSON 数据的调试、比较和优化。",

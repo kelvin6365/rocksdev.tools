@@ -104,7 +104,11 @@
           "description": "測試和驗證Regex",
           "title": "Regex測試工具"
         },
-        "title": "開發工具"
+        "title": "開發工具",
+        "jwt": {
+          "description": "生成和驗證 JWT 權杖",
+          "title": "JWT 生成器"
+        }
       },
       "json": {
         "description": "專業的 JSON 處理套件，包含格式化、驗證、對比和壓縮工具。完美支援 JSON 數據的調試、比較和優化。",
