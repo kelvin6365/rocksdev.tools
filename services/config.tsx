@@ -212,6 +212,14 @@ export const config = {
           icon: "🖼️",
         },
         {
+          label: "JWT Decoder/Encoder",
+          value: "dev.jwt",
+          href: "/tools/dev/jwt",
+          description: "Decode and encode JWT tokens",
+          icon: "🔐",
+          tags: ["security"],
+        },
+        {
           label: "AI SQL",
           value: "dev.ai-sql",
           href: "/tools/dev/ai-sql",

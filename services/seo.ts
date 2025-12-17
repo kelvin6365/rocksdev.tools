@@ -1877,6 +1877,185 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
   },
+  "dev.jwt": {
+    en: {
+      title: "JWT Decoder/Encoder | Secure Token Processing | RocksDev Tools",
+      description:
+        "Free online JWT Decoder and Encoder tool. Decode JWT tokens to view header and payload, or encode your own JWT tokens with custom secrets. Supports HS256, HS384, and HS512 algorithms.",
+      keywords: [
+        // Primary keywords
+        "jwt decoder",
+        "jwt encoder",
+        "jwt token decoder",
+        "jwt token encoder",
+        "jwt converter",
+
+        // Feature keywords
+        "decode jwt online",
+        "encode jwt online",
+        "jwt header decoder",
+        "jwt payload decoder",
+        "jwt signature verifier",
+
+        // Technical keywords
+        "jwt token parser",
+        "jwt token generator",
+        "hs256 jwt",
+        "hs384 jwt",
+        "hs512 jwt",
+        "json web token",
+
+        // Security keywords
+        "jwt security",
+        "token encryption",
+        "jwt authentication",
+        "oauth jwt",
+
+        // User intent keywords
+        "view jwt token contents",
+        "create jwt token",
+        "inspect jwt header",
+        "inspect jwt payload",
+
+        // Action keywords
+        "parse jwt token",
+        "generate jwt token",
+        "verify jwt signature",
+        "extract jwt claims",
+
+        // Characteristics
+        "free jwt tool",
+        "online jwt decoder",
+        "instant jwt processing",
+        "client-side jwt tool",
+      ],
+      openGraph: {
+        type: "website",
+        title: "JWT Decoder/Encoder - Process JSON Web Tokens Online",
+        description:
+          "Free online tool to decode and encode JWT tokens. View token headers and payloads or create your own JWT tokens with custom secrets.",
+        images: [`/api/og?title=JWT%20Decoder%2FEncoder`],
+      },
+    },
+    "zh-CN": {
+      title: "JWT 解码器/编码器 | 安全令牌处理 | RocksDev.Tools",
+      description:
+        "免费的在线 JWT 解码器和编码器工具。解码 JWT 令牌以查看头部和载荷，或使用自定义密钥编码您自己的 JWT 令牌。支持 HS256、HS384 和 HS512 算法。",
+      keywords: [
+        // Primary keywords
+        "jwt解码器",
+        "jwt编码器",
+        "jwt令牌解码器",
+        "jwt令牌编码器",
+        "jwt转换器",
+
+        // Feature keywords
+        "在线解码jwt",
+        "在线编码jwt",
+        "jwt头部解码器",
+        "jwt载荷解码器",
+        "jwt签名验证器",
+
+        // Technical keywords
+        "jwt令牌解析器",
+        "jwt令牌生成器",
+        "hs256 jwt",
+        "hs384 jwt",
+        "hs512 jwt",
+        "json网络令牌",
+
+        // Security keywords
+        "jwt安全",
+        "令牌加密",
+        "jwt认证",
+        "oauth jwt",
+
+        // User intent keywords
+        "查看jwt令牌内容",
+        "创建jwt令牌",
+        "检查jwt头部",
+        "检查jwt载荷",
+
+        // Action keywords
+        "解析jwt令牌",
+        "生成jwt令牌",
+        "验证jwt签名",
+        "提取jwt声明",
+
+        // Characteristics
+        "免费jwt工具",
+        "在线jwt解码器",
+        "即时jwt处理",
+        "客户端jwt工具",
+      ],
+      openGraph: {
+        type: "website",
+        title: "JWT 解码器/编码器 - 在线处理 JSON Web 令牌",
+        description:
+          "免费在线工具，用于解码和编码 JWT 令牌。查看令牌头部和载荷，或使用自定义密钥创建您自己的 JWT 令牌。",
+        images: [`/api/og?title=JWT%20Decoder%2FEncoder`],
+      },
+    },
+    "zh-HK": {
+      title: "JWT 解碼器/編碼器 | 安全令牌處理 | RocksDev.Tools",
+      description:
+        "免費的在線 JWT 解碼器和編碼器工具。解碼 JWT 令牌以查看頭部和載荷，或使用自定義金鑰編碼您自己的 JWT 令牌。支持 HS256、HS384 和 HS512 算法。",
+      keywords: [
+        // Primary keywords
+        "jwt解碼器",
+        "jwt編碼器",
+        "jwt令牌解碼器",
+        "jwt令牌編碼器",
+        "jwt轉換器",
+
+        // Feature keywords
+        "在線解碼jwt",
+        "在線編碼jwt",
+        "jwt頭部解碼器",
+        "jwt載荷解碼器",
+        "jwt簽名驗證器",
+
+        // Technical keywords
+        "jwt令牌解析器",
+        "jwt令牌生成器",
+        "hs256 jwt",
+        "hs384 jwt",
+        "hs512 jwt",
+        "json網絡令牌",
+
+        // Security keywords
+        "jwt安全",
+        "令牌加密",
+        "jwt認證",
+        "oauth jwt",
+
+        // User intent keywords
+        "查看jwt令牌內容",
+        "創建jwt令牌",
+        "檢查jwt頭部",
+        "檢查jwt載荷",
+
+        // Action keywords
+        "解析jwt令牌",
+        "生成jwt令牌",
+        "驗證jwt簽名",
+        "提取jwt聲明",
+
+        // Characteristics
+        "免費jwt工具",
+        "在線jwt解碼器",
+        "即時jwt處理",
+        "客戶端jwt工具",
+      ],
+      openGraph: {
+        type: "website",
+        title: "JWT 解碼器/編碼器 - 在線處理 JSON Web 令牌",
+        description:
+          "免費在線工具，用於解碼和編碼 JWT 令牌。查看令牌頭部和載荷，或使用自定義金鑰創建您自己的 JWT 令牌。",
+        images: [`/api/og?title=JWT%20Decoder%2FEncoder`],
+      },
+    },
+  },
 };
 
 export const termsSEO: Record<string, SEOConfig> = {

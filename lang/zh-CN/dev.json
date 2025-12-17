@@ -198,6 +198,93 @@
       "use": "使用"
     },
     "title": "开发工具",
-    "tryNow": "立即试用"
+    "tryNow": "立即试用",
+    "jwt": {
+      "algorithm": "算法",
+      "clear": "清除",
+      "copy": "复制",
+      "decode": "解码 JWT",
+      "decoded-header": "解码头部",
+      "decoded-payload": "解码载荷",
+      "description": "解码和编码 JWT 令牌",
+      "download": "下载",
+      "encode": "编码 JWT",
+      "error": {
+        "empty-token": "请输入 JWT 令牌",
+        "invalid-json": "无效的 JSON 格式",
+        "invalid-token": "无效的 JWT 令牌格式",
+        "missing-fields": "请填写所有必填字段"
+      },
+      "generated-token": "生成的令牌",
+      "guide": {
+        "decode": {
+          "description": "解码 JWT 令牌以查看其头部和载荷组件。",
+          "steps": {
+            "click": "点击'解码 JWT'按钮处理令牌",
+            "copy": "复制解码后的组件以进行进一步分析",
+            "paste": "在输入框中粘贴您的 JWT 令牌",
+            "title": "解码步骤",
+            "view": "以可读格式查看解码后的头部和载荷"
+          },
+          "title": "解码 JWT 令牌"
+        },
+        "encode": {
+          "description": "通过使用密钥编码头部和载荷来创建 JWT 令牌。",
+          "steps": {
+            "download": "下载生成的令牌以在您的应用程序中使用",
+            "fill": "填写头部和载荷 JSON 对象",
+            "generate": "点击'编码 JWT'生成令牌",
+            "select": "选择算法并输入您的密钥",
+            "title": "编码步骤"
+          },
+          "title": "编码 JWT 令牌"
+        },
+        "features": {
+          "list": {
+            "algorithm": "支持多种签名算法（HS256、HS384、HS512）",
+            "copy": "一键复制令牌和解码组件的功能",
+            "decode": "解码 JWT 令牌以查看头部和载荷",
+            "download": "将生成的令牌下载为文本文件",
+            "encode": "将头部和载荷编码为 JWT 令牌",
+            "title": "可用功能",
+            "validation": "验证 JWT 格式和 JSON 结构"
+          },
+          "title": "功能"
+        },
+        "tips": {
+          "list": {
+            "algorithms": "根据您的安全要求选择合适的算法",
+            "expiration": "始终在 JWT 载荷中设置适当的过期时间",
+            "secrets": "为生产应用程序使用强随机生成的密钥",
+            "title": "最佳实践",
+            "validation": "在信任 JWT 令牌内容之前，在服务器上验证它们",
+            "verify": "在处理 JWT 令牌之前验证其签名"
+          },
+          "note": "注意：此工具在您的浏览器中执行 JWT 编码和解码。不会将任何数据发送到我们的服务器。",
+          "title": "提示和最佳实践"
+        },
+        "title": "指南"
+      },
+      "header": "头部",
+      "load-sample": "加载示例",
+      "message": {
+        "copied": "已复制到剪贴板！",
+        "downloaded": "令牌下载成功！"
+      },
+      "payload": "载荷",
+      "placeholder": {
+        "header": "输入 JSON 头部对象",
+        "payload": "输入 JSON 载荷对象",
+        "secret": "输入您的密钥",
+        "token": "在此粘贴您的 JWT 令牌"
+      },
+      "secret": "密钥",
+      "tabs": {
+        "decode": "解码",
+        "encode": "编码"
+      },
+      "title": "JWT 解码器/编码器",
+      "token": "JWT 令牌"
+    }
   }
 }

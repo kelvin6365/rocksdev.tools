@@ -198,6 +198,93 @@
       "use": "Use"
     },
     "title": "Dev Tools",
-    "tryNow": "Try Now"
+    "tryNow": "Try Now",
+    "jwt": {
+      "algorithm": "Algorithm",
+      "clear": "Clear",
+      "copy": "Copy",
+      "decode": "Decode JWT",
+      "decoded-header": "Decoded Header",
+      "decoded-payload": "Decoded Payload",
+      "description": "Decode and encode JWT tokens",
+      "download": "Download",
+      "encode": "Encode JWT",
+      "error": {
+        "empty-token": "Please enter a JWT token",
+        "invalid-json": "Invalid JSON format",
+        "invalid-token": "Invalid JWT token format",
+        "missing-fields": "Please fill in all required fields"
+      },
+      "generated-token": "Generated Token",
+      "guide": {
+        "decode": {
+          "description": "Decode JWT tokens to view their header and payload components.",
+          "steps": {
+            "click": "Click the 'Decode JWT' button to process the token",
+            "copy": "Copy the decoded components for further analysis",
+            "paste": "Paste your JWT token in the input field",
+            "title": "Decoding Steps",
+            "view": "View the decoded header and payload in readable format"
+          },
+          "title": "Decoding JWT Tokens"
+        },
+        "encode": {
+          "description": "Create JWT tokens by encoding header and payload with a secret.",
+          "steps": {
+            "download": "Download the generated token for use in your applications",
+            "fill": "Fill in the header and payload JSON objects",
+            "generate": "Click 'Encode JWT' to generate the token",
+            "select": "Select the algorithm and enter your secret",
+            "title": "Encoding Steps"
+          },
+          "title": "Encoding JWT Tokens"
+        },
+        "features": {
+          "list": {
+            "algorithm": "Support for multiple signing algorithms (HS256, HS384, HS512)",
+            "copy": "One-click copy functionality for tokens and decoded components",
+            "decode": "Decode JWT tokens to view header and payload",
+            "download": "Download generated tokens as text files",
+            "encode": "Encode header and payload into JWT tokens",
+            "title": "Available Features",
+            "validation": "Validation of JWT format and JSON structure"
+          },
+          "title": "Features"
+        },
+        "tips": {
+          "list": {
+            "algorithms": "Choose the appropriate algorithm based on your security requirements",
+            "expiration": "Always set appropriate expiration times in your JWT payloads",
+            "secrets": "Use strong, randomly generated secrets for production applications",
+            "title": "Best Practices",
+            "validation": "Validate JWT tokens on your server before trusting their contents",
+            "verify": "Verify the signature of JWT tokens before processing them"
+          },
+          "note": "Note: This tool performs JWT encoding and decoding in your browser. No data is sent to our servers.",
+          "title": "Tips & Best Practices"
+        },
+        "title": "Guide"
+      },
+      "header": "Header",
+      "load-sample": "Load Sample",
+      "message": {
+        "copied": "Copied to clipboard!",
+        "downloaded": "Token downloaded successfully!"
+      },
+      "payload": "Payload",
+      "placeholder": {
+        "header": "Enter JSON header object",
+        "payload": "Enter JSON payload object",
+        "secret": "Enter your secret key",
+        "token": "Paste your JWT token here"
+      },
+      "secret": "Secret",
+      "tabs": {
+        "decode": "Decode",
+        "encode": "Encode"
+      },
+      "title": "JWT Decoder/Encoder",
+      "token": "JWT Token"
+    }
   }
 }

@@ -104,7 +104,11 @@
           "description": "Test and validate regular expressions",
           "title": "Regex Tester"
         },
-        "title": "Dev Tools"
+        "title": "Dev Tools",
+        "jwt": {
+          "description": "Decode and encode JWT tokens",
+          "title": "JWT Decoder/Encoder"
+        }
       },
       "json": {
         "description": "Professional JSON processing suite with formatter, validator, differ and minifier. Perfect for debugging, comparing and optimizing JSON data.",
@@ -198,7 +202,8 @@
     "ai": "AI",
     "base64": "Base64",
     "java": "Java",
-    "markdown": "Markdown"
+    "markdown": "Markdown",
+    "security": "Security"
   },
   "footer": {
     "about": {

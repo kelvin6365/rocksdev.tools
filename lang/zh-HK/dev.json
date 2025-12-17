@@ -198,6 +198,93 @@
       "use": "使用模式"
     },
     "title": "開發工具",
-    "tryNow": "立即試用"
+    "tryNow": "立即試用",
+    "jwt": {
+      "algorithm": "演算法",
+      "clear": "清除",
+      "copy": "複製",
+      "decode": "解碼 JWT",
+      "decoded-header": "解碼頭部",
+      "decoded-payload": "解碼載荷",
+      "description": "解碼和編碼 JWT 權杖",
+      "download": "下載",
+      "encode": "編碼 JWT",
+      "error": {
+        "empty-token": "請輸入 JWT 權杖",
+        "invalid-json": "無效的 JSON 格式",
+        "invalid-token": "無效的 JWT 權杖格式",
+        "missing-fields": "請填寫所有必填欄位"
+      },
+      "generated-token": "生成的權杖",
+      "guide": {
+        "decode": {
+          "description": "解碼 JWT 權杖以查看其頭部和載荷組件。",
+          "steps": {
+            "click": "點擊「解碼 JWT」按鈕處理權杖",
+            "copy": "複製解碼後的組件以進行進一步分析",
+            "paste": "在輸入框中貼上您的 JWT 權杖",
+            "title": "解碼步驟",
+            "view": "以可讀格式查看解碼後的頭部和載荷"
+          },
+          "title": "解碼 JWT 權杖"
+        },
+        "encode": {
+          "description": "透過使用金鑰編碼頭部和載荷來建立 JWT 權杖。",
+          "steps": {
+            "download": "下載生成的權杖以在您的應用程式中使用",
+            "fill": "填寫頭部和載荷 JSON 物件",
+            "generate": "點擊「編碼 JWT」生成權杖",
+            "select": "選擇演算法並輸入您的金鑰",
+            "title": "編碼步驟"
+          },
+          "title": "編碼 JWT 權杖"
+        },
+        "features": {
+          "list": {
+            "algorithm": "支援多種簽名演算法（HS256、HS384、HS512）",
+            "copy": "一鍵複製權杖和解碼組件的功能",
+            "decode": "解碼 JWT 權杖以查看頭部和載荷",
+            "download": "將生成的權杖下載為文字檔案",
+            "encode": "將頭部和載荷編碼為 JWT 權杖",
+            "title": "可用功能",
+            "validation": "驗證 JWT 格式和 JSON 結構"
+          },
+          "title": "功能"
+        },
+        "tips": {
+          "list": {
+            "algorithms": "根據您的安全要求選擇合適的演算法",
+            "expiration": "始終在 JWT 載荷中設定適當的過期時間",
+            "secrets": "為生產應用程式使用強隨機生成的金鑰",
+            "title": "最佳實踐",
+            "validation": "在信任 JWT 權杖內容之前，在伺服器上驗證它們",
+            "verify": "在處理 JWT 權杖之前驗證其簽名"
+          },
+          "note": "注意：此工具在您的瀏覽器中執行 JWT 編碼和解碼。不會將任何資料傳送到我們的伺服器。",
+          "title": "提示和最佳實踐"
+        },
+        "title": "指南"
+      },
+      "header": "頭部",
+      "load-sample": "載入範例",
+      "message": {
+        "copied": "已複製到剪貼簿！",
+        "downloaded": "權杖下載成功！"
+      },
+      "payload": "載荷",
+      "placeholder": {
+        "header": "輸入 JSON 頭部物件",
+        "payload": "輸入 JSON 載荷物件",
+        "secret": "輸入您的金鑰",
+        "token": "在此貼上您的 JWT 權杖"
+      },
+      "secret": "金鑰",
+      "tabs": {
+        "decode": "解碼",
+        "encode": "編碼"
+      },
+      "title": "JWT 解碼器/編碼器",
+      "token": "JWT 權杖"
+    }
   }
 }
