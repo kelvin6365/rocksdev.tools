@@ -289,6 +289,118 @@
     },
     "openSource": "開源",
     "title": "轉換器",
-    "tryNow": "立即嘗試"
+    "tryNow": "立即嘗試",
+    "advanced-image-optimization": {
+      "title": "進階圖像優化",
+      "description": "使用可調節的質量設定、格式轉換和批次處理來壓縮和優化圖像",
+      "empty-state": {
+        "message": "上傳圖像以開始"
+      },
+      "settings": {
+        "title": "優化設定",
+        "description": "調整質量、格式和尺寸以優化您的圖像",
+        "quality": {
+          "label": "質量",
+          "description": "調整質量百分比（越低 = 檔案越小）"
+        },
+        "format": {
+          "label": "輸出格式",
+          "description": "選擇優化圖像的輸出格式"
+        },
+        "max-width": {
+          "label": "最大寬度",
+          "placeholder": "例如：1920",
+          "description": "最大寬度（像素），留空表示無限制"
+        },
+        "max-height": {
+          "label": "最大高度",
+          "placeholder": "例如：1080",
+          "description": "最大高度（像素），留空表示無限制"
+        }
+      },
+      "upload": {
+        "title": "上傳圖像",
+        "description": "拖放圖像到此處或點擊選擇檔案",
+        "drop-label": "將圖像放到此處",
+        "click-to-upload": "點擊瀏覽檔案",
+        "formats-supported": "支援 JPEG、PNG、WebP 和 GIF 格式"
+      },
+      "progress": {
+        "title": "優化進度",
+        "status": "{processed} / {total} 個圖像已處理"
+      },
+      "results": {
+        "title": "優化結果",
+        "description": "檔案大小節省摘要",
+        "total-original": "總原始大小",
+        "total-optimized": "總優化大小",
+        "savings": "節省百分比"
+      },
+      "files": {
+        "title": "上傳的檔案",
+        "description": "管理您的上傳圖像和優化結果"
+      },
+      "status": {
+        "pending": "待處理",
+        "processing": "處理中",
+        "optimized": "已優化",
+        "error": "錯誤"
+      },
+      "actions": {
+        "optimize-all": "全部優化",
+        "optimizing": "正在優化...",
+        "download-single": "下載",
+        "download-all": "全部下載為ZIP",
+        "remove": "移除",
+        "reset": "重置"
+      },
+      "errors": {
+        "invalid-file-type": "無效的檔案類型。請上傳圖像檔案。",
+        "file-too-large": "檔案太大。最大大小為10MB。",
+        "no-files": "沒有要優化的檔案。請先上傳圖像。",
+        "optimization-failed": "一個或多個圖像優化失敗。",
+        "download-not-ready": "並非所有圖像都已完成優化。請等待優化完成。",
+        "download-failed": "下載檔案失敗。"
+      },
+      "guide": {
+        "tabs": {
+          "usage": "使用指南",
+          "features": "功能",
+          "tips": "技巧和最佳實踐"
+        },
+        "usage": {
+          "title": "如何使用圖像優化器",
+          "description": "按照以下步驟優化您的圖像",
+          "steps": {
+            "upload": "通過拖放或點擊上傳區域上傳圖像",
+            "adjust-settings": "調整優化設定，如質量、格式和尺寸",
+            "optimize": "點擊「全部優化」處理所有圖像",
+            "download": "下載單個圖像或將所有優化圖像下載為ZIP檔案"
+          }
+        },
+        "features": {
+          "title": "強大功能",
+          "description": "利用這些優化功能",
+          "list": {
+            "quality-control": "可調節質量設定（1-100%）",
+            "format-conversion": "在JPEG、PNG和WebP格式之間轉換",
+            "batch-processing": "同時處理多個圖像",
+            "size-comparison": "比較原始與優化的檔案大小",
+            "dimension-control": "設置最大寬度和高度約束"
+          }
+        },
+        "tips": {
+          "title": "優化技巧",
+          "description": "獲得最佳結果的最佳實踐",
+          "list": {
+            "quality-balance": "平衡質量和檔案大小 - 80-90% 通常適合網路使用",
+            "format-selection": "選擇正確的格式：照片使用JPEG，帶透明度的圖形使用PNG，最佳壓縮使用WebP",
+            "webp-benefits": "WebP 通常比JPEG/PNG提供25-35%更小的檔案大小",
+            "batch-processing": "使用批次處理一次優化多個圖像"
+          },
+          "list-batch-processing": "使用批次處理一次優化多個圖像"
+        }
+      }
+    }
   }
 }

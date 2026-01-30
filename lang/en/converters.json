@@ -289,6 +289,118 @@
     },
     "openSource": "Open Source",
     "title": "Converters",
-    "tryNow": "Try Now"
+    "tryNow": "Try Now",
+    "advanced-image-optimization": {
+      "title": "Advanced Image Optimization",
+      "description": "Compress and optimize images with adjustable quality settings, format conversion, and batch processing",
+      "empty-state": {
+        "message": "Upload images to get started"
+      },
+      "settings": {
+        "title": "Optimization Settings",
+        "description": "Adjust quality, format, and dimensions to optimize your images",
+        "quality": {
+          "label": "Quality",
+          "description": "Adjust the quality percentage (lower = smaller file size)"
+        },
+        "format": {
+          "label": "Output Format",
+          "description": "Choose the output format for optimized images"
+        },
+        "max-width": {
+          "label": "Maximum Width",
+          "placeholder": "e.g., 1920",
+          "description": "Maximum width in pixels (leave empty for no limit)"
+        },
+        "max-height": {
+          "label": "Maximum Height",
+          "placeholder": "e.g., 1080",
+          "description": "Maximum height in pixels (leave empty for no limit)"
+        }
+      },
+      "upload": {
+        "title": "Upload Images",
+        "description": "Drag & drop images here or click to select files",
+        "drop-label": "Drop your images here",
+        "click-to-upload": "Click to browse files",
+        "formats-supported": "Supports JPEG, PNG, WebP, and GIF formats"
+      },
+      "progress": {
+        "title": "Optimization Progress",
+        "status": "{processed} of {total} images processed"
+      },
+      "results": {
+        "title": "Optimization Results",
+        "description": "Summary of file size savings",
+        "total-original": "Total Original Size",
+        "total-optimized": "Total Optimized Size",
+        "savings": "Savings Percentage"
+      },
+      "files": {
+        "title": "Uploaded Files",
+        "description": "Manage your uploaded images and optimization results"
+      },
+      "status": {
+        "pending": "Pending",
+        "processing": "Processing",
+        "optimized": "Optimized",
+        "error": "Error"
+      },
+      "actions": {
+        "optimize-all": "Optimize All",
+        "optimizing": "Optimizing...",
+        "download-single": "Download",
+        "download-all": "Download All as ZIP",
+        "remove": "Remove",
+        "reset": "Reset"
+      },
+      "errors": {
+        "invalid-file-type": "Invalid file type. Please upload an image file.",
+        "file-too-large": "File too large. Maximum size is 10MB.",
+        "no-files": "No files to optimize. Please upload images first.",
+        "optimization-failed": "Optimization failed for one or more images.",
+        "download-not-ready": "Not all images are optimized yet. Please wait for optimization to complete.",
+        "download-failed": "Failed to download files."
+      },
+      "guide": {
+        "tabs": {
+          "usage": "Usage Guide",
+          "features": "Features",
+          "tips": "Tips & Best Practices"
+        },
+        "usage": {
+          "title": "How to Use the Image Optimizer",
+          "description": "Follow these steps to optimize your images",
+          "steps": {
+            "upload": "Upload images by dragging and dropping or clicking the upload area",
+            "adjust-settings": "Adjust optimization settings like quality, format, and dimensions",
+            "optimize": "Click 'Optimize All' to process all images",
+            "download": "Download individual images or all optimized images as a ZIP file"
+          }
+        },
+        "features": {
+          "title": "Powerful Features",
+          "description": "Take advantage of these optimization features",
+          "list": {
+            "quality-control": "Adjustable quality settings from 1-100%",
+            "format-conversion": "Convert between JPEG, PNG, and WebP formats",
+            "batch-processing": "Process multiple images simultaneously",
+            "size-comparison": "Compare original vs optimized file sizes",
+            "dimension-control": "Set maximum width and height constraints"
+          }
+        },
+        "tips": {
+          "title": "Optimization Tips",
+          "description": "Best practices for optimal results",
+          "list": {
+            "quality-balance": "Balance quality and file size - 80-90% is often ideal for web use",
+            "format-selection": "Choose the right format: JPEG for photos, PNG for graphics with transparency, WebP for best compression",
+            "webp-benefits": "WebP typically offers 25-35% smaller file sizes compared to JPEG/PNG",
+            "batch-processing": "Use batch processing to optimize multiple images at once"
+          },
+          "list-batch-processing": "Use batch processing to optimize multiple images at once"
+        }
+      }
+    }
   }
 }

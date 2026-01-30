@@ -154,6 +154,9 @@ importers:
       embla-carousel-react:
         specifier: ^8.5.1
         version: 8.5.1(react@19.0.0-rc.1)
+      file-saver:
+        specifier: ^2.0.5
+        version: 2.0.5
       fuse.js:
         specifier: ^7.0.0
         version: 7.0.0
@@ -254,6 +257,9 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
+      "@types/file-saver":
+        specifier: ^2.0.7
+        version: 2.0.7
       "@types/js-cookie":
         specifier: ^3.0.6
         version: 3.0.6
@@ -2629,6 +2635,12 @@ packages:
         integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==,
       }
 
+  "@types/file-saver@2.0.7":
+    resolution:
+      {
+        integrity: sha512-dNKVfHd/jk0SkR/exKGj2ggkB45MAkzvWCaqLUUgkyjITkGNzH8H+yUwr+BLJUBjZOe9w8X3wgmXhZDRg1ED6A==,
+      }
+
   "@types/hast@3.0.4":
     resolution:
       {
@@ -4238,6 +4250,12 @@ packages:
         integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==,
       }
     engines: { node: ^10.12.0 || >=12.0.0 }
+
+  file-saver@2.0.5:
+    resolution:
+      {
+        integrity: sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==,
+      }
 
   file-selector@2.1.2:
     resolution:
@@ -9138,6 +9156,8 @@ snapshots:
 
   "@types/estree@1.0.6": {}
 
+  "@types/file-saver@2.0.7": {}
+
   "@types/hast@3.0.4":
     dependencies:
       "@types/unist": 3.0.3
@@ -10217,6 +10237,8 @@ snapshots:
   file-entry-cache@6.0.1:
     dependencies:
       flat-cache: 3.2.0
+
+  file-saver@2.0.5: {}
 
   file-selector@2.1.2:
     dependencies:

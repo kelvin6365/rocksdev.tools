@@ -92,6 +92,10 @@
         "url": {
           "description": "編碼和解碼 URL",
           "title": "URL 編碼器/解碼器"
+        },
+        "advanced-image-optimization": {
+          "description": "壓縮和優化圖像，支持調整質量設置、格式轉換和批量處理",
+          "title": "高级图像优化"
         }
       },
       "dev": {
@@ -208,6 +212,9 @@
     "java": "Java",
     "markdown": "Markdown",
     "security": "Security",
+    "image": "圖像",
+    "optimization": "優化",
+    "compression": "壓縮",
     "encoding": "編碼"
   },
   "footer": {

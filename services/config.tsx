@@ -1,7 +1,6 @@
-import { DailyDevIcon } from "../components/icons/social";
 import { Github, Instagram, MessageCircle, Twitter } from "lucide-react";
+import { DailyDevIcon, XiaoHongShuIcon } from "../components/icons/social";
 import { Tool } from "../types/tool";
-import { XiaoHongShuIcon } from "../components/icons/social";
 
 export const config = {
   name: "Rocks Dev",
@@ -181,6 +180,15 @@ export const config = {
           description: "Encode and decode URLs",
           icon: "🔗",
           tags: ["encoding"],
+        },
+        {
+          label: "Advanced Image Optimization",
+          value: "converters.advanced-image-optimization",
+          href: "/tools/converters/advanced-image-optimization",
+          description:
+            "Compress and optimize images with adjustable quality settings, format conversion, and batch processing",
+          icon: "🖼️",
+          tags: ["image", "optimization", "compression"],
         },
       ],
     },

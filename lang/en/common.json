@@ -92,6 +92,10 @@
         "url": {
           "description": "Encode and decode URLs",
           "title": "URL Encoder/Decoder"
+        },
+        "advanced-image-optimization": {
+          "description": "Compress and optimize images with adjustable quality settings, format conversion, and batch processing",
+          "title": "Advanced Image Optimization"
         }
       },
       "dev": {
@@ -208,7 +212,10 @@
     "java": "Java",
     "markdown": "Markdown",
     "security": "Security",
-    "encoding": "Encoding"
+    "encoding": "Encoding",
+    "image": "Image",
+    "optimization": "Optimization",
+    "compression": "Compression"
   },
   "footer": {
     "about": {
