@@ -2211,6 +2211,196 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
   },
+  "converters.advanced-image-optimization": {
+    en: {
+      title:
+        "Advanced Image Optimization | Compress & Optimize Images Online | RocksDev Tools",
+      description:
+        "Free online advanced image optimization tool. Compress and optimize images with adjustable quality settings, format conversion (JPEG, PNG, WebP), batch processing, and dimension control. Reduce file sizes while maintaining quality.",
+      keywords: [
+        // Primary keywords
+        "image optimization",
+        "image compression",
+        "image optimizer",
+        "photo compression",
+        "image resizer",
+
+        // Feature keywords
+        "compress images online",
+        "optimize image quality",
+        "batch image processing",
+        "image format converter",
+        "resize images online",
+
+        // Format keywords
+        "jpeg optimizer",
+        "png compressor",
+        "webp converter",
+        "image format conversion",
+        "lossless image compression",
+
+        // Technical keywords
+        "image file size reducer",
+        "photo optimization tool",
+        "image dimension adjuster",
+        "bulk image optimizer",
+        "image quality controller",
+
+        // User intent keywords
+        "reduce image file size",
+        "optimize images for web",
+        "compress photos online",
+        "convert image formats",
+        "batch resize images",
+
+        // Action keywords
+        "shrink image files",
+        "optimize image dimensions",
+        "convert to webp format",
+        "adjust image quality",
+        "process multiple images",
+
+        // Characteristics
+        "free image optimizer",
+        "online image compression",
+        "instant image processing",
+        "bulk image optimization",
+        "web image optimizer",
+      ],
+      openGraph: {
+        type: "website",
+        title:
+          "Advanced Image Optimization - Compress & Optimize Images Online",
+        description:
+          "Free online tool to compress and optimize images. Adjust quality, convert formats, resize dimensions, and process multiple images in batches.",
+        images: [`/api/og?title=Advanced%20Image%20Optimization`],
+      },
+    },
+    "zh-CN": {
+      title: "高级图像优化 | 在线压缩和优化图像 | RocksDev.Tools",
+      description:
+        "免费的在线高级图像优化工具。通过可调节的质量设置、格式转换（JPEG、PNG、WebP）、批量处理和尺寸控制来压缩和优化图像。在保持质量的同时减小文件大小。",
+      keywords: [
+        // Primary keywords
+        "图像优化",
+        "图像压缩",
+        "图像优化器",
+        "照片压缩",
+        "图像调整大小",
+
+        // Feature keywords
+        "在线压缩图像",
+        "优化图像质量",
+        "批量图像处理",
+        "图像格式转换",
+        "在线调整图像大小",
+
+        // Format keywords
+        "jpeg优化器",
+        "png压缩器",
+        "webp转换器",
+        "图像格式转换",
+        "无损图像压缩",
+
+        // Technical keywords
+        "图像文件大小缩减器",
+        "照片优化工具",
+        "图像尺寸调整器",
+        "批量图像优化器",
+        "图像质量控制器",
+
+        // User intent keywords
+        "减小图像文件大小",
+        "为网页优化图像",
+        "在线压缩照片",
+        "转换图像格式",
+        "批量调整图像大小",
+
+        // Action keywords
+        "缩小图像文件",
+        "优化图像尺寸",
+        "转换为webp格式",
+        "调整图像质量",
+        "处理多个图像",
+
+        // Characteristics
+        "免费图像优化器",
+        "在线图像压缩",
+        "即时图像处理",
+        "批量图像优化",
+        "网页图像优化器",
+      ],
+      openGraph: {
+        type: "website",
+        title: "高级图像优化 - 在线压缩和优化图像",
+        description:
+          "免费在线工具，用于压缩和优化图像。调整质量、转换格式、调整尺寸，并批量处理多个图像。",
+        images: [`/api/og?title=Advanced%20Image%20Optimization`],
+      },
+    },
+    "zh-HK": {
+      title: "高級圖像優化 | 線上壓縮和優化圖像 | RocksDev.Tools",
+      description:
+        "免費的線上高級圖像優化工具。通過可調節的質量設置、格式轉換（JPEG、PNG、WebP）、批量處理和尺寸控制來壓縮和優化圖像。在保持質量的同時減小文件大小。",
+      keywords: [
+        // Primary keywords
+        "圖像優化",
+        "圖像壓縮",
+        "圖像優化器",
+        "照片壓縮",
+        "圖像調整大小",
+
+        // Feature keywords
+        "線上壓縮圖像",
+        "優化圖像質量",
+        "批量圖像處理",
+        "圖像格式轉換",
+        "線上調整圖像大小",
+
+        // Format keywords
+        "jpeg優化器",
+        "png壓縮器",
+        "webp轉換器",
+        "圖像格式轉換",
+        "無損圖像壓縮",
+
+        // Technical keywords
+        "圖像文件大小縮減器",
+        "照片優化工具",
+        "圖像尺寸調整器",
+        "批量圖像優化器",
+        "圖像質量控制器",
+
+        // User intent keywords
+        "減小圖像文件大小",
+        "為網頁優化圖像",
+        "線上壓縮照片",
+        "轉換圖像格式",
+        "批量調整圖像大小",
+
+        // Action keywords
+        "縮小圖像文件",
+        "優化圖像尺寸",
+        "轉換為webp格式",
+        "調整圖像質量",
+        "處理多個圖像",
+
+        // Characteristics
+        "免費圖像優化器",
+        "線上圖像壓縮",
+        "即時圖像處理",
+        "批量圖像優化",
+        "網頁圖像優化器",
+      ],
+      openGraph: {
+        type: "website",
+        title: "高級圖像優化 - 線上壓縮和優化圖像",
+        description:
+          "免費線上工具，用於壓縮和優化圖像。調整質量、轉換格式、調整尺寸，並批量處理多個圖像。",
+        images: [`/api/og?title=Advanced%20Image%20Optimization`],
+      },
+    },
+  },
 };
 
 export const termsSEO: Record<string, SEOConfig> = {
