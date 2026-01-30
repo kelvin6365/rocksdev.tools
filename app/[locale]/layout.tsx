@@ -1,25 +1,26 @@
+import { Dock } from "@/components/dock";
 import { NavBar } from "@/components/nav-bar";
+import { SupportOverlay } from "@/components/support-overlay";
+import { ToolProvider } from "@/contexts/tool-context";
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { ToastProvider } from "@/providers/toast-provider";
+import { getMetadata, getStructuredData } from "@/services/seo";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import Script from "next/dist/client/script";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import GoogleAdsense from "../../components/adsense";
 import { Footer } from "../../components/footer";
-import "./globals.css";
-import { getMetadata, getStructuredData } from "@/services/seo";
-import { ToolProvider } from "@/contexts/tool-context";
-import { SupportOverlay } from "@/components/support-overlay";
-import { Dock } from "@/components/dock";
+import OpenPanel from "../../components/open-panel-component";
+import ProductHuntBanner from "../../components/product-hunt-banner";
 import { PromotionBanner } from "../../components/promotion-banner";
 import { config } from "../../services/config";
-import Script from "next/dist/client/script";
-import ProductHuntBanner from "../../components/product-hunt-banner";
+import "./globals.css";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -102,6 +103,7 @@ export default async function RootLayout({
             />
           </ToolProvider>
         </NextIntlClientProvider>
+        <OpenPanel />
       </body>
     </html>
   );
