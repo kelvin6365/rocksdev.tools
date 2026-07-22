@@ -4,6 +4,13 @@ import { fetchGitHubReleases } from "@/services/github";
 import { ChangelogContent } from "../../../components/changelog-content";
 import { setRequestLocale } from "next-intl/server";
 
+/**
+ * Regenerate hourly. Static rendering would otherwise pin this page to the
+ * releases that existed at build time, so a new GitHub release would not show
+ * up until the next deploy.
+ */
+export const revalidate = 3600;
+
 export default async function ChangelogPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
