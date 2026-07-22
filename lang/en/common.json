@@ -164,7 +164,8 @@
       },
       "title": "Tools"
     },
-    "typeToSearch": "Type to search..."
+    "typeToSearch": "Type to search...",
+    "relatedTools": "Related tools"
   },
   "not-found": {
     "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",

@@ -678,7 +678,7 @@ export const contactUsSEO: Record<string, SEOConfig> = {
 export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   "json.formatter": {
     en: {
-      title: "JSON Formatter | RocksDev Tools",
+      title: "JSON Formatter — Format & Beautify JSON Online",
       description:
         "Format, validate and beautify your JSON with our powerful online JSON formatter tool. Features include syntax highlighting, error detection, and more.",
       keywords: [
@@ -768,9 +768,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "json.validator": {
     en: {
-      title: "JSON Validator | RocksDev Tools",
+      title: "JSON Validator — Check JSON Syntax Online",
       description:
-        "Validate your JSON data with our powerful online JSON validator tool.",
+        "Validate JSON instantly and see exactly where the syntax breaks. Free online JSON validator with line-level error reporting, in your browser.",
       keywords: ["json validator", "json validation", "json tools"],
       openGraph: {
         type: "website",
@@ -804,9 +804,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "json.diff": {
     en: {
-      title: "JSON Diff Tool - Compare JSON Objects Online | RocksDev Tools",
+      title: "JSON Diff — Compare Two JSON Objects Online",
       description:
-        "Free online JSON comparison tool. Compare two JSON objects, find differences, track changes, and analyze JSON data structures. Features include visual diff highlighting, nested object comparison, and export options.",
+        "Compare two JSON documents and see exactly what changed. Visual diff with nested object support and CSV or JSON export, free and in your browser.",
       keywords: [
         "json diff",
         "json compare",
@@ -914,9 +914,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "json.minifier": {
     en: {
-      title: "JSON Minifier | RocksDev Tools",
+      title: "JSON Minifier — Compress JSON Online",
       description:
-        "Minify and compress JSON data instantly with our powerful online JSON minifier tool. Reduce file size while maintaining data integrity, perfect for optimization and deployment.",
+        "Minify JSON instantly to cut file size without changing the data. Free online JSON compressor that strips whitespace and newlines in your browser.",
       keywords: [
         // Primary keywords
         "json minifier",
@@ -1062,9 +1062,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "converters.base64": {
     en: {
-      title: "Base64 Converter | RocksDev Tools",
+      title: "Base64 Encoder & Decoder — Convert Online",
       description:
-        "Convert between Base64 and other formats with our powerful online Base64 converter tool.",
+        "Encode and decode Base64 online, for both text and files. Supports URL-safe encoding and runs entirely in your browser, so nothing is uploaded.",
       keywords: [
         "base64 converter",
         "base64 tools",
@@ -1116,10 +1116,75 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
   },
+  "converters.md2html": {
+    en: {
+      title: "Markdown to HTML Converter — Live Preview",
+      description:
+        "Convert Markdown to clean HTML with a live GitHub-flavoured preview. Supports tables, task lists and code highlighting, free and in your browser.",
+      keywords: [
+        "markdown to html",
+        "markdown to html converter",
+        "convert markdown to html online",
+        "md to html",
+        "github flavored markdown converter",
+        "markdown preview",
+        "markdown renderer",
+        "free markdown converter",
+      ],
+      openGraph: {
+        type: "website",
+        title: "Markdown to HTML Converter",
+        description:
+          "Convert Markdown to clean HTML with a live GitHub-flavoured preview.",
+        images: [`/api/og?title=Markdown%20to%20HTML`],
+      },
+    },
+    "zh-CN": {
+      title: "Markdown 转 HTML 转换器 — 实时预览",
+      description:
+        "将 Markdown 转换为整洁的 HTML，并提供 GitHub 风格的实时预览。支持表格、任务列表和代码高亮，完全在浏览器中运行。",
+      keywords: [
+        "markdown转html",
+        "md转html",
+        "在线markdown转换器",
+        "markdown转html工具",
+        "GitHub风格markdown",
+        "markdown预览",
+        "免费markdown转换",
+      ],
+      openGraph: {
+        type: "website",
+        title: "Markdown 转 HTML 转换器",
+        description: "将 Markdown 转换为整洁的 HTML，并提供实时预览。",
+        images: [`/api/og?title=Markdown%20to%20HTML`],
+      },
+    },
+    "zh-HK": {
+      title: "Markdown 轉 HTML 轉換器 — 即時預覽",
+      description:
+        "將 Markdown 轉換為整潔的 HTML，並提供 GitHub 風格的即時預覽。支援表格、待辦清單和程式碼高亮，完全在瀏覽器中執行。",
+      keywords: [
+        "markdown轉html",
+        "md轉html",
+        "線上markdown轉換器",
+        "markdown轉html工具",
+        "GitHub風格markdown",
+        "markdown預覽",
+        "免費markdown轉換",
+      ],
+      openGraph: {
+        type: "website",
+        title: "Markdown 轉 HTML 轉換器",
+        description: "將 Markdown 轉換為整潔的 HTML，並提供即時預覽。",
+        images: [`/api/og?title=Markdown%20to%20HTML`],
+      },
+    },
+  },
   "dev.regex": {
     en: {
-      title: "Regex Tester | RocksDev Tools",
-      description: "Test and validate regular expressions",
+      title: "Regex Tester — Test Regular Expressions Online",
+      description:
+        "Test and debug regular expressions live, with match highlighting and a library of common patterns. Free, instant, and runs in your browser.",
       keywords: ["regex tester", "regex validator", "regex tools"],
       openGraph: {
         type: "website",
@@ -1153,10 +1218,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "seo.og-image": {
     en: {
-      title:
-        "OG Image Generator | Create Social Media Preview Images | RocksDev Tools",
+      title: "OG Image Generator — 1200×630 Social Previews",
       description:
-        "Create professional Open Graph (OG) images for social media previews. Free online tool to generate, crop, and optimize social card images for Facebook, Twitter, LinkedIn, and more.",
+        "Create Open Graph images at the right size for every platform. Generate, crop and export social previews for Facebook, X, LinkedIn and Slack.",
       keywords: [
         // Primary keywords
         "og image generator",
@@ -1343,8 +1407,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "text.text-formatter": {
     en: {
-      title: "Text Formatter | RocksDev Tools",
-      description: "Format and manipulate your text with advanced tools",
+      title: "Text Formatter — Clean & Transform Text Online",
+      description:
+        "Format, clean and transform text online — change case, trim whitespace, remove duplicates and more. Free and runs entirely in your browser.",
       keywords: ["text formatter", "text tools", "text formatting"],
       openGraph: {
         type: "website",
@@ -1378,10 +1443,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "seo.meta-tags": {
     en: {
-      title:
-        "Meta Tags Generator | Create SEO & Social Media Tags | RocksDev Tools",
+      title: "Meta Tags Generator — SEO & Social Tags",
       description:
-        "Free online Meta Tags Generator for SEO optimization. Create perfect meta tags for search engines (Google, Bing) and social media (Facebook, Twitter, LinkedIn). Features include title tag optimization, meta descriptions, Open Graph tags, Twitter Cards, and real-time preview.",
+        "Generate title, description, Open Graph and Twitter Card tags with a live SERP and social preview. Free meta tag builder for any page.",
       keywords: [
         // Primary keywords
         "meta tags generator",
@@ -1546,10 +1610,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "dev.app-icon": {
     en: {
-      title:
-        "Free App Icon Generator | Create iOS & Android Icons Effortlessly",
+      title: "App Icon Generator — iOS & Android, All Sizes",
       description:
-        "Easily generate app icons for iOS and Android with our free online tool. Resize, export, and create icons in all required sizes for App Store and Play Store submissions.",
+        "Generate every iOS and Android app icon size from one 1024px image. Includes App Store and Play Store sizes, ready to drop into your project.",
       keywords: [
         "app icon generator",
         "free app icon maker",
@@ -1617,9 +1680,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "dev.ai-sql": {
     en: {
-      title: "AI SQL Generator | Smart Database Query Builder | RocksDev Tools",
+      title: "AI SQL Generator — Turn Code into SQL Schema",
       description:
-        "Transform natural language and code into optimized SQL queries with our advanced AI-powered SQL generator. Features include multi-dialect support (MySQL, PostgreSQL, SQLite), intelligent query optimization, and real-time syntax validation. Perfect for developers, database administrators, and data analysts.",
+        "Turn class definitions and natural language into SQL table schemas. Supports MySQL, PostgreSQL and SQLite, with relationships and indexes included.",
       keywords: [
         // Primary keywords
         "ai sql generator",
@@ -1785,10 +1848,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "json.parser": {
     en: {
-      title:
-        "JSON Parser & Stringify Tool | Convert JSON Online | RocksDev Tools",
+      title: "JSON Unstringify & Parse — Unescape JSON Online",
       description:
-        "Free online JSON Parser and Stringify tool. Convert between JSON strings and JavaScript objects, with support for minification, pretty printing, and Unicode escaping. Perfect for developers working with JSON data.",
+        "Paste escaped or stringified JSON and get clean, readable output. Free tool to unstringify, unescape, parse and re-stringify JSON in your browser.",
       keywords: [
         // Primary keywords
         "json parser",
@@ -1940,9 +2002,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "dev.jwt": {
     en: {
-      title: "JWT Decoder/Encoder | Secure Token Processing | RocksDev Tools",
+      title: "JWT Decoder & Encoder — Inspect Tokens Online",
       description:
-        "Free online JWT Decoder and Encoder tool. Decode JWT tokens to view header and payload, or encode your own JWT tokens with custom secrets. Supports HS256, HS384, and HS512 algorithms.",
+        "Decode a JWT to inspect its header and payload, or encode your own with a custom secret. Supports HS256, HS384 and HS512, all in your browser.",
       keywords: [
         // Primary keywords
         "jwt decoder",
@@ -2119,9 +2181,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "converters.url": {
     en: {
-      title: "URL Encoder/Decoder | Percent Encoding Tool | RocksDev Tools",
+      title: "URL Encoder & Decoder — Percent Encoding Tool",
       description:
-        "Free online URL Encoder and Decoder tool. Encode URLs for safe web transmission or decode percent-encoded URLs to human-readable format. Perfect for web developers and API testing.",
+        "Encode URLs for safe transmission or decode percent-encoded strings back to readable text. Free online tool that runs entirely in your browser.",
       keywords: [
         // Primary keywords
         "url encoder",
@@ -2274,10 +2336,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "converters.advanced-image-optimization": {
     en: {
-      title:
-        "Advanced Image Optimization | Compress & Optimize Images Online | RocksDev Tools",
+      title: "Image Optimizer — Compress & Convert Images Online",
       description:
-        "Free online advanced image optimization tool. Compress and optimize images with adjustable quality settings, format conversion (JPEG, PNG, WebP), batch processing, and dimension control. Reduce file sizes while maintaining quality.",
+        "Compress and convert images to JPEG, PNG or WebP with adjustable quality. Batch processing and resizing, all in your browser with no upload.",
       keywords: [
         // Primary keywords
         "image optimization",
