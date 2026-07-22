@@ -212,7 +212,8 @@
             "font": "Font family - Select from sans-serif, serif, or monospace fonts",
             "layout": "Layout style - Different arrangements of title and description",
             "theme": "Color theme - Choose between light, dark, or gradient themes",
-            "title": "Title text - The main heading of your image"
+            "title": "Title text - The main heading of your image",
+            "heading": "Available settings"
           },
           "title": "Input Settings"
         },
@@ -232,7 +233,57 @@
           "note": "Note: The generator creates optimized images for social media sharing. Test your images across different platforms to ensure they display correctly.",
           "title": "Tips & Best Practices"
         },
-        "title": "Guide"
+        "title": "Guide",
+        "sizes": {
+          "title": "Social image sizes",
+          "intro": "Open Graph images are served at 1200 × 630 pixels — a 1.91:1 ratio that Facebook, LinkedIn and Slack all crop to. Most platforms accept that single image, but a few use their own ratio, so it is worth knowing where the differences are before you commit to one asset.",
+          "columns": {
+            "platform": "Platform",
+            "size": "Recommended size",
+            "ratio": "Aspect ratio",
+            "notes": "Notes"
+          },
+          "rows": {
+            "og": "The safe default. One 1200 × 630 image covers Facebook, LinkedIn and Slack link unfurls.",
+            "x-large": "Used when your page declares twitter:card as summary_large_image. Near-identical to Open Graph, so the same file works.",
+            "x-summary": "The small square card. X falls back to this when no large-image card is declared.",
+            "pinterest": "Vertical by design. A 1.91:1 image is heavily letterboxed here, so generate a separate asset if Pinterest matters.",
+            "whatsapp": "Thumbnails are cropped to a square. Keep the important content centred or it will be cut off."
+          },
+          "limits": {
+            "title": "Limits and gotchas",
+            "file-size": "Keep the file under 5 MB. Facebook accepts up to 8 MB, but X rejects anything larger than 5 MB.",
+            "formats": "Use PNG or JPG. SVG is not supported by any major crawler, and WebP support is inconsistent.",
+            "text-safe-area": "Keep text within the central 80% of the frame. Different platforms crop the edges by different amounts.",
+            "retina": "Do not upscale beyond 1200 × 630. Platforms downscale for display, and larger files slow down the first unfurl."
+          }
+        },
+        "troubleshooting": {
+          "title": "Troubleshooting",
+          "intro": "Most Open Graph problems are caching or URL issues rather than problems with the image itself.",
+          "items": {
+            "cache": {
+              "problem": "The preview still shows the old image",
+              "fix": "Platforms cache aggressively. Force a re-scrape with the Facebook Sharing Debugger, the X Card Validator, or LinkedIn's Post Inspector. Changing the image URL also works."
+            },
+            "absolute-url": {
+              "problem": "No image appears at all",
+              "fix": "og:image must be an absolute URL including the scheme and host. Relative paths such as /og.png are ignored by every crawler."
+            },
+            "blocked": {
+              "problem": "The image works in a browser but not when shared",
+              "fix": "Check that the image is not behind authentication, a paywall, or a robots.txt rule. Crawlers fetch it anonymously."
+            },
+            "missing-dimensions": {
+              "problem": "The card renders small or reflows after a moment",
+              "fix": "Declare og:image:width and og:image:height. Without them the platform must download the image before it can size the card."
+            },
+            "format": {
+              "problem": "The image is blank or corrupt on one platform only",
+              "fix": "Re-export as PNG or JPG. WebP and AVIF are still unevenly supported, and animated formats are never used for previews."
+            }
+          }
+        }
       },
       "images": {
         "alt": "Preview {index}",
