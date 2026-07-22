@@ -108,7 +108,84 @@
       "upload-button-generate": "生成图标",
       "upload-description": "上传一张 1024x1024px 的 PNG 图片以生成所有平台的图标。",
       "upload-placeholder": "将图标拖放到此处",
-      "upload-placeholder-description": "建议使用 1024x1024px 的正方形 PNG 或 JPG"
+      "upload-placeholder-description": "建议使用 1024x1024px 的正方形 PNG 或 JPG",
+      "guide": {
+        "columns": {
+          "usage": "用途",
+          "size": "尺寸（像素）",
+          "scale": "倍率",
+          "density": "密度分类"
+        },
+        "source": {
+          "title": "准备源图片",
+          "description": "所有尺寸都是由同一张源图片缩小生成的，因此这一个文件的质量决定了整套图标的质量。请从 1024 × 1024（App Store 要求的尺寸）开始，其余尺寸交给工具生成。",
+          "requirements": {
+            "title": "源文件的要求",
+            "list": {
+              "1": "正方形，至少 1024 × 1024 像素。尺寸更小的图片会被放大，在高分辨率屏幕上会显得模糊。",
+              "2": "PNG 格式；如果图标用于 iOS，则不能包含透明通道。",
+              "3": "图形要能经受住 48 × 48 的考验——细小的细节和纤细的线条在最小尺寸下会完全消失。",
+              "4": "不要自己加圆角或投影，两个平台都会套用各自的遮罩。",
+              "5": "使用 sRGB 色彩空间。广色域配置文件在系统重新渲染图标后可能出现明显偏色。"
+            }
+          }
+        },
+        "ios": {
+          "title": "iOS 图标尺寸",
+          "description": "Xcode 的 Asset Catalog 会为每种设备和倍率要求对应的文件。1024 × 1024 是提交到 App Store Connect 的那一张，其余则用于设备本身。",
+          "rows": {
+            "app-store": "App Store 商店页面",
+            "iphone-3x": "iPhone 主屏幕",
+            "iphone-2x": "iPhone 主屏幕（较旧机型）",
+            "ipad-pro": "iPad Pro 主屏幕",
+            "ipad-2x": "iPad 主屏幕",
+            "settings": "设置与搜索结果",
+            "notification": "通知"
+          }
+        },
+        "android": {
+          "title": "Android 图标尺寸",
+          "description": "Android 是按密度分类而不是按具体机型来选取图标的。每个 mipmap 目录存放同一个图标的不同分辨率版本，启动器会挑选与屏幕匹配的那一个。",
+          "rows": {
+            "play-store": "商店页面素材，与 APK 或 App Bundle 分开上传",
+            "xxxhdpi": "约 640 dpi——目前大多数旗舰手机",
+            "xxhdpi": "约 480 dpi——常见的中端机型和较旧的旗舰",
+            "xhdpi": "约 320 dpi",
+            "hdpi": "约 240 dpi",
+            "mdpi": "约 160 dpi——基准密度"
+          },
+          "adaptive": {
+            "title": "自适应图标",
+            "description": "Android 8.0 及以上会把前景层和背景层合成，并套用各设备自己的遮罩，可能是圆形、squircle 或圆角方形。请把有意义的画面内容保持在画布中央 66% 的范围内，因为超出部分在某些设备上会被裁掉。"
+          }
+        },
+        "pitfalls": {
+          "title": "常见错误",
+          "description": "商店审核被拒和图标显示异常，几乎都能归到下面这几种情况。",
+          "items": {
+            "alpha": {
+              "problem": "App Store Connect 以「图标包含 Alpha 通道」为由拒绝",
+              "fix": "iOS 图标必须完全不透明。请把图片合并到纯色背景上，并重新导出为不含透明通道的 PNG。"
+            },
+            "rounded": {
+              "problem": "图标出现双重圆角或边角被切掉",
+              "fix": "请提供完整的正方形。两个平台都会套用自己的圆角遮罩，事先做好圆角就会被切两次。"
+            },
+            "safe-area": {
+              "problem": "在部分 Android 设备上画面被裁掉一部分",
+              "fix": "各厂商的自适应图标遮罩并不一致。请把 logo 和文字保持在画布中央 66% 的范围内。"
+            },
+            "text": {
+              "problem": "图标在主屏幕上根本看不清",
+              "fix": "在 1024 像素下清晰的文字标识，在 48 像素下是无法辨认的。请改用图形符号，并在发布前先检查最小尺寸的导出结果。"
+            },
+            "upscaling": {
+              "problem": "图标在高分辨率屏幕上发虚",
+              "fix": "源图小于 1024 × 1024，被放大了。请从矢量素材按完整尺寸重新导出，而不是拉伸位图。"
+            }
+          }
+        }
+      }
     },
     "description": "为您的网站提供开发工具",
     "free": "免费",

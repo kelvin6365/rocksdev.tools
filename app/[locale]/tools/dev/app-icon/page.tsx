@@ -1,5 +1,6 @@
 import { ToolLayout } from "@/components/layouts/tool-layout";
 import AppIconGenerator from "@/components/tools/app-icon-generator";
+import { GuideSection } from "@/components/tools/app-icon-generator/guide-section";
 import { getMetadata } from "@/services/seo";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
@@ -23,7 +24,7 @@ export default function AppIconGeneratorPage({ params }: Props) {
   return (
     <>
       <ToolStructuredData path="dev.app-icon" locale={locale} />
-      <ToolLayout translationKey="dev.app-icon">
+      <ToolLayout translationKey="dev.app-icon" guideSection={<GuideSection />}>
         <AppIconGenerator />
       </ToolLayout>
     </>

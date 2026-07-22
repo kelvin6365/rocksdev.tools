@@ -92,6 +92,74 @@ const prettyJson = JSON.stringify(personData, null, 2);`}
           </ul>
         </div>
       </GuidePanel>
+
+      <GuidePanel title={t("unstringify.title")}>
+        <p className="text-sm text-muted-foreground">
+          {t("unstringify.description")}
+        </p>
+
+        <div className="space-y-2">
+          <h3 className="font-medium">{t("unstringify.sources.title")}</h3>
+          <ul className="text-sm text-muted-foreground list-disc pl-4 space-y-1">
+            {Object.entries(t.raw("unstringify.sources.list")).map(
+              ([key, value]) => (
+                <li key={key}>{value as string}</li>
+              ),
+            )}
+          </ul>
+        </div>
+
+        <div className="space-y-2">
+          <h3 className="font-medium">{t("unstringify.how.title")}</h3>
+          <p className="text-sm text-muted-foreground">
+            {t("unstringify.how.description")}
+          </p>
+          <p className="text-sm font-medium">{t("unstringify.how.escaped")}:</p>
+          <pre className="bg-muted p-2 rounded-md text-xs overflow-auto whitespace-pre-wrap">
+            {
+              '"{\\"order\\":{\\"id\\":41,\\"note\\":\\"line one\\\\nline two\\"}}"'
+            }
+          </pre>
+          <p className="text-sm font-medium mt-4">
+            {t("unstringify.how.decoded")}:
+          </p>
+          <pre className="bg-muted p-2 rounded-md text-xs overflow-auto whitespace-pre-wrap">
+            {`{
+  "order": {
+    "id": 41,
+    "note": "line one
+line two"
+  }
+}`}
+          </pre>
+        </div>
+      </GuidePanel>
+
+      <GuidePanel title={t("problems.title")}>
+        <p className="text-sm text-muted-foreground">
+          {t("problems.description")}
+        </p>
+        <div className="space-y-4">
+          {[
+            "double-encoded",
+            "literal-newlines",
+            "single-quotes",
+            "trailing-comma",
+            "smart-quotes",
+            "bom",
+          ].map((key) => (
+            <div key={key} className="space-y-1">
+              <h3 className="font-medium">
+                {t(`problems.items.${key}.problem`)}
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                {t(`problems.items.${key}.fix`)}
+              </p>
+            </div>
+          ))}
+        </div>
+      </GuidePanel>
+
       <GuidePanel title={t("features.title")}>
         <div className="space-y-2">
           <ul className="text-sm text-muted-foreground list-disc pl-4 space-y-1">
