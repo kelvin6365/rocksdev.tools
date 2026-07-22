@@ -28,6 +28,15 @@ export function GuideSection() {
         <p className="text-sm text-muted-foreground">{t("twid.gender")}</p>
       </GuidePanel>
 
+      <GuidePanel title={t("generating.title")}>
+        <p className="text-sm text-muted-foreground">
+          {t("generating.description")}
+        </p>
+        <p className="text-sm text-muted-foreground">
+          {t("generating.caution")}
+        </p>
+      </GuidePanel>
+
       <GuidePanel title={t("uses.title")}>
         <ul className="list-disc space-y-1 pl-4 text-sm text-muted-foreground">
           {USES.map((key) => (

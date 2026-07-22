@@ -49,6 +49,52 @@ function readGender(digit: string): { gender: TwIdGender; isResident: boolean } 
   return { gender: "unknown", isResident: false };
 }
 
+export const TW_LETTERS = Object.keys(LETTER_CODES);
+
+export type TwIdOptions = {
+  /** Leading letter; a random one is chosen when omitted. */
+  letter?: string;
+  /** Citizen numbers use 1/2; resident numbers issued from 2021 use 8/9. */
+  gender?: "male" | "female" | "any";
+  resident?: boolean;
+};
+
+/**
+ * Produce a checksum-valid Taiwan ID for use as test data.
+ *
+ * The number is fabricated: it satisfies the arithmetic and nothing else. It
+ * is not registered to anyone and will not pass any real identity check.
+ */
+export function generateTwId(options: TwIdOptions = {}): string {
+  const letter =
+    options.letter && LETTER_CODES[options.letter.toUpperCase()] !== undefined
+      ? options.letter.toUpperCase()
+      : TW_LETTERS[Math.floor(Math.random() * TW_LETTERS.length)];
+
+  const wantMale =
+    options.gender === "male"
+      ? true
+      : options.gender === "female"
+        ? false
+        : Math.random() < 0.5;
+  const genderDigit = options.resident
+    ? wantMale
+      ? "8"
+      : "9"
+    : wantMale
+      ? "1"
+      : "2";
+
+  let body = genderDigit;
+  for (let i = 0; i < 7; i++) body += Math.floor(Math.random() * 10);
+
+  const code = LETTER_CODES[letter];
+  let sum = Math.floor(code / 10) + (code % 10) * 9;
+  for (let i = 0; i < 8; i++) sum += Number(body[i]) * (8 - i);
+
+  return `${letter}${body}${(10 - (sum % 10)) % 10}`;
+}
+
 export function validateTwId(input: string): TwIdResult {
   const id = input.trim().toUpperCase();
 

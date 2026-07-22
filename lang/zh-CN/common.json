@@ -126,8 +126,8 @@
           "description": "MD5、SHA-1、SHA-256、SHA-384 和 SHA-512"
         },
         "id-validator": {
-          "title": "身份证号码验证",
-          "description": "校验香港身份证和台湾身份证字号"
+          "title": "身份证号码校验与生成",
+          "description": "校验或生成香港及台湾身份证号码"
         },
         "business-number": {
           "title": "统一编号验证",

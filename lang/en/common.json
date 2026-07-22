@@ -126,8 +126,8 @@
           "description": "MD5, SHA-1, SHA-256, SHA-384 and SHA-512"
         },
         "id-validator": {
-          "title": "ID Number Validator",
-          "description": "Check Hong Kong and Taiwan ID card numbers"
+          "title": "ID Number Validator & Generator",
+          "description": "Validate or generate Hong Kong and Taiwan ID numbers"
         },
         "business-number": {
           "title": "Business Number Validator",

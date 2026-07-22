@@ -22,6 +22,46 @@ export type HkidResult = {
   expectedCheck?: string;
 };
 
+export type HkidOptions = {
+  /** Number of leading letters. Both forms are in circulation. */
+  letters?: 1 | 2;
+};
+
+/** The check character that makes a given body valid. */
+function checkCharFor(letters: string, digits: string): string {
+  const values =
+    letters.length === 1
+      ? [NO_LETTER, letterValue(letters)]
+      : [letterValue(letters[0]), letterValue(letters[1])];
+
+  let sum = values[0] * 9 + values[1] * 8;
+  for (let i = 0; i < 6; i++) sum += Number(digits[i]) * (7 - i);
+
+  const remainder = (11 - (sum % 11)) % 11;
+  return remainder === 10 ? "A" : String(remainder);
+}
+
+const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+/**
+ * Produce a checksum-valid HKID for use as test data.
+ *
+ * The number is fabricated: it satisfies the arithmetic and nothing else. It
+ * is not issued to anyone and will not pass any real identity check.
+ */
+export function generateHkid(options: HkidOptions = {}): string {
+  const count = options.letters ?? (Math.random() < 0.8 ? 1 : 2);
+  let letters = "";
+  for (let i = 0; i < count; i++) {
+    letters += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+  }
+
+  let digits = "";
+  for (let i = 0; i < 6; i++) digits += Math.floor(Math.random() * 10);
+
+  return `${letters}${digits}(${checkCharFor(letters, digits)})`;
+}
+
 export function validateHkid(input: string): HkidResult {
   // Accept the number with or without parentheses and surrounding whitespace.
   const id = input.trim().toUpperCase().replace(/[\s()]/g, "");
@@ -35,18 +75,7 @@ export function validateHkid(input: string): HkidResult {
   const letters = body.match(/^[A-Z]{1,2}/)![0];
   const digits = body.slice(letters.length);
 
-  // Weights run 9 down to 2 across the eight body characters. A single-letter
-  // number is left-padded with the sentinel 36 so both forms share one path.
-  const values =
-    letters.length === 1
-      ? [NO_LETTER, letterValue(letters)]
-      : [letterValue(letters[0]), letterValue(letters[1])];
-
-  let sum = values[0] * 9 + values[1] * 8;
-  for (let i = 0; i < 6; i++) sum += Number(digits[i]) * (7 - i);
-
-  const remainder = (11 - (sum % 11)) % 11;
-  const expected = remainder === 10 ? "A" : String(remainder);
+  const expected = checkCharFor(letters, digits);
 
   if (check !== expected) {
     return { valid: false, error: "checksum", expectedCheck: expected };

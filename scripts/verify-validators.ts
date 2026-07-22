@@ -1,5 +1,5 @@
-import { validateTwId } from "../lib/validators/tw-id";
-import { validateHkid } from "../lib/validators/hkid";
+import { validateTwId, generateTwId, TW_LETTERS } from "../lib/validators/tw-id";
+import { validateHkid, generateHkid } from "../lib/validators/hkid";
 import { validateTwUbn } from "../lib/validators/tw-ubn";
 
 let fail = 0;
@@ -48,6 +48,43 @@ console.log("   22099131:", JSON.stringify(validateTwUbn("22099131")));
 let n = 0;
 for (let i = 0; i < 100000; i++) if (validateTwUbn(String(i).padStart(8,"0")).valid) n++;
 console.log(`   valid rate in first 100k: ${n} (${(n/1000).toFixed(1)}%) — expect ~20-24%`);
+
+
+// ---- generators: every generated number must validate ----
+
+console.log("\nGENERATORS");
+let gbad = 0;
+for (let i = 0; i < 20000; i++) {
+  const id = generateTwId();
+  if (!validateTwId(id).valid) { gbad++; if (gbad < 4) console.log("  FAIL tw", id); }
+}
+if (gbad) fail++;
+console.log(gbad ? `  FAIL ${gbad}/20000 tw` : "  ok   20000/20000 generated TW ids validate");
+
+let hbad2 = 0;
+for (let i = 0; i < 20000; i++) {
+  const id = generateHkid();
+  if (!validateHkid(id).valid) { hbad2++; if (hbad2 < 4) console.log("  FAIL hk", id); }
+}
+if (hbad2) fail++;
+console.log(hbad2 ? `  FAIL ${hbad2}/20000 hk` : "  ok   20000/20000 generated HKIDs validate");
+
+// options honoured
+const male = generateTwId({ gender: "male" });
+const female = generateTwId({ gender: "female" });
+const resident = generateTwId({ gender: "male", resident: true });
+const fixed = generateTwId({ letter: "F" });
+console.log("  ok   gender male ->", validateTwId(male).gender, "| female ->", validateTwId(female).gender);
+console.log("  ok   resident flag ->", validateTwId(resident).isResident, "| letter F ->", fixed[0], validateTwId(fixed).region);
+const one = generateHkid({ letters: 1 }), two = generateHkid({ letters: 2 });
+console.log("  ok   hkid 1-letter", one, "| 2-letter", two);
+if (!/^[A-Z]\d{6}\(/.test(one) || !/^[A-Z]{2}\d{6}\(/.test(two)) { fail++; console.log("  FAIL letter count"); }
+
+// distribution sanity: all 26 letters reachable, check chars include 'A'
+const seenLetters = new Set<string>(), seenChecks = new Set<string>();
+for (let i = 0; i < 20000; i++) { seenLetters.add(generateTwId()[0]); seenChecks.add(generateHkid().slice(-2, -1)); }
+console.log(`  ok   TW letters seen: ${seenLetters.size}/26 | HKID check chars seen: ${[...seenChecks].sort().join("")}`);
+if (seenLetters.size !== TW_LETTERS.length) { fail++; console.log("  FAIL not all letters reachable"); }
 
 console.log(fail ? `\n${fail} FAILURES` : "\nall pass");
 process.exit(fail ? 1 : 0);

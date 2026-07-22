@@ -7,6 +7,15 @@ from GitHub Releases, so each entry below should have a matching release whose
 body uses the same `## Added` / `## Changed` / `## Fixed` / `## Removed`
 headings — that is the format `parseReleaseBody` in `services/github.ts` parses.
 
+## [1.0.10] - 2026-07-22
+
+### Added
+- ID Number Validator can now generate valid Hong Kong and Taiwan ID numbers as test data, with options for gender, resident numbers and letter count
+- Guide section explaining what generated numbers are and are not
+
+### Changed
+- The tool is now named "ID Number Validator & Generator" consistently across its heading, navigation, search listing, page metadata and social preview
+
 ## [1.0.9] - 2026-07-22
 
 ### Added

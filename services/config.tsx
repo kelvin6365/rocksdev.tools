@@ -266,10 +266,10 @@ export const config = {
           tags: ["security"],
         },
         {
-          label: "ID Number Validator",
+          label: "ID Number Validator & Generator",
           value: "dev.id-validator",
           href: "/tools/dev/id-validator",
-          description: "Validate Hong Kong and Taiwan ID card numbers",
+          description: "Validate or generate Hong Kong and Taiwan ID numbers",
           icon: "🪪",
         },
         {

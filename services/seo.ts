@@ -2653,9 +2653,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
   },
   "dev.id-validator": {
     en: {
-      title: "HKID and Taiwan ID Validator — Checksum Checker",
+      title: "HKID and Taiwan ID Validator and Generator",
       description:
-        "Validate a Hong Kong Identity Card number or a Taiwan National ID against its checksum and see what the number encodes. Runs in your browser.",
+        "Validate a Hong Kong HKID or Taiwan National ID checksum, or generate fabricated test numbers for fixtures and form validation. Free, in your browser.",
       keywords: [
         "hkid validator",
         "hong kong id checker",
@@ -2664,19 +2664,23 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "id number checksum",
         "hkid format",
         "national id validator",
+        "hkid generator",
+        "hong kong id generator",
+        "taiwan id generator",
+        "fake id number generator for testing",
       ],
       openGraph: {
         type: "website",
-        title: "HKID and Taiwan ID Validator",
+        title: "HKID and Taiwan ID Validator and Generator",
         description:
-          "Check a Hong Kong or Taiwan ID number against its checksum, in your browser.",
+          "Validate or generate Hong Kong and Taiwan ID numbers, in your browser.",
         images: [`/api/og?title=ID%20Number%20Validator`],
       },
     },
     "zh-HK": {
-      title: "香港身份證及台灣身分證字號驗證工具",
+      title: "香港身份證及台灣身分證字號驗證與產生工具",
       description:
-        "線上檢查香港身份證號碼或台灣身分證字號的檢查碼是否正確，並顯示號碼所代表的資訊。完全在瀏覽器執行，輸入內容不會外傳。",
+        "線上檢查香港身份證或台灣身分證字號的檢查碼，或產生供測試用的虛構號碼。完全在瀏覽器執行，輸入內容不會外傳。",
       keywords: [
         "香港身份證驗證",
         "身份證號碼檢查",
@@ -2685,18 +2689,21 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "台灣身分證字號驗證",
         "身分證字號檢查",
         "身份證格式",
+        "身份證產生器",
+        "身分證字號產生器",
+        "測試身份證號碼",
       ],
       openGraph: {
         type: "website",
-        title: "香港身份證及台灣身分證字號驗證",
-        description: "線上檢查香港身份證及台灣身分證字號的檢查碼。",
+        title: "香港身份證及台灣身分證字號驗證與產生",
+        description: "線上驗證或產生香港及台灣身份證號碼。",
         images: [`/api/og?title=ID%20Number%20Validator`],
       },
     },
     "zh-CN": {
-      title: "香港身份证与台湾身份证号码校验工具",
+      title: "香港身份证与台湾身份证号码校验与生成工具",
       description:
-        "在线校验香港身份证号码或台湾身份证字号的校验位是否正确，并显示号码所代表的信息。完全在浏览器中运行，输入内容不会外传。",
+        "在线校验香港身份证或台湾身份证字号的校验位，或生成供测试使用的虚构号码。完全在浏览器中运行，输入内容不会外传。",
       keywords: [
         "香港身份证校验",
         "身份证号码检查",
@@ -2704,11 +2711,14 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "身份证校验位",
         "台湾身份证字号校验",
         "身份证格式",
+        "身份证生成器",
+        "身份证号码生成",
+        "测试身份证号码",
       ],
       openGraph: {
         type: "website",
-        title: "香港身份证与台湾身份证号码校验",
-        description: "在线校验香港身份证和台湾身份证号码的校验位。",
+        title: "香港身份证与台湾身份证号码校验与生成",
+        description: "在线校验或生成香港及台湾身份证号码。",
         images: [`/api/og?title=ID%20Number%20Validator`],
       },
     },

@@ -126,8 +126,8 @@
           "description": "MD5、SHA-1、SHA-256、SHA-384 及 SHA-512"
         },
         "id-validator": {
-          "title": "身份證號碼驗證",
-          "description": "檢查香港身份證及台灣身分證字號"
+          "title": "身份證號碼驗證與產生",
+          "description": "驗證或產生香港及台灣身份證號碼"
         },
         "business-number": {
           "title": "統一編號驗證",

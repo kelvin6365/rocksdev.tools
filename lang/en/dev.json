@@ -530,8 +530,8 @@
       }
     },
     "id-validator": {
-      "title": "ID Number Validator",
-      "description": "Check the checksum of a Hong Kong Identity Card number or a Taiwan National ID, and see what the number encodes. Runs entirely in your browser.",
+      "title": "ID Number Validator & Generator",
+      "description": "Check a Hong Kong HKID or Taiwan National ID against its checksum, or generate valid test numbers for your fixtures. Runs entirely in your browser.",
       "tabs": {
         "hk": "Hong Kong HKID",
         "tw": "Taiwan 身分證字號"
@@ -583,7 +583,32 @@
             "testing": "Generating well-formed test data that will pass your own validation",
             "debugging": "Working out why a third-party API rejected a number"
           }
+        },
+        "generating": {
+          "title": "Generating test data",
+          "description": "The Generate tab produces numbers that satisfy the checksum and nothing else. They are not issued to anyone and will not pass a real identity check — they exist so you can exercise a form validator, seed a staging database, or write a fixture without using a real person's number. Because the checksum algorithm is public, generating a valid-looking number reveals nothing that reading this page did not already tell you.",
+          "caution": "Do not use generated numbers in production records, and do not treat a passing checksum as identity verification anywhere. Real verification means checking against the issuing authority."
         }
+      },
+      "mode": {
+        "validate": "Validate",
+        "generate": "Generate"
+      },
+      "generate": {
+        "count": "How many",
+        "gender": "Gender",
+        "any": "Any",
+        "resident": "Foreign resident numbers",
+        "residentHint": "Uses the 8 and 9 prefixes issued from 2021 instead of 1 and 2.",
+        "letters": "Leading letters",
+        "lettersAny": "Mixed",
+        "letters1": "One letter",
+        "letters2": "Two letters",
+        "button": "Generate",
+        "copyAll": "Copy all",
+        "copied": "Copied",
+        "empty": "Press Generate to create test numbers",
+        "disclaimer": "These are fabricated numbers that satisfy the checksum and nothing else. They are not issued to anyone and will not pass a real identity check. Use them for test fixtures and form validation only."
       }
     },
     "business-number": {
