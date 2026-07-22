@@ -1,9 +1,54 @@
 import { Metadata } from "next";
+import { config as siteConfig } from "./config";
 
 interface SEOProps {
   path?: string;
   config?: Partial<SEOConfig>;
   locale?: string;
+}
+
+export const BASE_URL =
+  process.env.NEXT_PUBLIC_BASE_URL || "https://www.rocksdev.tools";
+
+/** Mirrors `routing.locales` in i18n/routing.ts. */
+export const LOCALES = ["en", "zh-HK", "zh-CN"] as const;
+
+/**
+ * Pages that live outside the /tools tree. Everything else is resolved from
+ * `siteConfig.tools`, which already maps each dotted key to its real href.
+ */
+const ROUTE_OVERRIDES: Record<string, string> = {
+  tools: "/tools",
+  "privacy-policy": "/privacy-policy",
+  "contact-us": "/contact-us",
+  terms: "/terms",
+  changelog: "/changelog",
+};
+
+/**
+ * Resolves a dotted SEO key (e.g. "json.formatter", "converters", "terms")
+ * to its route path, without the locale prefix.
+ *
+ * Returns `null` for routes that must never be indexed or canonicalised.
+ */
+export function getRoutePath(path?: string): string | null {
+  if (!path) return "/";
+  if (path === "not-found") return null;
+  if (ROUTE_OVERRIDES[path]) return ROUTE_OVERRIDES[path];
+
+  for (const tool of siteConfig.tools) {
+    if (tool.value === path) return tool.href;
+    const subTool = tool.subTools?.find((sub) => sub.value === path);
+    if (subTool) return subTool.href;
+  }
+
+  // Safety net for a key that hasn't been added to siteConfig.tools yet.
+  return `/tools/${path.split(".").join("/")}`;
+}
+
+/** Builds an absolute, locale-prefixed URL for a route path. */
+export function localeUrl(locale: string, route: string): string {
+  return `${BASE_URL}/${locale}${route === "/" ? "" : route}`;
 }
 
 export function getMetadata({
@@ -52,25 +97,48 @@ export function getMetadata({
     additionalMetaTags,
   } = mergedConfig;
 
+  const route = getRoutePath(path);
+  const canonical = route ? localeUrl(locale, route) : undefined;
+
+  // `robots` is owned by the metadata.robots field below, so drop any
+  // hand-written robots/googlebot entries to avoid emitting conflicting tags.
+  const other = additionalMetaTags?.reduce(
+    (acc, tag) => {
+      const key = tag.name || tag.property || "";
+      if (!key || key === "robots" || key === "googlebot") return acc;
+      if (tag.content === undefined) return acc;
+      return { ...acc, [key]: tag.content };
+    },
+    {} as Record<string, string>,
+  );
+
   return {
     title,
     description,
     keywords: keywords?.join(", "),
-    metadataBase: new URL(
-      process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools",
-    ),
+    metadataBase: new URL(BASE_URL),
+    alternates: route
+      ? {
+          canonical,
+          languages: {
+            ...Object.fromEntries(
+              LOCALES.map((loc) => [loc, localeUrl(loc, route)]),
+            ),
+            // Unprefixed URL; next-intl redirects it to the detected locale.
+            "x-default": `${BASE_URL}${route}`,
+          },
+        }
+      : undefined,
+    // Indexing is the default, so only the negative case needs a tag —
+    // emitting "index, follow" here would collide with the noindex that
+    // Next.js adds on the not-found boundary.
+    robots: route ? undefined : { index: false, follow: false },
     openGraph: {
       ...openGraph,
-      url: openGraph?.url || `${process.env.NEXT_PUBLIC_BASE_URL}${path || ""}`,
+      url: canonical ?? BASE_URL,
     },
     twitter,
-    other: additionalMetaTags?.reduce(
-      (acc, tag) => ({
-        ...acc,
-        [tag.name || tag.property || ""]: tag.content,
-      }),
-      {},
-    ),
+    other,
   };
 }
 
@@ -185,7 +253,7 @@ export const defaultSEO: Record<string, SEOConfig> = {
       description:
         "Free online developer tools including JSON formatter, validator, minifier, diff, Base64 converter, regex tester, SEO tools, and more. No signup required, instant access.",
       images: [`/api/og`],
-      url: process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools",
+      url: BASE_URL,
     },
     twitter: {
       card: "summary_large_image",
@@ -318,7 +386,7 @@ export const defaultSEO: Record<string, SEOConfig> = {
       description:
         "免費在線開發者工具，包括JSON格式化器、驗證器、壓縮器、差異比較工具、Base64轉換器、Regex測試器、SEO工具等。無需註冊，即時訪問。",
       images: [`/api/og`],
-      url: process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools",
+      url: BASE_URL,
     },
     twitter: {
       card: "summary_large_image",
@@ -431,7 +499,7 @@ export const defaultSEO: Record<string, SEOConfig> = {
       description:
         "免費在線開發者工具，包括JSON格式化器、驗證器、壓縮器、差異比較工具、Base64轉換器、Regex測試器、SEO工具等。無需註冊，即時訪問。",
       images: [`/api/og`],
-      url: process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools",
+      url: BASE_URL,
     },
     twitter: {
       card: "summary_large_image",
@@ -468,7 +536,7 @@ export function getStructuredData(locale: string = "en") {
     "@type": "WebApplication",
     name: defaultSEO[locale].title,
     description: defaultSEO[locale].description,
-    url: process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools",
+    url: localeUrl(locale, "/"),
     applicationCategory: "DeveloperApplication",
     operatingSystem: "Any",
     inLanguage: locale,
@@ -495,24 +563,14 @@ export function getStructuredData(locale: string = "en") {
         alternateName: "zh-HK",
       },
     ],
-    softwareHelp: {
-      "@type": "CreativeWork",
-      url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools"}/${locale !== "en" ? `${locale}/` : ""}help`,
-    },
     softwareVersion: "1.0.0",
     potentialAction: {
       "@type": "UseAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools"}${locale !== "en" ? `/${locale}` : ""}`,
+        urlTemplate: localeUrl(locale, "/"),
         inLanguage: locale,
       },
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      ratingCount: "1250",
-      bestRating: "5",
     },
   };
 }
@@ -520,15 +578,18 @@ export function getStructuredData(locale: string = "en") {
 // Add utility to generate tool-specific structured data
 export function getToolStructuredData(toolPath: string, locale: string = "en") {
   const toolSEO = toolsSEO[toolPath]?.[locale];
+  const route = getRoutePath(toolPath);
 
-  if (!toolSEO) return null;
+  if (!toolSEO || !route) return null;
+
+  const url = localeUrl(locale, route);
 
   return {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: toolSEO.title,
     description: toolSEO.description,
-    url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools"}${locale !== "en" ? `/${locale}` : ""}/tools/${toolPath}`,
+    url,
     applicationCategory: "DeveloperApplication",
     operatingSystem: "Any",
     inLanguage: locale,
@@ -560,7 +621,7 @@ export function getToolStructuredData(toolPath: string, locale: string = "en") {
       "@type": "UseAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rocksdev.tools"}${locale !== "en" ? `/${locale}` : ""}/tools/${toolPath}`,
+        urlTemplate: url,
         inLanguage: locale,
       },
     },

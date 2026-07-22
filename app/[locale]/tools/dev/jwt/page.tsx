@@ -2,6 +2,9 @@ import { ToolLayout } from "@/components/layouts/tool-layout";
 import { getMetadata } from "@/services/seo";
 import { JwtTool } from "@/components/tools/jwt";
 import { GuideSection } from "@/components/tools/jwt/guide-section";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
+import { ToolStructuredData } from "@/components/tool-structured-data";
 
 type Props = {
   params: Promise<{
@@ -14,10 +17,16 @@ export const generateMetadata = async ({ params }: Props) => {
   return getMetadata({ path: "dev.jwt", locale });
 };
 
-export default function JwtToolPage() {
+export default function JwtToolPage({ params }: Props) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
+
   return (
-    <ToolLayout translationKey="dev.jwt" guideSection={<GuideSection />}>
-      <JwtTool />
-    </ToolLayout>
+    <>
+      <ToolStructuredData path="dev.jwt" locale={locale} />
+      <ToolLayout translationKey="dev.jwt" guideSection={<GuideSection />}>
+        <JwtTool />
+      </ToolLayout>
+    </>
   );
 }

@@ -2,6 +2,8 @@ import { config } from "@/services/config";
 import { getMetadata } from "@/services/seo";
 import { useTranslations } from "next-intl";
 import { ToolsMenuItem } from "../../../../components/tools-menu-item";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
 const jsonTools =
   config.tools.find((tool) => tool.value === "json")?.subTools || [];
@@ -17,9 +19,14 @@ export const generateMetadata = async ({ params }: Props) => {
 
 export default function JsonToolsLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
+
   const t = useTranslations();
 
   return (

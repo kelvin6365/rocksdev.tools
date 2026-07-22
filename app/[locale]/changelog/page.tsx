@@ -2,8 +2,12 @@ import { Suspense } from "react";
 import { getMetadata } from "@/services/seo";
 import { fetchGitHubReleases } from "@/services/github";
 import { ChangelogContent } from "../../../components/changelog-content";
+import { setRequestLocale } from "next-intl/server";
 
-export default async function ChangelogPage() {
+export default async function ChangelogPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   const releases = await fetchGitHubReleases();
 
   return (

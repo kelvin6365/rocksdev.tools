@@ -10,7 +10,16 @@ import { Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import AdUnit from "../../../components/ad-units";
-export default function ToolsPage() {
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
+export default function ToolsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
+
   const t = useTranslations();
   return (
     <div className="space-y-6">

@@ -2,6 +2,8 @@ import { ToolsMenuItem } from "@/components/tools-menu-item";
 import { config } from "@/services/config";
 import { getMetadata } from "@/services/seo";
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
 const seoTools =
   config.tools.find((tool) => tool.value === "seo")?.subTools || [];
@@ -15,7 +17,16 @@ export const generateMetadata = async ({ params }: Props) => {
   return getMetadata({ locale, path: "seo" });
 };
 
-export default function SeoLayout({ children }: { children: React.ReactNode }) {
+export default function SeoLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
+
   const t = useTranslations();
 
   return (

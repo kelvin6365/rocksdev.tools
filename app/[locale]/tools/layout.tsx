@@ -5,6 +5,8 @@ import { getMetadata } from "@/services/seo";
 import { useTranslations } from "next-intl";
 import * as React from "react";
 import AdUnit from "@/components/ad-units";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -34,9 +36,14 @@ export const generateMetadata = async ({ params }: Props) => {
 
 export default function ToolsLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
+
   const t = useTranslations();
 
   return (

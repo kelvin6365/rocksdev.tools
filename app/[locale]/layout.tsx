@@ -10,8 +10,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import Script from "next/dist/client/script";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import GoogleAdsense from "../../components/adsense";
@@ -32,6 +31,11 @@ export const generateMetadata = async ({ params }: Props) => {
   const { locale } = await params;
   return getMetadata({ locale });
 };
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export default async function RootLayout({
   children,
   params,
@@ -44,6 +48,9 @@ export default async function RootLayout({
     notFound();
   }
 
+  // Opt into static rendering (next-intl).
+  setRequestLocale(locale);
+
   const messages = await getMessages();
   const structuredData = getStructuredData(locale);
 
@@ -55,22 +62,13 @@ export default async function RootLayout({
           name="google-adsense-account"
           content={`ca-pub-${process.env.NEXT_PUBLIC_ADSENSE_ID}`}
         ></meta>
-        {/* Language Alternates */}
-        {routing.locales.map((loc) => (
-          <link
-            key={loc}
-            rel="alternate"
-            hrefLang={loc}
-            href={`https://rocksdev.tools${loc !== "en" ? `/${loc}` : ""}`}
-          />
-        ))}
-        <link
-          rel="canonical"
-          href={`https://rocksdev.tools${locale !== "en" ? `/${locale}` : ""}`}
-        />
+        {/* Canonical URL and language alternates are emitted per-page by
+            `getMetadata` (services/seo.ts) via metadata.alternates. */}
 
-        {/* Structured Data */}
-        <Script
+        {/* Structured Data. Rendered as a plain <script> rather than
+            next/script so it is present in the server HTML, where crawlers
+            read it without having to execute JavaScript. */}
+        <script
           id="structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
