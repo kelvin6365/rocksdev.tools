@@ -116,6 +116,22 @@
         "jwt": {
           "description": "Decode and encode JWT tokens",
           "title": "JWT Decoder/Encoder"
+        },
+        "pwa-manifest": {
+          "title": "PWA Manifest Generator",
+          "description": "Build a web app manifest and icon set"
+        },
+        "hash": {
+          "title": "Hash Generator",
+          "description": "MD5, SHA-1, SHA-256, SHA-384 and SHA-512"
+        },
+        "id-validator": {
+          "title": "ID Number Validator",
+          "description": "Check Hong Kong and Taiwan ID card numbers"
+        },
+        "business-number": {
+          "title": "Business Number Validator",
+          "description": "Check Taiwan unified business numbers"
         }
       },
       "json": {
@@ -152,7 +168,11 @@
           "description": "Generate OG images for your website",
           "title": "OG Image Generator"
         },
-        "title": "SEO Tools"
+        "title": "SEO Tools",
+        "robots-txt": {
+          "title": "robots.txt Validator",
+          "description": "Lint robots.txt and test whether a URL is blocked"
+        }
       },
       "text": {
         "description": "Advanced text manipulation tools for formatting, case conversion, and content organization. Streamline your text processing workflow.",

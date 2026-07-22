@@ -311,6 +311,115 @@
     },
     "openSource": "开源",
     "title": "SEO 工具",
-    "tryNow": "立即试用"
+    "tryNow": "立即试用",
+    "robots-txt": {
+      "title": "robots.txt 验证工具",
+      "description": "粘贴一份 robots.txt，或直接从网址抓取。查看解析后的规则、检查语法，并测试某个路径对指定爬虫是否被屏蔽。",
+      "form": {
+        "input": "robots.txt",
+        "placeholder": "User-agent: *\nDisallow: /admin\nSitemap: https://example.com/sitemap.xml",
+        "fetch": "从网站抓取",
+        "fetchPlaceholder": "https://example.com",
+        "fetchButton": "抓取",
+        "fetching": "抓取中…",
+        "loadExample": "载入示例",
+        "fetchErrors": {
+          "invalidUrl": "这看起来不是一个有效的站点网址。",
+          "blockedHost": "该主机无法公开访问，因此无法抓取。",
+          "redirected": "请求被重定向了，请直接输入最终的域名。",
+          "tooLarge": "这份 robots.txt 太大，无法抓取。",
+          "fetchFailed": "无法从该网站抓取 robots.txt。"
+        }
+      },
+      "tester": {
+        "title": "测试网址",
+        "path": "路径",
+        "pathPlaceholder": "/admin/settings",
+        "userAgent": "爬虫",
+        "allowed": "允许",
+        "blocked": "屏蔽",
+        "matchedBy": "由第 {line} 行匹配：{rule}",
+        "noRule": "没有规则匹配，所以该路径是允许的",
+        "noGroup": "没有分组适用于这个爬虫，所以全部允许"
+      },
+      "parsed": {
+        "title": "解析后的规则",
+        "groups": "分组",
+        "userAgents": "User-agent",
+        "rules": "规则",
+        "sitemaps": "Sitemap",
+        "crawlDelay": "Crawl-delay",
+        "noGroups": "未找到任何分组"
+      },
+      "issues": {
+        "title": "检查结果",
+        "none": "未发现问题。",
+        "error": "错误",
+        "warning": "警告",
+        "info": "提示",
+        "line": "第 {line} 行",
+        "bom": "文件开头带有字节顺序标记（BOM），部分爬虫会把它当成第一条指令的一部分。",
+        "missingColon": "这一行没有冒号，因此不构成一条指令。",
+        "unknownDirective": "无法识别的指令 — 请检查拼写。",
+        "emptyUserAgent": "User-agent 没有填值。",
+        "ruleBeforeUserAgent": "这条规则出现在所有 User-agent 行之前，因此不会有爬虫应用它。",
+        "pathNotAbsolute": "路径应以 / 或 * 开头。",
+        "sitemapNotAbsolute": "Sitemap 必须是包含协议的绝对网址。",
+        "crawlDelayInvalid": "Crawl-delay 必须是非负数。",
+        "crawlDelayIgnoredByGoogle": "Google 会忽略 Crawl-delay，请改用 Search Console 中的抓取频次设置。",
+        "noindexUnsupported": "Google 自 2019 年起不再支持 robots.txt 中的 noindex。请改用 meta robots 标签或 X-Robots-Tag 响应头。",
+        "hostNonStandard": "Host 不是标准指令，Google 会忽略它。",
+        "blocksEntireSite": "这会屏蔽所有爬虫，使其无法抓取整个网站。",
+        "empty": "未找到任何指令。",
+        "noSitemap": "没有 Sitemap 指令。加上一条有助于爬虫找到你的网址。"
+      },
+      "guide": {
+        "overview": {
+          "title": "robots.txt 能做什么、不能做什么",
+          "description": "robots.txt 用来告诉守规矩的爬虫哪些路径不要去请求。它是抓取指令，既不是访问控制，也不是索引指令。被屏蔽的网址如果有其他页面链接过去，依然可能出现在搜索结果中 — 只是 Google 没有读过该页的内容。要让某些内容不进入索引，应该让页面可被抓取并加上 noindex meta 标签，或者用登录验证把它妥善保护起来。"
+        },
+        "matching": {
+          "title": "路径匹配的规则",
+          "description": "匹配基于前缀，并且区分大小写。系统支持两个通配符：* 匹配任意长度的字符，$ 用来锚定网址的结尾。",
+          "pattern": "模式",
+          "matches": "匹配",
+          "doesNotMatch": "不匹配"
+        },
+        "precedence": {
+          "title": "哪条规则优先",
+          "description": "当多条规则同时命中时，最具体的一条胜出，也就是路径模式最长的那一条。如果 Allow 和 Disallow 的长度相同，则 Allow 胜出。这就是为什么对其下层的网址而言，Allow: /folder/public 会覆盖 Disallow: /folder/。",
+          "example": "假设有 Disallow: /folder/ 和 Allow: /folder/public，路径 /folder/public/page 是允许的，因为 Allow 的模式更长。"
+        },
+        "groups": {
+          "title": "分组是怎么工作的",
+          "description": "连续的 User-agent 行共用同一组规则。爬虫只会采用 user-agent 名称与它匹配得最精确的那一个分组，并忽略其他所有分组 — 包括 * 分组。这正是 robots.txt 最常见的错误：加了一个 Googlebot 分组，却以为 Googlebot 仍然会遵守 * 下面的规则。"
+        },
+        "mistakes": {
+          "title": "常见错误",
+          "items": {
+            "blockAll": {
+              "problem": "从预发布环境遗留下来的 Disallow: /",
+              "fix": "这会屏蔽整个网站，也是站点上线后从搜索结果中消失的头号原因。"
+            },
+            "groupInheritance": {
+              "problem": "以为指定名称的爬虫也会遵守 * 的规则",
+              "fix": "并不会。所有共用的规则都要在指定名称的分组里再写一遍。"
+            },
+            "noindex": {
+              "problem": "用 Disallow 把页面从搜索结果中移除",
+              "fix": "被屏蔽的页面仍可能通过外部链接被索引。应该允许抓取，改为输出 noindex 标签。"
+            },
+            "blockedAssets": {
+              "problem": "屏蔽 /css/ 或 /js/",
+              "fix": "Google 会先渲染页面再对它排名。屏蔽这些资源会让页面在爬虫眼里像是坏掉了。"
+            },
+            "relativeSitemap": {
+              "problem": "使用相对路径的 Sitemap",
+              "fix": "Sitemap 必须是绝对网址，并且包含 https://。"
+            }
+          }
+        }
+      }
+    }
   }
 }

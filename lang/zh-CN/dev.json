@@ -362,6 +362,273 @@
       },
       "title": "JWT 解码器/编码器",
       "token": "JWT 令牌"
+    },
+    "pwa-manifest": {
+      "title": "PWA Manifest 生成器",
+      "description": "填好字段、上传一张正方形图标，即可下载一份 manifest.webmanifest，包含 Chrome、Android 和 iOS 会用到的所有图标尺寸。",
+      "form": {
+        "identity": "标识信息",
+        "name": "应用名称",
+        "namePlaceholder": "我的应用",
+        "shortName": "短名称",
+        "shortNamePlaceholder": "MyApp",
+        "shortNameHint": "显示在启动图标下方。Android 超过约 12 个字符就会截断。",
+        "appDescription": "描述",
+        "descriptionPlaceholder": "你的应用是做什么的",
+        "behaviour": "行为",
+        "startUrl": "起始网址",
+        "scope": "作用域 scope",
+        "scopeHint": "作用域之外的跳转会在浏览器中打开，而不是在应用内打开。",
+        "display": "显示模式",
+        "orientation": "屏幕方向",
+        "appearance": "外观",
+        "themeColor": "主题色",
+        "backgroundColor": "背景色",
+        "backgroundHint": "在应用渲染出来之前，用作启动画面的底色。",
+        "lang": "语言",
+        "dir": "文本方向",
+        "categories": "分类",
+        "categoriesPlaceholder": "productivity, utilities",
+        "icons": "图标",
+        "iconPath": "图标输出路径",
+        "uploadIcon": "上传正方形图标",
+        "uploadHint": "PNG 或 SVG，至少 512×512。所有缩放都在你的浏览器中完成。",
+        "includeMaskable": "包含 maskable 图标",
+        "maskableHint": "Android 会按启动器的形状裁剪图标，请把图形保持在中间 80% 的区域内。"
+      },
+      "output": {
+        "manifest": "manifest.webmanifest",
+        "head": "添加到你的 head 部分",
+        "preview": "图标预览",
+        "download": "下载 ZIP",
+        "copy": "复制",
+        "copied": "已复制",
+        "generating": "正在生成图标…",
+        "noIcon": "上传图标以生成整套图标"
+      },
+      "issues": {
+        "title": "检查结果",
+        "none": "未发现问题。",
+        "nameRequired": "必须填写 name — 安装提示显示的就是它。",
+        "shortNameRequired": "必须填写 short_name — 主屏幕图标的名称就是它。",
+        "shortNameTooLong": "short_name 超过 12 个字符，在 Android 上会被截断。",
+        "startUrlRelative": "start_url 应以 / 开头，才能从站点根目录解析。",
+        "startUrlOutsideScope": "start_url 落在 scope 之外，应用会在浏览器标签页中打开。",
+        "displayBrowserNotInstallable": "display 设为 browser 会让应用无法安装。",
+        "colorInvalid": "颜色必须是十六进制值，例如 #0f172a。",
+        "noMaskableIcon": "没有 maskable 图标，Android 会在你的图形后面画一个白色方块。"
+      },
+      "guide": {
+        "overview": {
+          "title": "网页应用清单的作用",
+          "description": "清单是把一个网站变成可安装应用的 JSON 文件。Chrome 读取它来决定是否弹出安装提示；Android 读取它来获取启动图标和启动画面；iOS 则会读取其中一部分内容，用于主屏幕。"
+        },
+        "required": {
+          "title": "Chrome 弹出安装提示前的要求",
+          "items": {
+            "manifest": "已链接、并以 JSON 形式返回的清单",
+            "name": "同时具备 name 和 short_name",
+            "icons": "192×192 和 512×512 的图标",
+            "display": "display 设为 standalone、fullscreen 或 minimal-ui",
+            "start": "离线时仍能加载的 start_url",
+            "https": "站点通过 HTTPS 提供"
+          }
+        },
+        "sizes": {
+          "title": "图标尺寸及其用途",
+          "size": "尺寸",
+          "usedBy": "用于",
+          "note": "备注"
+        },
+        "maskable": {
+          "title": "Maskable 图标",
+          "description": "Android 会根据设备把启动图标重新裁成圆形、方圆形或圆角矩形。普通图标后面会被画上一个白色方块。Maskable 图标则会填满整个画布，并把重要图形保留在一个覆盖宽度 80% 的居中圆形之内 — 外围那 20% 是系统可能裁掉的留白。"
+        },
+        "troubleshooting": {
+          "title": "常见问题",
+          "items": {
+            "noPrompt": {
+              "problem": "没有出现安装提示",
+              "fix": "检查清单是否在 head 部分被链接、是否返回 200、是否有 192 和 512 的图标，以及站点是否使用 HTTPS。Chrome DevTools → Application → Manifest 会列出缺少的项。"
+            },
+            "whiteBox": {
+              "problem": "Android 图标外面有一个白色方块",
+              "fix": "你缺少 maskable 图标。添加一个，并把 purpose 设为 maskable。"
+            },
+            "opensInBrowser": {
+              "problem": "安装后的应用在浏览器标签页中打开",
+              "fix": "start_url 落在 scope 之外，或者 display 被设成了 browser。"
+            },
+            "wrongSplash": {
+              "problem": "启动画面的颜色不对",
+              "fix": "background_color 在应用渲染前为启动画面上色；theme_color 则为状态栏上色。"
+            }
+          }
+        }
+      }
+    },
+    "hash": {
+      "title": "哈希值生成器",
+      "description": "为文本或文件计算 MD5、SHA-1、SHA-256、SHA-384 和 SHA-512，并与公布的校验和比对。不会上传任何内容。",
+      "tabs": {
+        "text": "文本",
+        "file": "文件"
+      },
+      "form": {
+        "input": "输入",
+        "placeholder": "输入或粘贴要计算哈希的文本",
+        "file": "选择文件",
+        "dropHint": "把文件拖到这里，或点击浏览",
+        "uppercase": "以大写输出",
+        "compare": "与校验和比对",
+        "comparePlaceholder": "粘贴预期的校验和"
+      },
+      "result": {
+        "algorithm": "算法",
+        "digest": "哈希值",
+        "copy": "复制",
+        "copied": "已复制",
+        "match": "匹配",
+        "noMatch": "不匹配",
+        "detected": "看起来像 {algorithm}",
+        "hashing": "计算中…",
+        "empty": "请输入文本或选择文件"
+      },
+      "warning": {
+        "broken": "{algorithm} 已被攻破，不能用于签名、密码，或用来抵御有备而来的攻击者的完整性校验。用来核对下载文件与公布的校验和则没有问题。"
+      },
+      "guide": {
+        "overview": {
+          "title": "哈希是用来做什么的",
+          "description": "哈希会把任意输入转成固定长度的指纹。相同的输入永远得到相同的哈希值，而只要改动其中一个字节，整个结果就会完全不同。这让哈希非常适合用来确认文件完整无损地送达，却不适合用来存储密码。"
+        },
+        "algorithms": {
+          "title": "如何选择算法",
+          "algorithm": "算法",
+          "length": "长度",
+          "status": "状态",
+          "use": "适用于"
+        },
+        "verify": {
+          "title": "校验下载的文件",
+          "description": "项目通常会在下载链接旁公布校验和。把收到的文件计算哈希后比对即可。本工具接受 sha256sum 的输出格式，所以连同文件名整行粘贴也没问题。",
+          "steps": {
+            "download": "下载文件，以及它公布的校验和",
+            "hash": "把文件拖到上方，并选择对应的算法",
+            "compare": "把公布的校验和粘贴到比对框中",
+            "confirm": "显示绿色匹配，说明两者字节完全一致"
+          }
+        },
+        "passwords": {
+          "title": "不要用这些算法来哈希密码",
+          "description": "MD5、SHA-1 甚至 SHA-256 都是为速度而设计的，而这对密码来说恰恰是最糟糕的特性 — 攻击者每秒可以尝试数十亿次。密码存储需要刻意设计得很慢的算法，例如 bcrypt、scrypt 或 Argon2，并为每个用户加上独立的盐值。"
+        },
+        "privacy": {
+          "title": "哈希在哪里计算",
+          "description": "一切都在你的浏览器中运行。文本通过 Web Crypto API 计算哈希，文件在本地读取，而 MD5 则用 JavaScript 计算，因为 Web Crypto 有意不提供 MD5。你的输入不会离开这个页面。"
+        }
+      }
+    },
+    "id-validator": {
+      "title": "身份证号码验证",
+      "description": "校验香港身份证号码或台湾身份证字号的校验位，并查看号码本身编码了哪些信息。完全在你的浏览器中运行。",
+      "tabs": {
+        "hk": "香港身份证",
+        "tw": "台湾身份证字号"
+      },
+      "form": {
+        "hkPlaceholder": "A123456(3)",
+        "twPlaceholder": "A123456789",
+        "input": "证件号码",
+        "check": "验证"
+      },
+      "result": {
+        "valid": "校验位正确",
+        "invalid": "校验位不正确",
+        "formatted": "格式化后",
+        "region": "登记地区",
+        "gender": "性别",
+        "male": "男",
+        "female": "女",
+        "unknown": "未知",
+        "resident": "外来人口统一证号（2021 年起签发）",
+        "expectedCheck": "应有的校验字符：{check}",
+        "errors": {
+          "format": "这不是一个格式正确的号码。",
+          "letter": "无法识别的首位字母。",
+          "checksum": "校验位与号码的其余部分不符。"
+        }
+      },
+      "disclaimer": "本工具只做算术校验。一个号码即便通过校验，也未必属于任何人。你输入的内容不会发送到任何地方。",
+      "guide": {
+        "overview": {
+          "title": "本工具能校验什么，不能校验什么",
+          "description": "香港身份证和台湾身份证字号都带有一个由其余字符推算出来的校验位，本工具会把它重新算一遍。这能抓出录入和抄写错误，而这正是它的用途。它无法告诉你某个号码是否真的签发过、目前是否仍然有效，或者持有人是谁 — 那必须向发证机关核实。"
+        },
+        "hkid": {
+          "title": "香港身份证校验位的算法",
+          "description": "香港身份证由一到两个英文字母、六位数字，以及一个写在括号里的校验字符组成。字母的取值从 A=10 一直到 Z=35；没有首位字母时按 36 计算。八个主体字符分别乘以从 9 递减到 2 的权重后相加，校验字符就是使总和能被 11 整除的那个值。余数为 10 时写作字母 A。",
+          "example": "以 A123456 为例：36×9 + 10×8 + 1×7 + 2×6 + 3×5 + 4×4 + 5×3 + 6×2 = 481。481 mod 11 = 8，而 11 − 8 = 3，所以完整号码是 A123456(3)。"
+        },
+        "twid": {
+          "title": "台湾身份证校验位的算法",
+          "description": "台湾身份证字号由一个英文字母和九位数字组成。字母对应首次户籍登记所在县市的两位数代码，该代码的第一位按权重 1 计算、第二位按权重 9 计算；随后八位数字的权重从 8 递减到 1，最后的校验位权重为 1。号码有效时，总和会是 10 的倍数。",
+          "gender": "字母后面的第一位数字是性别标记：1 表示男性，2 表示女性。自 2021 年起，8 和 9 用来标示发给外来人口的统一证号。"
+        },
+        "uses": {
+          "title": "什么时候会用到",
+          "items": {
+            "forms": "在表单字段写入数据库之前先做校验",
+            "migration": "排查历史数据集中的抄写错误",
+            "testing": "生成格式正确、能通过自家校验逻辑的测试数据",
+            "debugging": "弄清楚第三方 API 为什么拒绝某个号码"
+          }
+        }
+      }
+    },
+    "business-number": {
+      "title": "统一编号验证",
+      "description": "按照财政部的校验规则（含 2023 年的规则调整）校验台湾公司统一编号。在你的浏览器中运行。",
+      "form": {
+        "input": "统一编号",
+        "placeholder": "22099131",
+        "check": "验证"
+      },
+      "result": {
+        "valid": "校验位正确",
+        "invalid": "校验位不正确",
+        "sevenRule": "符合第七位为 7 的特殊规则",
+        "legacyOnly": "符合现行规则，但不符合 2023 年之前的旧规则",
+        "errors": {
+          "format": "统一编号必须正好是八位数字。",
+          "checksum": "校验结果不符。"
+        }
+      },
+      "disclaimer": "本工具只做算术校验。要确认一家公司是否存在，请到财政部的商业登记系统查询。",
+      "guide": {
+        "overview": {
+          "title": "什么是统一编号",
+          "description": "统一编号是台湾发给每一家已登记企业的八位数字号码，相当于公司注册号。它会出现在发票、合同和报税文件上，并带有校验位，让录错的数字在进入你的记录之前就能被拦下来。"
+        },
+        "algorithm": {
+          "title": "校验位的算法",
+          "description": "八位数字分别乘以固定的权重：1、2、1、2、1、2、4、1。每个乘积再取其各位数字之和，所以 7 × 2 = 14 只算作 5，而不是 14。当总和能被 5 整除时，号码即为有效。",
+          "seven": "这里有一个例外。当第七位数字是 7 时，乘积 7 × 4 = 28 可以算作 1 或 2，因此只要总和、或者总和加一其中之一能被 5 整除，号码就算有效。"
+        },
+        "change": {
+          "title": "2023 年的规则调整",
+          "description": "2023 年 4 月之前，总和必须能被 10 整除。财政部把条件放宽到能被 5 整除，可发放号码的数量大致翻了一倍。所有在旧规则下有效的号码现在依然有效，但 2023 年之前写的校验程序，会拒绝如今合法的号码 — 如果一个老系统一直拒绝新公司的统编，原因就在这里。"
+        },
+        "uses": {
+          "title": "什么时候会用到",
+          "items": {
+            "invoicing": "报税前先校验发票上的统一编号",
+            "forms": "在客户录入的当下即时校验所填号码",
+            "legacy": "查清老的校验程序是否还在用 2023 年之前的规则",
+            "data": "排查供应商名单中录错的号码"
+          }
+        }
+      }
     }
   }
 }

@@ -146,7 +146,7 @@
             "live_preview": "搜尋結果外觀即時預覽",
             "social_preview": "社交媒體分享預覽",
             "character_count": "字符計數及建議",
-            "code_generation": "自動生成元標籤代碼",
+            "code_generation": "自動生成元標籤程式碼",
             "copy_paste": "便捷的複製貼上功能"
           }
         },
@@ -191,8 +191,8 @@
       "guide": {
         "features": {
           "list": {
-            "customization": "完整文本自定義",
-            "download": "高質量圖片下載",
+            "customization": "完整文字自定義",
+            "download": "高品質圖片下載",
             "fonts": "多種字體選項",
             "layouts": "不同佈局樣式",
             "preview": "實時預覽",
@@ -208,11 +208,11 @@
             "title": "生成的圖片尺寸"
           },
           "settings": {
-            "description": "描述文本 - 標題下方的輔助文本",
+            "description": "描述文字 - 標題下方的輔助文字",
             "font": "字體系列 - 選擇無襯線、襯線或等寬字體",
             "layout": "佈局樣式 - 標題和描述的不同排列方式",
             "theme": "顏色主題 - 選擇明亮、暗色或漸變主題",
-            "title": "標題文本 - 圖片的主要標題",
+            "title": "標題文字 - 圖片的主要標題",
             "heading": "可用設定"
           },
           "title": "輸入格式"
@@ -223,7 +223,7 @@
         },
         "tips": {
           "list": {
-            "contrast": "確保文本和背景之間有良好的對比度",
+            "contrast": "確保文字和背景之間有良好的對比度",
             "dimensions": "保持推薦的 1200x630 像素尺寸",
             "platforms": "考慮圖片在不同平台上的顯示效果",
             "preview-test": "在社交媒體預覽工具中測試您的圖片",
@@ -311,6 +311,115 @@
     },
     "openSource": "開源",
     "title": "SEO 工具",
-    "tryNow": "立即試用"
+    "tryNow": "立即試用",
+    "robots-txt": {
+      "title": "robots.txt 驗證工具",
+      "description": "貼上一份 robots.txt，或直接從網址抓取。查看解析後的規則、檢查語法，並測試任何路徑對指定爬蟲是否被封鎖。",
+      "form": {
+        "input": "robots.txt",
+        "placeholder": "User-agent: *\nDisallow: /admin\nSitemap: https://example.com/sitemap.xml",
+        "fetch": "從網站抓取",
+        "fetchPlaceholder": "https://example.com",
+        "fetchButton": "抓取",
+        "fetching": "抓取中…",
+        "loadExample": "載入範例",
+        "fetchErrors": {
+          "invalidUrl": "這看來不是一個有效的網站網址。",
+          "blockedHost": "這個主機並非公開可連線，所以無法抓取。",
+          "redirected": "請求被重新導向，請直接輸入最終的網域。",
+          "tooLarge": "這份 robots.txt 太大，無法抓取。",
+          "fetchFailed": "無法從這個網站抓取 robots.txt。"
+        }
+      },
+      "tester": {
+        "title": "測試網址",
+        "path": "路徑",
+        "pathPlaceholder": "/admin/settings",
+        "userAgent": "爬蟲",
+        "allowed": "允許",
+        "blocked": "封鎖",
+        "matchedBy": "由第 {line} 行配對：{rule}",
+        "noRule": "沒有任何規則配對，所以這個路徑是允許的",
+        "noGroup": "沒有群組適用於這個爬蟲，所以全部都允許"
+      },
+      "parsed": {
+        "title": "解析後的規則",
+        "groups": "群組",
+        "userAgents": "User-agent",
+        "rules": "規則",
+        "sitemaps": "Sitemap",
+        "crawlDelay": "Crawl-delay",
+        "noGroups": "找不到任何群組"
+      },
+      "issues": {
+        "title": "檢查結果",
+        "none": "未發現問題。",
+        "error": "錯誤",
+        "warning": "警告",
+        "info": "備註",
+        "line": "第 {line} 行",
+        "bom": "檔案開頭有位元組順序記號（BOM），部分爬蟲會把它當成第一條指令的一部分。",
+        "missingColon": "這一行沒有冒號，所以並不算是一條指令。",
+        "unknownDirective": "無法辨識的指令 — 請檢查拼寫。",
+        "emptyUserAgent": "User-agent 沒有填上值。",
+        "ruleBeforeUserAgent": "這條規則出現在所有 User-agent 行之前，所以不會有爬蟲套用它。",
+        "pathNotAbsolute": "路徑應以 / 或 * 開頭。",
+        "sitemapNotAbsolute": "Sitemap 必須是包含通訊協定的絕對網址。",
+        "crawlDelayInvalid": "Crawl-delay 必須是非負數。",
+        "crawlDelayIgnoredByGoogle": "Google 會忽略 Crawl-delay，請改用 Search Console 的檢索頻率設定。",
+        "noindexUnsupported": "Google 由 2019 年起不再支援 robots.txt 內的 noindex。請改用 meta robots 標籤或 X-Robots-Tag 標頭。",
+        "hostNonStandard": "Host 並非標準指令，Google 會忽略它。",
+        "blocksEntireSite": "這會封鎖所有爬蟲，令牠們無法存取整個網站。",
+        "empty": "找不到任何指令。",
+        "noSitemap": "沒有 Sitemap 指令。加上一條有助爬蟲找到你的網址。"
+      },
+      "guide": {
+        "overview": {
+          "title": "robots.txt 能做甚麼、不能做甚麼",
+          "description": "robots.txt 是用來告訴守規矩的爬蟲，哪些路徑不要去請求。它是檢索指示，既不是存取控制，也不是索引指示。被封鎖的網址如果有其他頁面連結過去，仍然可能出現在搜尋結果之中 — 只不過 Google 沒有讀過該頁的內容。要令某些東西不進入索引，應該讓該頁可被檢索並加上 noindex meta 標籤，或者用登入驗證好好保護它。"
+        },
+        "matching": {
+          "title": "路徑配對的運作方式",
+          "description": "配對以前綴為準，並且區分大小寫。系統支援兩個萬用字元：* 代表任意長度的字元，$ 則用來標示網址的結尾。",
+          "pattern": "模式",
+          "matches": "會配對",
+          "doesNotMatch": "不會配對"
+        },
+        "precedence": {
+          "title": "哪一條規則勝出",
+          "description": "當有多條規則同時符合時，最具體的一條勝出，也就是路徑模式最長的那一條。如果 Allow 和 Disallow 的長度相同，則 Allow 勝出。這就是為甚麼對於位於下層的網址，Allow: /folder/public 會蓋過 Disallow: /folder/。",
+          "example": "假設有 Disallow: /folder/ 和 Allow: /folder/public，路徑 /folder/public/page 是允許的，因為 Allow 的模式較長。"
+        },
+        "groups": {
+          "title": "群組的運作方式",
+          "description": "連續的 User-agent 行共用同一組規則。爬蟲只會採用 user-agent 名稱與它配對得最貼切的那一個群組，並忽略其他所有群組 — 包括 * 群組。這正是 robots.txt 最常見的錯誤：加入了 Googlebot 群組，卻以為 Googlebot 仍然會遵守 * 之下的規則。"
+        },
+        "mistakes": {
+          "title": "常見錯誤",
+          "items": {
+            "blockAll": {
+              "problem": "測試環境遺留下來的 Disallow: /",
+              "fix": "這會封鎖整個網站，也是網站上線後從搜尋結果消失的頭號原因。"
+            },
+            "groupInheritance": {
+              "problem": "以為指名的爬蟲同時也會遵守 * 的規則",
+              "fix": "並不會。任何共用的規則，都要在指名的群組內再寫一次。"
+            },
+            "noindex": {
+              "problem": "用 Disallow 把頁面從搜尋結果移除",
+              "fix": "被封鎖的頁面仍可能因為外部連結而被收錄。應該允許檢索，並改為輸出 noindex 標籤。"
+            },
+            "blockedAssets": {
+              "problem": "封鎖 /css/ 或 /js/",
+              "fix": "Google 會先渲染頁面再為它排名。封鎖這些資源，會令頁面在爬蟲眼中像是壞掉了一樣。"
+            },
+            "relativeSitemap": {
+              "problem": "使用相對路徑的 Sitemap",
+              "fix": "Sitemap 必須是絕對網址，並且包含 https://。"
+            }
+          }
+        }
+      }
+    }
   }
 }

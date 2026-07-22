@@ -417,13 +417,13 @@ export const defaultSEO: Record<string, SEOConfig> = {
     ],
   },
   "zh-HK": {
-    title: "RocksDev.Tools - 免費在線開發者工具，JSON、SEO、代碼處理等",
+    title: "RocksDev.Tools - 免費線上開發者工具，JSON、SEO、程式碼處理等",
     description:
-      "免費在線開發者工具，包括JSON格式化器、驗證器、壓縮器、差異比較工具、Base64轉換器、Regex測試器、SEO工具等。無需註冊，即時訪問。",
+      "免費線上開發者工具，包括JSON格式化器、驗證器、壓縮器、差異比較工具、Base64轉換器、Regex測試器、SEO工具等。無需註冊，即時訪問。",
     keywords: [
       // Primary keywords
       "開發工具",
-      "在線開發工具",
+      "線上開發工具",
       "免費開發工具",
       "網頁開發工具",
       "編程工具",
@@ -436,24 +436,24 @@ export const defaultSEO: Record<string, SEOConfig> = {
       "JSON壓縮器",
       "JSON差異比較",
       "JSON解析器",
-      "在線格式化JSON",
-      "在線驗證JSON",
-      "在線壓縮JSON",
+      "線上格式化JSON",
+      "線上驗證JSON",
+      "線上壓縮JSON",
       "比較JSON文件",
-      "解析JSON字符串",
+      "解析JSON字串",
 
       // Conversion tools
       "Base64轉換器",
       "Base64編碼器",
       "Base64解碼器",
-      "在線轉換Base64",
+      "線上轉換Base64",
       "Markdown轉HTML轉換器",
       "JSON轉Java Bean轉換器",
 
       // Developer tools
       "Regex測試器",
       "Regex驗證器",
-      "在線測試Regex",
+      "線上測試Regex",
       "應用圖標生成器",
       "AI SQL生成器",
 
@@ -465,20 +465,20 @@ export const defaultSEO: Record<string, SEOConfig> = {
       "社交媒體預覽生成器",
 
       // Text tools
-      "文本格式化器",
-      "文本處理工具",
+      "文字格式化器",
+      "文字處理工具",
 
       // Feature keywords
-      "代碼格式化",
-      "在線代碼工具",
+      "程式碼格式化",
+      "線上程式碼工具",
       "網頁工具",
       "瀏覽器端工具",
 
       // User intent keywords
-      "在線格式化JSON",
-      "在線驗證JSON",
-      "在線測試Regex",
-      "在線轉換Base64",
+      "線上格式化JSON",
+      "線上驗證JSON",
+      "線上測試Regex",
+      "線上轉換Base64",
       "生成OG圖像",
       "創建元標籤",
 
@@ -495,9 +495,9 @@ export const defaultSEO: Record<string, SEOConfig> = {
     openGraph: {
       type: "website",
       siteName: "RocksDev.Tools",
-      title: "RocksDev.Tools - 免費在線開發者工具，JSON、SEO、代碼處理等",
+      title: "RocksDev.Tools - 免費線上開發者工具，JSON、SEO、程式碼處理等",
       description:
-        "免費在線開發者工具，包括JSON格式化器、驗證器、壓縮器、差異比較工具、Base64轉換器、Regex測試器、SEO工具等。無需註冊，即時訪問。",
+        "免費線上開發者工具，包括JSON格式化器、驗證器、壓縮器、差異比較工具、Base64轉換器、Regex測試器、SEO工具等。無需註冊，即時訪問。",
       images: [`/api/og`],
       url: BASE_URL,
     },
@@ -743,25 +743,25 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
     "zh-HK": {
       title: "JSON 格式化工具 | RocksDev.Tools",
       description:
-        "使用我們強大的在線 JSON 格式化工具來格式化、驗證和美化您的 JSON。包括語法高亮、錯誤檢測等功能。",
+        "使用我們強大的線上 JSON 格式化工具來格式化、驗證和美化您的 JSON。包括語法高亮、錯誤檢測等功能。",
       keywords: [
         "JSON格式化",
         "JSON美化器",
         "JSON驗證器",
-        "在線JSON格式化",
+        "線上JSON格式化",
         "JSON格式化工具",
         "JSON編輯器",
         "JSON stringify",
         "JSON語法高亮",
         "免費JSON工具",
-        "在線JSON美化",
+        "線上JSON美化",
         "JSON校驗工具",
         "即時JSON格式化",
       ],
       openGraph: {
         type: "website",
         title: "JSON 格式化工具",
-        description: "在線格式化和驗證您的 JSON",
+        description: "線上格式化和驗證您的 JSON",
         images: [`/api/og?title=JSON%20Formatter`],
       },
     },
@@ -792,12 +792,12 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
     },
     "zh-HK": {
       title: "JSON 驗證工具 | RocksDev.Tools",
-      description: "使用我們強大的在線 JSON 驗證工具驗證您的 JSON 數據。",
+      description: "使用我們強大的線上 JSON 驗證工具驗證您的 JSON 數據。",
       keywords: ["json驗證器", "json驗證", "json工具"],
       openGraph: {
         type: "website",
         title: "JSON 驗證工具",
-        description: "在線驗證您的 JSON 數據",
+        description: "線上驗證您的 JSON 數據",
         images: [`/api/og?title=JSON%20Validator`],
       },
     },
@@ -868,7 +868,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
     "zh-HK": {
       title: "JSON 差異對比工具 | RocksDev.Tools",
       description:
-        "使用我們強大的在線 JSON 差異對比工具比較兩個 JSON 對象並找出它們的差異。輕鬆發現 JSON 文件之間的更改、添加和刪除。",
+        "使用我們強大的線上 JSON 差異對比工具比較兩個 JSON 對象並找出它們的差異。輕鬆發現 JSON 文件之間的更改、添加和刪除。",
       keywords: [
         // Primary keywords
         "json差異",
@@ -891,7 +891,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "查找json差異",
         "檢查json變化",
         "發現json不同",
-        "在線比較json",
+        "線上比較json",
 
         // Action keywords
         "可視化json差異",
@@ -900,12 +900,12 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
 
         // Characteristics
         "免費json對比工具",
-        "在線json比較",
+        "線上json比較",
         "即時json差異",
       ],
       openGraph: {
         type: "website",
-        title: "JSON 差異對比工具 - 在線比較 JSON 文件",
+        title: "JSON 差異對比工具 - 線上比較 JSON 文件",
         description:
           "即時比較兩個 JSON 對象並找出它們的差異。提供並排視圖和差異高亮的可視化比較工具。",
         images: [`/api/og?title=JSON%20Diff`],
@@ -1011,9 +1011,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "JSON Minifier | RocksDev.Tools",
+      title: "JSON 壓縮工具 | RocksDev.Tools",
       description:
-        "使用我們強大的在線 JSON 壓縮工具立即壓縮您的 JSON 數據。在保持數據完整性的同時減小文件大小，完美用於優化和部署。",
+        "使用我們強大的線上 JSON 壓縮工具立即壓縮您的 JSON 數據。在保持數據完整性的同時減小文件大小，完美用於優化和部署。",
       keywords: [
         // Primary keywords
         "json壓縮工具",
@@ -1023,7 +1023,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "json minifier",
 
         // Feature keywords
-        "在線壓縮json",
+        "線上壓縮json",
         "json文件優化",
         "減小json大小",
         "json大小優化器",
@@ -1043,19 +1043,19 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         // Action keywords
         "刪除json空格",
         "壓縮json數據",
-        "優化json代碼",
+        "優化json程式碼",
 
         // Characteristics
         "免費json壓縮",
-        "在線json壓縮",
+        "線上json壓縮",
         "即時json壓縮",
         "批量json壓縮",
       ],
       openGraph: {
         type: "website",
-        title: "JSON Minifier - 在線壓縮 JSON 數據",
+        title: "JSON Minifier - 線上壓縮 JSON 數據",
         description:
-          "免費的在線 JSON Minifier，壓縮和優化您的 JSON 數據。刪除空白並減小文件大小，同時保持數據完整性。",
+          "免費的線上 JSON Minifier，壓縮和優化您的 JSON 數據。刪除空白並減小文件大小，同時保持數據完整性。",
         images: [`/api/og?title=JSON%20Minifier`],
       },
     },
@@ -1100,7 +1100,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
     "zh-HK": {
       title: "Base64 轉換器 | RocksDev.Tools",
       description:
-        "使用我們強大的在線 Base64 轉換器工具在 Base64 和其他格式之間轉換。",
+        "使用我們強大的線上 Base64 轉換器工具在 Base64 和其他格式之間轉換。",
       keywords: [
         "base64轉換器",
         "base64工具",
@@ -1194,7 +1194,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-CN": {
-      title: "Regex測試工具 | RocksDev.Tools",
+      title: "正則表達式測試工具 | RocksDev.Tools",
       description: "測試和驗證Regex",
       keywords: ["Regex測試器", "Regex驗證器", "Regex工具"],
       openGraph: {
@@ -1205,7 +1205,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "Regex測試工具 | RocksDev.Tools",
+      title: "正則表達式測試工具 | RocksDev.Tools",
       description: "測試和驗證Regex",
       keywords: ["Regex測試器", "Regex驗證器", "Regex工具"],
       openGraph: {
@@ -1345,7 +1345,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
     "zh-HK": {
       title: "OG圖像生成器 | 社交媒體預覽圖片生成工具 | RocksDev.Tools",
       description:
-        "創建專業的Open Graph（OG）圖像，用於社會媒體預覽。免費在線工具，可生成、裁剪和優化Facebook、Twitter、LinkedIn等社交卡片圖像。",
+        "創建專業的Open Graph（OG）圖像，用於社會媒體預覽。免費線上工具，可生成、裁剪和優化Facebook、Twitter、LinkedIn等社交卡片圖像。",
       keywords: [
         // Primary keywords
         "og圖像生成器",
@@ -1373,7 +1373,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "元標籤圖像",
 
         // User intent keywords
-        "在線創建og圖像",
+        "線上創建og圖像",
         "生成社交預覽",
         "製作社交卡片圖片",
         "優化社交圖片",
@@ -1386,7 +1386,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
 
         // Characteristics
         "免費og圖片工具",
-        "在線圖片生成器",
+        "線上圖片生成器",
         "即時預覽生成器",
         "批量og圖片創建",
       ],
@@ -1394,7 +1394,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         type: "website",
         title: "OG圖像生成器 - 創建社交媒體預覽圖片",
         description:
-          "免費在線工具，創建和優化社交媒體預覽圖片。為Facebook、Twitter、LinkedIn等生成完美的Open Graph圖像。",
+          "免費線上工具，創建和優化社交媒體預覽圖片。為Facebook、Twitter、LinkedIn等生成完美的Open Graph圖像。",
         images: [`/api/og?title=OG%20Image%20Generator`],
         siteName: "RocksDev.Tools",
       },
@@ -1430,13 +1430,13 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "文本格式化器 | RocksDev.Tools",
-      description: "使用高级工具格式化和操作您的文本",
-      keywords: ["文本格式化器", "文本工具", "文本格式化"],
+      title: "文字格式化工具 | RocksDev.Tools",
+      description: "使用高级工具格式化和操作您的文字",
+      keywords: ["文字格式化器", "文字工具", "文字格式化"],
       openGraph: {
         type: "website",
-        title: "文本格式化器",
-        description: "使用高级工具格式化和操作您的文本",
+        title: "文字格式化器",
+        description: "使用高级工具格式化和操作您的文字",
         images: [`/api/og?title=Text%20Formatter`],
       },
     },
@@ -1555,7 +1555,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
     "zh-HK": {
       title: "Meta標籤生成器 | SEO和社交媒體標籤生成工具 | RocksDev.Tools",
       description:
-        "專業的在線Meta標籤生成工具，為搜尋引擎（Google、Bing）和社交媒體（Facebook、Twitter、LinkedIn）優化您的網站。支援標題標籤優化、Meta描述、Open Graph標籤、Twitter卡片，並提供實時預覽功能。",
+        "專業的線上Meta標籤生成工具，為搜尋引擎（Google、Bing）和社交媒體（Facebook、Twitter、LinkedIn）優化您的網站。支援標題標籤優化、Meta描述、Open Graph標籤、Twitter卡片，並提供實時預覽功能。",
       keywords: [
         // Primary keywords
         "meta標籤生成器",
@@ -1595,7 +1595,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
 
         // Characteristics
         "免費meta標籤工具",
-        "在線meta生成器",
+        "線上meta生成器",
         "即時meta預覽",
         "meta標籤最佳實踐",
       ],
@@ -1603,7 +1603,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         type: "website",
         title: "Meta標籤生成器 - 創建SEO和社交媒體標籤",
         description:
-          "免費在線工具，生成和優化用於SEO和社交媒體的Meta標籤。為Google、Facebook、Twitter、LinkedIn創建完美的Meta標籤，支援實時預覽。",
+          "免費線上工具，生成和優化用於SEO和社交媒體的Meta標籤。為Google、Facebook、Twitter、LinkedIn創建完美的Meta標籤，支援實時預覽。",
         images: [`/api/og?title=Meta%20Tags%20Generator`],
       },
     },
@@ -1665,7 +1665,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "免費圖示產生器",
         "iOS應用圖示製作",
         "安卓應用圖示生成",
-        "在線圖示設計工具",
+        "線上圖示設計工具",
         "圖示尺寸調整工具",
         "應用商店圖示規範",
       ],
@@ -1772,20 +1772,20 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
       },
     },
     "zh-HK": {
-      title: "輕鬆將代碼轉換為SQL - AI SQL生成器",
+      title: "輕鬆將程式碼轉換為SQL - AI SQL生成器",
       description:
-        "使用我們的AI SQL生成器，輕鬆將代碼轉換為高效的SQL查詢，節省時間，提高工作效率。",
+        "使用我們的AI SQL生成器，輕鬆將程式碼轉換為高效的SQL查詢，節省時間，提高工作效率。",
       keywords: [
         "ai sql生成器",
-        "代碼轉sql工具",
+        "程式碼轉sql工具",
         "自動化sql生成",
-        "ai代碼轉換器",
-        "在線sql生成器",
+        "ai程式碼轉換器",
+        "線上sql生成器",
       ],
       openGraph: {
         type: "website",
-        title: "輕鬆將代碼轉換為SQL - AI SQL生成器",
-        description: "使用我們的AI SQL生成器，輕鬆將代碼轉換為高效的SQL查詢。",
+        title: "輕鬆將程式碼轉換為SQL - AI SQL生成器",
+        description: "使用我們的AI SQL生成器，輕鬆將程式碼轉換為高效的SQL查詢。",
         images: ["/api/og?title=AI%20SQL%20生成器"],
       },
     },
@@ -1950,9 +1950,9 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
     },
     "zh-HK": {
       title:
-        "JSON stringify 和 JSON parse 工具 | 在線轉換 JSON | RocksDev.Tools",
+        "JSON stringify 和 JSON parse 工具 | 線上轉換 JSON | RocksDev.Tools",
       description:
-        "免費的在線 JSON stringify 和 JSON parse 工具。在 JSON 字串和 JSON 物件之間轉換，支援壓縮、美化和 Unicode 轉義。為開發者處理 JSON 數據提供完美解決方案。",
+        "免費的線上 JSON stringify 和 JSON parse 工具。在 JSON 字串和 JSON 物件之間轉換，支援壓縮、美化和 Unicode 轉義。為開發者處理 JSON 數據提供完美解決方案。",
       keywords: [
         // Primary keywords
         "json stringify",
@@ -1961,7 +1961,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "json字串轉換",
 
         // Feature keywords
-        "在線解析json",
+        "線上解析json",
         "json字串化",
         "json美化",
         "json壓縮",
@@ -1987,15 +1987,15 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
 
         // Characteristics
         "免費json stringify",
-        "在線json工具",
+        "線上json工具",
         "即時json轉換",
         "json字串處理",
       ],
       openGraph: {
         type: "website",
-        title: "JSON stringify 和 JSON parse - 在線轉換 JSON",
+        title: "JSON stringify 和 JSON parse - 線上轉換 JSON",
         description:
-          "免費在線工具，將 JSON 字串解析為物件，並將 JSON 物件字串化為 JSON 格式。功能包括壓縮、美化和 Unicode 轉義。",
+          "免費線上工具，將 JSON 字串解析為物件，並將 JSON 物件字串化為 JSON 格式。功能包括壓縮、美化和 Unicode 轉義。",
         images: [`/api/og?title=JSON%20Parser%20%26%20Stringify`],
       },
     },
@@ -2122,7 +2122,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
     "zh-HK": {
       title: "JWT 解碼器/編碼器 | 安全令牌處理 | RocksDev.Tools",
       description:
-        "免費的在線 JWT 解碼器和編碼器工具。解碼 JWT 令牌以查看頭部和載荷，或使用自定義金鑰編碼您自己的 JWT 令牌。支持 HS256、HS384 和 HS512 算法。",
+        "免費的線上 JWT 解碼器和編碼器工具。解碼 JWT 令牌以查看頭部和載荷，或使用自定義金鑰編碼您自己的 JWT 令牌。支持 HS256、HS384 和 HS512 算法。",
       keywords: [
         // Primary keywords
         "jwt解碼器",
@@ -2132,8 +2132,8 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "jwt轉換器",
 
         // Feature keywords
-        "在線解碼jwt",
-        "在線編碼jwt",
+        "線上解碼jwt",
+        "線上編碼jwt",
         "jwt頭部解碼器",
         "jwt載荷解碼器",
         "jwt簽名驗證器",
@@ -2166,15 +2166,15 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
 
         // Characteristics
         "免費jwt工具",
-        "在線jwt解碼器",
+        "線上jwt解碼器",
         "即時jwt處理",
         "客戶端jwt工具",
       ],
       openGraph: {
         type: "website",
-        title: "JWT 解碼器/編碼器 - 在線處理 JSON Web 令牌",
+        title: "JWT 解碼器/編碼器 - 線上處理 JSON Web 令牌",
         description:
-          "免費在線工具，用於解碼和編碼 JWT 令牌。查看令牌頭部和載荷，或使用自定義金鑰創建您自己的 JWT 令牌。",
+          "免費線上工具，用於解碼和編碼 JWT 令牌。查看令牌頭部和載荷，或使用自定義金鑰創建您自己的 JWT 令牌。",
         images: [`/api/og?title=JWT%20Decoder%2FEncoder`],
       },
     },
@@ -2285,7 +2285,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
     "zh-HK": {
       title: "URL 編碼器/解碼器 | 百分號編碼工具 | RocksDev.Tools",
       description:
-        "免費的在線 URL 編碼器和解碼器工具。編碼 URL 以安全傳輸或解碼百分號編碼的 URL 為人類可讀格式。非常適合 Web 開發人員和 API 測試。",
+        "免費的線上 URL 編碼器和解碼器工具。編碼 URL 以安全傳輸或解碼百分號編碼的 URL 為人類可讀格式。非常適合 Web 開發人員和 API 測試。",
       keywords: [
         // Primary keywords
         "url編碼器",
@@ -2295,11 +2295,11 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "url解碼工具",
 
         // Feature keywords
-        "在線編碼url",
-        "在線解碼url",
+        "線上編碼url",
+        "線上解碼url",
         "百分號編碼url",
         "url參數編碼",
-        "查詢字符串編碼",
+        "查詢字串編碼",
 
         // Technical keywords
         "uri編碼",
@@ -2317,19 +2317,19 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "編碼網頁url",
         "解碼編碼的url",
         "轉換url格式",
-        "處理url字符串",
+        "處理url字串",
 
         // Characteristics
         "免費url編碼器",
-        "在線url工具",
+        "線上url工具",
         "即時url編碼",
         "客戶端url處理",
       ],
       openGraph: {
         type: "website",
-        title: "URL 編碼器/解碼器 - 在線百分號編碼 URL",
+        title: "URL 編碼器/解碼器 - 線上百分號編碼 URL",
         description:
-          "免費在線工具，用於編碼和解碼 URL。將特殊字符轉換為百分號編碼格式或將百分號編碼的 URL 解碼為可讀文本。",
+          "免費線上工具，用於編碼和解碼 URL。將特殊字符轉換為百分號編碼格式或將百分號編碼的 URL 解碼為可讀文字。",
         images: [`/api/og?title=URL%20Encoder%2FDecoder`],
       },
     },
@@ -2463,7 +2463,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
     "zh-HK": {
       title: "高級圖像優化 | 線上壓縮和優化圖像 | RocksDev.Tools",
       description:
-        "免費的線上高級圖像優化工具。通過可調節的質量設置、格式轉換（JPEG、PNG、WebP）、批量處理和尺寸控制來壓縮和優化圖像。在保持質量的同時減小文件大小。",
+        "免費的線上高級圖像優化工具。通過可調節的品質設置、格式轉換（JPEG、PNG、WebP）、批量處理和尺寸控制來壓縮和優化圖像。在保持品質的同時減小文件大小。",
       keywords: [
         // Primary keywords
         "圖像優化",
@@ -2474,7 +2474,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
 
         // Feature keywords
         "線上壓縮圖像",
-        "優化圖像質量",
+        "優化圖像品質",
         "批量圖像處理",
         "圖像格式轉換",
         "線上調整圖像大小",
@@ -2491,7 +2491,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "照片優化工具",
         "圖像尺寸調整器",
         "批量圖像優化器",
-        "圖像質量控制器",
+        "圖像品質控制器",
 
         // User intent keywords
         "減小圖像文件大小",
@@ -2504,7 +2504,7 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         "縮小圖像文件",
         "優化圖像尺寸",
         "轉換為webp格式",
-        "調整圖像質量",
+        "調整圖像品質",
         "處理多個圖像",
 
         // Characteristics
@@ -2518,8 +2518,317 @@ export const toolsSEO: Record<string, Record<string, SEOConfig>> = {
         type: "website",
         title: "高級圖像優化 - 線上壓縮和優化圖像",
         description:
-          "免費線上工具，用於壓縮和優化圖像。調整質量、轉換格式、調整尺寸，並批量處理多個圖像。",
+          "免費線上工具，用於壓縮和優化圖像。調整品質、轉換格式、調整尺寸，並批量處理多個圖像。",
         images: [`/api/og?title=Advanced%20Image%20Optimization`],
+      },
+    },
+  },
+  "dev.pwa-manifest": {
+    en: {
+      title: "PWA Manifest Generator — Web App Manifest & Icons",
+      description:
+        "Build a manifest.webmanifest and every PWA icon size from one image, including maskable icons and the head snippet. Free and runs in your browser.",
+      keywords: [
+        "pwa manifest generator",
+        "web app manifest generator",
+        "manifest.webmanifest generator",
+        "pwa icon generator",
+        "maskable icon generator",
+        "progressive web app manifest",
+        "pwa install prompt",
+        "web manifest validator",
+      ],
+      openGraph: {
+        type: "website",
+        title: "PWA Manifest Generator",
+        description:
+          "Build a web app manifest and the full PWA icon set from one image.",
+        images: [`/api/og?title=PWA%20Manifest%20Generator`],
+      },
+    },
+    "zh-HK": {
+      title: "PWA Manifest 產生器 — 網頁應用程式資訊清單與圖示",
+      description:
+        "由一張圖片產生 manifest.webmanifest 及所有 PWA 圖示尺寸，包括 maskable 圖示與 head 程式碼。免費，完全在瀏覽器執行。",
+      keywords: [
+        "PWA manifest 產生器",
+        "網頁應用程式資訊清單",
+        "PWA 圖示產生器",
+        "maskable 圖示",
+        "漸進式網頁應用程式",
+        "PWA 安裝",
+        "web manifest 產生器",
+      ],
+      openGraph: {
+        type: "website",
+        title: "PWA Manifest 產生器",
+        description: "由一張圖片產生網頁應用程式資訊清單與完整 PWA 圖示。",
+        images: [`/api/og?title=PWA%20Manifest%20Generator`],
+      },
+    },
+    "zh-CN": {
+      title: "PWA Manifest 生成器 — 网页应用清单与图标",
+      description:
+        "从一张图片生成 manifest.webmanifest 和所有 PWA 图标尺寸，包括 maskable 图标和 head 代码。免费，完全在浏览器中运行。",
+      keywords: [
+        "PWA manifest 生成器",
+        "网页应用清单",
+        "PWA 图标生成器",
+        "maskable 图标",
+        "渐进式网页应用",
+        "PWA 安装",
+        "web manifest 生成器",
+      ],
+      openGraph: {
+        type: "website",
+        title: "PWA Manifest 生成器",
+        description: "从一张图片生成网页应用清单和完整 PWA 图标。",
+        images: [`/api/og?title=PWA%20Manifest%20Generator`],
+      },
+    },
+  },
+  "dev.hash": {
+    en: {
+      title: "Hash Generator — MD5, SHA-1, SHA-256 and SHA-512",
+      description:
+        "Generate MD5, SHA-1, SHA-256, SHA-384 and SHA-512 checksums for text or a file and compare against a published hash. Nothing is uploaded.",
+      keywords: [
+        "hash generator",
+        "sha256 hash generator",
+        "md5 hash generator",
+        "sha512 generator",
+        "checksum calculator",
+        "file checksum verify",
+        "online hash calculator",
+        "sha1 generator",
+      ],
+      openGraph: {
+        type: "website",
+        title: "Hash Generator",
+        description:
+          "MD5, SHA-1, SHA-256, SHA-384 and SHA-512 for text or files, in your browser.",
+        images: [`/api/og?title=Hash%20Generator`],
+      },
+    },
+    "zh-HK": {
+      title: "雜湊值產生器 — MD5、SHA-1、SHA-256、SHA-512",
+      description:
+        "為文字或檔案計算 MD5、SHA-1、SHA-256、SHA-384 及 SHA-512 雜湊值，並與公布的檢查碼比對。所有運算在瀏覽器完成，不會上傳。",
+      keywords: [
+        "雜湊值產生器",
+        "SHA256 產生器",
+        "MD5 產生器",
+        "檢查碼計算",
+        "檔案雜湊驗證",
+        "線上雜湊計算",
+        "SHA512 計算",
+      ],
+      openGraph: {
+        type: "website",
+        title: "雜湊值產生器",
+        description: "在瀏覽器計算文字或檔案的 MD5、SHA-1、SHA-256 及 SHA-512。",
+        images: [`/api/og?title=Hash%20Generator`],
+      },
+    },
+    "zh-CN": {
+      title: "哈希值生成器 — MD5、SHA-1、SHA-256、SHA-512",
+      description:
+        "为文本或文件计算 MD5、SHA-1、SHA-256、SHA-384 和 SHA-512 哈希值，并与公布的校验和比对。全部在浏览器中完成，不会上传。",
+      keywords: [
+        "哈希值生成器",
+        "SHA256 生成器",
+        "MD5 生成器",
+        "校验和计算",
+        "文件哈希校验",
+        "在线哈希计算",
+        "SHA512 计算",
+      ],
+      openGraph: {
+        type: "website",
+        title: "哈希值生成器",
+        description: "在浏览器中计算文本或文件的 MD5、SHA-1、SHA-256 和 SHA-512。",
+        images: [`/api/og?title=Hash%20Generator`],
+      },
+    },
+  },
+  "dev.id-validator": {
+    en: {
+      title: "HKID and Taiwan ID Validator — Checksum Checker",
+      description:
+        "Validate a Hong Kong Identity Card number or a Taiwan National ID against its checksum and see what the number encodes. Runs in your browser.",
+      keywords: [
+        "hkid validator",
+        "hong kong id checker",
+        "hkid check digit",
+        "taiwan id validator",
+        "id number checksum",
+        "hkid format",
+        "national id validator",
+      ],
+      openGraph: {
+        type: "website",
+        title: "HKID and Taiwan ID Validator",
+        description:
+          "Check a Hong Kong or Taiwan ID number against its checksum, in your browser.",
+        images: [`/api/og?title=ID%20Number%20Validator`],
+      },
+    },
+    "zh-HK": {
+      title: "香港身份證及台灣身分證字號驗證工具",
+      description:
+        "線上檢查香港身份證號碼或台灣身分證字號的檢查碼是否正確，並顯示號碼所代表的資訊。完全在瀏覽器執行，輸入內容不會外傳。",
+      keywords: [
+        "香港身份證驗證",
+        "身份證號碼檢查",
+        "HKID 驗證",
+        "身份證檢查碼",
+        "台灣身分證字號驗證",
+        "身分證字號檢查",
+        "身份證格式",
+      ],
+      openGraph: {
+        type: "website",
+        title: "香港身份證及台灣身分證字號驗證",
+        description: "線上檢查香港身份證及台灣身分證字號的檢查碼。",
+        images: [`/api/og?title=ID%20Number%20Validator`],
+      },
+    },
+    "zh-CN": {
+      title: "香港身份证与台湾身份证号码校验工具",
+      description:
+        "在线校验香港身份证号码或台湾身份证字号的校验位是否正确，并显示号码所代表的信息。完全在浏览器中运行，输入内容不会外传。",
+      keywords: [
+        "香港身份证校验",
+        "身份证号码检查",
+        "HKID 校验",
+        "身份证校验位",
+        "台湾身份证字号校验",
+        "身份证格式",
+      ],
+      openGraph: {
+        type: "website",
+        title: "香港身份证与台湾身份证号码校验",
+        description: "在线校验香港身份证和台湾身份证号码的校验位。",
+        images: [`/api/og?title=ID%20Number%20Validator`],
+      },
+    },
+  },
+  "dev.business-number": {
+    en: {
+      title: "Taiwan Unified Business Number Validator",
+      description:
+        "Check a Taiwan unified business number against the Ministry of Finance checksum, including the 2023 rule change. Free and runs in your browser.",
+      keywords: [
+        "taiwan unified business number",
+        "tax id validator taiwan",
+        "business number checksum",
+        "taiwan company number check",
+        "unified business number format",
+      ],
+      openGraph: {
+        type: "website",
+        title: "Taiwan Unified Business Number Validator",
+        description:
+          "Validate a Taiwan unified business number, including the 2023 rule change.",
+        images: [`/api/og?title=Business%20Number%20Validator`],
+      },
+    },
+    "zh-HK": {
+      title: "統一編號驗證工具 — 台灣公司統編檢查",
+      description:
+        "線上檢查台灣公司統一編號是否符合財政部檢查碼規則，並涵蓋 2023 年新制。免費，完全在瀏覽器執行。",
+      keywords: [
+        "統一編號驗證",
+        "統編檢查",
+        "統一編號檢查碼",
+        "台灣公司統編",
+        "統一編號格式",
+        "統編驗證工具",
+      ],
+      openGraph: {
+        type: "website",
+        title: "統一編號驗證工具",
+        description: "線上檢查台灣公司統一編號的檢查碼，涵蓋 2023 年新制。",
+        images: [`/api/og?title=Business%20Number%20Validator`],
+      },
+    },
+    "zh-CN": {
+      title: "统一编号验证工具 — 台湾公司统编校验",
+      description:
+        "在线校验台湾公司统一编号是否符合财政部校验规则，并涵盖 2023 年新规。免费，完全在浏览器中运行。",
+      keywords: [
+        "统一编号验证",
+        "统编校验",
+        "统一编号校验位",
+        "台湾公司统编",
+        "统一编号格式",
+      ],
+      openGraph: {
+        type: "website",
+        title: "统一编号验证工具",
+        description: "在线校验台湾公司统一编号，涵盖 2023 年新规。",
+        images: [`/api/og?title=Business%20Number%20Validator`],
+      },
+    },
+  },
+  "seo.robots-txt": {
+    en: {
+      title: "robots.txt Validator and Tester — Check Blocked URLs",
+      description:
+        "Lint your robots.txt, read the parsed rules, and test whether any URL is blocked for Googlebot or another crawler. Free, no sign-up needed.",
+      keywords: [
+        "robots.txt validator",
+        "robots.txt tester",
+        "robots txt checker",
+        "test robots.txt url",
+        "robots.txt syntax check",
+        "is url blocked by robots",
+        "googlebot robots tester",
+      ],
+      openGraph: {
+        type: "website",
+        title: "robots.txt Validator and Tester",
+        description:
+          "Lint robots.txt and test whether a URL is blocked for any crawler.",
+        images: [`/api/og?title=robots.txt%20Validator`],
+      },
+    },
+    "zh-HK": {
+      title: "robots.txt 驗證工具 — 測試網址是否被封鎖",
+      description:
+        "檢查 robots.txt 語法、查看解析後的規則，並測試任何網址對 Googlebot 或其他爬蟲是否被封鎖。免費，無須註冊。",
+      keywords: [
+        "robots.txt 驗證",
+        "robots.txt 測試",
+        "robots.txt 檢查",
+        "網址封鎖測試",
+        "robots.txt 語法",
+        "Googlebot 爬蟲測試",
+      ],
+      openGraph: {
+        type: "website",
+        title: "robots.txt 驗證工具",
+        description: "檢查 robots.txt 語法並測試網址是否被爬蟲封鎖。",
+        images: [`/api/og?title=robots.txt%20Validator`],
+      },
+    },
+    "zh-CN": {
+      title: "robots.txt 验证工具 — 测试网址是否被屏蔽",
+      description:
+        "检查 robots.txt 语法、查看解析后的规则，并测试任何网址对 Googlebot 或其他爬虫是否被屏蔽。免费，无需注册。",
+      keywords: [
+        "robots.txt 验证",
+        "robots.txt 测试",
+        "robots.txt 检查",
+        "网址屏蔽测试",
+        "robots.txt 语法",
+        "Googlebot 爬虫测试",
+      ],
+      openGraph: {
+        type: "website",
+        title: "robots.txt 验证工具",
+        description: "检查 robots.txt 语法并测试网址是否被爬虫屏蔽。",
+        images: [`/api/og?title=robots.txt%20Validator`],
       },
     },
   },
@@ -2717,15 +3026,15 @@ export const textToolsSEO: Record<string, SEOConfig> = {
     },
   },
   "zh-HK": {
-    title: "文本工具 | RocksDev.Tools",
+    title: "文字工具 | RocksDev.Tools",
     description:
-      "探索我們的文本工具集，用於高效文本處理。從字符計數到文本格式化，我們的工具幫助您輕鬆管理文本。",
-    keywords: ["文本工具", "文本處理", "字符計數", "文本格式化", "文本操作"],
+      "探索我們的文字工具集，用於高效文字處理。從字符計數到文字格式化，我們的工具幫助您輕鬆管理文字。",
+    keywords: ["文字工具", "文字處理", "字符計數", "文字格式化", "文字操作"],
     openGraph: {
       type: "website",
-      title: "文本工具 - RocksDev.Tools",
+      title: "文字工具 - RocksDev.Tools",
       description:
-        "探索我們的文本工具集，用於高效文本處理。從字符計數到文本格式化，我們的工具幫助您輕鬆管理文本。",
+        "探索我們的文字工具集，用於高效文字處理。從字符計數到文字格式化，我們的工具幫助您輕鬆管理文字。",
       images: [`/api/og?title=Text%20Tools`],
     },
   },
@@ -2838,13 +3147,13 @@ export const convertersSEO: Record<string, SEOConfig> = {
   "zh-HK": {
     title: "轉換器 | RocksDev.Tools",
     description:
-      "探索我們的轉換器工具集，用於高效轉換任務。從文本到JSON，我們的工具幫助您輕鬆管理轉換。",
-    keywords: ["轉換器", "轉換工具", "文本到JSON", "文本到CSV", "文本到XML"],
+      "探索我們的轉換器工具集，用於高效轉換任務。從文字到JSON，我們的工具幫助您輕鬆管理轉換。",
+    keywords: ["轉換器", "轉換工具", "文字到JSON", "文字到CSV", "文字到XML"],
     openGraph: {
       type: "website",
       title: "轉換器 - RocksDev.Tools",
       description:
-        "探索我們的轉換器工具集，用於高效轉換任務。從文本到JSON，我們的工具幫助您輕鬆管理轉換。",
+        "探索我們的轉換器工具集，用於高效轉換任務。從文字到JSON，我們的工具幫助您輕鬆管理轉換。",
       images: [`/api/og?title=Converters`],
     },
   },

@@ -4,7 +4,7 @@
       "conversion-type": "轉換類型",
       "copy-sql": "複製 SQL",
       "current-conversion": "當前轉換",
-      "description": "使用 AI 將您的代碼 DTO 和實體轉換為 SQL 命令",
+      "description": "使用 AI 將您的程式碼 DTO 和實體轉換為 SQL 命令",
       "error": {
         "generation": "生成失敗"
       },
@@ -19,24 +19,24 @@
           "title": "功能特點"
         },
         "input": {
-          "description": "貼上您的代碼（類、接口或類型定義），AI 將生成相應的 SQL 表結構。",
+          "description": "貼上您的程式碼（類、接口或類型定義），AI 將生成相應的 SQL 表結構。",
           "title": "輸入格式"
         },
         "storage": {
-          "description": "所有對話都存儲在您的瀏覽器中。除了您要轉換的代碼外，不會向我們的服務器發送任何數據。",
+          "description": "所有對話都存儲在您的瀏覽器中。除了您要轉換的程式碼外，不會向我們的服務器發送任何數據。",
           "title": "本地存儲"
         },
         "title": "如何使用 SQL 生成器"
       },
       "how_to_use": "如何使用 SQL 生成器：",
       "input": {
-        "placeholder": "在此輸入或貼上代碼...（按 Enter 發送，Shift + Enter 換行）"
+        "placeholder": "在此輸入或貼上程式碼...（按 Enter 發送，Shift + Enter 換行）"
       },
       "message": {
         "copied": "已複製到剪貼簿！"
       },
       "new-conversion": "開始新轉換",
-      "paste-code": "貼上代碼",
+      "paste-code": "貼上程式碼",
       "privacy": {
         "data_storage": {
           "all-chat-histories-are-stored-locally-in-your-browser": "所有聊天記錄都存儲在您的瀏覽器中",
@@ -47,8 +47,8 @@
         "data_usage": {
           "conversations-remain-private-to-your-browser": "對話保持在您的瀏覽器中私密",
           "title": "數據使用",
-          "we-do-not-store-share-or-analyze-your-code": "我們不存儲、分享或分析您的代碼",
-          "your-code-is-only-used-to-generate-sql-schemas": "您的代碼僅用於生成 SQL 結構"
+          "we-do-not-store-share-or-analyze-your-code": "我們不存儲、分享或分析您的程式碼",
+          "your-code-is-only-used-to-generate-sql-schemas": "您的程式碼僅用於生成 SQL 結構"
         },
         "disclaimer": "使用此工具即表示您確認所有數據都存儲在您的瀏覽器中，我們對因清除瀏覽器數據或瀏覽器存儲限制而可能發生的任何數據丟失不承擔責任。",
         "storage_management": {
@@ -64,7 +64,7 @@
       "start_new": "開始新轉換",
       "title": "AI SQL 生成器",
       "upload-file": "上傳檔案",
-      "welcome": "歡迎使用 SQL 生成器！我可以帮助您將代碼轉換為 SQL。您可以開始粘貼代碼或上傳文件。"
+      "welcome": "歡迎使用 SQL 生成器！我可以帮助您將程式碼轉換為 SQL。您可以開始粘貼程式碼或上傳文件。"
     },
     "app-icon": {
       "description": "產生各種尺寸的 iOS 和 Android 應用程式圖示",
@@ -223,7 +223,7 @@
             "email": "電子郵件 - 驗證電子郵件地址",
             "password": "密碼 - 驗證密碼要求",
             "phone": "電話號碼 - 匹配各種電話號碼格式",
-            "simple": "簡單文本 - 匹配精確的文本或單詞",
+            "simple": "簡單文字 - 匹配精確的文字或單詞",
             "title": "常用模式",
             "url": "網址 - 匹配網址和域名"
           },
@@ -234,7 +234,7 @@
             "common_patterns": "常用正則表達式模式庫",
             "flags": "支持所有 JavaScript 正則表達式標誌",
             "match_details": "包括分組在內的詳細匹配信息",
-            "match_highlighting": "測試文本中的可視化匹配高亮",
+            "match_highlighting": "測試文字中的可視化匹配高亮",
             "pattern_explanation": "詳細的模式分析和說明",
             "real_time": "實時模式測試和驗證",
             "title": "可用功能"
@@ -267,8 +267,8 @@
       "placeholder": "在此貼上你的模式...",
       "regexPattern": "正則表達式模式",
       "sticky": "粘性",
-      "testString": "測試文本",
-      "testStringPlaceholder": "輸入要測試的文本...",
+      "testString": "測試文字",
+      "testStringPlaceholder": "輸入要測試的文字...",
       "title": "正則表達式測試器",
       "unicode": "Unicode",
       "url": "URL",
@@ -362,6 +362,273 @@
       },
       "title": "JWT 解碼器/編碼器",
       "token": "JWT 權杖"
+    },
+    "pwa-manifest": {
+      "title": "PWA Manifest 產生器",
+      "description": "填好欄位、上載一個正方形圖示，即可下載一份 manifest.webmanifest，內含 Chrome、Android 及 iOS 會用到的所有圖示尺寸。",
+      "form": {
+        "identity": "識別資料",
+        "name": "應用程式名稱",
+        "namePlaceholder": "我的應用程式",
+        "shortName": "短名稱",
+        "shortNamePlaceholder": "MyApp",
+        "shortNameHint": "顯示在啟動圖示下方。Android 超過約 12 個字元就會截短。",
+        "appDescription": "描述",
+        "descriptionPlaceholder": "你的應用程式用來做甚麼",
+        "behaviour": "行為",
+        "startUrl": "起始網址",
+        "scope": "範圍 scope",
+        "scopeHint": "範圍以外的導覽會在瀏覽器開啟，而不是在應用程式內開啟。",
+        "display": "顯示模式",
+        "orientation": "螢幕方向",
+        "appearance": "外觀",
+        "themeColor": "主題顏色",
+        "backgroundColor": "背景顏色",
+        "backgroundHint": "在應用程式渲染出來之前，用作啟動畫面的底色。",
+        "lang": "語言",
+        "dir": "文字方向",
+        "categories": "分類",
+        "categoriesPlaceholder": "productivity, utilities",
+        "icons": "圖示",
+        "iconPath": "圖示輸出路徑",
+        "uploadIcon": "上載正方形圖示",
+        "uploadHint": "PNG 或 SVG，最少 512×512。所有縮放都在你的瀏覽器內完成。",
+        "includeMaskable": "加入 maskable 圖示",
+        "maskableHint": "Android 會按啟動器的形狀裁剪圖示，請把圖案保持在中央 80% 範圍內。"
+      },
+      "output": {
+        "manifest": "manifest.webmanifest",
+        "head": "加到你的 head 區段",
+        "preview": "圖示預覽",
+        "download": "下載 ZIP",
+        "copy": "複製",
+        "copied": "已複製",
+        "generating": "正在產生圖示…",
+        "noIcon": "上載圖示以產生整套圖示"
+      },
+      "issues": {
+        "title": "檢查結果",
+        "none": "未發現問題。",
+        "nameRequired": "必須填寫 name — 安裝提示顯示的就是這個名稱。",
+        "shortNameRequired": "必須填寫 short_name — 主畫面圖示的標籤就是它。",
+        "shortNameTooLong": "short_name 超過 12 個字元，在 Android 上會被截短。",
+        "startUrlRelative": "start_url 應以 / 開頭，才會從網站根目錄解析。",
+        "startUrlOutsideScope": "start_url 落在 scope 之外，應用程式會在瀏覽器分頁開啟。",
+        "displayBrowserNotInstallable": "display 設為 browser 會令應用程式無法安裝。",
+        "colorInvalid": "顏色必須是十六進位值，例如 #0f172a。",
+        "noMaskableIcon": "沒有 maskable 圖示，Android 會在你的圖案後面畫一個白色方塊。"
+      },
+      "guide": {
+        "overview": {
+          "title": "網頁應用程式資訊清單的作用",
+          "description": "資訊清單是把一個網站變成可安裝應用程式的 JSON 檔案。Chrome 讀取它來決定是否顯示安裝提示；Android 讀取它來取得啟動圖示與啟動畫面；iOS 則會讀取當中部分內容，用於主畫面。"
+        },
+        "required": {
+          "title": "Chrome 願意顯示安裝提示的條件",
+          "items": {
+            "manifest": "已連結、並以 JSON 格式提供的資訊清單",
+            "name": "同時具備 name 與 short_name",
+            "icons": "192×192 及 512×512 的圖示",
+            "display": "display 設為 standalone、fullscreen 或 minimal-ui",
+            "start": "離線時仍能載入的 start_url",
+            "https": "網站以 HTTPS 提供"
+          }
+        },
+        "sizes": {
+          "title": "圖示尺寸及其用途",
+          "size": "尺寸",
+          "usedBy": "用於",
+          "note": "備註"
+        },
+        "maskable": {
+          "title": "Maskable 圖示",
+          "description": "Android 會按裝置把啟動圖示重新塑形成圓形、方圓形或圓角正方形。普通圖示後面會被畫上一個白色方塊。Maskable 圖示則會填滿整張畫布，並把重要圖案保留在一個覆蓋寬度 80% 的置中圓形之內 — 外圍那 20% 是系統有機會裁走的留白。"
+        },
+        "troubleshooting": {
+          "title": "常見問題",
+          "items": {
+            "noPrompt": {
+              "problem": "沒有出現安裝提示",
+              "fix": "檢查資訊清單有沒有在 head 區段連結、是否回傳 200、有沒有 192 及 512 的圖示，以及網站是否使用 HTTPS。Chrome DevTools → Application → Manifest 會列出欠缺了甚麼。"
+            },
+            "whiteBox": {
+              "problem": "Android 圖示外圍有一個白色方塊",
+              "fix": "你欠缺 maskable 圖示。加入一個，並把 purpose 設為 maskable。"
+            },
+            "opensInBrowser": {
+              "problem": "已安裝的應用程式在瀏覽器分頁開啟",
+              "fix": "start_url 落在 scope 之外，或者 display 被設成了 browser。"
+            },
+            "wrongSplash": {
+              "problem": "啟動畫面的顏色不對",
+              "fix": "background_color 在應用程式渲染前為啟動畫面上色；theme_color 則為狀態列上色。"
+            }
+          }
+        }
+      }
+    },
+    "hash": {
+      "title": "雜湊值產生器",
+      "description": "為文字或檔案計算 MD5、SHA-1、SHA-256、SHA-384 及 SHA-512，並與公布的校驗碼比對。不會上載任何內容。",
+      "tabs": {
+        "text": "文字",
+        "file": "檔案"
+      },
+      "form": {
+        "input": "輸入",
+        "placeholder": "輸入或貼上要計算雜湊的文字",
+        "file": "選擇檔案",
+        "dropHint": "把檔案拖到這裡，或按一下瀏覽",
+        "uppercase": "以大寫輸出",
+        "compare": "與校驗碼比對",
+        "comparePlaceholder": "貼上預期的校驗碼"
+      },
+      "result": {
+        "algorithm": "演算法",
+        "digest": "雜湊值",
+        "copy": "複製",
+        "copied": "已複製",
+        "match": "相符",
+        "noMatch": "不相符",
+        "detected": "看似 {algorithm}",
+        "hashing": "計算中…",
+        "empty": "請輸入文字或選擇檔案"
+      },
+      "warning": {
+        "broken": "{algorithm} 已被攻破，不可用於簽章、密碼，或用來抵禦有心攻擊者的完整性檢查。用來核對下載檔案與公布的校驗碼則沒有問題。"
+      },
+      "guide": {
+        "overview": {
+          "title": "雜湊值有甚麼用",
+          "description": "雜湊會把任何輸入轉成固定長度的指紋。同樣的輸入永遠得出同樣的雜湊值，而只要改動其中一個位元組，整個結果就會完全不同。這令雜湊很適合用來確認檔案完整無缺地送達，卻不適合用來儲存密碼。"
+        },
+        "algorithms": {
+          "title": "如何選擇演算法",
+          "algorithm": "演算法",
+          "length": "長度",
+          "status": "狀態",
+          "use": "適用於"
+        },
+        "verify": {
+          "title": "核對下載回來的檔案",
+          "description": "專案通常會在下載連結旁公布校驗碼。把收到的檔案計算雜湊，再作比對即可。本工具接受 sha256sum 的輸出格式，所以連同檔名整行貼上也沒問題。",
+          "steps": {
+            "download": "下載檔案，以及它公布的校驗碼",
+            "hash": "把檔案拖到上方，並選擇對應的演算法",
+            "compare": "把公布的校驗碼貼進比對欄",
+            "confirm": "顯示綠色相符，代表兩者的位元組完全一致"
+          }
+        },
+        "passwords": {
+          "title": "不要用這些演算法來雜湊密碼",
+          "description": "MD5、SHA-1 甚至 SHA-256 都是為速度而設計，而這對密碼來說剛好是最要不得的特性 — 攻擊者每秒可以嘗試數十億次。密碼儲存需要刻意設計得慢的演算法，例如 bcrypt、scrypt 或 Argon2，並為每個使用者加上獨立的鹽值。"
+        },
+        "privacy": {
+          "title": "雜湊在哪裡運算",
+          "description": "一切都在你的瀏覽器內執行。文字透過 Web Crypto API 計算雜湊，檔案在本機讀取，而 MD5 則以 JavaScript 計算，因為 Web Crypto 刻意不提供 MD5。你的輸入不會離開這個頁面。"
+        }
+      }
+    },
+    "id-validator": {
+      "title": "身份證號碼驗證",
+      "description": "檢查香港身份證號碼或台灣身分證字號的校驗碼，並看看號碼本身編碼了甚麼資訊。完全在你的瀏覽器內執行。",
+      "tabs": {
+        "hk": "香港身份證",
+        "tw": "台灣身分證字號"
+      },
+      "form": {
+        "hkPlaceholder": "A123456(3)",
+        "twPlaceholder": "A123456789",
+        "input": "證件號碼",
+        "check": "驗證"
+      },
+      "result": {
+        "valid": "校驗碼正確",
+        "invalid": "校驗碼不正確",
+        "formatted": "格式化後",
+        "region": "登記地區",
+        "gender": "性別",
+        "male": "男",
+        "female": "女",
+        "unknown": "不明",
+        "resident": "外來人口統一證號（2021 年起簽發）",
+        "expectedCheck": "應有的檢查碼：{check}",
+        "errors": {
+          "format": "這不是一個格式正確的號碼。",
+          "letter": "無法辨識的開頭字母。",
+          "checksum": "檢查碼與號碼其餘部分不符。"
+        }
+      },
+      "disclaimer": "本工具只檢查算式。一個號碼即使通過校驗，也未必屬於任何人。你輸入的內容不會傳送到任何地方。",
+      "guide": {
+        "overview": {
+          "title": "本工具檢查甚麼，又檢查不到甚麼",
+          "description": "香港身份證和台灣身分證字號都帶有一個由其餘字元推算出來的檢查碼，本工具會把它重新計算一次。這能抓出打字和抄寫上的錯誤，而這正是它的用途。它無法告訴你某個號碼是否曾經簽發、目前是否仍然有效，或者持有人是誰 — 那必須向發證機關查證。"
+        },
+        "hkid": {
+          "title": "香港身份證檢查碼的運作方式",
+          "description": "香港身份證由一至兩個英文字母、六位數字，以及一個放在括號內的檢查字元組成。字母的值由 A=10 一直到 Z=35；沒有第一個字母時以 36 計算。八個主體字元分別乘以由 9 遞減至 2 的權重後相加，檢查字元就是令總和可被 11 整除的那個值。餘數為 10 時，會寫成字母 A。",
+          "example": "以 A123456 為例：36×9 + 10×8 + 1×7 + 2×6 + 3×5 + 4×4 + 5×3 + 6×2 = 481。481 mod 11 = 8，而 11 − 8 = 3，所以完整號碼是 A123456(3)。"
+        },
+        "twid": {
+          "title": "台灣身分證檢查碼的運作方式",
+          "description": "台灣身分證字號由一個英文字母和九位數字組成。字母對應初次戶籍登記所在縣市的兩位數代號，該代號的第一位以權重 1 計算、第二位以權重 9 計算；其後八位數字的權重由 8 遞減至 1，最後的檢查碼權重為 1。號碼有效時，總和會是 10 的倍數。",
+          "gender": "字母之後的第一位數字是性別標記：1 代表男性，2 代表女性。由 2021 年起，8 和 9 用來標示發給外來人口的統一證號。"
+        },
+        "uses": {
+          "title": "甚麼時候會用到",
+          "items": {
+            "forms": "在表單欄位寫入你的數據庫之前先做驗證",
+            "migration": "審查舊有數據集，找出抄寫錯誤",
+            "testing": "產生格式正確、能通過自家驗證邏輯的測試數據",
+            "debugging": "查明第三方 API 為何拒絕某個號碼"
+          }
+        }
+      }
+    },
+    "business-number": {
+      "title": "統一編號驗證",
+      "description": "依照財政部的校驗規則（包括 2023 年的規則修訂）檢查台灣公司統一編號。在你的瀏覽器內執行。",
+      "form": {
+        "input": "統一編號",
+        "placeholder": "22099131",
+        "check": "驗證"
+      },
+      "result": {
+        "valid": "校驗碼正確",
+        "invalid": "校驗碼不正確",
+        "sevenRule": "符合第七位數字為 7 的特殊規則",
+        "legacyOnly": "符合現行規則，但不符合 2023 年前的舊規則",
+        "errors": {
+          "format": "統一編號必須剛好是八位數字。",
+          "checksum": "校驗碼不符。"
+        }
+      },
+      "disclaimer": "本工具只檢查算式。要確認一家公司是否存在，請到財政部的商業登記資料查詢。",
+      "guide": {
+        "overview": {
+          "title": "甚麼是統一編號",
+          "description": "統一編號是台灣發給每一家已登記商業機構的八位數字號碼，相當於公司登記編號。它會出現在發票、合約和報稅文件上，並附有校驗碼，讓打錯的數字在進入你的紀錄之前就能被抓出來。"
+        },
+        "algorithm": {
+          "title": "校驗碼的運作方式",
+          "description": "八位數字分別乘以固定的權重：1、2、1、2、1、2、4、1。每個乘積再取其各位數字之和，所以 7 × 2 = 14 只計為 5，而不是 14。當總和可被 5 整除時，號碼即為有效。",
+          "seven": "當中有一個例外。當第七位數字是 7 時，乘積 7 × 4 = 28 可以計為 1 或 2，因此只要總和、或總和加一其中之一可被 5 整除，號碼就算有效。"
+        },
+        "change": {
+          "title": "2023 年的規則修訂",
+          "description": "2023 年 4 月之前，總和必須可被 10 整除。財政部把條件放寬至可被 5 整除，令可供發放的號碼大約增加一倍。所有依舊規則有效的號碼現在仍然有效，但 2023 年之前寫成的驗證程式，會拒絕現時屬於合法的號碼 — 如果一個舊系統一直拒絕新公司的統編，原因就在這裡。"
+        },
+        "uses": {
+          "title": "甚麼時候會用到",
+          "items": {
+            "invoicing": "報稅前先驗證發票上的統一編號",
+            "forms": "在客戶輸入的當下即時檢查所填的號碼",
+            "legacy": "查明舊有的驗證程式是否仍在使用 2023 年前的規則",
+            "data": "審查供應商名單，找出打錯的號碼"
+          }
+        }
+      }
     }
   }
 }

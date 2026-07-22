@@ -311,6 +311,115 @@
     },
     "openSource": "Open Source",
     "title": "SEO Tools",
-    "tryNow": "Try Now"
+    "tryNow": "Try Now",
+    "robots-txt": {
+      "title": "robots.txt Validator",
+      "description": "Paste a robots.txt or fetch one from a URL. See the parsed rules, get the syntax checked, and test whether any path is blocked for a given crawler.",
+      "form": {
+        "input": "robots.txt",
+        "placeholder": "User-agent: *\nDisallow: /admin\nSitemap: https://example.com/sitemap.xml",
+        "fetch": "Fetch from a site",
+        "fetchPlaceholder": "https://example.com",
+        "fetchButton": "Fetch",
+        "fetching": "Fetching…",
+        "loadExample": "Load example",
+        "fetchErrors": {
+          "invalidUrl": "That does not look like a valid site URL.",
+          "blockedHost": "That host is not publicly reachable, so it cannot be fetched.",
+          "redirected": "The request was redirected. Enter the final domain directly.",
+          "tooLarge": "That robots.txt is too large to fetch.",
+          "fetchFailed": "Could not fetch robots.txt from that site."
+        }
+      },
+      "tester": {
+        "title": "Test a URL",
+        "path": "Path",
+        "pathPlaceholder": "/admin/settings",
+        "userAgent": "Crawler",
+        "allowed": "Allowed",
+        "blocked": "Blocked",
+        "matchedBy": "Matched by line {line}: {rule}",
+        "noRule": "No rule matched, so the path is allowed",
+        "noGroup": "No group applies to this crawler, so everything is allowed"
+      },
+      "parsed": {
+        "title": "Parsed rules",
+        "groups": "Groups",
+        "userAgents": "User agents",
+        "rules": "Rules",
+        "sitemaps": "Sitemaps",
+        "crawlDelay": "Crawl-delay",
+        "noGroups": "No groups found"
+      },
+      "issues": {
+        "title": "Checks",
+        "none": "No problems found.",
+        "error": "Error",
+        "warning": "Warning",
+        "info": "Note",
+        "line": "Line {line}",
+        "bom": "The file begins with a byte-order mark, which some crawlers read as part of the first directive.",
+        "missingColon": "This line has no colon, so it is not a directive.",
+        "unknownDirective": "Unknown directive — check the spelling.",
+        "emptyUserAgent": "User-agent has no value.",
+        "ruleBeforeUserAgent": "This rule appears before any User-agent line, so no crawler will apply it.",
+        "pathNotAbsolute": "Paths should begin with / or *.",
+        "sitemapNotAbsolute": "Sitemap must be an absolute URL including the protocol.",
+        "crawlDelayInvalid": "Crawl-delay must be a non-negative number.",
+        "crawlDelayIgnoredByGoogle": "Google ignores Crawl-delay. Use the crawl rate setting in Search Console instead.",
+        "noindexUnsupported": "Google stopped supporting noindex in robots.txt in 2019. Use a meta robots tag or an X-Robots-Tag header.",
+        "hostNonStandard": "Host is non-standard and ignored by Google.",
+        "blocksEntireSite": "This blocks every crawler from the whole site.",
+        "empty": "No directives found.",
+        "noSitemap": "No Sitemap directive. Adding one helps crawlers find your URLs."
+      },
+      "guide": {
+        "overview": {
+          "title": "What robots.txt does and does not do",
+          "description": "robots.txt tells well-behaved crawlers which paths to avoid requesting. It is a crawling instruction, not an access control and not an indexing instruction. A blocked URL can still appear in search results if other pages link to it — Google just will not have read the page. To keep something out of the index, use a noindex meta tag on a page that is crawlable, or protect it properly with authentication."
+        },
+        "matching": {
+          "title": "How path matching works",
+          "description": "Matching is prefix-based and case-sensitive. Two wildcards are supported: * matches any run of characters and $ anchors the end of the URL.",
+          "pattern": "Pattern",
+          "matches": "Matches",
+          "doesNotMatch": "Does not match"
+        },
+        "precedence": {
+          "title": "Which rule wins",
+          "description": "When several rules match, the most specific one wins — that is, the one with the longest path pattern. If an Allow and a Disallow are the same length, Allow wins. This is why Allow: /folder/public overrides Disallow: /folder/ for a URL underneath it.",
+          "example": "Given Disallow: /folder/ and Allow: /folder/public, the path /folder/public/page is allowed because the Allow pattern is longer."
+        },
+        "groups": {
+          "title": "How groups work",
+          "description": "Consecutive User-agent lines share one group of rules. A crawler uses the single group whose user-agent token matches it most specifically, and ignores every other group — including the * group. That is the most common robots.txt mistake: adding a Googlebot group and assuming Googlebot still obeys the rules under *."
+        },
+        "mistakes": {
+          "title": "Common mistakes",
+          "items": {
+            "blockAll": {
+              "problem": "Disallow: / left over from staging",
+              "fix": "This blocks the entire site. It is the single most common cause of a site vanishing from search after a launch."
+            },
+            "groupInheritance": {
+              "problem": "Expecting a named crawler to also follow the * rules",
+              "fix": "It will not. Repeat any shared rules inside the named group."
+            },
+            "noindex": {
+              "problem": "Using Disallow to remove a page from search",
+              "fix": "Blocked pages can still be indexed from external links. Allow crawling and serve a noindex tag instead."
+            },
+            "blockedAssets": {
+              "problem": "Blocking /css/ or /js/",
+              "fix": "Google renders pages before ranking them. Blocking assets can make a page look broken to the crawler."
+            },
+            "relativeSitemap": {
+              "problem": "A relative Sitemap path",
+              "fix": "Sitemap must be an absolute URL, including https://."
+            }
+          }
+        }
+      }
+    }
   }
 }

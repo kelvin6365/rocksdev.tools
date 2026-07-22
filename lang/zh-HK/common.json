@@ -5,7 +5,7 @@
       "title": "意見反饋"
     },
     "github": {
-      "description": "如果您發現任何問題或想要貢獻代碼，請訪問我們的 GitHub。",
+      "description": "如果您發現任何問題或想要貢獻程式碼，請訪問我們的 GitHub。",
       "repository": "RocksDev.Tools Repository",
       "submit-issue": "提交問題",
       "title": "GitHub"
@@ -94,13 +94,13 @@
           "title": "URL 編碼器/解碼器"
         },
         "advanced-image-optimization": {
-          "description": "壓縮和優化圖像，支持調整質量設置、格式轉換和批量處理",
+          "description": "壓縮和優化圖像，支持調整品質設置、格式轉換和批量處理",
           "title": "高級圖像優化"
         }
       },
       "dev": {
         "ai-sql": {
-          "description": "使用 AI 將您的代碼 DTO 和實體轉換為 SQL 命令",
+          "description": "使用 AI 將您的程式碼 DTO 和實體轉換為 SQL 命令",
           "title": "AI SQL 生成器"
         },
         "app-icon": {
@@ -109,13 +109,29 @@
         },
         "description": "基礎開發工具集，包含正則測試器、圖標生成器等。由開發者建構，服務開發者。",
         "regex": {
-          "description": "測試和驗證Regex",
-          "title": "Regex測試工具"
+          "description": "線上測試和驗證正則表達式",
+          "title": "正則表達式測試工具"
         },
         "title": "開發工具",
         "jwt": {
           "description": "生成和驗證 JWT 權杖",
           "title": "JWT 生成器"
+        },
+        "pwa-manifest": {
+          "title": "PWA Manifest 產生器",
+          "description": "建立網頁應用程式資訊清單與圖示"
+        },
+        "hash": {
+          "title": "雜湊值產生器",
+          "description": "MD5、SHA-1、SHA-256、SHA-384 及 SHA-512"
+        },
+        "id-validator": {
+          "title": "身份證號碼驗證",
+          "description": "檢查香港身份證及台灣身分證字號"
+        },
+        "business-number": {
+          "title": "統一編號驗證",
+          "description": "檢查台灣公司統一編號"
         }
       },
       "json": {
@@ -130,7 +146,7 @@
         },
         "minifier": {
           "description": "壓縮和精簡 JSON Object",
-          "title": "JSON Minifier"
+          "title": "JSON 壓縮工具"
         },
         "title": "JSON 工具",
         "validator": {
@@ -139,7 +155,7 @@
         },
         "parser": {
           "description": "輕鬆在 JSON stringify 和 JSON parse 之間進行轉換",
-          "title": "JSON Parser & Stringify"
+          "title": "JSON 解析與字串化工具"
         }
       },
       "seo": {
@@ -152,10 +168,14 @@
           "description": "���成 OG 圖像",
           "title": "OG 圖像生成器"
         },
-        "title": "SEO 工具"
+        "title": "SEO 工具",
+        "robots-txt": {
+          "title": "robots.txt 驗證工具",
+          "description": "檢查 robots.txt 語法並測試網址是否被封鎖"
+        }
       },
       "text": {
-        "description": "進階文本處理工具，用於格式化、大小寫轉換和內容整理。簡化您的文本處理工作流程。",
+        "description": "進階文字處理工具，用於格式化、大小寫轉換和內容整理。簡化您的文字處理工作流程。",
         "text-formatter": {
           "description": "使用進階工具格式化和操縱您的文字",
           "title": "文字格式化工具"
