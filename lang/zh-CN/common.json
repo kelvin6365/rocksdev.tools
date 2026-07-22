@@ -116,6 +116,22 @@
         "jwt": {
           "description": "生成和验证 JWT 令牌",
           "title": "JWT 生成器"
+        },
+        "pwa-manifest": {
+          "title": "PWA Manifest 生成器",
+          "description": "生成网页应用清单和图标集"
+        },
+        "hash": {
+          "title": "哈希值生成器",
+          "description": "MD5、SHA-1、SHA-256、SHA-384 和 SHA-512"
+        },
+        "id-validator": {
+          "title": "身份证号码验证",
+          "description": "校验香港身份证和台湾身份证字号"
+        },
+        "business-number": {
+          "title": "统一编号验证",
+          "description": "校验台湾公司统一编号"
         }
       },
       "json": {
@@ -152,7 +168,11 @@
           "description": "生成 OG 图像",
           "title": "OG 图像生成器"
         },
-        "title": "SEO 工具"
+        "title": "SEO 工具",
+        "robots-txt": {
+          "title": "robots.txt 验证工具",
+          "description": "检查 robots.txt 语法并测试网址是否被屏蔽"
+        }
       },
       "text": {
         "description": "高级文本处理工具，用于格式化、大小写转换和内容整理。简化您的文本处理工作流程。",

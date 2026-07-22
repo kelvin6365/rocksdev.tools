@@ -7,6 +7,24 @@ from GitHub Releases, so each entry below should have a matching release whose
 body uses the same `## Added` / `## Changed` / `## Fixed` / `## Removed`
 headings — that is the format `parseReleaseBody` in `services/github.ts` parses.
 
+## [1.0.9] - 2026-07-22
+
+### Added
+- PWA Manifest Generator — build a manifest and the full icon set from one image
+- Hash Generator — MD5, SHA-1, SHA-256, SHA-384 and SHA-512 for text or files
+- ID Number Validator — Hong Kong HKID and Taiwan National ID checksums
+- Business Number Validator — Taiwan unified business numbers, including the 2023 rule change
+- robots.txt Validator — lint the file and test whether a URL is blocked for a given crawler
+- Test suites for the hash, robots.txt and ID checksum logic
+
+### Changed
+- Traditional Chinese pages now use Hong Kong wording instead of mainland wording
+- Traditional Chinese titles for the JSON Parser, JSON Minifier, Regex Tester and Text Formatter are now in Chinese
+- Local tooling caches are no longer picked up by commits
+
+### Fixed
+- Traditional Chinese pages said 在線 where Hong Kong says 線上, across 162 strings
+
 ## [v1.0.8] - Unreleased
 
 An SEO release. A Google Search Console export covering 2026-04-20 to

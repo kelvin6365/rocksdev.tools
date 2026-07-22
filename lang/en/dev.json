@@ -362,6 +362,273 @@
       },
       "title": "JWT Decoder/Encoder",
       "token": "JWT Token"
+    },
+    "pwa-manifest": {
+      "title": "PWA Manifest Generator",
+      "description": "Fill in the fields, drop in one square icon, and download a manifest.webmanifest with every icon size Chrome, Android and iOS look for.",
+      "form": {
+        "identity": "Identity",
+        "name": "App name",
+        "namePlaceholder": "My Application",
+        "shortName": "Short name",
+        "shortNamePlaceholder": "MyApp",
+        "shortNameHint": "Shown under the launcher icon. Android truncates past ~12 characters.",
+        "appDescription": "Description",
+        "descriptionPlaceholder": "What your app does",
+        "behaviour": "Behaviour",
+        "startUrl": "Start URL",
+        "scope": "Scope",
+        "scopeHint": "Navigations outside the scope open in the browser instead of the app.",
+        "display": "Display mode",
+        "orientation": "Orientation",
+        "appearance": "Appearance",
+        "themeColor": "Theme colour",
+        "backgroundColor": "Background colour",
+        "backgroundHint": "Painted behind the splash screen before your app renders.",
+        "lang": "Language",
+        "dir": "Text direction",
+        "categories": "Categories",
+        "categoriesPlaceholder": "productivity, utilities",
+        "icons": "Icons",
+        "iconPath": "Icon output path",
+        "uploadIcon": "Upload a square icon",
+        "uploadHint": "PNG or SVG, at least 512×512. Everything is resized in your browser.",
+        "includeMaskable": "Include a maskable icon",
+        "maskableHint": "Android crops icons to the launcher shape. Keep artwork inside the centre 80%."
+      },
+      "output": {
+        "manifest": "manifest.webmanifest",
+        "head": "Add to the head section",
+        "preview": "Icon preview",
+        "download": "Download ZIP",
+        "copy": "Copy",
+        "copied": "Copied",
+        "generating": "Generating icons…",
+        "noIcon": "Upload an icon to generate the set"
+      },
+      "issues": {
+        "title": "Checks",
+        "none": "No problems found.",
+        "nameRequired": "name is required — it is what the install prompt shows.",
+        "shortNameRequired": "short_name is required — it labels the home screen icon.",
+        "shortNameTooLong": "short_name is longer than 12 characters and will be truncated on Android.",
+        "startUrlRelative": "start_url should begin with / so it resolves from the site root.",
+        "startUrlOutsideScope": "start_url falls outside scope, so the app would open in a browser tab.",
+        "displayBrowserNotInstallable": "display: browser makes the app non-installable.",
+        "colorInvalid": "Colour must be a hex value such as #0f172a.",
+        "noMaskableIcon": "Without a maskable icon, Android draws a white box behind your artwork."
+      },
+      "guide": {
+        "overview": {
+          "title": "What a web app manifest does",
+          "description": "The manifest is the JSON file that turns a website into something installable. Chrome reads it to decide whether to offer the install prompt; Android reads it for the launcher icon and splash screen; iOS reads part of it for the home screen."
+        },
+        "required": {
+          "title": "What Chrome requires before it will offer installation",
+          "items": {
+            "manifest": "A linked manifest that is served as JSON",
+            "name": "Both name and short_name",
+            "icons": "Icons at 192×192 and 512×512",
+            "display": "A display mode of standalone, fullscreen or minimal-ui",
+            "start": "A start_url that loads while offline",
+            "https": "The site served over HTTPS"
+          }
+        },
+        "sizes": {
+          "title": "Icon sizes and what uses them",
+          "size": "Size",
+          "usedBy": "Used by",
+          "note": "Note"
+        },
+        "maskable": {
+          "title": "Maskable icons",
+          "description": "Android reshapes launcher icons into a circle, squircle or rounded square depending on the device. A normal icon gets a white box drawn behind it. A maskable icon fills the whole canvas and keeps its important artwork inside a centred circle covering 80% of the width — the outer 20% is padding the system may crop away."
+        },
+        "troubleshooting": {
+          "title": "Common problems",
+          "items": {
+            "noPrompt": {
+              "problem": "No install prompt appears",
+              "fix": "Check that the manifest is linked in the head, returns 200, has 192 and 512 icons, and that the site is on HTTPS. Chrome DevTools → Application → Manifest lists what is missing."
+            },
+            "whiteBox": {
+              "problem": "The Android icon has a white box around it",
+              "fix": "You are missing a maskable icon. Add one with purpose set to maskable."
+            },
+            "opensInBrowser": {
+              "problem": "The installed app opens in a browser tab",
+              "fix": "start_url is outside scope, or display is set to browser."
+            },
+            "wrongSplash": {
+              "problem": "The splash screen is the wrong colour",
+              "fix": "background_color paints the splash before the app renders; theme_color paints the status bar."
+            }
+          }
+        }
+      }
+    },
+    "hash": {
+      "title": "Hash Generator",
+      "description": "Compute MD5, SHA-1, SHA-256, SHA-384 and SHA-512 for text or a file, and compare against a published checksum. Nothing is uploaded.",
+      "tabs": {
+        "text": "Text",
+        "file": "File"
+      },
+      "form": {
+        "input": "Input",
+        "placeholder": "Type or paste text to hash",
+        "file": "Choose a file",
+        "dropHint": "Drop a file here, or click to browse",
+        "uppercase": "Uppercase output",
+        "compare": "Compare against a checksum",
+        "comparePlaceholder": "Paste the expected checksum"
+      },
+      "result": {
+        "algorithm": "Algorithm",
+        "digest": "Digest",
+        "copy": "Copy",
+        "copied": "Copied",
+        "match": "Matches",
+        "noMatch": "Does not match",
+        "detected": "Looks like {algorithm}",
+        "hashing": "Hashing…",
+        "empty": "Enter text or choose a file"
+      },
+      "warning": {
+        "broken": "{algorithm} is broken and must not be used for signatures, passwords or integrity against a motivated attacker. It is fine for checking a download against a published checksum."
+      },
+      "guide": {
+        "overview": {
+          "title": "What a hash is for",
+          "description": "A hash turns any input into a fixed-length fingerprint. The same input always produces the same digest, and changing a single byte changes the whole thing. That makes hashes useful for confirming a file arrived intact, not for storing passwords."
+        },
+        "algorithms": {
+          "title": "Choosing an algorithm",
+          "algorithm": "Algorithm",
+          "length": "Length",
+          "status": "Status",
+          "use": "Use it for"
+        },
+        "verify": {
+          "title": "Verifying a download",
+          "description": "Projects publish a checksum next to the download. Hash the file you received and compare. The tool accepts the sha256sum output format, so you can paste the whole line including the filename.",
+          "steps": {
+            "download": "Download the file and its published checksum",
+            "hash": "Drop the file in above and pick the matching algorithm",
+            "compare": "Paste the published checksum into the compare box",
+            "confirm": "A green match means the bytes are identical"
+          }
+        },
+        "passwords": {
+          "title": "Do not hash passwords with these",
+          "description": "MD5, SHA-1 and even SHA-256 are designed to be fast, which is exactly wrong for passwords — an attacker can try billions per second. Password storage needs a deliberately slow algorithm such as bcrypt, scrypt or Argon2, with a per-user salt."
+        },
+        "privacy": {
+          "title": "Where the hashing happens",
+          "description": "Everything runs in your browser. Text is hashed with the Web Crypto API, files are read locally, and MD5 is computed in JavaScript because Web Crypto deliberately omits it. No input leaves the page."
+        }
+      }
+    },
+    "id-validator": {
+      "title": "ID Number Validator",
+      "description": "Check the checksum of a Hong Kong Identity Card number or a Taiwan National ID, and see what the number encodes. Runs entirely in your browser.",
+      "tabs": {
+        "hk": "Hong Kong HKID",
+        "tw": "Taiwan 身分證字號"
+      },
+      "form": {
+        "hkPlaceholder": "A123456(3)",
+        "twPlaceholder": "A123456789",
+        "input": "ID number",
+        "check": "Validate"
+      },
+      "result": {
+        "valid": "Checksum valid",
+        "invalid": "Checksum invalid",
+        "formatted": "Formatted",
+        "region": "Registered region",
+        "gender": "Gender",
+        "male": "Male",
+        "female": "Female",
+        "unknown": "Unknown",
+        "resident": "Foreign resident number (issued from 2021)",
+        "expectedCheck": "Expected check character: {check}",
+        "errors": {
+          "format": "That is not a well-formed number.",
+          "letter": "Unrecognised leading letter.",
+          "checksum": "The check digit does not match the rest of the number."
+        }
+      },
+      "disclaimer": "This checks arithmetic only. A number can pass the checksum and still not belong to anyone. Nothing you type is sent anywhere.",
+      "guide": {
+        "overview": {
+          "title": "What this checks, and what it cannot",
+          "description": "Both the HKID and the Taiwan National ID carry a check digit derived from the other characters. This tool recomputes it. That catches typos and transcription errors, which is what it is for. It cannot tell you whether a number was ever issued, whether it is currently valid, or who holds it — that requires the issuing authority."
+        },
+        "hkid": {
+          "title": "How the HKID check digit works",
+          "description": "An HKID is one or two letters, six digits and a check character in parentheses. Letters are valued A=10 through Z=35; a missing first letter counts as 36. The eight body characters are multiplied by weights 9 down to 2, summed, and the check character is whatever makes the total divisible by 11. A remainder of 10 is written as the letter A.",
+          "example": "For A123456: 36×9 + 10×8 + 1×7 + 2×6 + 3×5 + 4×4 + 5×3 + 6×2 = 481. 481 mod 11 = 8, and 11 − 8 = 3, so the number is A123456(3)."
+        },
+        "twid": {
+          "title": "How the Taiwan check digit works",
+          "description": "A Taiwan ID is one letter and nine digits. The letter maps to a two-digit code for the county or city of first household registration. That code contributes its first digit at weight 1 and its second at weight 9; the following eight digits carry weights 8 down to 1, and the final check digit carries weight 1. A valid number sums to a multiple of 10.",
+          "gender": "The first digit after the letter is the gender marker: 1 for male, 2 for female. Since 2021 the numbers 8 and 9 mark the unified numbers issued to foreign residents."
+        },
+        "uses": {
+          "title": "When you need this",
+          "items": {
+            "forms": "Validating a form field before it reaches your database",
+            "migration": "Auditing a legacy dataset for transcription errors",
+            "testing": "Generating well-formed test data that will pass your own validation",
+            "debugging": "Working out why a third-party API rejected a number"
+          }
+        }
+      }
+    },
+    "business-number": {
+      "title": "Business Number Validator",
+      "description": "Check a Taiwan unified business number (統一編號) against the Ministry of Finance checksum, including the 2023 rule change. Runs in your browser.",
+      "form": {
+        "input": "Unified business number",
+        "placeholder": "22099131",
+        "check": "Validate"
+      },
+      "result": {
+        "valid": "Checksum valid",
+        "invalid": "Checksum invalid",
+        "sevenRule": "Passes under the special rule for a 7 in the seventh position",
+        "legacyOnly": "Valid under the current rule, but not under the pre-2023 rule",
+        "errors": {
+          "format": "A unified business number is exactly eight digits.",
+          "checksum": "The checksum does not match."
+        }
+      },
+      "disclaimer": "This checks arithmetic only. To confirm a company exists, look it up in the Ministry of Finance registry.",
+      "guide": {
+        "overview": {
+          "title": "What a unified business number is",
+          "description": "The 統一編號 is the eight-digit number Taiwan assigns to every registered business — the equivalent of a company registration number. It appears on invoices, contracts and tax filings, and it carries a checksum so that a mistyped digit can be caught before it reaches your records."
+        },
+        "algorithm": {
+          "title": "How the checksum works",
+          "description": "Each of the eight digits is multiplied by a fixed weight: 1, 2, 1, 2, 1, 2, 4, 1. Each product is reduced to the sum of its own digits, so 7 × 2 = 14 contributes 5 rather than 14. The number is valid when the total is divisible by 5.",
+          "seven": "There is one exception. When the seventh digit is 7, the product 7 × 4 = 28 may be counted as either 1 or 2, so the number is valid if either the total or the total plus one is divisible by 5."
+        },
+        "change": {
+          "title": "The 2023 rule change",
+          "description": "Before April 2023 the total had to be divisible by 10. The Ministry of Finance relaxed this to divisible by 5, roughly doubling the pool of issuable numbers. Every number valid under the old rule is still valid, but a validator written before 2023 will reject numbers that are now legitimate — if an old system is rejecting new companies, this is why."
+        },
+        "uses": {
+          "title": "When you need this",
+          "items": {
+            "invoicing": "Validating a number on an invoice before filing",
+            "forms": "Checking a customer-supplied number at the point of entry",
+            "legacy": "Finding out whether an old validator is using the pre-2023 rule",
+            "data": "Auditing a supplier list for typos"
+          }
+        }
+      }
     }
   }
 }
