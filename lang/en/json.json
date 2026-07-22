@@ -315,6 +315,56 @@
             "4": "Copy the output directly to clipboard with the copy button",
             "5": "Check error messages for validation issues in your input"
           }
+        },
+        "unstringify": {
+          "title": "Unstringify escaped JSON",
+          "description": "Escaped JSON — also called stringified or double-encoded JSON — is a JSON document that has been stored inside a JSON string. Every quote becomes \\\" and every line break becomes \\n. It appears whenever JSON passes through a system that treats it as plain text rather than structured data.",
+          "sources": {
+            "title": "Where it comes from",
+            "list": {
+              "1": "Log lines that record a request or response body as a single string field",
+              "2": "APIs that serialise a nested payload twice, so the value arrives as a string rather than an object",
+              "3": "Database TEXT or VARCHAR columns holding a serialised document",
+              "4": "Webhook payloads that wrap the original event inside an envelope",
+              "5": "Values copied out of a debugger or browser devtools, which display them already escaped"
+            }
+          },
+          "how": {
+            "title": "How to unescape it",
+            "description": "Paste the escaped string into the input and run Parse. One layer of encoding is removed and the result is pretty-printed. If the output is still a string full of backslashes, the document was encoded more than once — run Parse again on the result until real structure appears.",
+            "escaped": "Escaped input",
+            "decoded": "After parsing"
+          }
+        },
+        "problems": {
+          "title": "Common escaping problems",
+          "description": "Most parse failures come from a document that is nearly JSON rather than one that is badly formed. These are the cases that account for almost all of them.",
+          "items": {
+            "double-encoded": {
+              "problem": "The output is still one long escaped string",
+              "fix": "The value was encoded twice. Run Parse again on the result — each pass removes exactly one layer of encoding."
+            },
+            "literal-newlines": {
+              "problem": "The text shows \\n instead of line breaks",
+              "fix": "Inside a JSON string, \\n is a two-character escape sequence, not a newline. Parsing converts it into a real line break; a find-and-replace on the raw text does not."
+            },
+            "single-quotes": {
+              "problem": "A value copied from a config file will not parse",
+              "fix": "JSON requires double quotes. Single-quoted keys and values are valid JavaScript but are not valid JSON."
+            },
+            "trailing-comma": {
+              "problem": "Parsing fails with an unexpected token near the end",
+              "fix": "JSON does not allow a trailing comma after the last element of an object or array. JavaScript does, so hand-edited files often carry one."
+            },
+            "smart-quotes": {
+              "problem": "A document copied from a word processor or chat app will not parse",
+              "fix": "Those applications replace straight quotes with typographic quotes, which JSON does not recognise. Retype the quotes or paste through a plain-text editor first."
+            },
+            "bom": {
+              "problem": "The first character is reported as invalid but the file looks correct",
+              "fix": "The file begins with a UTF-8 byte order mark. Re-save it as UTF-8 without BOM."
+            }
+          }
         }
       }
     }

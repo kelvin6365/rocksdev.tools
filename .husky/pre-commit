@@ -1,3 +1,6 @@
 pnpm run format
 pnpm run lint
-git add .
+# Restage formatting fixes, but only for files already tracked or staged.
+# `git add .` would also sweep untracked files (.codegraph/, .cursor/, local
+# scratch files) into every commit.
+git add -u

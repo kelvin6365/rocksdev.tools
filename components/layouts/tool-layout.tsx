@@ -115,7 +115,54 @@ export function ToolLayout({
       <div className="flex flex-col gap-4">
         <Card className={cn("p-2 md:p-4", childrenClassName)}>{children}</Card>
         {guideSection}
+        <RelatedTools translationKey={translationKey} />
       </div>
     </div>
+  );
+}
+
+/**
+ * Contextual links to the other tools in the same category.
+ *
+ * Every link on a tool page used to be navigation chrome — the sidebar and the
+ * breadcrumb — which gives search engines nothing to work with when inferring
+ * how the tools relate to each other.
+ */
+function RelatedTools({ translationKey }: { translationKey: string }) {
+  const t = useTranslations();
+  const [category] = translationKey.split(".");
+
+  const siblings =
+    config.tools
+      .find((tool) => tool.value === category)
+      ?.subTools?.filter((sub) => sub.value !== translationKey) ?? [];
+
+  if (!siblings.length) return null;
+
+  return (
+    <section className="space-y-3" aria-labelledby="related-tools">
+      <h2 id="related-tools" className="text-xl font-semibold tracking-tight">
+        {t("nav.relatedTools")}
+      </h2>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {siblings.map((sub) => (
+          <Link
+            key={sub.value}
+            href={sub.href}
+            className="rounded-lg border p-3 transition-colors hover:bg-accent"
+          >
+            <span className="flex items-center gap-2 font-medium">
+              {sub.icon}{" "}
+              {t(`nav.tools.${category}.${sub.value.split(".")[1]}.title`)}
+            </span>
+            <span className="mt-1 block text-sm text-muted-foreground">
+              {t(
+                `nav.tools.${category}.${sub.value.split(".")[1]}.description`,
+              )}
+            </span>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }

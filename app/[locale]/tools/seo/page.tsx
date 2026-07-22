@@ -9,10 +9,19 @@ import { Link } from "@/i18n/routing";
 import { config } from "@/services/config";
 import { useTranslations } from "next-intl";
 import AdUnit from "../../../../components/ad-units";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
 const seoTools = config.tools.find((tool) => tool.value === "seo");
 
-export default function SeoPage() {
+export default function SeoPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
+
   const t = useTranslations();
   return (
     <div className="space-y-6">

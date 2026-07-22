@@ -95,7 +95,7 @@
         },
         "advanced-image-optimization": {
           "description": "壓縮和優化圖像，支持調整質量設置、格式轉換和批量處理",
-          "title": "高级图像优化"
+          "title": "高級圖像優化"
         }
       },
       "dev": {
@@ -164,7 +164,8 @@
       },
       "title": "工具"
     },
-    "typeToSearch": "輸入要搜索的命令或內容..."
+    "typeToSearch": "輸入要搜索的命令或內容...",
+    "relatedTools": "相關工具"
   },
   "not-found": {
     "description": "您正在尋找的頁面可能已被刪除、名稱已更改或暫時不可用���",

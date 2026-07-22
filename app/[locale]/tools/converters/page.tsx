@@ -10,11 +10,20 @@ import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { Badge } from "@/components/ui/badge";
 import AdUnit from "../../../../components/ad-units";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 const convertersTools = config.tools.find(
   (tool) => tool.value === "converters",
 );
 
-export default function ConvertersPage() {
+export default function ConvertersPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
+
   const t = useTranslations();
   return (
     <div className="space-y-6">

@@ -212,7 +212,8 @@
             "font": "字體系列 - 選擇無襯線、襯線或等寬字體",
             "layout": "佈局樣式 - 標題和描述的不同排列方式",
             "theme": "顏色主題 - 選擇明亮、暗色或漸變主題",
-            "title": "標題文本 - 圖片的主要標題"
+            "title": "標題文本 - 圖片的主要標題",
+            "heading": "可用設定"
           },
           "title": "輸入格式"
         },
@@ -232,7 +233,57 @@
           "note": "注意：生成器會創建針對社交媒體分享優化的圖片。請在不同平台上測試您的圖片以確保正確顯示。",
           "title": "技巧和最佳實踐"
         },
-        "title": "使用指南"
+        "title": "使用指南",
+        "sizes": {
+          "title": "社交圖片尺寸",
+          "intro": "Open Graph 圖片的標準尺寸是 1200 × 630 像素，長寬比 1.91:1。Facebook、LinkedIn 和 Slack 都按這個比例裁切。大部分平台都接受這一張圖，但少數平台使用自己的比例，因此在只準備一張素材之前，值得先了解差異在哪裡。",
+          "columns": {
+            "platform": "平台",
+            "size": "建議尺寸",
+            "ratio": "長寬比",
+            "notes": "說明"
+          },
+          "rows": {
+            "og": "最穩妥的預設值。一張 1200 × 630 的圖片即可涵蓋 Facebook、LinkedIn 和 Slack 的連結預覽。",
+            "x-large": "當頁面宣告 twitter:card 為 summary_large_image 時使用。與 Open Graph 幾乎一致，同一個檔案即可通用。",
+            "x-summary": "小尺寸方形卡片。當頁面未宣告大圖卡片時，X 會回退到這種樣式。",
+            "pinterest": "本身就是直向。1.91:1 的圖片在這裡會出現大量留白，如果重視 Pinterest，請另外製作素材。",
+            "whatsapp": "縮圖會被裁成正方形。請把重要內容放在中間，否則會被裁走。"
+          },
+          "limits": {
+            "title": "限制與注意事項",
+            "file-size": "檔案請控制在 5 MB 以內。Facebook 最大支援 8 MB，但 X 會拒絕超過 5 MB 的圖片。",
+            "formats": "請使用 PNG 或 JPG。所有主流爬蟲都不支援 SVG，WebP 的支援情況亦不一致。",
+            "text-safe-area": "文字請保持在畫面中央 80% 的範圍內。不同平台對邊緣的裁切幅度並不相同。",
+            "retina": "不要放大至超過 1200 × 630。平台顯示時會縮小圖片，檔案過大只會拖慢首次預覽的載入。"
+          }
+        },
+        "troubleshooting": {
+          "title": "疑難排解",
+          "intro": "大部分 Open Graph 問題源於快取或連結，而不是圖片本身。",
+          "items": {
+            "cache": {
+              "problem": "預覽仍然顯示舊圖片",
+              "fix": "各平台的快取都很積極。可以用 Facebook 分享偵錯工具、X Card Validator 或 LinkedIn Post Inspector 強制重新抓取。更換圖片 URL 同樣有效。"
+            },
+            "absolute-url": {
+              "problem": "完全不顯示圖片",
+              "fix": "og:image 必須是包含通訊協定和網域的絕對 URL。像 /og.png 這樣的相對路徑會被所有爬蟲忽略。"
+            },
+            "blocked": {
+              "problem": "瀏覽器能開啟，但分享時不顯示",
+              "fix": "請檢查圖片是否位於登入驗證、付費牆或 robots.txt 規則之後。爬蟲是以匿名身分擷取圖片的。"
+            },
+            "missing-dimensions": {
+              "problem": "卡片顯示偏小，或稍後才重新排版",
+              "fix": "請宣告 og:image:width 和 og:image:height。缺少這兩項時，平台必須先下載圖片才能決定卡片尺寸。"
+            },
+            "format": {
+              "problem": "只在某一個平台上顯示空白或損毀",
+              "fix": "請重新匯出為 PNG 或 JPG。WebP 和 AVIF 的支援仍然參差，動態格式則從不用於預覽。"
+            }
+          }
+        }
       },
       "images": {
         "alt": "預覽 {index}",

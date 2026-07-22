@@ -2,8 +2,13 @@ import { Card } from "@/components/ui/card";
 import { useTranslations } from "next-intl";
 import { getMetadata } from "@/services/seo";
 import AdUnit from "../../../components/ad-units";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
-export default function TermsPage() {
+export default function TermsPage({ params }: Props) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
+
   const t = useTranslations("terms");
 
   return (

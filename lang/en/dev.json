@@ -108,7 +108,84 @@
       "upload-button-generate": "Generate Icons",
       "upload-description": "Upload a 1024x1024px PNG image to generate icons for all platforms.",
       "upload-placeholder": "Drop your icon here",
-      "upload-placeholder-description": "Square PNG or JPG, 1024x1024px recommended"
+      "upload-placeholder-description": "Square PNG or JPG, 1024x1024px recommended",
+      "guide": {
+        "columns": {
+          "usage": "Used for",
+          "size": "Size (px)",
+          "scale": "Scale",
+          "density": "Density bucket"
+        },
+        "source": {
+          "title": "Preparing the source image",
+          "description": "Every size is produced by downscaling a single source image, so the quality of that one file determines the quality of the whole set. Start at 1024 × 1024 — the size the App Store requires — and let the generator produce everything below it.",
+          "requirements": {
+            "title": "What the source file needs",
+            "list": {
+              "1": "Square, at least 1024 × 1024 pixels. Anything smaller will be upscaled and will look soft on modern displays.",
+              "2": "PNG, with no transparency if the icon is destined for iOS.",
+              "3": "Artwork that survives being shown at 48 × 48 — fine detail and thin strokes disappear at the smallest sizes.",
+              "4": "No rounded corners or drop shadows of your own; both platforms apply their own mask.",
+              "5": "Colour in sRGB. Wide-gamut profiles can shift noticeably once the OS re-renders the icon."
+            }
+          }
+        },
+        "ios": {
+          "title": "iOS icon sizes",
+          "description": "Xcode asset catalogues expect a specific file for each device and scale factor. The 1024 × 1024 image is the one submitted to App Store Connect; the rest are used on-device.",
+          "rows": {
+            "app-store": "App Store listing",
+            "iphone-3x": "iPhone home screen",
+            "iphone-2x": "iPhone home screen (older devices)",
+            "ipad-pro": "iPad Pro home screen",
+            "ipad-2x": "iPad home screen",
+            "settings": "Settings and search results",
+            "notification": "Notifications"
+          }
+        },
+        "android": {
+          "title": "Android icon sizes",
+          "description": "Android resolves icons by density bucket rather than by device. Each mipmap folder holds the same icon at a different resolution, and the launcher picks the one matching the screen.",
+          "rows": {
+            "play-store": "Store listing artwork, uploaded separately from the APK or bundle",
+            "xxxhdpi": "~640 dpi — most current flagship phones",
+            "xxhdpi": "~480 dpi — common mid-range and older flagships",
+            "xhdpi": "~320 dpi",
+            "hdpi": "~240 dpi",
+            "mdpi": "~160 dpi — the baseline density"
+          },
+          "adaptive": {
+            "title": "Adaptive icons",
+            "description": "Android 8.0 and later composites a foreground and background layer and applies a device-specific mask, which may be a circle, squircle or rounded square. Keep the meaningful part of the artwork inside the central 66% of the canvas, because everything outside that can be cropped on some devices."
+          }
+        },
+        "pitfalls": {
+          "title": "Common mistakes",
+          "description": "Store review rejections and odd-looking icons almost always trace back to one of these.",
+          "items": {
+            "alpha": {
+              "problem": "App Store Connect rejects the icon for containing an alpha channel",
+              "fix": "iOS icons must be fully opaque. Flatten the image onto a solid background and re-export as PNG without transparency."
+            },
+            "rounded": {
+              "problem": "The icon appears with doubled or clipped corners",
+              "fix": "Supply a full square. Both platforms apply their own corner mask, so pre-rounded artwork gets rounded twice."
+            },
+            "safe-area": {
+              "problem": "Part of the artwork is cut off on some Android devices",
+              "fix": "Adaptive icon masks vary by manufacturer. Keep logos and text within the central 66% of the canvas."
+            },
+            "text": {
+              "problem": "The icon is unreadable on the home screen",
+              "fix": "Wordmarks that read well at 1024 px are illegible at 48 px. Use a symbol rather than text, and check the smallest export before shipping."
+            },
+            "upscaling": {
+              "problem": "The icon looks blurry on high-density screens",
+              "fix": "The source was smaller than 1024 × 1024 and has been upscaled. Re-export from vector artwork at full size rather than enlarging a raster file."
+            }
+          }
+        }
+      }
     },
     "description": "Dev tools for your website",
     "free": "Free",

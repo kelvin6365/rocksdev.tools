@@ -212,7 +212,8 @@
             "font": "字体系列 - 选择无衬线、衬线或等宽字体",
             "layout": "布局样式 - 标题和描述的不同排列方式",
             "theme": "颜色主题 - 选择明亮、暗色或渐变主题",
-            "title": "标题文本 - 图片的主要标题"
+            "title": "标题文本 - 图片的主要标题",
+            "heading": "可用设置"
           },
           "title": "输入设置"
         },
@@ -232,7 +233,57 @@
           "note": "注意：生成器会创建针对社交媒体分享优化的图片。请在不同平台上测试您的图片以确保正确显示。",
           "title": "技巧和最佳实践"
         },
-        "title": "使用指南"
+        "title": "使用指南",
+        "sizes": {
+          "title": "社交图片尺寸",
+          "intro": "Open Graph 图片的标准尺寸是 1200 × 630 像素，宽高比 1.91:1。Facebook、LinkedIn 和 Slack 都按这个比例裁剪。大多数平台都接受这一张图，但少数平台使用自己的比例，因此在只准备一张素材之前，值得先了解差异在哪里。",
+          "columns": {
+            "platform": "平台",
+            "size": "建议尺寸",
+            "ratio": "宽高比",
+            "notes": "说明"
+          },
+          "rows": {
+            "og": "最稳妥的默认值。一张 1200 × 630 的图片即可覆盖 Facebook、LinkedIn 和 Slack 的链接预览。",
+            "x-large": "当页面声明 twitter:card 为 summary_large_image 时使用。与 Open Graph 几乎一致，同一个文件即可通用。",
+            "x-summary": "小尺寸方形卡片。当页面未声明大图卡片时，X 会回退到这种样式。",
+            "pinterest": "本身就是竖版。1.91:1 的图片在这里会出现大量留白，如果重视 Pinterest，请单独制作素材。",
+            "whatsapp": "缩略图会被裁成正方形。请把重要内容放在中间，否则会被裁掉。"
+          },
+          "limits": {
+            "title": "限制与注意事项",
+            "file-size": "文件请控制在 5 MB 以内。Facebook 最大支持 8 MB，但 X 会拒绝超过 5 MB 的图片。",
+            "formats": "请使用 PNG 或 JPG。所有主流抓取工具都不支持 SVG，WebP 的支持情况也不一致。",
+            "text-safe-area": "文字请保持在画面中央 80% 的范围内。不同平台对边缘的裁剪幅度并不相同。",
+            "retina": "不要放大到超过 1200 × 630。平台在展示时会缩小图片，文件过大只会拖慢首次预览的加载。"
+          }
+        },
+        "troubleshooting": {
+          "title": "疑难排查",
+          "intro": "大多数 Open Graph 问题出在缓存或链接上，而不是图片本身。",
+          "items": {
+            "cache": {
+              "problem": "预览仍然显示旧图片",
+              "fix": "各平台的缓存都很激进。可以用 Facebook 分享调试器、X Card Validator 或 LinkedIn Post Inspector 强制重新抓取。更换图片 URL 同样有效。"
+            },
+            "absolute-url": {
+              "problem": "完全不显示图片",
+              "fix": "og:image 必须是包含协议和域名的绝对 URL。像 /og.png 这样的相对路径会被所有抓取工具忽略。"
+            },
+            "blocked": {
+              "problem": "浏览器能打开，但分享时不显示",
+              "fix": "请检查图片是否位于登录验证、付费墙或 robots.txt 规则之后。抓取工具是以匿名身份获取图片的。"
+            },
+            "missing-dimensions": {
+              "problem": "卡片显示偏小，或稍后才重新排版",
+              "fix": "请声明 og:image:width 和 og:image:height。缺少这两项时，平台必须先下载图片才能确定卡片尺寸。"
+            },
+            "format": {
+              "problem": "只在某一个平台上显示空白或损坏",
+              "fix": "请重新导出为 PNG 或 JPG。WebP 和 AVIF 的支持仍然参差不齐，动图格式则从不用于预览。"
+            }
+          }
+        }
       },
       "images": {
         "alt": "预览 {index}",

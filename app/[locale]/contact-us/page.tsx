@@ -4,6 +4,8 @@ import { LinkButton } from "../../../components/link-button";
 import { config } from "../../../services/config";
 import { getMetadata } from "../../../services/seo";
 import AdUnit from "../../../components/ad-units";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -14,7 +16,10 @@ export const generateMetadata = async ({ params }: Props) => {
   return getMetadata({ path: "contact-us", locale });
 };
 
-export default function ContactUsPage() {
+export default function ContactUsPage({ params }: Props) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
+
   const t = useTranslations("contact-us");
 
   return (

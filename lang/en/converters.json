@@ -284,6 +284,41 @@
             "complex_types": "For complex types, consider generating multiple classes"
           },
           "note": "Note: The converter generates standard Java Bean classes with proper encapsulation. Lombok annotations can significantly reduce the amount of boilerplate code."
+        },
+        "types": {
+          "title": "JSON to Java type mapping",
+          "description": "Types are inferred from the values in your sample, not from a schema, so the generated class is only as accurate as the JSON you paste. Provide a representative document — one with every optional field populated — and check the mapping below against your domain model.",
+          "columns": {
+            "json": "JSON value",
+            "java": "Java type",
+            "notes": "Notes"
+          },
+          "rows": {
+            "string": "The default for any quoted value that is not recognised as a date.",
+            "date": "Strings matching the ISO 8601 pattern are mapped to LocalDateTime. Epoch timestamps arrive as numbers and become Integer or Double instead.",
+            "integer": "Whole numbers become Integer. Values beyond the 32-bit range need changing to Long by hand.",
+            "decimal": "Any number with a fractional part becomes Double. Use BigDecimal for money — Double is not safe for currency arithmetic.",
+            "boolean": "Wrapper types are used throughout so that a missing field can be null rather than silently defaulting to false.",
+            "array": "The element type is inferred from the first item. Mixed-type arrays fall back to List'<'Object>, and an empty array cannot be inferred at all.",
+            "object": "Each nested object becomes a static inner class named after its field.",
+            "null": "A null value carries no type information, so Object is emitted. Replace it once you know the intended type."
+          }
+        },
+        "nested": {
+          "title": "Nested objects and collections",
+          "description": "Nested structures are turned into static inner classes named after the field that contains them, so a single paste produces a complete, compilable file rather than a flat class with Object fields.",
+          "input": "Input JSON",
+          "output": "Generated class",
+          "rules": {
+            "title": "How names and collections are resolved",
+            "list": {
+              "1": "An inner class is named after its field, with the first letter capitalised — a customer field produces a Customer class.",
+              "2": "An array of objects produces List<T>, where T is an inner class generated from the first element.",
+              "3": "Nesting is followed to any depth; each level adds another inner class.",
+              "4": "Two fields with the same name at different levels resolve to the same class name, so rename one if their shapes differ.",
+              "5": "An empty array yields List<Object> because there is no element to infer from — supply a populated sample instead."
+            }
+          }
         }
       }
     },

@@ -12,8 +12,10 @@ export async function fetchGitHubReleases(): Promise<GitHubRelease[]> {
       headers: {
         Accept: "application/vnd.github.v3+json",
       },
+      // Releases change rarely, but the changelog page must not be frozen at
+      // build time — a new release should appear without a redeploy.
       next: {
-        revalidate: 0,
+        revalidate: 3600,
       },
     },
   );

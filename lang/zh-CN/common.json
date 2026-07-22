@@ -164,7 +164,8 @@
       },
       "title": "工具"
     },
-    "typeToSearch": "输入要搜索的命令或内容..."
+    "typeToSearch": "输入要搜索的命令或内容...",
+    "relatedTools": "相关工具"
   },
   "not-found": {
     "description": "您正在寻找的页面可能已被删除、名称已更改或暂时不可用。",
